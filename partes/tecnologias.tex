@@ -3,7 +3,7 @@
 
 Este capítulo apresenta as tecnologias empregadas no desenvolvimento do sistema, organizadas em frontend, backend e infraestrutura, com uma discussão sobre o papel de cada uma, os motivos de sua escolha e as alternativas consideradas durante o processo de decisão.
 
-Arquiteturalmente, o sistema é composto por duas aplicações independentes, cada uma com seu próprio repositório, dependências, ferramenta de build e pipeline de deploy: (1) o frontend, uma \textit{Single Page Application} (SPA) construída com React 19 e Vite, que utiliza o TanStack Router para roteamento no lado do cliente e se comunica com o backend via requisições HTTP; e (2) o backend, uma API REST que utiliza o Next.js exclusivamente como framework de servidor --- seus \textit{Route Handlers} processam as requisições, mas o Next.js não renderiza páginas nem serve conteúdo frontend. As seções a seguir detalham as tecnologias de cada camada, deixando explícito o escopo de atuação de cada uma nessa arquitetura de duas aplicações.
+Arquiteturalmente, o sistema é composto por duas aplicações independentes, cada uma com seu próprio repositório, dependências, ferramenta de build e pipeline de deploy: uma \textit{Single Page Application} (SPA) para o frontend e uma API REST para o backend. As seções a seguir detalham as tecnologias de cada camada.
 
 \subsection{Frontend}
 \label{sec:frontend}

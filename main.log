@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  12 JUN 2026 15:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  12 JUN 2026 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -957,7 +957,7 @@ Overfull \hbox (9.2685pt too wide) in paragraph at lines 53--54
 it/12 to-ast \T1/ptm/m/n/12 para Re-act, de-sen-vol-vida por Emil Kowalski
  []
 
-[11] [12] [13] [14]
+[11] [12] [13]
 Overfull \hbox (11.74266pt too wide) in paragraph at lines 96--97
 \T1/ptm/m/n/12 dên-cias ne-ces-sá-rias (\T1/ptm/m/it/12 re-po-si-to-ries \T1/pt
 m/m/n/12 e \T1/ptm/m/it/12 ser-vi-ces\T1/ptm/m/n/12 ) e re-tor-nam a res-posta.
@@ -970,14 +970,14 @@ Overfull \hbox (39.05617pt too wide) in paragraph at lines 96--97
  fron-tend (\T1/pcr/m/n/12 http://10.17.40.207:5173\T1/ptm/m/n/12 )
  []
 
-
+[14]
 Overfull \hbox (1.26834pt too wide) in paragraph at lines 98--99
 \T1/ptm/m/n/12 cript sem \T1/ptm/m/it/12 ts-con-fig \T1/ptm/m/n/12 adi-ci-o-nal
 , va-ri-á-veis de am-bi-ente va-li-da-das com Zod via \T1/pcr/m/n/12 next.confi
 g.ts\T1/ptm/m/n/12 ),
  []
 
-[15] [16]
+[15]
 Overfull \hbox (26.15733pt too wide) in paragraph at lines 118--119
 \T1/ptm/m/n/12 ter-fa-ces de re-po-si-tó-rio e ser-viço), \T1/pcr/m/n/12 applic
 ation \T1/ptm/m/n/12 (\T1/ptm/m/it/12 use ca-ses \T1/ptm/m/n/12 como \T1/pcr/m/
@@ -998,7 +998,7 @@ teRepository\T1/ptm/m/n/12 , \T1/pcr/m/n/12 SupabaseTemplateRepository\T1/ptm/m
 /n/12 ,
  []
 
-[17]
+[16] [17]
 Overfull \hbox (49.48158pt too wide) in paragraph at lines 140--141
 []\T1/ptm/m/n/12 No sis-tema, am-bos fo-ram con-fi-gu-ra-dos com plu-gins es-pe
 -cí-fi-cos: \T1/pcr/m/n/12 eslint-plugin-react-hooks
@@ -1392,7 +1392,7 @@ r/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (39 pages, 3792607 bytes).
+Output written on main.pdf (39 pages, 3792249 bytes).
 PDF statistics:
  660 PDF objects out of 1000 (max. 8388607)
  142 named destinations out of 1000 (max. 500000)
