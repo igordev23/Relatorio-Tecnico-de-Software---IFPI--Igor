@@ -21,15 +21,15 @@
 \contentsline {subsection}{\numberline {2.3}Backend}{14}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Next.js 16}{14}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Supabase e PostgreSQL}{15}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}PDFKit}{16}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3}PDFKit}{15}{subsubsection.2.3.3}%
 \contentsline {subsubsection}{\numberline {2.3.4}Zod}{16}{subsubsection.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.3.5}Arquitetura e Padrões}{17}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.5}Arquitetura e Padrões}{16}{subsubsection.2.3.5}%
 \contentsline {subsection}{\numberline {2.4}Infraestrutura e Ferramentas}{17}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}Render}{17}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Jest}{18}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2}Jest}{17}{subsubsection.2.4.2}%
 \contentsline {subsubsection}{\numberline {2.4.3}ESLint e Prettier}{18}{subsubsection.2.4.3}%
 \contentsline {subsubsection}{\numberline {2.4.4}Git e GitHub}{18}{subsubsection.2.4.4}%
-\contentsline {subsubsection}{\numberline {2.4.5}Visual Studio Code}{19}{subsubsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.5}Visual Studio Code}{18}{subsubsection.2.4.5}%
 \contentsline {subsection}{\numberline {2.5}Síntese das Tecnologias}{19}{subsection.2.5}%
 \contentsline {section}{\numberline {3.0}Modelagem do Projeto}{21}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Levantamento de Requisitos}{21}{subsection.3.1}%

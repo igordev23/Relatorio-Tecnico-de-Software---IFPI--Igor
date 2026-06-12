@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  12 JUN 2026 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  12 JUN 2026 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -943,68 +943,8 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 14
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-[8] [9]
-Overfull \hbox (40.58223pt too wide) in paragraph at lines 33--34
-\T1/pcr/m/n/12 Dialog\T1/ptm/m/n/12 , \T1/pcr/m/n/12 Form\T1/ptm/m/n/12 , \T1/p
-cr/m/n/12 Table\T1/ptm/m/n/12 , \T1/pcr/m/n/12 Sidebar\T1/ptm/m/n/12 , \T1/pcr/
-m/n/12 Chart \T1/ptm/m/n/12 e \T1/pcr/m/n/12 Toast\T1/ptm/m/n/12 . O uti-li-tá-
-rio \T1/pcr/m/n/12 class-variance-authority
- []
-
-[10]
-Overfull \hbox (9.2685pt too wide) in paragraph at lines 53--54
-[]\T1/ptm/m/n/12 Sonner é uma bi-bli-o-teca leve de no-ti-fi-ca-ções \T1/ptm/m/
-it/12 to-ast \T1/ptm/m/n/12 para Re-act, de-sen-vol-vida por Emil Kowalski
- []
-
-[11] [12] [13]
-Overfull \hbox (11.74266pt too wide) in paragraph at lines 96--97
-\T1/ptm/m/n/12 dên-cias ne-ces-sá-rias (\T1/ptm/m/it/12 re-po-si-to-ries \T1/pt
-m/m/n/12 e \T1/ptm/m/it/12 ser-vi-ces\T1/ptm/m/n/12 ) e re-tor-nam a res-posta.
- O ar-quivo \T1/pcr/m/n/12 next.config.ts
- []
-
-
-Overfull \hbox (39.05617pt too wide) in paragraph at lines 96--97
-\T1/ptm/m/n/12 con-fi-gura ca-be-ça-lhos CORS para per-mi-tir re-qui-si-ções do
- fron-tend (\T1/pcr/m/n/12 http://10.17.40.207:5173\T1/ptm/m/n/12 )
- []
-
-[14]
-Overfull \hbox (1.26834pt too wide) in paragraph at lines 98--99
-\T1/ptm/m/n/12 cript sem \T1/ptm/m/it/12 ts-con-fig \T1/ptm/m/n/12 adi-ci-o-nal
-, va-ri-á-veis de am-bi-ente va-li-da-das com Zod via \T1/pcr/m/n/12 next.confi
-g.ts\T1/ptm/m/n/12 ),
- []
-
-[15]
-Overfull \hbox (26.15733pt too wide) in paragraph at lines 118--119
-\T1/ptm/m/n/12 ter-fa-ces de re-po-si-tó-rio e ser-viço), \T1/pcr/m/n/12 applic
-ation \T1/ptm/m/n/12 (\T1/ptm/m/it/12 use ca-ses \T1/ptm/m/n/12 como \T1/pcr/m/
-n/12 EmitCertificateUseCase\T1/ptm/m/n/12 ,
- []
-
-
-Overfull \hbox (63.371pt too wide) in paragraph at lines 118--119
-\T1/pcr/m/n/12 GeneratePDFUseCase\T1/ptm/m/n/12 , \T1/pcr/m/n/12 VerifyCertific
-ateUseCase \T1/ptm/m/n/12 e DTOs de va-li-da-ção), \T1/pcr/m/n/12 infrastructur
-e
- []
-
-
-Overfull \hbox (81.03407pt too wide) in paragraph at lines 118--119
-\T1/ptm/m/n/12 (im-ple-men-ta-ções con-cre-tas \T1/pcr/m/n/12 SupabaseCertifica
-teRepository\T1/ptm/m/n/12 , \T1/pcr/m/n/12 SupabaseTemplateRepository\T1/ptm/m
-/n/12 ,
- []
-
-[16] [17]
-Overfull \hbox (49.48158pt too wide) in paragraph at lines 140--141
-[]\T1/ptm/m/n/12 No sis-tema, am-bos fo-ram con-fi-gu-ra-dos com plu-gins es-pe
--cí-fi-cos: \T1/pcr/m/n/12 eslint-plugin-react-hooks
- []
-
-[18]) (partes/modelagem.tex [19]
+[8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]) (partes/modelagem.tex
+[19]
 Overfull \vbox (61.0854pt too high) has occurred while \output is active []
 
 
@@ -1278,7 +1218,7 @@ l.90 }
 (That was another \errmessage.)
 
 [29]) (partes/diagramas/Diagrama_de_Classes.tex
-<imagens/diagrama-de-classes.png, id=576, 1541.76pt x 1027.84pt>
+<imagens/diagrama-de-classes.png, id=578, 1541.76pt x 1027.84pt>
 File: imagens/diagrama-de-classes.png Graphic file (type png)
 <use imagens/diagrama-de-classes.png>
 Package pdftex.def Info: imagens/diagrama-de-classes.png  used on input line 5.
@@ -1286,20 +1226,20 @@ Package pdftex.def Info: imagens/diagrama-de-classes.png  used on input line 5.
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
 ) [30 <./imagens/diagrama-de-classes.png (PNG copy)>] (partes/diagramas/arquite
 tura-backend.tex
-<imagens/backend.png, id=585, 1166.3575pt x 1359.0775pt>
+<imagens/backend.png, id=587, 1166.3575pt x 1359.0775pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 477.4055pt.
 )
 (partes/diagramas/arquitetura-frontend.tex
-<imagens/frontend.png, id=586, 1541.76pt x 1027.84pt>
+<imagens/frontend.png, id=588, 1541.76pt x 1027.84pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
 ) [31 <./imagens/backend.png (PNG copy)>] (partes/diagramas/der.tex
-<imagens/DER.png, id=593, 1529.715pt x 1385.175pt>
+<imagens/DER.png, id=595, 1529.715pt x 1385.175pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 3.
@@ -1418,16 +1358,16 @@ Here is how much of TeX's memory you used:
  54653 multiletter control sequences out of 15000+600000
  654054 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,94p,1121b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,94p,1112b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi12.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courie
 r/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (40 pages, 3797160 bytes).
+Output written on main.pdf (40 pages, 3796725 bytes).
 PDF statistics:
- 685 PDF objects out of 1000 (max. 8388607)
+ 687 PDF objects out of 1000 (max. 8388607)
  151 named destinations out of 1000 (max. 500000)
  630 words of extra memory for PDF output out of 10000 (max. 10000000)
 
