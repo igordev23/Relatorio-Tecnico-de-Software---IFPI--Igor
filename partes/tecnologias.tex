@@ -73,6 +73,9 @@ Vite é uma ferramenta de build e servidor de desenvolvimento que utiliza módul
 
 No projeto, o Vite é a ferramenta de build **exclusiva do frontend SPA** --- o backend Next.js utiliza seu próprio sistema de compilação (\texttt{next build}). Essa divisão reforça a independência entre as duas aplicações: alterações no frontend não exigem reconstrução do backend, e vice-versa. A substituição do Create React App (CRA) pelo Vite reduziu o tempo de inicialização do servidor de desenvolvimento de aproximadamente 30 segundos para menos de 2 segundos, e o HMR reflete alterações no código em milissegundos, melhorando significativamente a produtividade durante o desenvolvimento.
 
+\subsubsection{Arquitetura e Padrões}
+O frontend adota o padrão MVVM (\textit{Model-View-ViewModel}) como arquitetura. As \textit{Views} são componentes React que renderizam a interface e capturam eventos do usuário. Os \textit{ViewModels} são implementados como hooks do TanStack React Query que encapsulam o estado assíncrono (cache, \textit{loading}, erro) e expõem dados reativos para as \textit{Views}. O \textit{Model} corresponde às entidades de domínio tipadas com TypeScript e aos DTOs validados com Zod. O TanStack Router atua como orquestrador da navegação, mapeando URLs para componentes e acionando os \textit{ViewModels} via \textit{loaders} antes da renderização. O shadcn/ui fornece os componentes de apresentação (\texttt{Button}, \texttt{Card}, \texttt{Dialog}, etc.) que compõem as \textit{Views}, enquanto o Tailwind CSS gerencia a estilização. Essa separação de responsabilidades permite testar a lógica de apresentação independentemente da interface, utilizando Jest para testar os \textit{ViewModels} sem depender de um navegador.
+
 \subsection{Integração com a API REST}
 \label{sec:api}
 
