@@ -1,0 +1,99 @@
+\textbf{Requisitos Não Funcionais}:
+
+\subsubsection{Segurança}
+\begin{itemize}
+\item RNF001 – O sistema deve utilizar o Supabase Auth para gerenciamento seguro de autenticação e armazenamento de senhas com hash criptográfico seguro (bcrypt).
+\item RNF002 – O sistema deve utilizar conexão segura HTTPS (TLS 1.2 ou superior).
+\item RNF003 – O sistema deve proteger dados sensíveis em repouso utilizando criptografia fornecida pela infraestrutura cloud.
+\item RNF004 – O sistema deve bloquear autenticação após 5 tentativas consecutivas inválidas (conforme política do provedor de autenticação).
+\item RNF005 – Sessões inativas devem expirar automaticamente após tempo configurável (ex.: 30 minutos).
+\item RNF006 – O sistema deve implementar controle de acesso baseado em papéis (RBAC).
+\item RNF007 – O sistema deve seguir boas práticas de segurança conforme OWASP Top 10.
+\item RNF008 – O sistema deve registrar logs de autenticação e eventos de segurança.
+\item RNF009 – O sistema deve garantir isolamento de dados entre empresas (multi-tenant).
+\item RNF010 – O sistema deve permitir futura implementação de autenticação multifator (MFA).
+\end{itemize}
+
+\subsubsection{Desempenho e Escalabilidade}
+\begin{itemize}
+\item RNF011 – O sistema deve suportar geração simultânea mínima de 500 certificados por lote.
+\item RNF012 – O tempo médio de geração individual não deve exceder 5 segundos.
+\item RNF013 – O portal público de validação deve responder em até 2 segundos.
+\item RNF014 – O sistema deve permitir escalabilidade horizontal do serviço de geração.
+\item RNF015 – O sistema deve suportar volume mínimo de 10.000 certificados/mês.
+\item RNF016 – A geração em lote deve ser processada de forma assíncrona por meio de fila de processamento, sem bloquear a aplicação principal.
+\item RNF017 – A fila de certificados deve garantir processamento ordenado e controle de concorrência.
+\end{itemize}
+
+\subsubsection{Disponibilidade e Confiabilidade}
+\begin{itemize}
+\item RNF018 – O sistema deve garantir disponibilidade mínima de 99,5\% mensal.
+\item RNF019 – O sistema deve realizar backup automático diário do banco de dados.
+\item RNF020 – O sistema deve permitir restauração de dados em até 24 horas.
+\item RNF021 – O sistema deve implementar mecanismo de retentativa automática para tarefas falhas na fila de certificados.
+\item RNF022 – O sistema deve registrar falhas de processamento para auditoria posterior.
+\end{itemize}
+
+\subsubsection{Usabilidade e Acessibilidade}
+\begin{itemize}
+\item RNF023 – O sistema deve ser responsivo (desktop, tablet e mobile).
+\item RNF024 – O sistema deve manter padrão visual consistente.
+\item RNF025 – O sistema deve fornecer mensagens de erro claras.
+\item RNF026 – O sistema deve permitir navegação por teclado.
+\item RNF027 – O sistema deve seguir recomendações WCAG 2.1 nível AA (quando aplicável).
+\end{itemize}
+
+\subsubsection{Compatibilidade e Integração}
+\begin{itemize}
+\item RNF028 – O sistema deve ser compatível com navegadores modernos (Chrome, Firefox, Edge, Safari).
+\item RNF029 – A geração de PDF deve preservar fidelidade visual do template original.
+\item RNF030 – O sistema deve disponibilizar API REST autenticada via token JWT do Supabase.
+\item RNF031 – O sistema deve aceitar arquivos CSV codificados em UTF-8.
+\item RNF032 – O sistema deve permitir integração via Webhooks em formato JSON.
+\end{itemize}
+
+\subsubsection{Armazenamento e Retenção}
+\begin{itemize}
+\item RNF033 – O sistema deve armazenar certificados por no mínimo 5 anos.
+\item RNF034 – O sistema deve garantir integridade dos certificados por meio de hash único.
+\item RNF035 – O sistema deve aplicar exclusão lógica (soft delete) quando aplicável.
+\end{itemize}
+
+\subsubsection{Conformidade Legal e LGPD}
+\begin{itemize}
+\item RNF036 – O sistema deve estar em conformidade com a LGPD (Lei nº 13.709/2018).
+\item RNF037 – O sistema deve permitir exclusão ou anonimização de dados pessoais mediante solicitação.
+\item RNF038 – O sistema deve registrar consentimento para tratamento de dados.
+\item RNF039 – Logs sensíveis devem ser acessíveis apenas por administradores autorizados.
+\item RNF040 – O sistema deve manter trilha de auditoria inviolável para operações críticas.
+\end{itemize}
+
+\subsubsection{Arquitetura e Tecnologia}
+\begin{itemize}
+\item RNF041 – O sistema deve adotar arquitetura baseada em microserviços, com serviços independentes e desacoplados.
+\item RNF042 – Cada microserviço deve possuir responsabilidade única e bem definida (ex.: autenticação, geração de certificados, envio de e-mail, validação pública).
+\item RNF043 – A comunicação entre microserviços deve ocorrer via API REST segura ou mensageria assíncrona.
+\item RNF044 – O sistema deve utilizar API Gateway como ponto único de entrada para requisições externas.
+\item RNF045 – A geração em lote deve ser processada por um microserviço específico de processamento assíncrono utilizando fila de mensagens.
+\item RNF046 – Cada microserviço deve permitir deploy independente sem impactar os demais.
+\item RNF047 – O sistema deve permitir escalabilidade horizontal individual por serviço.
+\item RNF048 – O sistema deve utilizar banco de dados relacional com integridade referencial (PostgreSQL).
+\item RNF049 – O sistema deve definir estratégia de isolamento multi-tenant (por schema ou coluna organizacional).
+\item RNF050 – O sistema deve implementar monitoramento e observabilidade centralizada (logs, métricas e rastreamento).
+\item RNF051 – O sistema deve permitir deploy em ambiente cloud compatível com containers (ex.: Docker).
+\end{itemize}
+
+\subsubsection{Manutenção e Monitoramento}
+\begin{itemize}
+\item RNF052 – O sistema deve permitir atualização com mínima indisponibilidade (deploy contínuo).
+\item RNF053 – O sistema deve possuir documentação técnica e manual do usuário.
+\item RNF054 – O sistema deve registrar erros em sistema centralizado de monitoramento.
+\item RNF055 – O sistema deve permitir extensibilidade sem impacto nas funcionalidades existentes.
+\end{itemize}
+
+\subsubsection{Internacionalização}
+\begin{itemize}
+\item RNF056 – O sistema deve permitir configuração de timezone por organização.
+\item RNF057 – O sistema deve permitir tradução futura da interface.
+\item RNF058 – O sistema deve suportar diferentes formatos de data e hora.
+\end{itemize}

@@ -1,0 +1,94 @@
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[
+    scale=0.7,
+    transform shape,
+    actor/.style={rectangle, draw=black, fill=blue!20, rounded corners, minimum width=1.8cm, minimum height=0.7cm},
+    usecase/.style={ellipse, draw=black, minimum width=2.5cm, minimum height=0.8cm, font=\small},
+    include/.style={->, dashed, font=\tiny},
+    assoc/.style={-},
+    every node/.style={font=\small}
+]
+
+% Limite do sistema (mais compacto)
+\draw[dashed] (-1,-7) rectangle (14,3.5);
+
+% Atores (mais próximos)
+\node[actor] (admin) at (-1.5,1.5) {Administrador};
+\node[actor] (colab) at (-1.5,-1.5) {Colaborador};
+\node[actor] (visit) at (-1.5,-5) {Visitante};
+
+% Casos Admin (mais compactos)
+\node[usecase, fill=red!20] (usuarios) at (2.5,2.5) {Gerenciar Usuários};
+\node[usecase, fill=red!20] (template) at (2.5,1.2) {Criar Template};
+\node[usecase, fill=red!20] (cursos) at (2.5,0) {Gerenciar Cursos};
+
+\node[usecase, fill=yellow!30] (permissoes) at (6.5,2.5) {Definir Permissões};
+\node[usecase, fill=red!20] (campos) at (6.5,1.2) {Configurar Campos};
+\node[usecase, fill=red!20] (editar) at (6.5,0) {Editar Template};
+
+\node[usecase, fill=yellow!30] (salvar) at (10.5,1.2) {Salvar};
+\node[usecase, fill=yellow!30] (preview) at (13.5,0) {Prévia};
+
+% Casos Colaborador (mais compactos)
+\node[usecase, fill=green!30] (emitir) at (2.5,-1) {Emitir Individual};
+\node[usecase, fill=green!30] (lote) at (2.5,-2.2) {Emitir em Lote};
+\node[usecase, fill=orange!40] (cadastro) at (2.5,-3.4) {Cadastrar Part.};
+\node[usecase, fill=orange!40] (importar) at (2.5,-4.6) {Importar Part.};
+
+\node[usecase, fill=purple!25] (pdf) at (6.5,-1) {Gerar PDF};
+\node[usecase, fill=purple!25] (codigo) at (9.5,-1) {Gerar Código};
+\node[usecase, fill=purple!25] (registro) at (12.5,-1) {Registrar};
+
+\node[usecase, fill=purple!25] (fila) at (6.5,-3) {Fila};
+\node[usecase, fill=purple!25] (notificar) at (9.5,-3) {Notificar};
+\node[usecase, fill=purple!25] (email) at (12.5,-2.5) {Email};
+
+\node[usecase, fill=blue!30] (validardados) at (6.5,-5) {Validar Dados};
+
+% Casos Visitante (mais compactos)
+\node[usecase, fill=red!20] (validar) at (2.5,-6.2) {Validar Cert.};
+\node[usecase, fill=blue!30] (consultar) at (6.5,-6.2) {Consultar Cód.};
+\node[usecase, fill=blue!30] (dados) at (10.5,-6.2) {Exibir Dados};
+
+% Associações (linhas mais curtas)
+\draw[assoc] (admin) -- (usuarios);
+\draw[assoc] (admin) -- (template);
+\draw[assoc] (admin) -- (cursos);
+\draw[assoc] (admin) -- (emitir);
+
+\draw[assoc] (colab) -- (emitir);
+\draw[assoc] (colab) -- (lote);
+\draw[assoc] (colab) -- (cadastro);
+\draw[assoc] (colab) -- (importar);
+
+\draw[assoc] (visit) -- (validar);
+
+% Includes (setas mais curtas)
+\draw[include] (usuarios) -- (permissoes);
+\draw[include] (template) -- (campos);
+\draw[include] (template) -- (editar);
+\draw[include] (campos) -- (salvar);
+\draw[include] (editar) -- (salvar);
+\draw[include] (salvar) -- (preview);
+
+\draw[include] (emitir) -- (pdf);
+\draw[include] (pdf) -- (codigo);
+\draw[include] (codigo) -- (registro);
+\draw[include] (registro) -- (email);
+
+\draw[include] (lote) -- (fila);
+\draw[include] (fila) -- (notificar);
+
+\draw[include] (importar) -- (validardados);
+
+\draw[include] (validar) -- (consultar);
+\draw[include] (consultar) -- (dados);
+
+\end{tikzpicture}
+}
+\caption{Diagrama de casos de uso do sistema de certificados}
+\label{fig:casos-uso}
+\end{figure}
+

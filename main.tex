@@ -1,0 +1,91 @@
+\documentclass[12pt,openright,oneside,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACOTES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb}
+\usepackage{indentfirst}
+\usepackage{enumerate}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+
+% Numeração: 1.0, 1.1, 1.1.1...
+\renewcommand{\thesection}{\arabic{section}.0}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+% Configuração dos códigos
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    emph={@app},
+    emphstyle=\color{teal}\bfseries,
+    keywordstyle=\color{blue}\bfseries,
+    backgroundcolor=\color{black!5},
+    stringstyle=\color{red},
+    commentstyle=\color{gray},
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    tabsize=4
+}
+
+\geometry{a4paper, left=3cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setstretch{1.5}
+\captionsetup{labelfont=bf, labelsep=endash}
+
+% Dados do trabalho
+\newcommand{\Instituicao}{INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO PIAUÍ}
+\newcommand{\Campus}{Campus Piripiri}
+\newcommand{\Curso}{Tecnólogo em Análise e Desenvolvimento de Sistemas}
+\newcommand{\Titulo}{Sistema para Emissão, Gestão e Autenticação de Certificados}
+\newcommand{\Autor}{Francisco Igor Silva Santos}
+\newcommand{\Orientador}{Prof. Mayllon Veras da Silva}
+\newcommand{\CoOrientador}{Nome do(a) Coorientador(a) (opcional)}
+\newcommand{\Cidade}{Piripiri – PI}
+\newcommand{\Ano}{2025}
+
+% ---------------------------------------------------------
+\begin{document}
+
+% ================= IMPORTANDO ARQUIVOS =================
+\input{partes/capa}
+\input{partes/folha_rosto}
+\input{partes/resumo}
+
+\newpage
+\tableofcontents
+\newpage
+
+\input{partes/introducao}
+\input{partes/tecnologias}
+\input{partes/modelagem}
+\input{partes/software}
+\input{partes/consideracoes}
+% ================= REFERÊNCIAS =====================
+\newpage
+\bibliographystyle{abntex2-num}
+\bibliography{referencias}
+\addcontentsline{toc}{section}{Referências}
+\newpage
+\input{partes/anexos}
+
+
+
+\end{document}
