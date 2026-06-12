@@ -69,7 +69,7 @@
 \contentsline {subsection}{\numberline {4.1}Implantação}{33}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Testes}{33}{subsection.4.2}%
 \contentsline {section}{\numberline {5.0}Considerações Finais}{34}{section.5}%
-\contentsline {section}{Referências}{36}{section*.10}%
-\contentsline {section}{\numberline {6.0}Anexos}{37}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{37}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{37}{subsection.6.2}%
+\contentsline {section}{Referências}{37}{section*.10}%
+\contentsline {section}{\numberline {6.0}Anexos}{38}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{38}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{38}{subsection.6.2}%
