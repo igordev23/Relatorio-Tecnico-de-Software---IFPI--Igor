@@ -1,7 +1,9 @@
 \section{Tecnologias Envolvidas}
 \label{sec:tecnologias}
 
-Este capítulo apresenta as tecnologias empregadas no desenvolvimento do sistema, organizadas em frontend, backend e infraestrutura, com uma discussão sobre o papel de cada uma, os motivos de sua escolha e as alternativas consideradas durante o processo de decisão. O sistema é dividido em duas aplicações independentes: uma \textit{Single Page Application} (SPA) para o frontend e uma API REST construída com Next.js para o backend.
+Este capítulo apresenta as tecnologias empregadas no desenvolvimento do sistema, organizadas em frontend, backend e infraestrutura, com uma discussão sobre o papel de cada uma, os motivos de sua escolha e as alternativas consideradas durante o processo de decisão.
+
+Arquiteturalmente, o sistema é composto por duas aplicações independentes, cada uma com seu próprio repositório, dependências, ferramenta de build e pipeline de deploy: (1) o frontend, uma \textit{Single Page Application} (SPA) construída com React 19 e Vite, que utiliza o TanStack Router para roteamento no lado do cliente e se comunica com o backend via requisições HTTP; e (2) o backend, uma API REST que utiliza o Next.js exclusivamente como framework de servidor --- seus \textit{Route Handlers} processam as requisições, mas o Next.js não renderiza páginas nem serve conteúdo frontend. As seções a seguir detalham as tecnologias de cada camada, deixando explícito o escopo de atuação de cada uma nessa arquitetura de duas aplicações.
 
 \subsection{Frontend}
 \label{sec:frontend}
@@ -69,7 +71,7 @@ No sistema, o date-fns é empregado para formatar datas de validade de certifica
 \subsubsection{Vite}
 Vite é uma ferramenta de build e servidor de desenvolvimento que utiliza módulos ES nativos durante o desenvolvimento para oferecer \textit{Hot Module Replacement} (HMR) instantâneo, eliminando a necessidade de empacotamento em tempo de desenvolvimento \cite{vite2025}. Em produção, utiliza Rollup para gerar bundles otimizados com \textit{code splitting} automático e \textit{lazy loading}.
 
-A substituição do Create React App (CRA) pelo Vite reduziu o tempo de inicialização do servidor de desenvolvimento de aproximadamente 30 segundos para menos de 2 segundos, e o HMR reflete alterações no código em milissegundos, melhorando significativamente a produtividade durante o desenvolvimento.
+No projeto, o Vite é a ferramenta de build **exclusiva do frontend SPA** --- o backend Next.js utiliza seu próprio sistema de compilação (\texttt{next build}). Essa divisão reforça a independência entre as duas aplicações: alterações no frontend não exigem reconstrução do backend, e vice-versa. A substituição do Create React App (CRA) pelo Vite reduziu o tempo de inicialização do servidor de desenvolvimento de aproximadamente 30 segundos para menos de 2 segundos, e o HMR reflete alterações no código em milissegundos, melhorando significativamente a produtividade durante o desenvolvimento.
 
 \subsection{Integração com a API REST}
 \label{sec:api}
@@ -88,6 +90,8 @@ O backend do sistema é uma API REST desenvolvida com Next.js seguindo os princ�
 
 \subsubsection{Next.js 16}
 Next.js é um framework React que, em sua versão 16, oferece o \textit{App Router} com \textit{Route Handlers} para construção de APIs serverless \cite{nextjs2025}. Cada endpoint é definido como um arquivo em \texttt{src/app/api/} exportando funções assíncronas nomeadas (\texttt{GET}, \texttt{POST}, \texttt{PUT}, \texttt{DELETE}) --- não há necessidade de um servidor Express ou configuração de rotas manual.
+
+É importante destacar que, neste projeto, o Next.js é utilizado **exclusivamente como servidor de API (\textit{backend-only})**: não há páginas, layouts, \textit{Server Components} ou qualquer funcionalidade de renderização frontend. O diretório \texttt{src/app/} contém apenas subdiretórios \texttt{api/*} com \textit{Route Handlers}; não existe um \texttt{page.tsx} ou \texttt{layout.tsx} no projeto. O frontend é uma SPA completamente separada (descrita na Seção~\ref{sec:frontend}), que consome a API via HTTP. Essa separação foi intencional: o frontend SPA poderia ser substituído por outro cliente (como um aplicativo mobile) sem qualquer alteração no backend, e o backend poderia ser reescrito em outra linguagem sem afetar o frontend. O fato de o Next.js ser tipicamente associado a aplicações full-stack não invalida seu uso como servidor de API puro --- os \textit{Route Handlers} operam de forma independente do sistema de páginas e podem substituir frameworks como Express ou Fastify com menos configuração.
 
 No sistema, os \textit{Route Handlers} do Next.js atuam como a camada mais externa da aplicação: recebem a requisição, validam os parâmetros com Zod, instanciam os \textit{use cases} com as dependências necessárias (\textit{repositories} e \textit{services}) e retornam a resposta. O arquivo \texttt{next.config.ts} configura cabeçalhos CORS para permitir requisições do frontend (\texttt{http://10.17.40.207:5173}) e isola o PDFKit como pacote exclusivo do servidor via \texttt{serverExternalPackages}.
 
