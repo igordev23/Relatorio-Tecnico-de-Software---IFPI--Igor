@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  12 JUN 2026 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  12 JUN 2026 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1284,24 +1284,22 @@ File: imagens/diagrama-de-classes.png Graphic file (type png)
 Package pdftex.def Info: imagens/diagrama-de-classes.png  used on input line 5.
 
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
-)
-(partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=577, 1166.3575pt x 1359.0775pt>
+) [30 <./imagens/diagrama-de-classes.png (PNG copy)>] (partes/diagramas/arquite
+tura-backend.tex
+<imagens/backend.png, id=585, 1166.3575pt x 1359.0775pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 477.4055pt.
 )
-(partes/diagramas/arquitetura-frontend.tex [30 <./imagens/diagrama-de-classes.p
-ng (PNG copy)>]
-<imagens/frontend.png, id=584, 1541.76pt x 1027.84pt>
+(partes/diagramas/arquitetura-frontend.tex
+<imagens/frontend.png, id=586, 1541.76pt x 1027.84pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
-) [31 <./imagens/backend.png (PNG copy)>]
-(partes/diagramas/der.tex
-<imagens/DER.png, id=590, 1529.715pt x 1385.175pt>
+) [31 <./imagens/backend.png (PNG copy)>] (partes/diagramas/der.tex
+<imagens/DER.png, id=593, 1529.715pt x 1385.175pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 3.
@@ -1427,9 +1425,9 @@ r/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (40 pages, 3796422 bytes).
+Output written on main.pdf (40 pages, 3797160 bytes).
 PDF statistics:
- 683 PDF objects out of 1000 (max. 8388607)
+ 685 PDF objects out of 1000 (max. 8388607)
  151 named destinations out of 1000 (max. 500000)
  630 words of extra memory for PDF output out of 10000 (max. 10000000)
 
