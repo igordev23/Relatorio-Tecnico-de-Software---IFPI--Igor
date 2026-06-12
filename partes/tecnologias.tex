@@ -1,32 +1,203 @@
 \section{Tecnologias Envolvidas}
-Descrição das linguagens, frameworks, banco de dados e ferramentas utilizadas no desenvolvimento e implantação do sistema.
+\label{sec:tecnologias}
 
+Este capítulo apresenta as tecnologias empregadas no desenvolvimento do sistema, organizadas em frontend, backend e infraestrutura, com uma discussão sobre o papel de cada uma, os motivos de sua escolha e as alternativas consideradas durante o processo de decisão.
+
+Arquiteturalmente, o sistema é composto por duas aplicações independentes, cada uma com seu próprio repositório, dependências, ferramenta de build e pipeline de deploy: uma \textit{Single Page Application} (SPA) para o frontend e uma API REST para o backend. As seções a seguir detalham as tecnologias de cada camada.
+
+\subsection{Frontend}
+\label{sec:frontend}
+
+A camada de apresentação foi construída com tecnologias modernas do ecossistema JavaScript, priorizando tipagem estática, experiência de desenvolvimento produtiva e performance em tempo de execução.
+
+\subsubsection{React 19}
+React é uma biblioteca JavaScript para construção de interfaces de usuário baseada no conceito de componentes reutilizáveis e estado unidirecional \cite{benkora2024}. A versão 19 introduz melhorias significativas no modelo de concorrência, como o novo hook \texttt{use()}, que permite leitura assíncrona de recursos diretamente no corpo do componente, e as \textit{Actions} para gerenciamento nativo de formulários, reduzindo a necessidade de bibliotecas externas para controle de estado de formulários.
+
+A escolha do React 19 baseou-se em dois fatores principais: (1) maturidade do ecossistema, com ampla disponibilidade de bibliotecas e documentação; e (2) modelo de componentes que favorece a modularidade e a testabilidade do código. Alternativas como Vue.js e Angular foram descartadas respectivamente pelo ecossistema menos consolidado para o tipo de aplicação e pela curva de aprendizado mais steep.
+
+\subsubsection{TypeScript}
+TypeScript é um superconjunto tipado de JavaScript que compila para JavaScript puro. Seu sistema de tipos estrutural permite detectar erros comuns em tempo de compilação, como acesso a propriedades inexistentes, passagem de argumentos com tipos incompatíveis e retorno incorreto de funções \cite{typescript2025}.
+
+A adoção do TypeScript em vez de JavaScript puro deveu-se à necessidade de contratos explícitos entre módulos e à segurança proporcionada pela verificação estática de tipos: erros como acesso a propriedades inexistentes ou argumentos com tipos incorretos são detectados em tempo de compilação, e não em runtime. Alternativas como Flow (Facebook) foram descartadas por seu ecossistema significativamente menor — o Flow não é suportado nativamente por ferramentas como ESLint, Prettier e o próprio Vite — e pela comunidade majoritariamente concentrada no TypeScript, que resulta em melhor documentação, mais tipos publicados (\texttt{@types/*}) e suporte de primeira classe em IDEs.
+
+No projeto, o TypeScript foi utilizado em toda a camada frontend. O recurso de \textit{generics} possibilitou a criação de hooks e utilitários reutilizáveis com segurança de tipos, enquanto \textit{union types} e \textit{discriminated unions} foram empregados para modelar estados de carregamento, erro e sucesso das requisições assíncronas.
+
+\subsubsection{Tailwind CSS}
+Tailwind CSS é um framework de estilização baseado no paradigma \textit{utility-first}, fornecendo classes atômicas de baixo nível (como \texttt{flex}, \texttt{p-4}, \texttt{text-lg}) que são compostas diretamente no markup HTML/JSX \cite{tailwind2025}. Diferentemente de abordagens tradicionais como Bootstrap (baseada em componentes pré-construídos), o Tailwind oferece maior flexibilidade de design sem a necessidade de sobrescrever estilos padrão.
+
+Na versão 4, o Tailwind adota uma abordagem \textit{CSS-first}, eliminando a necessidade do arquivo \texttt{tailwind.config.js}. A configuração é feita diretamente via CSS com o diretório \texttt{@theme}, e o \textit{tree-shaking} é automático: o plugin \texttt{@tailwindcss/vite} detecta quais classes são usadas no código-fonte e gera apenas o CSS necessário, resultando em bundles tipicamente inferiores a 10 KB. A consistência visual foi garantida pela definição de um tema personalizado com cores, espaçamentos e tipografia alinhados à identidade visual do sistema.
+
+\subsubsection{shadcn/ui}
+shadcn/ui é uma coleção de componentes reutilizáveis construídos sobre \textit{Radix UI} (primitivas acessíveis e sem estilo) e estilizados com Tailwind CSS \cite{shadcn2025}. Diferentemente de bibliotecas tradicionais como Material UI ou Chakra UI, o shadcn/ui não é publicado como um pacote npm instalável --- os componentes são copiados diretamente para o código-fonte do projeto, concedendo controle total sobre a implementação e personalização.
+
+No sistema, foram utilizados 46 componentes do shadcn/ui, incluindo \texttt{Button}, \texttt{Card}, \texttt{Dialog}, \texttt{Form}, \texttt{Table}, \texttt{Sidebar}, \texttt{Chart} e \texttt{Toast}. O utilitário \texttt{class-variance-authority} gerencia variantes de componentes, enquanto \texttt{tailwind-merge} e \texttt{clsx} resolvem conflitos de classes CSS. O \texttt{Button}, por exemplo, oferece as variantes \texttt{default}, \texttt{destructive}, \texttt{outline}, \texttt{secondary}, \texttt{ghost} e \texttt{link}, todas definidas via \texttt{cva()} e utilizadas consistentemente em toda a interface.
+
+\subsubsection{TanStack Router}
+O TanStack Router é uma biblioteca de roteamento para React que adota uma abordagem declarativa e baseada em arquivos para definição de rotas \cite{tanstackrouter2025}. Seu diferencial em relação ao React Router DOM tradicional está no suporte a \textit{search params} tipados, \textit{loaders} e \textit{actions} que integram o carregamento de dados ao ciclo de vida da navegação.
+
+No sistema, as rotas foram organizadas em uma árvore aninhada que reflete a hierarquia de navegação do usuário: rotas públicas (login, validação de certificados), rotas protegidas (dashboard, gestão de eventos) e rotas administrativas (configurações, relatórios). O recurso de \textit{beforeLoad} foi utilizado para verificar a autenticação antes de renderizar qualquer rota protegida, redirecionando usuários não autenticados para a tela de login sem necessidade de estado global.
+
+O React Router DOM, embora mais difundido, foi preterido por não oferecer tipagem nativa para \textit{search params} e \textit{path params} — o desenvolvedor precisa declarar tipos manualmente ou usar bibliotecas auxiliares como \texttt{zod-router}. O TanStack Router infere os tipos automaticamente a partir da definição da rota, eliminando uma fonte comum de erros em tempo de execução. Além disso, seu modelo de \textit{loaders} e \textit{actions} elimina a necessidade de \texttt{useEffect} para buscar dados durante a navegação, substituindo-o por funções assíncronas executadas antes da renderização da rota.
+
+\subsubsection{TanStack React Query}
+O TanStack React Query (anteriormente React Query) é uma biblioteca para gerenciamento de estado assíncrono que abstrai o ciclo de vida completo de requisições a servidores: cache, \textit{background refetching}, \textit{paginação}, \textit{optimistic updates} e \textit{deduplicação} de requisições simultâneas \cite{tanstackquery2025}.
+
+No sistema, o \texttt{QueryClient} é instanciado e injetado no contexto do \textit{TanStack Router} (arquivo \texttt{router.tsx}), ficando acessível nas funções \textit{loader} das rotas para buscar dados antes da renderização da página. A motivação para sua adoção foi substituir a abordagem manual com \texttt{useEffect} + \texttt{useState}, que resulta em código boilerplate e carece de estratégia de cache consistente. Alternativas como Redux Toolkit Query e SWR foram avaliadas, optando-se pelo React Query por sua API mais expressiva para mutações complexas e integração nativa com o ecossistema TanStack.
+
+\subsubsection{React Hook Form}
+React Hook Form é uma biblioteca para gerenciamento de formulários em React que minimiza o número de re-renderizações ao utilizar refs em vez de estado controlado \cite{reacthookform2025}. Diferentemente do Formik, que mantém o estado do formulário no React state e dispara uma re-renderização a cada tecla digitada, o React Hook Form registra os campos via refs e só re-renderiza componentes específicos quando necessário — o que resulta em melhor desempenho em formulários com muitos campos. Sua integração com o Zod via \texttt{@hookform/resolvers} permite que os esquemas de validação definidos com Zod sejam reutilizados como regras de formulário, garantindo que as mesmas validações aplicadas no backend sejam executadas no frontend antes do envio.
+
+No sistema, o padrão adotado combina \texttt{useForm} com \texttt{zodResolver} para cada formulário (emissão de certificado, cadastro de template, etc.). As mensagens de erro retornadas pelo Zod são mapeadas automaticamente para os campos correspondentes e exibidas via componentes \texttt{FormMessage} do shadcn/ui. O modo \texttt{onBlur} dispara a validação no momento em que o usuário sai do campo, oferecendo feedback imediato sem a latência da validação a cada tecla.
+
+\subsubsection{Sonner}
+Sonner é uma biblioteca leve de notificações \textit{toast} para React, desenvolvida por Emil Kowalski \cite{sonner2025}. Diferentemente de alternativas como react-hot-toast ou notistack, o Sonner prioriza a simplicidade de API (exporta apenas as funções \texttt{toast} e \texttt{Toaster}) e a acessibilidade, com suporte nativo a leitores de tela.
+
+No sistema, o Sonner é utilizado para exibir feedback ao usuário após operações assíncronas: sucesso na emissão de certificados, erros de validação, confirmação de exclusão e falhas de rede. As notificações são posicionadas no canto superior direito e configuradas para desaparecer automaticamente após 4 segundos, exceto erros que requerem ação manual.
+
+\subsubsection{Recharts}
+Recharts é uma biblioteca de gráficos para React construída sobre os componentes SVG do D3, seguindo uma abordagem declarativa e composível \cite{recharts2025}. Cada tipo de gráfico é um componente React independente (\texttt{BarChart}, \texttt{PieChart}, \texttt{LineChart}), facilitando a personalização sem conhecimento aprofundado de SVG.
+
+A escolha do Recharts em vez do react-chartjs-2 (wrapper para Chart.js) deu-se pela integração mais natural com o ecossistema React: enquanto o Chart.js manipula o canvas diretamente e exige imperativamente chamar \texttt{update()} para refletir alterações nos dados, o Recharts utiliza SVG declarativo e reage automaticamente a mudanças de props — o que simplifica a manutenção de gráficos dinâmicos que se atualizam conforme o usuário filtra os dados no dashboard. O D3 puro foi descartado por sua API de baixo nível, que demandaria mais código boilerplate para alcançar o mesmo resultado.
+
+No sistema, o Recharts é utilizado no dashboard para exibir métricas como total de certificados emitidos por mês (gráfico de barras) e distribuição por tipo de template (gráfico de pizza). Os componentes \texttt{ResponsiveContainer}, \texttt{Tooltip} e \texttt{Legend} garantem que os gráficos se adaptem ao tamanho da tela e exibam informações contextuais ao passar o mouse.
+
+\subsubsection{date-fns}
+date-fns é uma biblioteca de utilitários para manipulação de datas em JavaScript, caracterizada por sua abordagem modular e funcional \cite{datefns2025}. Cada função é importada individualmente (\texttt{format}, \texttt{parse}, \texttt{differenceInDays}, \texttt{isAfter}), evitando o aumento desnecessário do bundle com código não utilizado.
+
+Alternativas como Moment.js foram descartadas porque o Moment.js é considerado obsoleto pela própria equipe de mantenedores (modo de manutenção desde 2020), possui API mutável que pode causar efeitos colaterais inesperados e não suporta \textit{tree-shaking} — importar uma única função inclui a biblioteca inteira no bundle final. O dayjs, embora mais leve que o Moment.js, foi preterido por sua API menos expressiva para operações como \textit{locale} customizado e formatação avançada. O date-fns, por sua vez, adota funções puras (sem mutação), é completamente modular e oferece suporte a 80+ locales, incluindo português brasileiro.
+
+No sistema, o date-fns é empregado para formatar datas de validade de certificados nos componentes de listagem, calcular diferenças entre datas para alertas de expiração e padronizar a exibição de datas no formato local (\texttt{dd/MM/yyyy}) via função \texttt{format}. A função \texttt{isAfter} é utilizada no modelo \texttt{certificate.ts} para determinar se um certificado está expirado.
+
+\subsubsection{Vite}
+Vite é uma ferramenta de build e servidor de desenvolvimento que utiliza módulos ES nativos durante o desenvolvimento para oferecer \textit{Hot Module Replacement} (HMR) instantâneo, eliminando a necessidade de empacotamento em tempo de desenvolvimento \cite{vite2025}. Em produção, utiliza Rollup para gerar bundles otimizados com \textit{code splitting} automático e \textit{lazy loading}.
+
+No projeto, o Vite é a ferramenta de build **exclusiva do frontend SPA** --- o backend Next.js utiliza seu próprio sistema de compilação (\texttt{next build}). Essa divisão reforça a independência entre as duas aplicações: alterações no frontend não exigem reconstrução do backend, e vice-versa. A substituição do Create React App (CRA) pelo Vite reduziu o tempo de inicialização do servidor de desenvolvimento de aproximadamente 30 segundos para menos de 2 segundos, e o HMR reflete alterações no código em milissegundos, melhorando significativamente a produtividade durante o desenvolvimento.
+
+\subsection{Integração com a API REST}
+\label{sec:api}
+
+O frontend comunica-se com um backend externo por meio de uma API REST, cuja URL base é configurada via variável de ambiente \texttt{VITE\_API\_URL}. As requisições são centralizadas em um módulo \texttt{api.ts} que utiliza a \texttt{fetch} API nativa do JavaScript, encapsulando o tratamento de erros e a serialização JSON. Os endpoints expostos incluem operações CRUD para templates e certificados, emissão de certificados, geração de PDF e verificação de autenticidade.
+
+\subsubsection{Zod}
+Zod é uma biblioteca de validação de esquemas com suporte primário a TypeScript, que permite definir esquemas de dados com inferência automática de tipos \cite{zod2025}. Diferentemente de alternativas como Joi ou Yup, o Zod foi projetado especificamente para integração com TypeScript, eliminando a necessidade de declarar tipos manualmente: o tipo é inferido diretamente do esquema de validação.
+
+No sistema, os esquemas Zod são utilizados em conjunto com o React Hook Form para validar as entradas dos formulários antes do envio à API. Um mesmo esquema pode validar desde o formato de e-mail até a estrutura completa de um cadastro de certificado, com mensagens de erro localizadas exibidas nos componentes \texttt{FormMessage} do shadcn/ui. Essa abordagem garante consistência entre a validação no frontend e as regras aplicadas pelo backend.
+
+\subsection{Backend}
+\label{sec:backend}
+
+O backend do sistema é uma API REST desenvolvida com Next.js e executada no Node.js 22 LTS \cite{nodejs2025}, seguindo os princípios da \textit{Clean Architecture}, que separa o código em três camadas: domínio (\textit{entities} e \textit{value objects} sem dependências externas), aplicação (\textit{use cases} e \textit{DTOs}) e infraestrutura (\textit{repositories}, \textit{services} e acesso a banco de dados). As dependências apontam para dentro: a camada de domínio define interfaces que a infraestrutura implementa, permitindo substituir implementações sem alterar a lógica de negócio.
+
+\subsubsection{Next.js 16}
+Next.js é um framework React que, em sua versão 16, oferece o \textit{App Router} com \textit{Route Handlers} para construção de APIs serverless \cite{nextjs2025}. Cada endpoint é definido como um arquivo em \texttt{src/app/api/} exportando funções assíncronas nomeadas (\texttt{GET}, \texttt{POST}, \texttt{PUT}, \texttt{DELETE}) --- não há necessidade de um servidor Express ou configuração de rotas manual.
+
+É importante destacar que, neste projeto, o Next.js é utilizado **exclusivamente como servidor de API (\textit{backend-only})**: não há páginas, layouts, \textit{Server Components} ou qualquer funcionalidade de renderização frontend. O diretório \texttt{src/app/} contém apenas subdiretórios \texttt{api/*} com \textit{Route Handlers}; não existe um \texttt{page.tsx} ou \texttt{layout.tsx} no projeto. O frontend é uma SPA completamente separada (descrita na Seção~\ref{sec:frontend}), que consome a API via HTTP. Essa separação foi intencional: o frontend SPA poderia ser substituído por outro cliente (como um aplicativo mobile) sem qualquer alteração no backend, e o backend poderia ser reescrito em outra linguagem sem afetar o frontend. O fato de o Next.js ser tipicamente associado a aplicações full-stack não invalida seu uso como servidor de API puro --- os \textit{Route Handlers} operam de forma independente do sistema de páginas e podem substituir frameworks como Express ou Fastify com menos configuração.
+
+No sistema, os \textit{Route Handlers} do Next.js atuam como a camada mais externa da aplicação: recebem a requisição, validam os parâmetros com Zod, instanciam os \textit{use cases} com as dependências necessárias (\textit{repositories} e \textit{services}) e retornam a resposta. O arquivo \texttt{next.config.ts} configura cabeçalhos CORS para permitir requisições do frontend (\texttt{http://10.17.40.207:5173}) e isola o PDFKit como pacote exclusivo do servidor via \texttt{serverExternalPackages}.
+
+Alternativas como Express e Fastify foram consideradas, mas descartadas porque exigiriam configuração manual de middlewares, roteamento e integração com TypeScript. O Next.js oferece essas funcionalidades de forma nativa (roteamento baseado em arquivos, suporte a TypeScript sem \textit{tsconfig} adicional, variáveis de ambiente validadas com Zod via \texttt{next.config.ts}), além de simplificar o deploy ao produzir um único artefato \textit{serverless}. Já o NestJS, embora traga uma arquitetura modular madura, foi preterido por sua curva de aprendizado mais acentuada e pela sobrecarga de abstrações (decorators, módulos, injetores) que não se alinhavam à simplicidade almejada para o projeto.
+
+\subsubsection{Supabase e PostgreSQL}
+Supabase é uma plataforma \textit{open-source} que oferece PostgreSQL como serviço gerenciado, com APIs REST auto-geradas e autenticação integrada \cite{supabase2025}. Diferentemente do Firebase (Google), que utiliza um banco NoSQL proprietário, o Supabase utiliza PostgreSQL, um banco relacional maduro que permite consultas complexas, integridade referencial e transações ACID.
+
+A escolha do Supabase em vez de alternativas como Firebase foi motivada pelo modelo de dados relacional do sistema: certificados e templates possuem relações bem definidas (um template pode gerar muitos certificados) e exigem integridade referencial via chaves estrangeiras, algo que o Firestore (NoSQL do Firebase) não oferece nativamente, exigindo validações manuais no código da aplicação. O Appwrite, outra alternativa \textit{open-source} BaaS, foi descartado por seu ecossistema menos maduro e pela ausência de um cliente oficial com suporte a SSR para Next.js no momento da decisão.
+
+No sistema, o Supabase é utilizado exclusivamente como banco de dados relacional. As consultas são feitas via \texttt{@supabase/supabase-js} e \texttt{@supabase/ssr} (para compatibilidade com server-side rendering do Next.js), sem a utilização de ORMs como Prisma ou TypeORM. O PostgreSQL 16 \cite{postgresql2025} é o banco subjacente. A opção por queries SQL diretas — em vez de um ORM — deu-se pelo controle fino sobre as consultas: operações como inserção em lote e CTEs (\textit{Common Table Expressions}) são expressas de forma mais natural em SQL puro, sem as abstrações que um ORM impõe. O esquema do banco de dados contém duas tabelas principais: \texttt{templates} (com coluna \texttt{layout\_config} do tipo JSONB para configuração visual dos certificados) e \texttt{certificates} (com índices em \texttt{recipient\_cpf} e \texttt{verification\_code} para consultas eficientes de verificação). A nomenclatura segue \textit{snake\_case} no banco e \textit{camelCase} no código, com mapeamento manual nos repositórios.
+
+\subsubsection{PDFKit}
+PDFKit é uma biblioteca Node.js para geração de documentos PDF no lado do servidor, sem dependência de ferramentas externas como wkhtmltopdf ou LaTeX \cite{pdfkit2025}. Suporta texto com fontes embutidas, imagens, vetores e cores personalizadas.
+
+A escolha do PDFKit em detrimento de alternativas como Puppeteer baseou-se em eficiência de recursos: o Puppeteer exige a execução de um navegador Chromium headless completo para rasterizar HTML em PDF, consumindo tipicamente mais de 100 MB de memória por instância. Em um ambiente serverless, onde cada requisição pode inicializar uma nova instância, esse custo inviabiliza o uso. O PDFKit opera exclusivamente em Node.js, com footprint de memória da ordem de dezenas de megabytes, e permite controle programático preciso sobre cada elemento do documento — posicionamento absoluto, fontes embutidas e cores arbitrárias — sem a intermediação de um motor de renderização HTML. Bibliotecas como jsPDF foram descartadas por operarem no lado do cliente (navegador), o que as tornaria inadequadas para um fluxo de geração server-side.
+
+No sistema, o PDFKitService implementa a interface \texttt{IPDFService} definida no domínio, seguindo o princípio de inversão de dependência. O certificado é gerado em formato paisagem A4, com fundo colorido, bordas decorativas, título ``CERTIFICADO'', nome do destinatário, curso, carga horária, datas de emissão e validade, CPF formatado e código de verificação gerado com UUID v4 \cite{uuid2025}. Todas as cores, tamanhos e visibilidade dos elementos são controlados pelo \texttt{layoutConfig} do template, armazenado como JSONB no banco de dados. O PDF é retornado como \texttt{Buffer} e streamado diretamente na resposta HTTP.
+
+\subsubsection{Zod}
+Zod é uma biblioteca de validação de esquemas que, na versão 4, oferece inferência automática de tipos e composição de esquemas \cite{zod2025}. No backend, os esquemas são definidos em \texttt{application/dtos/index.ts} e utilizados nos \textit{Route Handlers} para validar o corpo das requisições antes de repassá-los aos \textit{use cases}. Essa validação centralizada garante que apenas dados consistentes cheguem à camada de domínio.
+
+\subsubsection{Arquitetura e Padrões}
+A \textit{Clean Architecture} adotada no backend organiza o código em quatro pacotes principais: \texttt{domain} (entidades \texttt{Certificate} e \texttt{Template}, \textit{value object} \texttt{VerificationCode}, interfaces de repositório e serviço), \texttt{application} (\textit{use cases} como \texttt{EmitCertificateUseCase}, \texttt{GeneratePDFUseCase}, \texttt{VerifyCertificateUseCase} e DTOs de validação), \texttt{infrastructure} (implementações concretas \texttt{SupabaseCertificateRepository}, \texttt{SupabaseTemplateRepository}, \texttt{PDFKitService}) e \texttt{app} (\textit{Route Handlers} do Next.js). Cada \textit{use case} possui uma única responsabilidade, e as entidades de domínio encapsulam suas próprias regras de negócio (como \texttt{Certificate.updateValidity()} que valida a data antes de alterá-la).
+
+\subsection{Infraestrutura e Ferramentas}
+\label{sec:infra}
+
+\subsubsection{Render}
+Render é uma plataforma de cloud computing que oferece hospedagem simplificada para aplicações web, sites estáticos e serviços, com deploys automáticos a partir de repositórios Git e certificados SSL gratuitos \cite{render2025}.
+
+O frontend, construído como uma SPA com Vite, é compilado para arquivos estáticos (HTML, CSS, JS) e implantado como um \textit{Static Site} no Render. O deploy é acionado automaticamente a cada \textit{push} na branch principal do GitHub. O arquivo \texttt{index.html} na raiz do projeto serve como ponto de entrada, e o roteamento no lado do cliente é gerenciado pelo TanStack Router, que utiliza \textit{History API} para navegação sem recarregamento de página.
+
+Alternativas como Vercel e Netlify foram avaliadas. O Render foi escolhido por dois motivos principais: (1) suporte nativo a sites estáticos com deploys automáticos a partir do GitHub, sem limite de largura de banda na camada gratuita, diferentemente da Vercel que impõe limites de banda em planos gratuitos; e (2) a possibilidade de, futuramente, hospedar o backend como \textit{Web Service} na mesma plataforma, centralizando a gestão de infraestrutura em um único provedor. O Cloudflare Pages também foi descartado por seu ecossistema de \textit{Workers} focado em funções \textit{edge}, modelo que não se aplica a um backend Node.js tradicional com dependências como PDFKit.
+
+\subsubsection{Jest}
+Jest é um framework de testes JavaScript desenvolvido pelo Facebook, que oferece um conjunto completo de funcionalidades: \textit{runner} de testes, asserções, \textit{mocking}, \textit{code coverage} e \textit{snapshot testing} \cite{jest2025}. Suporte a TypeScript é provido via \texttt{ts-jest}.
+
+O Jest foi escolhido em detrimento do Vitest por dois motivos: (1) maturidade e estabilidade — o Jest possui mais de uma década de desenvolvimento, documentação extensa e uma comunidade consolidada, enquanto o Vitest, embora mais rápido por aproveitar o Vite, ainda estava em estágio inicial de adoção no momento da decisão do projeto; e (2) compatibilidade com o ecossistema — diversas bibliotecas do projeto (\texttt{@testing-library/react}, \texttt{jest-dom}, \texttt{ts-jest}) possuem integração madura e testada com o Jest, reduzindo o risco de incompatibilidades durante o desenvolvimento.
+
+No sistema, o Jest está configurado com cobertura mínima de 75\%, validada através da flag \texttt{--coverage} no pipeline de CI. Testes unitários foram escritos para as \textit{ViewModels} e funções utilitárias, enquanto a configuração de \textit{mocking} permite isolar as chamadas de API durante os testes sem depender de um servidor backend ativo.
+
+\subsubsection{ESLint e Prettier}
+ESLint é uma ferramenta de análise estática de código que identifica padrões problemáticos, erros de sintaxe e violações de boas práticas \cite{eslint2025}. Prettier \cite{prettier2025} é um formatador de código opinativo que garante consistência estilística em todo o projeto, eliminando discussões sobre espaçamento, aspas e ponto-e-vírgula.
+
+No sistema, ambos foram configurados com plugins específicos: \texttt{eslint-plugin-react-hooks} para garantir a correta utilização dos hooks do React, \texttt{@typescript-eslint} para regras de tipagem, e \texttt{eslint-config-prettier} para evitar conflitos entre as regras do ESLint e a formatação do Prettier. A integração com o VS Code via extensões permite que erros sejam destacados em tempo real e que o código seja formatado automaticamente ao salvar.
+
+\subsubsection{Git e GitHub}
+Git \cite{git2025} é um sistema de controle de versão distribuído que permite rastrear alterações no código-fonte, gerenciar ramos de desenvolvimento paralelo e colaborar entre múltiplos desenvolvedores. GitHub \cite{github2025} é a plataforma de hospedagem de repositórios que estende o Git com \textit{Pull Requests}, \textit{Issues}, \textit{Actions} para CI/CD e revisão de código.
+
+O fluxo de trabalho adotado foi o \textit{Git Flow} simplificado, com as branches \texttt{main} (produção), \texttt{dev} (desenvolvimento) e \texttt{feature/*} (funcionalidades específicas). Cada funcionalidade é desenvolvida em uma branch separada e integrada à \texttt{dev} via \textit{Pull Request}, que passa por revisão de código antes do merge.
+
+\subsubsection{Visual Studio Code}
+Visual Studio Code \cite{vscode2025} é um editor de código-fonte desenvolvido pela Microsoft, baseado no Electron e no protocolo \textit{Language Server Protocol} (LSP), que oferece suporte avançado a TypeScript, depuração integrada, terminal embutido e um ecossistema rico de extensões.
+
+A produtividade foi ampliada com extensões como ESLint (análise estática), Prettier (formatação automática), Tailwind CSS IntelliSense (autocompletar para classes) e GitHub Copilot (sugestões contextuais).
+
+\subsection{Síntese das Tecnologias}
+\label{sec:sintese}
+
+A Tabela~\ref{tab:tecnologias} apresenta um resumo das tecnologias discutidas neste capítulo, com suas respectivas finalidades no contexto do sistema.
 
 \begin{table}[H]
 \centering
-\caption{Tecnologias utilizadas}
-\begin{tabular}{@{}ll@{}}
+\caption{Tecnologias utilizadas no desenvolvimento do sistema}
+\label{tab:tecnologias}
+\begin{tabular}{@{}lll@{}}
 \toprule
-\textbf{Tecnologia} & \textbf{Descrição} \\
+\textbf{Tecnologia} & \textbf{Versão} & \textbf{Finalidade} \\
 \midrule
-React 19 & Desenvolvimento da interface do usuário (Frontend) \\
-TypeScript & Linguagem de programação com tipagem estática \\
-Tailwind CSS & Estilização da interface \\
-TanStack React Router & Gerenciamento de rotas \\
-TanStack React Query & Gerenciamento de estado assíncrono e cache \\
-Node.js & Ambiente de execução do backend \\
-Next.js & Framework para API e funcionalidades do servidor \\
-Supabase & Plataforma de banco de dados e autenticação \\
-PostgreSQL & Sistema de gerenciamento de banco de dados relacional \\
-Zod & Validação de dados \\
-PDFKit & Geração de certificados em PDF \\
-Jest & Testes unitários e de integração \\
-Docker & Conteinerização da aplicação \\
-Render & Hospedagem e deploy do frontend e backend \\
-Git & Controle de versão do código-fonte \\
-GitHub & Repositório remoto e colaboração da equipe \\
-Visual Studio Code & Ambiente de Desenvolvimento Integrado (IDE) \\
-Vite & Ferramenta de build e desenvolvimento frontend \\
+\multicolumn{3}{l}{\textbf{Frontend}} \\
+React & 19 & Construção da interface com componentes reutilizáveis \\
+TypeScript & 5.x & Tipagem estática e segurança em tempo de compilação \\
+Tailwind CSS & 4.x & Estilização utilitária com configuração CSS-first \\
+shadcn/ui & \textasciitilde 2.x & Componentes reutilizáveis baseados em Radix UI \\
+TanStack Router & \textasciitilde 1.x & Roteamento declarativo com proteção de rotas \\
+TanStack React Query & \textasciitilde 5.x & Gerenciamento de cache e estado assíncrono \\
+React Hook Form & \textasciitilde 7.x & Gerenciamento performático de formulários \\
+Sonner & \textasciitilde 2.x & Notificações toast acessíveis \\
+Recharts & \textasciitilde 2.x & Gráficos declarativos para dashboard \\
+date-fns & \textasciitilde 4.x & Utilitários de manipulação de datas \\
+Vite & \textasciitilde 7.x & Servidor de desenvolvimento e empacotamento \\
+Zod & \textasciitilde 3.x / 4.x & Validação de esquemas no frontend e backend \\
+\midrule
+\multicolumn{3}{l}{\textbf{Backend}} \\
+Next.js & 16 & Framework para API REST com Route Handlers \\
+Node.js & 22 LTS & Ambiente de execução do servidor \\
+\midrule
+\multicolumn{3}{l}{\textbf{Banco de Dados}} \\
+Supabase & \textasciitilde 2.x & Plataforma de banco PostgreSQL gerenciado \\
+PostgreSQL & 16 & Banco relacional com integridade referencial \\
+\midrule
+\multicolumn{3}{l}{\textbf{Geração de Documentos}} \\
+PDFKit & \textasciitilde 0.18 & Geração server-side de certificados em PDF \\
+UUID & \textasciitilde 14.x & Geração de identificadores únicos para verificação \\
+\midrule
+\multicolumn{3}{l}{\textbf{Infraestrutura e DevOps}} \\
+Render & SaaS & Hospedagem do frontend como site estático \\
+Git & \textasciitilde 2.x & Controle de versão distribuído \\
+GitHub & SaaS & Repositório remoto e CI/CD via Actions \\
+\midrule
+\multicolumn{3}{l}{\textbf{Ferramentas de Desenvolvimento}} \\
+Jest & \textasciitilde 30.x & Testes unitários com cobertura mínima de 75\% \\
+ESLint & \textasciitilde 9.x & Análise estática e linting de código \\
+Prettier & \textasciitilde 3.x & Formatador opinativo de código \\
+Visual Studio Code & \textasciitilde 1.x & Ambiente de desenvolvimento integrado \\
 \bottomrule
 \end{tabular}
 \end{table}
