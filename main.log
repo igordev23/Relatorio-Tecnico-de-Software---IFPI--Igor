@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  12 JUN 2026 14:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  12 JUN 2026 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -952,59 +952,65 @@ rio \T1/pcr/m/n/12 class-variance-authority
  []
 
 [9] [10]
-Overfull \hbox (9.2685pt too wide) in paragraph at lines 47--48
+Overfull \hbox (9.2685pt too wide) in paragraph at lines 49--50
 []\T1/ptm/m/n/12 Sonner é uma bi-bli-o-teca leve de no-ti-fi-ca-ções \T1/ptm/m/
 it/12 to-ast \T1/ptm/m/n/12 para Re-act, de-sen-vol-vida por Emil Kowalski
  []
 
 [11] [12]
-Overfull \hbox (11.74266pt too wide) in paragraph at lines 84--85
+Overfull \hbox (11.74266pt too wide) in paragraph at lines 86--87
 \T1/ptm/m/n/12 dên-cias ne-ces-sá-rias (\T1/ptm/m/it/12 re-po-si-to-ries \T1/pt
 m/m/n/12 e \T1/ptm/m/it/12 ser-vi-ces\T1/ptm/m/n/12 ) e re-tor-nam a res-posta.
  O ar-quivo \T1/pcr/m/n/12 next.config.ts
  []
 
 
-Overfull \hbox (39.05617pt too wide) in paragraph at lines 84--85
+Overfull \hbox (39.05617pt too wide) in paragraph at lines 86--87
 \T1/ptm/m/n/12 con-fi-gura ca-be-ça-lhos CORS para per-mi-tir re-qui-si-ções do
  fron-tend (\T1/pcr/m/n/12 http://10.17.40.207:5173\T1/ptm/m/n/12 )
  []
 
 
-Overfull \hbox (7.50868pt too wide) in paragraph at lines 89--90
-\T1/pcr/m/n/12 layout_config \T1/ptm/m/n/12 do tipo JSONB para con-fi-gu-ra-ção
- vi-sual dos cer-ti-fi-ca-dos) e \T1/pcr/m/n/12 certificates
+Overfull \hbox (1.26834pt too wide) in paragraph at lines 88--89
+\T1/ptm/m/n/12 cript sem \T1/ptm/m/it/12 ts-con-fig \T1/ptm/m/n/12 adi-ci-o-nal
+, va-ri-á-veis de am-bi-ente va-li-da-das com Zod via \T1/pcr/m/n/12 next.confi
+g.ts\T1/ptm/m/n/12 ),
  []
 
-[13]
-Overfull \hbox (26.15733pt too wide) in paragraph at lines 100--101
+[13] [14]
+Overfull \hbox (26.15733pt too wide) in paragraph at lines 108--109
 \T1/ptm/m/n/12 ter-fa-ces de re-po-si-tó-rio e ser-viço), \T1/pcr/m/n/12 applic
 ation \T1/ptm/m/n/12 (\T1/ptm/m/it/12 use ca-ses \T1/ptm/m/n/12 como \T1/pcr/m/
 n/12 EmitCertificateUseCase\T1/ptm/m/n/12 ,
  []
 
 
-Overfull \hbox (63.371pt too wide) in paragraph at lines 100--101
+Overfull \hbox (63.371pt too wide) in paragraph at lines 108--109
 \T1/pcr/m/n/12 GeneratePDFUseCase\T1/ptm/m/n/12 , \T1/pcr/m/n/12 VerifyCertific
 ateUseCase \T1/ptm/m/n/12 e DTOs de va-li-da-ção), \T1/pcr/m/n/12 infrastructur
 e
  []
 
 
-Overfull \hbox (81.03407pt too wide) in paragraph at lines 100--101
+Overfull \hbox (81.03407pt too wide) in paragraph at lines 108--109
 \T1/ptm/m/n/12 (im-ple-men-ta-ções con-cre-tas \T1/pcr/m/n/12 SupabaseCertifica
 teRepository\T1/ptm/m/n/12 , \T1/pcr/m/n/12 SupabaseTemplateRepository\T1/ptm/m
 /n/12 ,
  []
 
-[14]
-Overfull \hbox (49.48158pt too wide) in paragraph at lines 118--119
+[15] [16]
+Overfull \hbox (49.48158pt too wide) in paragraph at lines 128--129
 []\T1/ptm/m/n/12 No sis-tema, am-bos fo-ram con-fi-gu-ra-dos com plu-gins es-pe
 -cí-fi-cos: \T1/pcr/m/n/12 eslint-plugin-react-hooks
  []
 
-[15]) (partes/modelagem.tex [16] (partes/requisitos/rf.tex [17] [18] [19]
-[20] [21]) (partes/requisitos/rfn.tex [22] [23] [24] [25])
+
+Overfull \hbox (63.87202pt too wide) in paragraph at lines 149--183
+ [][] 
+ []
+
+[17]) (partes/modelagem.tex [18] (partes/requisitos/rf.tex [19] [20] [21]
+[22] [23]) (partes/requisitos/rfn.tex [24] [25] [26] [27])
 (partes/diagramas/casos_de_uso.tex
 
 ! Package pgfkeys Error: I do not know the key '/tikz/ellipse' and I am going t
@@ -1273,8 +1279,8 @@ l.90 }
       
 (That was another \errmessage.)
 
-[26]) (partes/diagramas/Diagrama_de_Classes.tex
-<imagens/diagrama-de-classes.png, id=546, 1541.76pt x 1027.84pt>
+[28]) (partes/diagramas/Diagrama_de_Classes.tex
+<imagens/diagrama-de-classes.png, id=554, 1541.76pt x 1027.84pt>
 File: imagens/diagrama-de-classes.png Graphic file (type png)
 <use imagens/diagrama-de-classes.png>
 Package pdftex.def Info: imagens/diagrama-de-classes.png  used on input line 5.
@@ -1282,29 +1288,29 @@ Package pdftex.def Info: imagens/diagrama-de-classes.png  used on input line 5.
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
 )
 (partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=547, 1166.3575pt x 1359.0775pt>
+<imagens/backend.png, id=555, 1166.3575pt x 1359.0775pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 477.4055pt.
 )
-(partes/diagramas/arquitetura-frontend.tex [27 <./imagens/diagrama-de-classes.p
+(partes/diagramas/arquitetura-frontend.tex [29 <./imagens/diagrama-de-classes.p
 ng (PNG copy)>]
-<imagens/frontend.png, id=554, 1541.76pt x 1027.84pt>
+<imagens/frontend.png, id=563, 1541.76pt x 1027.84pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
-) [28 <./imagens/backend.png (PNG copy)>]
+) [30 <./imagens/backend.png (PNG copy)>]
 (partes/diagramas/der.tex
-<imagens/DER.png, id=560, 1529.715pt x 1385.175pt>
+<imagens/DER.png, id=569, 1529.715pt x 1385.175pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 371.00093pt.
-) [29 <./imagens/frontend.png (PNG copy)>])
-(partes/software.tex) (partes/consideracoes.tex) [30 <./imagens/DER.png>]
-[31] (main.bbl
+) [31 <./imagens/frontend.png (PNG copy)>])
+(partes/software.tex) (partes/consideracoes.tex) [32 <./imagens/DER.png>]
+[33] (main.bbl
 Underfull \hbox (badness 5652) in paragraph at lines 23--28
 []\T1/ptm/m/n/12 KULKARNI, R. et al. A se-cure cer-ti-fi-cate authen-ti-ca-tion
  sys-tem using cryp-
@@ -1346,7 +1352,7 @@ Underfull \hbox (badness 3148) in paragraph at lines 73--75
 r Re-act\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-[32]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 83--85
 []\T1/ptm/m/n/12 CONTRIBUTORS date-fns. \T1/ptm/m/it/12 date-fns Do-cu-men-ta-t
 ion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
@@ -1364,7 +1370,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--126
 m/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-) [33] (partes/anexos.tex) [34] (main.aux)
+) [35] (partes/anexos.tex) [36] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1373,22 +1379,22 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 6F3D7F586C65190FE694C1FC963EAB02;12699.
  ) 
 Here is how much of TeX's memory you used:
- 26391 strings out of 467871
- 493131 string characters out of 5418376
+ 26393 strings out of 467871
+ 493145 string characters out of 5418376
  1148103 words of memory out of 5000000
  54645 multiletter control sequences out of 15000+600000
  654054 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,94p,910b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,94p,1060b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi12.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courie
 r/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (36 pages, 3782627 bytes).
+Output written on main.pdf (38 pages, 3787435 bytes).
 PDF statistics:
- 644 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
+ 655 PDF objects out of 1000 (max. 8388607)
+ 141 named destinations out of 1000 (max. 500000)
  630 words of extra memory for PDF output out of 10000 (max. 10000000)
 

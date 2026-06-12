@@ -33,6 +33,8 @@ O TanStack Router é uma biblioteca de roteamento para React que adota uma abord
 
 No sistema, as rotas foram organizadas em uma árvore aninhada que reflete a hierarquia de navegação do usuário: rotas públicas (login, validação de certificados), rotas protegidas (dashboard, gestão de eventos) e rotas administrativas (configurações, relatórios). O recurso de \textit{beforeLoad} foi utilizado para verificar a autenticação antes de renderizar qualquer rota protegida, redirecionando usuários não autenticados para a tela de login sem necessidade de estado global.
 
+O React Router DOM, embora mais difundido, foi preterido por não oferecer tipagem nativa para \textit{search params} e \textit{path params} — o desenvolvedor precisa declarar tipos manualmente ou usar bibliotecas auxiliares como \texttt{zod-router}. O TanStack Router infere os tipos automaticamente a partir da definição da rota, eliminando uma fonte comum de erros em tempo de execução. Além disso, seu modelo de \textit{loaders} e \textit{actions} elimina a necessidade de \texttt{useEffect} para buscar dados durante a navegação, substituindo-o por funções assíncronas executadas antes da renderização da rota.
+
 \subsubsection{TanStack React Query}
 O TanStack React Query (anteriormente React Query) é uma biblioteca para gerenciamento de estado assíncrono que abstrai o ciclo de vida completo de requisições a servidores: cache, \textit{background refetching}, \textit{paginação}, \textit{optimistic updates} e \textit{deduplicação} de requisições simultâneas \cite{tanstackquery2025}.
 
@@ -83,13 +85,19 @@ Next.js é um framework React que, em sua versão 16, oferece o \textit{App Rout
 
 No sistema, os \textit{Route Handlers} do Next.js atuam como a camada mais externa da aplicação: recebem a requisição, validam os parâmetros com Zod, instanciam os \textit{use cases} com as dependências necessárias (\textit{repositories} e \textit{services}) e retornam a resposta. O arquivo \texttt{next.config.ts} configura cabeçalhos CORS para permitir requisições do frontend (\texttt{http://10.17.40.207:5173}) e isola o PDFKit como pacote exclusivo do servidor via \texttt{serverExternalPackages}.
 
+Alternativas como Express e Fastify foram consideradas, mas descartadas porque exigiriam configuração manual de middlewares, roteamento e integração com TypeScript. O Next.js oferece essas funcionalidades de forma nativa (roteamento baseado em arquivos, suporte a TypeScript sem \textit{tsconfig} adicional, variáveis de ambiente validadas com Zod via \texttt{next.config.ts}), além de simplificar o deploy ao produzir um único artefato \textit{serverless}. Já o NestJS, embora traga uma arquitetura modular madura, foi preterido por sua curva de aprendizado mais acentuada e pela sobrecarga de abstrações (decorators, módulos, injetores) que não se alinhavam à simplicidade almejada para o projeto.
+
 \subsubsection{Supabase e PostgreSQL}
 Supabase é uma plataforma \textit{open-source} que oferece PostgreSQL como serviço gerenciado, com APIs REST auto-geradas e autenticação integrada \cite{supabase2025}. Diferentemente do Firebase (Google), que utiliza um banco NoSQL proprietário, o Supabase utiliza PostgreSQL, um banco relacional maduro que permite consultas complexas, integridade referencial e transações ACID.
 
-No sistema, o Supabase é utilizado exclusivamente como banco de dados relacional. As consultas são feitas via \texttt{@supabase/supabase-js} e \texttt{@supabase/ssr} (para compatibilidade com server-side rendering do Next.js), sem a utilização de ORMs como Prisma ou TypeORM. O esquema do banco de dados contém duas tabelas principais: \texttt{templates} (com coluna \texttt{layout\_config} do tipo JSONB para configuração visual dos certificados) e \texttt{certificates} (com índices em \texttt{recipient\_cpf} e \texttt{verification\_code} para consultas eficientes de verificação). A nomenclatura segue \textit{snake\_case} no banco e \textit{camelCase} no código, com mapeamento manual nos repositórios.
+A escolha do Supabase em vez de alternativas como Firebase foi motivada pelo modelo de dados relacional do sistema: certificados e templates possuem relações bem definidas (um template pode gerar muitos certificados) e exigem integridade referencial via chaves estrangeiras, algo que o Firestore (NoSQL do Firebase) não oferece nativamente, exigindo validações manuais no código da aplicação. O Appwrite, outra alternativa \textit{open-source} BaaS, foi descartado por seu ecossistema menos maduro e pela ausência de um cliente oficial com suporte a SSR para Next.js no momento da decisão.
+
+No sistema, o Supabase é utilizado exclusivamente como banco de dados relacional. As consultas são feitas via \texttt{@supabase/supabase-js} e \texttt{@supabase/ssr} (para compatibilidade com server-side rendering do Next.js), sem a utilização de ORMs como Prisma ou TypeORM. A opção por queries SQL diretas — em vez de um ORM — deu-se pelo controle fino sobre as consultas: operações como inserção em lote e CTEs (\textit{Common Table Expressions}) são expressas de forma mais natural em SQL puro, sem as abstrações que um ORM impõe. O esquema do banco de dados contém duas tabelas principais: \texttt{templates} (com coluna \texttt{layout\_config} do tipo JSONB para configuração visual dos certificados) e \texttt{certificates} (com índices em \texttt{recipient\_cpf} e \texttt{verification\_code} para consultas eficientes de verificação). A nomenclatura segue \textit{snake\_case} no banco e \textit{camelCase} no código, com mapeamento manual nos repositórios.
 
 \subsubsection{PDFKit}
 PDFKit é uma biblioteca Node.js para geração de documentos PDF no lado do servidor, sem dependência de ferramentas externas como wkhtmltopdf ou LaTeX \cite{pdfkit2025}. Suporta texto com fontes embutidas, imagens, vetores e cores personalizadas.
+
+A escolha do PDFKit em detrimento de alternativas como Puppeteer baseou-se em eficiência de recursos: o Puppeteer exige a execução de um navegador Chromium headless completo para rasterizar HTML em PDF, consumindo tipicamente mais de 100 MB de memória por instância. Em um ambiente serverless, onde cada requisição pode inicializar uma nova instância, esse custo inviabiliza o uso. O PDFKit opera exclusivamente em Node.js, com footprint de memória da ordem de dezenas de megabytes, e permite controle programático preciso sobre cada elemento do documento — posicionamento absoluto, fontes embutidas e cores arbitrárias — sem a intermediação de um motor de renderização HTML. Bibliotecas como jsPDF foram descartadas por operarem no lado do cliente (navegador), o que as tornaria inadequadas para um fluxo de geração server-side.
 
 No sistema, o PDFKitService implementa a interface \texttt{IPDFService} definida no domínio, seguindo o princípio de inversão de dependência. O certificado é gerado em formato paisagem A4, com fundo colorido, bordas decorativas, título ``CERTIFICADO'', nome do destinatário, curso, carga horária, datas de emissão e validade, CPF formatado e código de verificação. Todas as cores, tamanhos e visibilidade dos elementos são controlados pelo \texttt{layoutConfig} do template, armazenado como JSONB no banco de dados. O PDF é retornado como \texttt{Buffer} e streamado diretamente na resposta HTTP.
 
@@ -106,6 +114,8 @@ A \textit{Clean Architecture} adotada no backend organiza o código em quatro pa
 Render é uma plataforma de cloud computing que oferece hospedagem simplificada para aplicações web, sites estáticos e serviços, com deploys automáticos a partir de repositórios Git e certificados SSL gratuitos \cite{render2025}.
 
 O frontend, construído como uma SPA com Vite, é compilado para arquivos estáticos (HTML, CSS, JS) e implantado como um \textit{Static Site} no Render. O deploy é acionado automaticamente a cada \textit{push} na branch principal do GitHub. O arquivo \texttt{index.html} na raiz do projeto serve como ponto de entrada, e o roteamento no lado do cliente é gerenciado pelo TanStack Router, que utiliza \textit{History API} para navegação sem recarregamento de página.
+
+Alternativas como Vercel e Netlify foram avaliadas. O Render foi escolhido por dois motivos principais: (1) suporte nativo a sites estáticos com deploys automáticos a partir do GitHub, sem limite de largura de banda na camada gratuita, diferentemente da Vercel que impõe limites de banda em planos gratuitos; e (2) a possibilidade de, futuramente, hospedar o backend como \textit{Web Service} na mesma plataforma, centralizando a gestão de infraestrutura em um único provedor. O Cloudflare Pages também foi descartado por seu ecossistema de \textit{Workers} focado em funções \textit{edge}, modelo que não se aplica a um backend Node.js tradicional com dependências como PDFKit.
 
 \subsubsection{Jest}
 Jest é um framework de testes JavaScript desenvolvido pelo Facebook, que oferece um conjunto completo de funcionalidades: \textit{runner} de testes, asserções, \textit{mocking}, \textit{code coverage} e \textit{snapshot testing} \cite{jest2025}. Suporte a TypeScript é provido via \texttt{ts-jest}.
@@ -151,9 +161,8 @@ React Hook Form & \textasciitilde 7.x & Gerenciamento performático de formulár
 Sonner & \textasciitilde 2.x & Notificações toast acessíveis \\
 Recharts & \textasciitilde 2.x & Gráficos declarativos para dashboard \\
 date-fns & \textasciitilde 4.x & Utilitários de manipulação de datas \\
-Zod & \textasciitilde 3.x & Validação de formulários com React Hook Form \\
 Vite & \textasciitilde 7.x & Servidor de desenvolvimento e empacotamento \\
-Zod & \textasciitilde 3.x / 4.x & Validação de esquemas no frontend e backend \\
+Zod & \textasciitilde 3.x / 4.x & Validação de esquemas no frontend (com React Hook Form) e backend \\
 \midrule
 \multicolumn{3}{l}{\textbf{Backend}} \\
 Next.js & 16 & Framework para API REST com Route Handlers \\
