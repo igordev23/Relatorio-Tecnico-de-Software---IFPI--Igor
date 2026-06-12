@@ -265,9 +265,6 @@ INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\t1ptm.fd
 INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\t1ptm.fd
 INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\t1ptm.fd
 INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT .\main.aux
-INPUT .\main.aux
-INPUT main.aux
 OUTPUT main.aux
 INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -324,9 +321,6 @@ INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
-INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
-INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
 INPUT .\partes\tecnologias.tex
 INPUT .\partes\tecnologias.tex
 INPUT .\partes\tecnologias.tex
@@ -360,6 +354,9 @@ INPUT .\partes\modelagem.tex
 INPUT .\partes\modelagem.tex
 INPUT .\partes\modelagem.tex
 INPUT partes\modelagem.tex
+INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
+INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
 INPUT .\partes\requisitos\rf.tex
 INPUT .\partes\requisitos\rf.tex
 INPUT partes\requisitos\rf.tex
@@ -384,6 +381,8 @@ INPUT .\imagens\diagrama-de-classes.png
 INPUT .\imagens\diagrama-de-classes.png
 INPUT .\imagens\diagrama-de-classes.png
 INPUT .\imagens\diagrama-de-classes.png
+INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT .\partes\diagramas\arquitetura-backend.tex
 INPUT .\partes\diagramas\arquitetura-backend.tex
 INPUT .\partes\diagramas\arquitetura-backend.tex
@@ -401,8 +400,6 @@ INPUT .\partes\diagramas\arquitetura-frontend.tex
 INPUT .\partes\diagramas\arquitetura-frontend.tex
 INPUT .\partes\diagramas\arquitetura-frontend.tex
 INPUT partes\diagramas\arquitetura-frontend.tex
-INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
-INPUT C:\Users\franc\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT .\imagens\frontend.png
 INPUT .\imagens\frontend.png
 INPUT .\imagens\frontend.png
@@ -432,6 +429,9 @@ INPUT .\partes\consideracoes.tex
 INPUT .\partes\consideracoes.tex
 INPUT .\partes\consideracoes.tex
 INPUT partes\consideracoes.tex
+INPUT .\main.bbl
+INPUT .\main.bbl
+INPUT main.bbl
 INPUT .\partes\anexos.tex
 INPUT .\partes\anexos.tex
 INPUT .\partes\anexos.tex
