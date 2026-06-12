@@ -1,48 +1,48 @@
 \babel@toc {brazil}{}\relax 
-\contentsline {section}{\numberline {1.0}Introdução}{4}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Objetivos}{5}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Geral}{5}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.2}Específicos}{5}{subsubsection.1.1.2}%
-\contentsline {section}{\numberline {2.0}Tecnologias Envolvidas}{5}{section.2}%
-\contentsline {section}{\numberline {3.0}Modelagem do Projeto}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Levantamento de Requisitos}{6}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Módulo de Autenticação e Controle de Acesso}{6}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Módulo de Templates de Certificados}{7}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Módulo de Entrada de Dados}{7}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Módulo de Geração de Certificados}{8}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Módulo de Envio e Comunicação}{8}{subsubsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {3.1.6}Módulo de Validação Pública e Antifraude}{8}{subsubsection.3.1.6}%
-\contentsline {subsubsection}{\numberline {3.1.7}Módulo de Assinaturas Digitais}{8}{subsubsection.3.1.7}%
-\contentsline {subsubsection}{\numberline {3.1.8}Módulo de Dashboard e Gestão}{9}{subsubsection.3.1.8}%
-\contentsline {subsubsection}{\numberline {3.1.9}Módulo de Auditoria e Segurança Operacional}{9}{subsubsection.3.1.9}%
-\contentsline {subsubsection}{\numberline {3.1.10}Módulo de Gestão de Cursos/Eventos}{9}{subsubsection.3.1.10}%
-\contentsline {subsubsection}{\numberline {3.1.11}Módulo de Participantes}{10}{subsubsection.3.1.11}%
-\contentsline {subsubsection}{\numberline {3.1.12}Módulo Multiempresa / Multi-tenant}{10}{subsubsection.3.1.12}%
-\contentsline {subsubsection}{\numberline {3.1.13}Módulo de Configurações do Sistema}{10}{subsubsection.3.1.13}%
-\contentsline {subsubsection}{\numberline {3.1.14}Módulo de Armazenamento e Arquivos}{10}{subsubsection.3.1.14}%
-\contentsline {subsubsection}{\numberline {3.1.15}Módulo de Notificações e Alertas}{10}{subsubsection.3.1.15}%
-\contentsline {subsubsection}{\numberline {3.1.16}Módulo de Monitoramento e Logs}{11}{subsubsection.3.1.16}%
-\contentsline {subsubsection}{\numberline {3.1.17}Módulo de Suporte, Operação e Manutenção}{11}{subsubsection.3.1.17}%
-\contentsline {subsubsection}{\numberline {3.1.18}Segurança}{11}{subsubsection.3.1.18}%
-\contentsline {subsubsection}{\numberline {3.1.19}Desempenho e Escalabilidade}{12}{subsubsection.3.1.19}%
-\contentsline {subsubsection}{\numberline {3.1.20}Disponibilidade e Confiabilidade}{12}{subsubsection.3.1.20}%
-\contentsline {subsubsection}{\numberline {3.1.21}Usabilidade e Acessibilidade}{13}{subsubsection.3.1.21}%
-\contentsline {subsubsection}{\numberline {3.1.22}Compatibilidade e Integração}{13}{subsubsection.3.1.22}%
-\contentsline {subsubsection}{\numberline {3.1.23}Armazenamento e Retenção}{13}{subsubsection.3.1.23}%
-\contentsline {subsubsection}{\numberline {3.1.24}Conformidade Legal e LGPD}{13}{subsubsection.3.1.24}%
-\contentsline {subsubsection}{\numberline {3.1.25}Arquitetura e Tecnologia}{14}{subsubsection.3.1.25}%
-\contentsline {subsubsection}{\numberline {3.1.26}Manutenção e Monitoramento}{15}{subsubsection.3.1.26}%
-\contentsline {subsubsection}{\numberline {3.1.27}Internacionalização}{15}{subsubsection.3.1.27}%
-\contentsline {subsection}{\numberline {3.2}Diagramas de casos de uso}{15}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Diagramas de classe}{16}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Arquitetura do Sistema}{17}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Diagrama Entidade-Relacionamento}{19}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Interfaces}{19}{subsection.3.6}%
-\contentsline {section}{\numberline {4.0}Software}{19}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Implantação}{19}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Testes}{19}{subsection.4.2}%
-\contentsline {section}{\numberline {5.0}Considerações Finais}{20}{section.5}%
-\contentsline {section}{Referências}{21}{section.5}%
-\contentsline {section}{\numberline {6.0}Anexos}{21}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{21}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{21}{subsection.6.2}%
+\contentsline {section}{\numberline {1.0}Introdução}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Objetivos}{6}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Geral}{6}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Específicos}{6}{subsubsection.1.1.2}%
+\contentsline {section}{\numberline {2.0}Tecnologias Envolvidas}{7}{section.2}%
+\contentsline {section}{\numberline {3.0}Modelagem do Projeto}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Levantamento de Requisitos}{7}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Módulo de Autenticação e Controle de Acesso}{8}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Módulo de Templates de Certificados}{8}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Módulo de Entrada de Dados}{8}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Módulo de Geração de Certificados}{9}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Módulo de Envio e Comunicação}{9}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Módulo de Validação Pública e Antifraude}{9}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.7}Módulo de Assinaturas Digitais}{10}{subsubsection.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.1.8}Módulo de Dashboard e Gestão}{10}{subsubsection.3.1.8}%
+\contentsline {subsubsection}{\numberline {3.1.9}Módulo de Auditoria e Segurança Operacional}{10}{subsubsection.3.1.9}%
+\contentsline {subsubsection}{\numberline {3.1.10}Módulo de Gestão de Cursos/Eventos}{10}{subsubsection.3.1.10}%
+\contentsline {subsubsection}{\numberline {3.1.11}Módulo de Participantes}{11}{subsubsection.3.1.11}%
+\contentsline {subsubsection}{\numberline {3.1.12}Módulo Multiempresa / Multi-tenant}{11}{subsubsection.3.1.12}%
+\contentsline {subsubsection}{\numberline {3.1.13}Módulo de Configurações do Sistema}{11}{subsubsection.3.1.13}%
+\contentsline {subsubsection}{\numberline {3.1.14}Módulo de Armazenamento e Arquivos}{11}{subsubsection.3.1.14}%
+\contentsline {subsubsection}{\numberline {3.1.15}Módulo de Notificações e Alertas}{11}{subsubsection.3.1.15}%
+\contentsline {subsubsection}{\numberline {3.1.16}Módulo de Monitoramento e Logs}{12}{subsubsection.3.1.16}%
+\contentsline {subsubsection}{\numberline {3.1.17}Módulo de Suporte, Operação e Manutenção}{12}{subsubsection.3.1.17}%
+\contentsline {subsubsection}{\numberline {3.1.18}Segurança}{12}{subsubsection.3.1.18}%
+\contentsline {subsubsection}{\numberline {3.1.19}Desempenho e Escalabilidade}{13}{subsubsection.3.1.19}%
+\contentsline {subsubsection}{\numberline {3.1.20}Disponibilidade e Confiabilidade}{13}{subsubsection.3.1.20}%
+\contentsline {subsubsection}{\numberline {3.1.21}Usabilidade e Acessibilidade}{14}{subsubsection.3.1.21}%
+\contentsline {subsubsection}{\numberline {3.1.22}Compatibilidade e Integração}{14}{subsubsection.3.1.22}%
+\contentsline {subsubsection}{\numberline {3.1.23}Armazenamento e Retenção}{14}{subsubsection.3.1.23}%
+\contentsline {subsubsection}{\numberline {3.1.24}Conformidade Legal e LGPD}{14}{subsubsection.3.1.24}%
+\contentsline {subsubsection}{\numberline {3.1.25}Arquitetura e Tecnologia}{15}{subsubsection.3.1.25}%
+\contentsline {subsubsection}{\numberline {3.1.26}Manutenção e Monitoramento}{16}{subsubsection.3.1.26}%
+\contentsline {subsubsection}{\numberline {3.1.27}Internacionalização}{16}{subsubsection.3.1.27}%
+\contentsline {subsection}{\numberline {3.2}Diagramas de casos de uso}{16}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Diagramas de classe}{17}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Arquitetura do Sistema}{18}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Diagrama Entidade-Relacionamento}{20}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Interfaces}{20}{subsection.3.6}%
+\contentsline {section}{\numberline {4.0}Software}{20}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Implantação}{20}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Testes}{20}{subsection.4.2}%
+\contentsline {section}{\numberline {5.0}Considerações Finais}{21}{section.5}%
+\contentsline {section}{Referências}{22}{section*.10}%
+\contentsline {section}{\numberline {6.0}Anexos}{23}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{23}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{23}{subsection.6.2}%

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1781231246.36931 "main.aux" "main.bbl" "main" 1781231259.81524 2
+["bibtex main"] 1781234778.33 "main.aux" "main.bbl" "main" 1781234783.86897 0
   "./referencias.bib" 1781229537 2381 385fd41b6061d99275b64be1b0f6e2a0 ""
   "C:/Users/franc/AppData/Local/Programs/MiKTeX/bibtex/bst/abntex2/abntex2-num.bst" 1543103230 60065 0bf58df5e47e1a6c21c910ec88a893f4 ""
-  "main.aux" 1781231259 8594 ff0496a01100fefc8da15ca2bfb61b82 "pdflatex"
+  "main.aux" 1781234783 8696 22999f914e771e84567fd1bdc9908bba "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781231257.55568 "c:/Users/franc/OneDrive/Documentos/ADS/TCC/Relatório_Técnico_de_Software___IFPI__Igor/main.tex" "main.pdf" "main" 1781231259.81599 2
+["pdflatex"] 1781234781.56905 "c:/Users/franc/OneDrive/Documentos/ADS/TCC/Relatório_Técnico_de_Software___IFPI__Igor/main.tex" "main.pdf" "main" 1781234783.8698 2
   "C:/Users/franc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1781227093 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/franc/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1781226556 13333487 a18c7193b3f4f72b45bceadd72a7853b ""
   "C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -185,17 +185,17 @@
   "C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/tools/indentfirst.sty" 1761901070 1618 30b01152766afcef2ed8f904cfdd3cc6 ""
   "C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/franc/OneDrive/Documentos/ADS/TCC/Relatório_Técnico_de_Software___IFPI__Igor/main.tex" 1781227365 2561 5ba79395f941c50baefcce6836783ee7 ""
+  "c:/Users/franc/OneDrive/Documentos/ADS/TCC/Relatório_Técnico_de_Software___IFPI__Igor/main.tex" 1781234391 2495 e686faf2012606a59bc31fc096350ff6 ""
   "imagens/DER.png" 1781221273 289205 28950ef9a1b41e5abd4e77d18e4fea31 ""
   "imagens/Logo-IFPI-Vertical.png" 1781221273 10068 4086d7f8a57d4b60b5437ff341fc1bbc ""
   "imagens/backend.png" 1781221273 958023 0e7dd065b8f182c093f6ace7af5fc366 ""
   "imagens/diagrama-de-classes.png" 1781221273 1342344 774ee5e1e6bb24c5f4723cb88662758e ""
   "imagens/frontend.png" 1781221273 1163993 a315095b5f37aebefa39dc36b430a46d ""
-  "main.aux" 1781231259 8594 ff0496a01100fefc8da15ca2bfb61b82 "pdflatex"
-  "main.bbl" 1781231246 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
-  "main.out" 1781231259 9184 518165db6ed9a983cc83bba50c01ec62 "pdflatex"
-  "main.tex" 1781227365 2561 5ba79395f941c50baefcce6836783ee7 ""
-  "main.toc" 1781231259 4624 e5525da2035ef32553772956e4d33608 "pdflatex"
+  "main.aux" 1781234783 8696 22999f914e771e84567fd1bdc9908bba "pdflatex"
+  "main.bbl" 1781234778 1557 1502dfddafb24db4e94c3386c3ea400c "bibtex main"
+  "main.out" 1781234783 9186 7c140585bc17095440d4d0908bf33486 "pdflatex"
+  "main.tex" 1781234391 2495 e686faf2012606a59bc31fc096350ff6 ""
+  "main.toc" 1781234783 4626 85c39c0acbbbc0fe67a9cd8a286501c7 "pdflatex"
   "partes/anexos.tex" 1781227331 281 3e402e04f8d30abc91ad63aa85a3682e ""
   "partes/capa.tex" 1781221273 270 41b56c9d9ba9cd9a74a58a03bd3233ef ""
   "partes/consideracoes.tex" 1781221273 70 d037d8f4fceedc293ae919bf2a26f3ea ""
@@ -204,8 +204,8 @@
   "partes/diagramas/arquitetura-frontend.tex" 1781221273 209 1be79f6028236508c5543c429e97008b ""
   "partes/diagramas/casos_de_uso.tex" 1781227326 3402 d4104bce7c9347abd75b83e48548373e ""
   "partes/diagramas/der.tex" 1781221273 195 37ac5870d811fa66113530383fe38a91 ""
-  "partes/folha_rosto.tex" 1781221273 386 bbb142759f44b7f4834a7eae2196d4b9 ""
-  "partes/introducao.tex" 1781231254 3824 3261d387964e34d077232ae10ec97acb ""
+  "partes/folha_rosto.tex" 1781234777 371 b3204c2eb6f2d243023d8dc7c7fb1777 ""
+  "partes/introducao.tex" 1781233814 4631 21bf6b2c5ef0f6820f9e53d49ca33deb ""
   "partes/modelagem.tex" 1781227323 565 3425159ba7d28f300fd8141053c71d5a ""
   "partes/requisitos/rf.tex" 1781221274 6331 780ffdbaf2d59454b63cc848b16503be ""
   "partes/requisitos/rfn.tex" 1781221274 6548 1b0d684ec1452ea4d65255130f9e895f ""
