@@ -12,12 +12,12 @@
 ]
 
 % Fronteira do sistema
-\draw (-1,-7) rectangle (14,3.5) node[above left, font=\small\bfseries, inner sep=3pt] at (14,3.5) {Sistema de Certificados};
+\draw (-0.5,-7.5) rectangle (15.5,4.5) node[above left, font=\small\bfseries, inner sep=3pt] at (15.5,4.5) {Sistema de Certificados};
 
-% Atores (mais próximos)
-\node[actor] (admin) at (-1.5,1.5) {Administrador};
-\node[actor] (colab) at (-1.5,-1.5) {Colaborador};
-\node[actor] (visit) at (-1.5,-5) {Visitante};
+% Atores
+\node[actor] (admin) at (-3,1.5) {Administrador};
+\node[actor] (colab) at (-3,-1.5) {Colaborador};
+\node[actor] (visit) at (-3,-5) {Visitante};
 
 % Generalização: Administrador herda casos de uso do Colaborador
 \draw[-{Triangle[open]}] (admin) -- (colab);
@@ -32,7 +32,7 @@
 \node[usecase, fill=red!20] (editar) at (6.5,0) {Editar Template};
 
 \node[usecase, fill=yellow!30] (salvar) at (10.5,1.2) {Salvar};
-\node[usecase, fill=yellow!30] (preview) at (13.5,0) {Prévia};
+\node[usecase, fill=yellow!30] (preview) at (13,0) {Prévia};
 
 % Casos Colaborador (mais compactos)
 \node[usecase, fill=green!30] (emitir) at (2.5,-1) {Emitir Individual};
