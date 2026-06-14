@@ -6,7 +6,8 @@
     transform shape,
     actor/.style={rectangle, draw=black, fill=blue!20, rounded corners, minimum width=1.8cm, minimum height=0.7cm},
     usecase/.style={ellipse, draw=black, minimum width=2.5cm, minimum height=0.8cm, font=\small},
-    include/.style={->, dashed, font=\tiny},
+    include/.style={->, dashed},
+    extend/.style={->, dashed},
     assoc/.style={-},
     every node/.style={font=\small}
 ]
@@ -43,6 +44,9 @@
 \node[usecase, fill=purple!25] (fila) at (8,-2) {Fila};
 \node[usecase, fill=purple!25] (notificar) at (13,-2) {Notificar};
 
+% Extend — comportamento opcional
+\node[usecase, fill=purple!25] (reenvio) at (8,-0.5) {Reenviar Certificado};
+
 % Casos Visitante
 \node[usecase, fill=red!20] (validar) at (2.5,-7) {Validar Cert.};
 \node[usecase, fill=blue!30] (consultar) at (8,-7) {Consultar Cód.};
@@ -58,22 +62,26 @@
 \draw[assoc] (colab) -- (lote);
 \draw[assoc] (colab) -- (cadastro);
 \draw[assoc] (colab) -- (importar);
+\draw[assoc] (colab) -- (reenvio);
 
 \draw[assoc] (visit) -- (validar);
 
 % Includes
-\draw[include] (usuarios) -- (permissoes);
-\draw[include] (template) -- (campos);
-\draw[include] (template) -- (editar);
-\draw[include] (campos) -- (salvar);
-\draw[include] (editar) -- (salvar);
-\draw[include] (salvar) -- (preview);
+\draw[include] (usuarios) -- (permissoes) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
+\draw[include] (template) -- (campos) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
+\draw[include] (template) -- (editar) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
+\draw[include] (campos) -- (salvar) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
+\draw[include] (editar) -- (salvar) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
+\draw[include] (salvar) -- (preview) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
 
-\draw[include] (lote) -- (fila);
-\draw[include] (fila) -- (notificar);
+\draw[include] (lote) -- (fila) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
+\draw[include] (fila) -- (notificar) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
 
-\draw[include] (validar) -- (consultar);
-\draw[include] (consultar) -- (dados);
+\draw[include] (validar) -- (consultar) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
+\draw[include] (consultar) -- (dados) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
+
+% Extend
+\draw[extend] (reenvio) -- (emitir) node[midway, above, font=\tiny] {\guillemotleft extend\guillemotright};
 
 \end{tikzpicture}
 }
