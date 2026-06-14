@@ -1,0 +1,738 @@
+﻿As descrições textuais a seguir detalham cada caso de uso identificado no diagrama da Figura~\ref{fig:casos-uso}, seguindo o formato padronizado proposto por Kr\"amer~\cite{kraemer2024}.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC001} & \textbf{Gerenciar Usuários} \\
+\hline
+\textbf{Dependências} & RF001, RF003, RF004, RF005, RF006 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador gerencie os usuários da plataforma, incluindo criação, edição e desativação de contas, bem como a definição de perfis de acesso. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+    \item Administrador possui permissão de gerenciamento de usuários.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de usuários. \\
+\hline
+2 & O sistema exibe a lista de usuários cadastrados. \\
+\hline
+3 & O administrador seleciona criar, editar ou desativar um usuário. \\
+\hline
+4 & O sistema valida os dados informados. \\
+\hline
+5 & O sistema persiste a alteração no banco de dados. \\
+\hline
+6 & O sistema exibe confirmação da operação. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Usuário criado, editado ou desativado com sucesso.
+    \item Alterações refletidas na lista de usuários.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+3 & Se o e-mail informado já existir, o sistema rejeita o cadastro e exibe mensagem de erro. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF001, RF003, RF004, RF005, RF006 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC001 -- Gerenciar Usuários}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC002} & \textbf{Gerenciar Templates} \\
+\hline
+\textbf{Dependências} & RF008, RF009, RF010, RF012, RF013 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador gerencie templates de certificados, incluindo upload, personalização visual e configuração de campos dinâmicos. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de templates. \\
+\hline
+2 & O sistema exibe a galeria de templates existentes. \\
+\hline
+3 & O administrador faz upload de um novo arquivo PPTX. \\
+\hline
+4 & O sistema valida o formato do arquivo e exibe preview. \\
+\hline
+5 & O administrador configura campos dinâmicos e personaliza cores e fontes. \\
+\hline
+6 & O sistema salva o template e retorna à galeria. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Template salvo no sistema.
+    \item Template disponível para uso na emissão de certificados.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+3 & Se o arquivo enviado não for PPTX, o sistema rejeita e exibe mensagem de formato inválido. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF008, RF009, RF010, RF012, RF013 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC002 -- Gerenciar Templates}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC003} & \textbf{Gerenciar Cursos} \\
+\hline
+\textbf{Dependências} & RF046, RF047, RF048, RF049, RF050, RF053 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador cadastre e gerencie cursos, incluindo nome, carga horária, datas, local e instrutor. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de cursos. \\
+\hline
+2 & O sistema exibe a lista de cursos cadastrados. \\
+\hline
+3 & O administrador preenche nome, carga horária, datas e instrutor. \\
+\hline
+4 & O sistema valida os dados obrigatórios. \\
+\hline
+5 & O sistema salva o curso no banco de dados. \\
+\hline
+6 & O sistema exibe confirmação. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Curso cadastrado no sistema.
+    \item Curso disponível para vinculação com certificados.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se dados obrigatórios estiverem ausentes, o sistema bloqueia o salvamento e exibe os campos pendentes. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF046, RF047, RF048, RF049, RF050, RF053 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC003 -- Gerenciar Cursos}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC004} & \textbf{Emitir Certificado Individual} \\
+\hline
+\textbf{Dependências} & RF015, RF016, RF023, RF024, RF025, RF026, RF028, RF052 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador emita um certificado individual, selecionando template, curso e participante, e gerando PDF com código único e QR Code. \\
+\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+    \item Template de certificado cadastrado.
+    \item Curso cadastrado.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O colaborador acessa a seção de emissão. \\
+\hline
+2 & O sistema exibe formulário com campos para template, curso e participante. \\
+\hline
+3 & O colaborador seleciona o template e o curso. \\
+\hline
+4 & O colaborador seleciona ou cadastra o participante. \\
+\hline
+5 & O sistema valida o vínculo do participante ao curso. \\
+\hline
+6 & O sistema gera o PDF preenchendo os campos dinâmicos. \\
+\hline
+7 & O sistema gera código único e insere QR Code no PDF. \\
+\hline
+8 & O sistema registra data, hora e responsável pela emissão. \\
+\hline
+9 & O sistema exibe o certificado gerado com opção de download. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Certificado gerado em PDF.
+    \item Código único registrado no banco de dados.
+    \item Certificado disponível para validação pública.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+5 & Se o participante não estiver vinculado ao curso, o sistema bloqueia a emissão e exibe alerta. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF015, RF016, RF023, RF024, RF025, RF026, RF028, RF052 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC004 -- Emitir Certificado Individual}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC005} & \textbf{Emitir Certificados em Lote} \\
+\hline
+\textbf{Dependências} & RF017, RF020, RF021, RF022 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador emita certificados em lote a partir de uma lista de participantes, processando de forma assíncrona por fila. \\
+\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+    \item Template de certificado cadastrado.
+    \item Arquivo com lista de participantes disponível.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O colaborador acessa a seção de emissão em lote. \\
+\hline
+2 & O sistema exibe formulário para seleção de template e arquivo. \\
+\hline
+3 & O colaborador seleciona o template e envia o arquivo. \\
+\hline
+4 & O sistema valida os dados do arquivo. \\
+\hline
+5 & O sistema enfileira as emissões para processamento. \\
+\hline
+6 & O sistema processa cada item da fila, gerando PDF e código único. \\
+\hline
+7 & O sistema notifica o colaborador ao término do processamento. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Certificados do lote gerados e registrados.
+    \item Colaborador notificado sobre o resultado.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se o arquivo tiver formato inválido, o sistema rejeita e exibe mensagem. \\
+\hline
+6 & Se alguma linha contiver dados inválidos, o sistema ignora e reporta ao final. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF017, RF020, RF021, RF022 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC005 -- Emitir Certificados em Lote}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC006} & \textbf{Cadastrar Participante} \\
+\hline
+\textbf{Dependências} & RF015, RF054, RF055, RF058 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador cadastre participantes individualmente, informando nome, e-mail e CPF opcional. \\
+\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O colaborador acessa a seção de participantes. \\
+\hline
+2 & O sistema exibe formulário com campos de nome, e-mail e CPF. \\
+\hline
+3 & O colaborador preenche os dados e confirma. \\
+\hline
+4 & O sistema valida o formato do e-mail. \\
+\hline
+5 & O sistema salva o participante no banco de dados. \\
+\hline
+6 & O sistema exibe confirmação. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Participante cadastrado no sistema.
+    \item Participante disponível para emissão de certificados.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se o e-mail já estiver cadastrado, o sistema alerta sobre registro existente. \\
+\hline
+4 & Se o formato do e-mail for inválido, o sistema rejeita e exibe mensagem. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF015, RF054, RF055, RF058 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC006 -- Cadastrar Participante}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC007} & \textbf{Importar Participantes} \\
+\hline
+\textbf{Dependências} & RF017, RF018, RF056 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador importe participantes em lote a partir de arquivos CSV ou Excel. \\
+\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+    \item Arquivo CSV ou Excel disponível.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O colaborador acessa a opção de importar participantes. \\
+\hline
+2 & O sistema exibe formulário para upload de arquivo. \\
+\hline
+3 & O colaborador seleciona e envia o arquivo. \\
+\hline
+4 & O sistema valida o cabeçalho e os dados das linhas. \\
+\hline
+5 & O sistema importa os registros válidos. \\
+\hline
+6 & O sistema exibe resumo com quantidade de registros importados e rejeitados. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Participantes válidos importados e disponíveis para emissão.
+    \item Relatório de erros gerado para registros rejeitados.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se o formato do arquivo não for CSV ou XLSX, o sistema rejeita e exibe mensagem. \\
+\hline
+4 & Se alguma linha contiver dados inconsistentes, o sistema ignora e lista ao final. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF017, RF018, RF056 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC007 -- Importar Participantes}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC008} & \textbf{Validar Certificado} \\
+\hline
+\textbf{Dependências} & RF033, RF034, RF035, RF036 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve disponibilizar um portal público onde qualquer visitante possa validar um certificado informando o código único ou escaneando o QR Code. \\
+\textbf{Ator(es)} & Visitante \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Nenhuma (portal público, sem autenticação).
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O visitante acessa o portal público de validação. \\
+\hline
+2 & O sistema exibe campo para inserção do código único. \\
+\hline
+3 & O visitante insere o código presente no certificado. \\
+\hline
+4 & O sistema consulta o código no banco de dados. \\
+\hline
+5 & O sistema exibe nome, curso, data e status de autenticidade. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Informações do certificado exibidas ao visitante.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+3 & Se o visitante escanear o QR Code, o sistema redireciona com o código preenchido automaticamente. \\
+\hline
+4 & Se o código não existir, o sistema exibe "Certificado não encontrado". \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF033, RF034, RF035, RF036 \\
+\textbf{Comentários} & A validação via QR Code elimina a necessidade de digitação manual do código. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC008 -- Validar Certificado}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC009} & \textbf{Buscar Participantes} \\
+\hline
+\textbf{Dependências} & RF058 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador busque participantes por nome, e-mail ou CPF, exibindo os resultados de forma rápida e paginada. \\
+\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O colaborador acessa a seção de participantes. \\
+\hline
+2 & O sistema exibe campo de busca e lista completa de participantes. \\
+\hline
+3 & O colaborador digita nome, e-mail ou CPF e confirma. \\
+\hline
+4 & O sistema filtra os registros correspondentes. \\
+\hline
+5 & O sistema exibe os resultados em menos de 2 segundos. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Lista de participantes filtrada exibida ao colaborador.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se nenhum registro corresponder à busca, o sistema exibe mensagem "Nenhum participante encontrado". \\
+\hline
+4 & Se a busca estiver vazia, o sistema retorna a lista completa. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF058 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC009 -- Buscar Participantes}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC010} & \textbf{Visualizar Histórico de Certificados} \\
+\hline
+\textbf{Dependências} & RF057, RF058 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve exibir o histórico completo de certificados emitidos para um participante específico, incluindo data de emissão, template utilizado e status de validade. \\
+\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+    \item Participante localizado via busca.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O colaborador acessa a página do participante. \\
+\hline
+2 & O sistema exibe os dados cadastrais do participante. \\
+\hline
+3 & O colaborador seleciona a opção "Histórico de Certificados". \\
+\hline
+4 & O sistema consulta todos os certificados associados ao participante. \\
+\hline
+5 & O sistema exibe lista com data, template, curso e status de cada certificado. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Histórico de certificados exibido ao colaborador.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se o participante não possuir certificados, o sistema exibe "Nenhum certificado encontrado". \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF057, RF058 \\
+\textbf{Comentários} & Estende o caso de uso Buscar Participantes. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC010 -- Visualizar Histórico de Certificados}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC011} & \textbf{Gerenciar Organizações} \\
+\hline
+\textbf{Dependências} & RF059, RF060, RF061, RF062 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador cadastre e gerencie organizações (multi-tenant), incluindo CNPJ, razão social, endereço e contato, bem como a associação de usuários e templates a cada organização. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de organizações. \\
+\hline
+2 & O sistema exibe a lista de organizações cadastradas. \\
+\hline
+3 & O administrador seleciona criar, editar ou desativar uma organização. \\
+\hline
+4 & O administrador preenche CNPJ, razão social, endereço e contato. \\
+\hline
+5 & O sistema valida o CNPJ e os dados obrigatórios. \\
+\hline
+6 & O sistema persiste a organização no banco de dados. \\
+\hline
+7 & O sistema exibe confirmação da operação. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Organização cadastrada, editada ou desativada com sucesso.
+    \item Organização disponível para associação de usuários e templates.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+5 & Se o CNPJ já estiver cadastrado, o sistema rejeita e exibe mensagem de duplicidade. \\
+\hline
+5 & Se o CNPJ for inválido, o sistema rejeita e exibe mensagem. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF059, RF060, RF061, RF062 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC011 -- Gerenciar Organizações}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC012} & \textbf{Configurar Sistema} \\
+\hline
+\textbf{Dependências} & RF063, RF064, RF065 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador configure parâmetros gerais do sistema, incluindo personalização de mensagens padrão, ativação de envio automático e regras de reemissão de certificados. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de configurações. \\
+\hline
+2 & O sistema exibe os painéis de configuração disponíveis. \\
+\hline
+3 & O administrador personaliza mensagens padrão de e-mail. \\
+\hline
+4 & O administrador ativa ou desativa o envio automático. \\
+\hline
+5 & O administrador configura limites e regras de reemissão. \\
+\hline
+6 & O sistema valida e persiste as configurações. \\
+\hline
+7 & O sistema exibe confirmação da operação. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Configurações do sistema atualizadas.
+    \item Novas regras e mensagens aplicadas às próximas operações.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+6 & Se algum valor obrigatório estiver ausente, o sistema bloqueia o salvamento e exibe os campos pendentes. \\
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF063, RF064, RF065 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC012 -- Configurar Sistema}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC013} & \textbf{Abrir Chamado de Suporte} \\
+\hline
+\textbf{Dependências} & RF073 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador abra chamados de suporte técnico, informando descrição do problema, prioridade e dados de contato. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de suporte. \\
+\hline
+2 & O sistema exibe o formulário de abertura de chamado. \\
+\hline
+3 & O administrador preenche descrição, prioridade e contato. \\
+\hline
+4 & O sistema valida os dados obrigatórios. \\
+\hline
+5 & O sistema registra o chamado no banco de dados. \\
+\hline
+6 & O sistema exibe confirmação com número do chamado. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Chamado registrado no sistema.
+    \item Chamado disponível para acompanhamento pela equipe de suporte.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se campos obrigatórios estiverem ausentes, o sistema bloqueia o envio e exibe os campos pendentes. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF073 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC013 -- Abrir Chamado de Suporte}
+\end{table}
