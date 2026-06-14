@@ -1,4 +1,4 @@
-%%{init: {'theme': 'neutral'}}%%
+%%{init: {'theme': 'neutral', 'themeVariables': {'lineColor': '#333333', 'primaryTextColor': '#222222', 'primaryColor': '#f4f4f4', 'primaryBorderColor': '#333333', 'secondaryColor': '#ffffff'}}}%%
 classDiagram
     class Pessoa {
       -UUID id
@@ -128,29 +128,3 @@ classDiagram
     Certificado "1" -- "0..1" EnvioEmail
     Certificado "1" -- "1" Template
     Certificado "1" -- "1" AssinaturaDigital : assinadoCom
-
-    classDef pessoa fill:#dbeafe,stroke:#3b82f6,stroke-width:1px
-    classDef organizacao fill:#fef3c7,stroke:#d97706,stroke-width:1px
-    classDef curso fill:#d1fae5,stroke:#059669,stroke-width:1px
-    classDef template fill:#ede9fe,stroke:#7c3aed,stroke-width:1px
-    classDef certificado fill:#fee2e2,stroke:#dc2626,stroke-width:1px
-    classDef assinatura fill:#fce7f3,stroke:#db2777,stroke-width:1px
-    classDef log fill:#f3f4f6,stroke:#4b5563,stroke-width:1px
-    classDef config fill:#ccfbf1,stroke:#0d9488,stroke-width:1px
-    classDef suporte fill:#ffedd5,stroke:#ea580c,stroke-width:1px
-
-    class Pessoa pessoa
-    class Usuario pessoa
-    class Participante pessoa
-    class Organizacao organizacao
-    class Curso curso
-    class ParticipanteCurso curso
-    class Template template
-    class CampoDinamico template
-    class Certificado certificado
-    class EnvioEmail certificado
-    class AssinaturaDigital assinatura
-    class Log log
-    class LogAuditoria log
-    class ConfiguracaoSistema config
-    class ChamadoSuporte suporte
