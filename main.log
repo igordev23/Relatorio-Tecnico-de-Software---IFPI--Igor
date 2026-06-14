@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1051,12 +1051,12 @@ Overfull \vbox (61.0854pt too high) has occurred while \output is active []
 
 [20] (partes/requisitos/rf.tex [21] [22] [23] [24] [25])
 (partes/requisitos/rfn.tex [26] [27] [28]
-Overfull \hbox (3.7261pt too wide) in paragraph at lines 75--76
+Overfull \hbox (3.7261pt too wide) in paragraph at lines 78--79
 []\T1/ptm/m/n/12 RNF042 ^^U O fron-tend deve se-guir o pa-dr�o ar-qui-te-tu-ral
  MVVM (\T1/ptm/m/it/12 Model-View-ViewModel\T1/ptm/m/n/12 ),
  []
 
-[29]) (partes/requisitos/regras_negocio.tex)
+[29]) (partes/requisitos/regras_negocio.tex [30])
 (partes/requisitos/criterios_aceitacao.tex
 Overfull \hbox (7.5472pt too wide) in alignment at lines 7--13
  [] [] [] 
@@ -1507,7 +1507,6 @@ Overfull \hbox (7.5472pt too wide) in alignment at lines 21--114
  [] [] [] 
  []
 
-[30]
 ignored error: Infinite glue shrinkage found in box being split [31]
 ignored error: Infinite glue shrinkage found in box being split [32]
 ignored error: Infinite glue shrinkage found in box being split [33]
@@ -1650,7 +1649,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  28512 strings out of 467871
  553628 string characters out of 5418376
- 1278360 words of memory out of 5000000
+ 1279360 words of memory out of 5000000
  56680 multiletter control sequences out of 15000+600000
  664702 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1662,7 +1661,7 @@ s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmri8a.pfb>
 Output written on C:\Users\franc\OneDrive\Documentos\ADS\TCC\Relatório_Técnic
-o_de_Software___IFPI__Igor\main.pdf (46 pages, 3819712 bytes).
+o_de_Software___IFPI__Igor\main.pdf (46 pages, 3820345 bytes).
 PDF statistics:
  738 PDF objects out of 1000 (max. 8388607)
  163 named destinations out of 1000 (max. 500000)

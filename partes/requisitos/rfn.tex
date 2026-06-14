@@ -16,12 +16,15 @@
 \end{itemize}
 
 \subsubsection{Desempenho e Escalabilidade}
+
+Os valores numéricos apresentados a seguir são estimativas baseadas na demanda esperada da empresa parceira piloto, que realiza emissões periódicas para turmas de 20 a 50 participantes e projetou a necessidade de emitir certificados para aproximadamente 10.000 participantes ao longo de um ano. Os limites estabelecidos consideram uma margem de segurança para absorver picos sazonais sem degradação da experiência do usuário.
+
 \begin{itemize}
-\item RNF011 – O sistema deve suportar geração simultânea mínima de 500 certificados por lote.
-\item RNF012 – O tempo médio de geração individual não deve exceder 5 segundos.
+\item RNF011 – O sistema deve suportar geração simultânea de, estimados, 500 certificados por lote, volume equivalente a dez turmas médias processadas em única operação.
+\item RNF012 – O tempo médio de geração individual não deve exceder 5 segundos por certificado, garantindo que um lote de 500 certificados seja concluído em aproximadamente 40 minutos.
 \item RNF013 – O portal público de validação deve responder em até 2 segundos.
 \item RNF014 – O sistema deve permitir escalabilidade horizontal do serviço de geração.
-\item RNF015 – O sistema deve suportar volume mínimo de 10.000 certificados/mês.
+\item RNF015 – O sistema deve suportar volume estimado de 10.000 certificados/mês, compatível com a projeção anual da empresa parceira acrescida de margem de segurança.
 \item RNF016 – A geração em lote deve ser processada de forma assíncrona por meio de fila de processamento, sem bloquear a aplicação principal.
 \item RNF017 – A fila de certificados deve garantir processamento ordenado e controle de concorrência.
 \end{itemize}
