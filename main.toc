@@ -65,23 +65,15 @@
 \contentsline {subsection}{\numberline {3.3}Critérios de Aceitação}{31}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Matriz de Rastreabilidade}{35}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Diagramas de casos de uso}{36}{subsection.3.5}%
-\contentsline {paragraph}{UC001 -- Gerenciar Usuários}{36}{section*.7}%
-\contentsline {paragraph}{UC002 -- Gerenciar Templates}{37}{section*.8}%
-\contentsline {paragraph}{UC003 -- Gerenciar Cursos}{37}{section*.9}%
-\contentsline {paragraph}{UC004 -- Emitir Certificado Individual}{38}{section*.10}%
-\contentsline {paragraph}{UC005 -- Emitir Certificados em Lote}{38}{section*.11}%
-\contentsline {paragraph}{UC006 -- Cadastrar Participante}{39}{section*.12}%
-\contentsline {paragraph}{UC007 -- Importar Participantes}{39}{section*.13}%
-\contentsline {paragraph}{UC008 -- Validar Certificado}{40}{section*.14}%
-\contentsline {subsection}{\numberline {3.6}Diagramas de classe}{41}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Arquitetura do Sistema}{41}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Diagrama Entidade-Relacionamento}{44}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Interfaces}{44}{subsection.3.9}%
-\contentsline {section}{\numberline {4.0}Software}{44}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Implantação}{44}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Testes}{44}{subsection.4.2}%
-\contentsline {section}{\numberline {5.0}Considerações Finais}{45}{section.5}%
-\contentsline {section}{Referências}{48}{section*.19}%
-\contentsline {section}{\numberline {6.0}Anexos}{49}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{49}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{49}{subsection.6.2}%
+\contentsline {subsection}{\numberline {3.6}Diagramas de classe}{42}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Arquitetura do Sistema}{42}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Diagrama Entidade-Relacionamento}{45}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Interfaces}{45}{subsection.3.9}%
+\contentsline {section}{\numberline {4.0}Software}{45}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Implantação}{45}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Testes}{45}{subsection.4.2}%
+\contentsline {section}{\numberline {5.0}Considerações Finais}{46}{section.5}%
+\contentsline {section}{Referências}{49}{section*.19}%
+\contentsline {section}{\numberline {6.0}Anexos}{50}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{50}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{50}{subsection.6.2}%

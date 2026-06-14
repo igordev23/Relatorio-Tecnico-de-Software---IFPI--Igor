@@ -1,135 +1,210 @@
 As descrições textuais a seguir detalham cada caso de uso identificado no diagrama da Figura~\ref{fig:casos-uso}. Cada descrição contempla ator principal, pré-condições, fluxo principal, fluxos alternativos e de exceção, e pós-condições.
 
-\paragraph{UC001 -- Gerenciar Usuários}
-\begin{description}
-    \item[Ator principal:] Administrador.
-    \item[Pré-condições:] Administrador autenticado no sistema.
-    \item[Fluxo principal:]
-        \begin{enumerate}
-            \item Administrador acessa a seção de usuários.
-            \item Sistema exibe lista de usuários cadastrados.
-            \item Administrador seleciona criar, editar ou desativar um usuário.
-            \item Sistema valida e persiste a alteração.
-            \item Sistema exibe confirmação.
-        \end{enumerate}
-    \item[Fluxo alternativo -- Definir permissões:] Durante a edição, o administrador pode definir perfis de acesso do usuário.
-    \item[Fluxo de exceção -- E-mail duplicado:] Sistema rejeita cadastro com e-mail já existente e exibe mensagem.
-    \item[Pós-condições:] Usuário criado, editado ou desativado com sucesso; alterações refletidas na lista.
-\end{description}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{3.5cm} p{11.5cm}}
+\toprule
+\multicolumn{2}{c}{\textbf{UC001 -- Gerenciar Usuários}} \\
+\midrule
+\textbf{Ator principal} & Administrador \\
+\midrule
+\textbf{Pré-condições} & Administrador autenticado no sistema. \\
+\midrule
+\textbf{Fluxo principal} & 
+1. Administrador acessa a seção de usuários. \\
+& 2. Sistema exibe lista de usuários cadastrados. \\
+& 3. Administrador seleciona criar, editar ou desativar um usuário. \\
+& 4. Sistema valida e persiste a alteração. \\
+& 5. Sistema exibe confirmação. \\
+\midrule
+\textbf{Fluxo alternativo} & FA01 -- Definir permissões: durante a edição, o administrador pode definir perfis de acesso do usuário. \\
+\midrule
+\textbf{Fluxo de exceção} & FE01 -- E-mail duplicado: sistema rejeita cadastro e exibe mensagem. \\
+\midrule
+\textbf{Pós-condições} & Usuário criado/editado/desativado com sucesso; alterações refletidas na lista. \\
+\bottomrule
+\end{tabular}
+\caption{Descrição do caso de uso UC001 -- Gerenciar Usuários}
+\end{table}
 
-\paragraph{UC002 -- Gerenciar Templates}
-\begin{description}
-    \item[Ator principal:] Administrador.
-    \item[Pré-condições:] Administrador autenticado.
-    \item[Fluxo principal:]
-        \begin{enumerate}
-            \item Administrador acessa a seção de templates.
-            \item Sistema exibe galeria de templates existentes.
-            \item Administrador faz upload de novo arquivo PPTX.
-            \item Sistema valida o formato e exibe preview.
-            \item Administrador configura campos dinâmicos (\{\{nome\}\}, \{\{curso\}\}, etc.) e personaliza cores e fontes.
-            \item Administrador salva o template.
-        \end{enumerate}
-    \item[Fluxo alternativo -- Editar template:] Administrador seleciona template existente, altera configurações e salva.
-    \item[Fluxo de exceção -- Formato inválido:] Arquivo diferente de PPTX é rejeitado com mensagem.
-    \item[Pós-condições:] Template salvo e disponível para uso na emissão de certificados.
-\end{description}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{3.5cm} p{11.5cm}}
+\toprule
+\multicolumn{2}{c}{\textbf{UC002 -- Gerenciar Templates}} \\
+\midrule
+\textbf{Ator principal} & Administrador \\
+\midrule
+\textbf{Pré-condições} & Administrador autenticado. \\
+\midrule
+\textbf{Fluxo principal} & 
+1. Administrador acessa a seção de templates. \\
+& 2. Sistema exibe galeria de templates existentes. \\
+& 3. Administrador faz upload de novo arquivo PPTX. \\
+& 4. Sistema valida o formato e exibe preview. \\
+& 5. Administrador configura campos dinâmicos e personaliza cores e fontes. \\
+& 6. Administrador salva o template. \\
+\midrule
+\textbf{Fluxo alternativo} & FA01 -- Editar template: seleciona template existente, altera configurações e salva. \\
+\midrule
+\textbf{Fluxo de exceção} & FE01 -- Formato inválido: arquivo diferente de PPTX é rejeitado. \\
+\midrule
+\textbf{Pós-condições} & Template salvo e disponível para uso na emissão. \\
+\bottomrule
+\end{tabular}
+\caption{Descrição do caso de uso UC002 -- Gerenciar Templates}
+\end{table}
 
-\paragraph{UC003 -- Gerenciar Cursos}
-\begin{description}
-    \item[Ator principal:] Administrador.
-    \item[Pré-condições:] Administrador autenticado.
-    \item[Fluxo principal:]
-        \begin{enumerate}
-            \item Administrador acessa seção de cursos.
-            \item Sistema exibe lista de cursos cadastrados.
-            \item Administrador preenche nome, carga horária, datas e instrutor.
-            \item Sistema valida e salva o curso.
-            \item Sistema exibe confirmação.
-        \end{enumerate}
-    \item[Fluxo de exceção -- Dados obrigatórios ausentes:] Sistema bloqueia salvamento até preenchimento completo.
-    \item[Pós-condições:] Curso cadastrado e disponível para vinculação com certificados.
-\end{description}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{3.5cm} p{11.5cm}}
+\toprule
+\multicolumn{2}{c}{\textbf{UC003 -- Gerenciar Cursos}} \\
+\midrule
+\textbf{Ator principal} & Administrador \\
+\midrule
+\textbf{Pré-condições} & Administrador autenticado. \\
+\midrule
+\textbf{Fluxo principal} & 
+1. Administrador acessa seção de cursos. \\
+& 2. Sistema exibe lista de cursos cadastrados. \\
+& 3. Administrador preenche nome, carga horária, datas e instrutor. \\
+& 4. Sistema valida e salva o curso. \\
+& 5. Sistema exibe confirmação. \\
+\midrule
+\textbf{Fluxo de exceção} & FE01 -- Dados obrigatórios ausentes: sistema bloqueia salvamento. \\
+\midrule
+\textbf{Pós-condições} & Curso cadastrado e disponível para vinculação com certificados. \\
+\bottomrule
+\end{tabular}
+\caption{Descrição do caso de uso UC003 -- Gerenciar Cursos}
+\end{table}
 
-\paragraph{UC004 -- Emitir Certificado Individual}
-\begin{description}
-    \item[Ator principal:] Colaborador.
-    \item[Pré-condições:] Colaborador autenticado; template e curso cadastrados.
-    \item[Fluxo principal:]
-        \begin{enumerate}
-            \item Colaborador acessa a seção de emissão.
-            \item Sistema exibe formulário com campos para template, curso e participante.
-            \item Colaborador seleciona template, curso e participante.
-            \item Sistema valida vínculo do participante ao curso.
-            \item Sistema gera PDF preenchendo campos dinâmicos.
-            \item Sistema gera código único e QR Code.
-            \item Sistema registra data, hora e responsável.
-            \item Sistema exibe certificado gerado com opção de download.
-        \end{enumerate}
-    \item[Fluxo de exceção -- Participante sem vínculo:] Sistema bloqueia emissão e exibe alerta.
-    \item[Pós-condições:] Certificado gerado, código único registrado e disponível para validação pública.
-\end{description}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{3.5cm} p{11.5cm}}
+\toprule
+\multicolumn{2}{c}{\textbf{UC004 -- Emitir Certificado Individual}} \\
+\midrule
+\textbf{Ator principal} & Colaborador \\
+\midrule
+\textbf{Pré-condições} & Colaborador autenticado; template e curso cadastrados. \\
+\midrule
+\textbf{Fluxo principal} & 
+1. Colaborador acessa a seção de emissão. \\
+& 2. Sistema exibe formulário com template, curso e participante. \\
+& 3. Colaborador seleciona template, curso e participante. \\
+& 4. Sistema valida vínculo do participante ao curso. \\
+& 5. Sistema gera PDF preenchendo campos dinâmicos. \\
+& 6. Sistema gera código único e QR Code. \\
+& 7. Sistema registra data, hora e responsável. \\
+& 8. Sistema exibe certificado com opção de download. \\
+\midrule
+\textbf{Fluxo de exceção} & FE01 -- Participante sem vínculo: sistema bloqueia emissão e exibe alerta. \\
+\midrule
+\textbf{Pós-condições} & Certificado gerado, código único registrado e disponível para validação. \\
+\bottomrule
+\end{tabular}
+\caption{Descrição do caso de uso UC004 -- Emitir Certificado Individual}
+\end{table}
 
-\paragraph{UC005 -- Emitir Certificados em Lote}
-\begin{description}
-    \item[Ator principal:] Colaborador.
-    \item[Pré-condições:] Colaborador autenticado; template e lista de participantes disponíveis.
-    \item[Fluxo principal:]
-        \begin{enumerate}
-            \item Colaborador seleciona template e arquivo com lista de participantes.
-            \item Sistema valida dados e enfileira as emissões.
-            \item Sistema processa cada item da fila, gerando PDF, código único e registro.
-            \item Sistema notifica o colaborador ao término.
-        \end{enumerate}
-    \item[Fluxo de exceção -- Dados inválidos na lista:] Linhas com erro são ignoradas e reportadas ao final do processamento.
-    \item[Pós-condições:] Certificados do lote gerados e registrados no sistema.
-\end{description}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{3.5cm} p{11.5cm}}
+\toprule
+\multicolumn{2}{c}{\textbf{UC005 -- Emitir Certificados em Lote}} \\
+\midrule
+\textbf{Ator principal} & Colaborador \\
+\midrule
+\textbf{Pré-condições} & Colaborador autenticado; template e lista de participantes disponíveis. \\
+\midrule
+\textbf{Fluxo principal} & 
+1. Colaborador seleciona template e arquivo com lista de participantes. \\
+& 2. Sistema valida dados e enfileira as emissões. \\
+& 3. Sistema processa cada item, gerando PDF, código e registro. \\
+& 4. Sistema notifica o colaborador ao término. \\
+\midrule
+\textbf{Fluxo de exceção} & FE01 -- Dados inválidos: linhas com erro são ignoradas e reportadas. \\
+\midrule
+\textbf{Pós-condições} & Certificados do lote gerados e registrados. \\
+\bottomrule
+\end{tabular}
+\caption{Descrição do caso de uso UC005 -- Emitir Certificados em Lote}
+\end{table}
 
-\paragraph{UC006 -- Cadastrar Participante}
-\begin{description}
-    \item[Ator principal:] Colaborador.
-    \item[Pré-condições:] Colaborador autenticado.
-    \item[Fluxo principal:]
-        \begin{enumerate}
-            \item Colaborador acessa seção de participantes.
-            \item Sistema exibe formulário com campos nome, e-mail e CPF (opcional).
-            \item Colaborador preenche dados e confirma.
-            \item Sistema valida e salva.
-            \item Sistema exibe confirmação.
-        \end{enumerate}
-    \item[Fluxo de exceção -- E-mail duplicado:] Sistema alerta sobre registro existente.
-    \item[Pós-condições:] Participante cadastrado e disponível para emissão de certificados.
-\end{description}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{3.5cm} p{11.5cm}}
+\toprule
+\multicolumn{2}{c}{\textbf{UC006 -- Cadastrar Participante}} \\
+\midrule
+\textbf{Ator principal} & Colaborador \\
+\midrule
+\textbf{Pré-condições} & Colaborador autenticado. \\
+\midrule
+\textbf{Fluxo principal} & 
+1. Colaborador acessa seção de participantes. \\
+& 2. Sistema exibe formulário com nome, e-mail e CPF (opcional). \\
+& 3. Colaborador preenche dados e confirma. \\
+& 4. Sistema valida e salva. \\
+& 5. Sistema exibe confirmação. \\
+\midrule
+\textbf{Fluxo de exceção} & FE01 -- E-mail duplicado: sistema alerta sobre registro existente. \\
+\midrule
+\textbf{Pós-condições} & Participante cadastrado e disponível para emissão. \\
+\bottomrule
+\end{tabular}
+\caption{Descrição do caso de uso UC006 -- Cadastrar Participante}
+\end{table}
 
-\paragraph{UC007 -- Importar Participantes}
-\begin{description}
-    \item[Ator principal:] Colaborador.
-    \item[Pré-condições:] Colaborador autenticado; arquivo CSV ou Excel disponível.
-    \item[Fluxo principal:]
-        \begin{enumerate}
-            \item Colaborador acessa opção de importar participantes.
-            \item Sistema exibe formulário para upload de arquivo.
-            \item Colaborador seleciona e envia o arquivo.
-            \item Sistema valida cabeçalho e dados das linhas.
-            \item Sistema importa registros válidos e exibe resumo.
-        \end{enumerate}
-    \item[Fluxo de exceção -- Formato inválido:] Arquivo diferente de CSV ou XLSX é rejeitado.
-    \item[Fluxo de exceção -- Dados inconsistentes:] Linhas com erros são listadas para correção.
-    \item[Pós-condições:] Participantes importados disponíveis para emissão.
-\end{description}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{3.5cm} p{11.5cm}}
+\toprule
+\multicolumn{2}{c}{\textbf{UC007 -- Importar Participantes}} \\
+\midrule
+\textbf{Ator principal} & Colaborador \\
+\midrule
+\textbf{Pré-condições} & Colaborador autenticado; arquivo CSV ou Excel disponível. \\
+\midrule
+\textbf{Fluxo principal} & 
+1. Colaborador acessa opção de importar. \\
+& 2. Sistema exibe formulário para upload. \\
+& 3. Colaborador seleciona e envia o arquivo. \\
+& 4. Sistema valida cabeçalho e dados das linhas. \\
+& 5. Sistema importa registros válidos e exibe resumo. \\
+\midrule
+\textbf{Fluxo de exceção} & FE01 -- Formato inválido: arquivo diferente de CSV/XLSX é rejeitado. \\
+& FE02 -- Dados inconsistentes: linhas com erro são listadas. \\
+\midrule
+\textbf{Pós-condições} & Participantes importados disponíveis para emissão. \\
+\bottomrule
+\end{tabular}
+\caption{Descrição do caso de uso UC007 -- Importar Participantes}
+\end{table}
 
-\paragraph{UC008 -- Validar Certificado}
-\begin{description}
-    \item[Ator principal:] Visitante (público).
-    \item[Pré-condições:] Nenhuma (portal público).
-    \item[Fluxo principal:]
-        \begin{enumerate}
-            \item Visitante acessa portal público de validação.
-            \item Sistema exibe campo para inserir código único.
-            \item Visitante insere o código presente no certificado.
-            \item Sistema consulta o código e exibe nome, curso, data e status de autenticidade.
-        \end{enumerate}
-    \item[Fluxo alternativo -- QR Code:] Visitante escaneia QR Code no certificado e é redirecionado com o código preenchido automaticamente.
-    \item[Fluxo de exceção -- Código inválido:] Sistema exibe "Certificado não encontrado".
-    \item[Pós-condições:] Informações do certificado exibidas ao visitante.
-\end{description}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{3.5cm} p{11.5cm}}
+\toprule
+\multicolumn{2}{c}{\textbf{UC008 -- Validar Certificado}} \\
+\midrule
+\textbf{Ator principal} & Visitante (público) \\
+\midrule
+\textbf{Pré-condições} & Nenhuma (portal público). \\
+\midrule
+\textbf{Fluxo principal} & 
+1. Visitante acessa portal público de validação. \\
+& 2. Sistema exibe campo para inserir código único. \\
+& 3. Visitante insere o código do certificado. \\
+& 4. Sistema consulta e exibe nome, curso, data e status. \\
+\midrule
+\textbf{Fluxo alternativo} & FA01 -- QR Code: visitante escaneia código e é redirecionado automaticamente. \\
+\midrule
+\textbf{Fluxo de exceção} & FE01 -- Código inválido: sistema exibe "Certificado não encontrado". \\
+\midrule
+\textbf{Pós-condições} & Informações do certificado exibidas ao visitante. \\
+\bottomrule
+\end{tabular}
+\caption{Descrição do caso de uso UC008 -- Validar Certificado}
+\end{table}
