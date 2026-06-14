@@ -12,7 +12,7 @@
 ]
 
 % Fronteira do sistema
-\draw (-0.5,-9) rectangle (19.5,5.5) node[above left, font=\small\bfseries, inner sep=3pt] at (19.5,5.5) {Sistema de Certificados};
+\draw (-0.5,-8) rectangle (17,5.5) node[above left, font=\small\bfseries, inner sep=3pt] at (17,5.5) {Sistema de Certificados};
 
 % Atores
 \node[actor] (admin) at (-3.5,2) {Administrador};
@@ -32,7 +32,7 @@
 \node[usecase, fill=red!20] (editar) at (8,1) {Editar Template};
 
 \node[usecase, fill=yellow!30] (salvar) at (13,2.5) {Salvar};
-\node[usecase, fill=yellow!30] (preview) at (17,1) {Prévia};
+\node[usecase, fill=yellow!30] (preview) at (15.5,1) {Prévia};
 
 % Casos Colaborador
 \node[usecase, fill=green!30] (emitir) at (2.5,-0.5) {Emitir Individual};
@@ -40,15 +40,8 @@
 \node[usecase, fill=orange!40] (cadastro) at (2.5,-3.5) {Cadastrar Part.};
 \node[usecase, fill=orange!40] (importar) at (2.5,-5) {Importar Part.};
 
-\node[usecase, fill=purple!25] (pdf) at (8,-0.5) {Gerar PDF};
-\node[usecase, fill=purple!25] (codigo) at (13,-0.5) {Gerar Código};
-\node[usecase, fill=purple!25] (registro) at (17,-0.5) {Registrar};
-
 \node[usecase, fill=purple!25] (fila) at (8,-2) {Fila};
 \node[usecase, fill=purple!25] (notificar) at (13,-2) {Notificar};
-\node[usecase, fill=purple!25] (email) at (17,-2) {Email};
-
-\node[usecase, fill=blue!30] (validardados) at (8,-5) {Validar Dados};
 
 % Casos Visitante
 \node[usecase, fill=red!20] (validar) at (2.5,-7) {Validar Cert.};
@@ -76,15 +69,8 @@
 \draw[include] (editar) -- (salvar);
 \draw[include] (salvar) -- (preview);
 
-\draw[include] (emitir) -- (pdf);
-\draw[include] (pdf) -- (codigo);
-\draw[include] (codigo) -- (registro);
-\draw[include] (registro) -- (email);
-
 \draw[include] (lote) -- (fila);
 \draw[include] (fila) -- (notificar);
-
-\draw[include] (importar) -- (validardados);
 
 \draw[include] (validar) -- (consultar);
 \draw[include] (consultar) -- (dados);
