@@ -22,10 +22,15 @@
 \textbf{Passo} & \textbf{Ação} \\
 \hline
 1 & O administrador acessa a seção de usuários. \\
+\hline
 2 & O sistema exibe a lista de usuários cadastrados. \\
+\hline
 3 & O administrador seleciona criar, editar ou desativar um usuário. \\
+\hline
 4 & O sistema valida os dados informados. \\
+\hline
 5 & O sistema persiste a alteração no banco de dados. \\
+\hline
 6 & O sistema exibe confirmação da operação. \\
 \hline
 \end{tabular} \\
@@ -72,10 +77,15 @@
 \textbf{Passo} & \textbf{Ação} \\
 \hline
 1 & O administrador acessa a seção de templates. \\
+\hline
 2 & O sistema exibe a galeria de templates existentes. \\
+\hline
 3 & O administrador faz upload de um novo arquivo PPTX. \\
+\hline
 4 & O sistema valida o formato do arquivo e exibe preview. \\
+\hline
 5 & O administrador configura campos dinâmicos e personaliza cores e fontes. \\
+\hline
 6 & O sistema salva o template e retorna à galeria. \\
 \hline
 \end{tabular} \\
@@ -122,10 +132,15 @@
 \textbf{Passo} & \textbf{Ação} \\
 \hline
 1 & O administrador acessa a seção de cursos. \\
+\hline
 2 & O sistema exibe a lista de cursos cadastrados. \\
+\hline
 3 & O administrador preenche nome, carga horária, datas e instrutor. \\
+\hline
 4 & O sistema valida os dados obrigatórios. \\
+\hline
 5 & O sistema salva o curso no banco de dados. \\
+\hline
 6 & O sistema exibe confirmação. \\
 \hline
 \end{tabular} \\
@@ -174,13 +189,21 @@
 \textbf{Passo} & \textbf{Ação} \\
 \hline
 1 & O colaborador acessa a seção de emissão. \\
+\hline
 2 & O sistema exibe formulário com campos para template, curso e participante. \\
+\hline
 3 & O colaborador seleciona o template e o curso. \\
+\hline
 4 & O colaborador seleciona ou cadastra o participante. \\
+\hline
 5 & O sistema valida o vínculo do participante ao curso. \\
+\hline
 6 & O sistema gera o PDF preenchendo os campos dinâmicos. \\
+\hline
 7 & O sistema gera código único e insere QR Code no PDF. \\
+\hline
 8 & O sistema registra data, hora e responsável pela emissão. \\
+\hline
 9 & O sistema exibe o certificado gerado com opção de download. \\
 \hline
 \end{tabular} \\
@@ -195,6 +218,7 @@
 \textbf{Exceções} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Condição} \\
+\hline
 5 & Se o participante não estiver vinculado ao curso, o sistema bloqueia a emissão e exibe alerta. \\
 \hline
 \end{tabular} \\
@@ -229,11 +253,17 @@
 \textbf{Passo} & \textbf{Ação} \\
 \hline
 1 & O colaborador acessa a seção de emissão em lote. \\
+\hline
 2 & O sistema exibe formulário para seleção de template e arquivo. \\
+\hline
 3 & O colaborador seleciona o template e envia o arquivo. \\
+\hline
 4 & O sistema valida os dados do arquivo. \\
+\hline
 5 & O sistema enfileira as emissões para processamento. \\
+\hline
 6 & O sistema processa cada item da fila, gerando PDF e código único. \\
+\hline
 7 & O sistema notifica o colaborador ao término do processamento. \\
 \hline
 \end{tabular} \\
@@ -249,6 +279,7 @@
 \textbf{Passo} & \textbf{Condição} \\
 \hline
 4 & Se o arquivo tiver formato inválido, o sistema rejeita e exibe mensagem. \\
+\hline
 6 & Se alguma linha contiver dados inválidos, o sistema ignora e reporta ao final. \\
 \hline
 \end{tabular} \\
@@ -281,10 +312,15 @@
 \textbf{Passo} & \textbf{Ação} \\
 \hline
 1 & O colaborador acessa a seção de participantes. \\
+\hline
 2 & O sistema exibe formulário com campos de nome, e-mail e CPF. \\
+\hline
 3 & O colaborador preenche os dados e confirma. \\
+\hline
 4 & O sistema valida o formato do e-mail. \\
+\hline
 5 & O sistema salva o participante no banco de dados. \\
+\hline
 6 & O sistema exibe confirmação. \\
 \hline
 \end{tabular} \\
@@ -300,6 +336,7 @@
 \textbf{Passo} & \textbf{Condição} \\
 \hline
 4 & Se o e-mail já estiver cadastrado, o sistema alerta sobre registro existente. \\
+\hline
 4 & Se o formato do e-mail for inválido, o sistema rejeita e exibe mensagem. \\
 \hline
 \end{tabular} \\
@@ -333,10 +370,15 @@
 \textbf{Passo} & \textbf{Ação} \\
 \hline
 1 & O colaborador acessa a opção de importar participantes. \\
+\hline
 2 & O sistema exibe formulário para upload de arquivo. \\
+\hline
 3 & O colaborador seleciona e envia o arquivo. \\
+\hline
 4 & O sistema valida o cabeçalho e os dados das linhas. \\
+\hline
 5 & O sistema importa os registros válidos. \\
+\hline
 6 & O sistema exibe resumo com quantidade de registros importados e rejeitados. \\
 \hline
 \end{tabular} \\
@@ -352,6 +394,7 @@
 \textbf{Passo} & \textbf{Condição} \\
 \hline
 4 & Se o formato do arquivo não for CSV ou XLSX, o sistema rejeita e exibe mensagem. \\
+\hline
 4 & Se alguma linha contiver dados inconsistentes, o sistema ignora e lista ao final. \\
 \hline
 \end{tabular} \\
@@ -384,9 +427,13 @@
 \textbf{Passo} & \textbf{Ação} \\
 \hline
 1 & O visitante acessa o portal público de validação. \\
+\hline
 2 & O sistema exibe campo para inserção do código único. \\
+\hline
 3 & O visitante insere o código presente no certificado. \\
+\hline
 4 & O sistema consulta o código no banco de dados. \\
+\hline
 5 & O sistema exibe nome, curso, data e status de autenticidade. \\
 \hline
 \end{tabular} \\
@@ -401,6 +448,7 @@
 \textbf{Passo} & \textbf{Condição} \\
 \hline
 3 & Se o visitante escanear o QR Code, o sistema redireciona com o código preenchido automaticamente. \\
+\hline
 4 & Se o código não existir, o sistema exibe "Certificado não encontrado". \\
 \hline
 \end{tabular} \\
