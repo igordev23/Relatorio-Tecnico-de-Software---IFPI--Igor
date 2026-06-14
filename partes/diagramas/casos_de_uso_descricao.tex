@@ -1,142 +1,135 @@
-As descrições textuais dos casos de uso identificados no diagrama da Figura~\ref{fig:casos-uso} são apresentadas a seguir, contendo ator, pré-condições, fluxo principal, fluxos alternativos e de exceção, e pós-condições.
+As descrições textuais a seguir detalham cada caso de uso identificado no diagrama da Figura~\ref{fig:casos-uso}. Cada descrição contempla ator principal, pré-condições, fluxo principal, fluxos alternativos e de exceção, e pós-condições.
 
-\paragraph{UC001 — Gerenciar Usuários}
-\leavevmode\vspace{-\parskip}\vspace{-\baselineskip}
-\begin{itemize}[nosep,leftmargin=*,labelindent=0pt]
-    \item[\textbf{Ator:}] Administrador.
-    \item[\textbf{Pré-condições:}] Administrador autenticado no sistema.
-    \item[\textbf{Fluxo principal:}]
-    \begin{enumerate}[nosep]
-        \item Administrador acessa a seção de usuários.
-        \item Sistema exibe lista de usuários cadastrados.
-        \item Administrador seleciona criar, editar ou desativar um usuário.
-        \item Sistema valida e persiste a alteração.
-        \item Sistema exibe confirmação.
-    \end{enumerate}
-    \item[\textbf{Fluxo alternativo:}] \textbf{FA01 — Definir permissões:} durante a edição, o administrador pode definir perfis de acesso do usuário.
-    \item[\textbf{Fluxo de exceção:}] \textbf{FE01 — E-mail duplicado:} sistema rejeita cadastro e exibe mensagem de erro.
-    \item[\textbf{Pós-condições:}] Usuário criado/editado/desativado com sucesso; alterações refletidas na lista.
-\end{itemize}
+\paragraph{UC001 -- Gerenciar Usuários}
+\begin{description}
+    \item[Ator principal:] Administrador.
+    \item[Pré-condições:] Administrador autenticado no sistema.
+    \item[Fluxo principal:]
+        \begin{enumerate}
+            \item Administrador acessa a seção de usuários.
+            \item Sistema exibe lista de usuários cadastrados.
+            \item Administrador seleciona criar, editar ou desativar um usuário.
+            \item Sistema valida e persiste a alteração.
+            \item Sistema exibe confirmação.
+        \end{enumerate}
+    \item[Fluxo alternativo -- Definir permissões:] Durante a edição, o administrador pode definir perfis de acesso do usuário.
+    \item[Fluxo de exceção -- E-mail duplicado:] Sistema rejeita cadastro com e-mail já existente e exibe mensagem.
+    \item[Pós-condições:] Usuário criado, editado ou desativado com sucesso; alterações refletidas na lista.
+\end{description}
 
-\paragraph{UC002 — Gerenciar Templates}
-\leavevmode\vspace{-\parskip}\vspace{-\baselineskip}
-\begin{itemize}[nosep,leftmargin=*,labelindent=0pt]
-    \item[\textbf{Ator:}] Administrador.
-    \item[\textbf{Pré-condições:}] Administrador autenticado.
-    \item[\textbf{Fluxo principal:}]
-    \begin{enumerate}[nosep]
-        \item Administrador acessa a seção de templates.
-        \item Sistema exibe galeria de templates existentes.
-        \item Administrador faz upload de novo arquivo PPTX.
-        \item Sistema valida o formato e exibe preview.
-        \item Administrador configura campos dinâmicos (\{\{nome\}\}, \{\{curso\}\}, etc.) e personaliza cores e fontes.
-        \item Administrador salva o template.
-    \end{enumerate}
-    \item[\textbf{Fluxo alternativo:}] \textbf{FA01 — Editar template:} administrador seleciona template existente, altera configurações e salva.
-    \item[\textbf{Fluxo de exceção:}] \textbf{FE01 — Formato inválido:} arquivo diferente de PPTX é rejeitado.
-    \item[\textbf{Pós-condições:}] Template salvo e disponível para uso na emissão de certificados.
-\end{itemize}
+\paragraph{UC002 -- Gerenciar Templates}
+\begin{description}
+    \item[Ator principal:] Administrador.
+    \item[Pré-condições:] Administrador autenticado.
+    \item[Fluxo principal:]
+        \begin{enumerate}
+            \item Administrador acessa a seção de templates.
+            \item Sistema exibe galeria de templates existentes.
+            \item Administrador faz upload de novo arquivo PPTX.
+            \item Sistema valida o formato e exibe preview.
+            \item Administrador configura campos dinâmicos (\{\{nome\}\}, \{\{curso\}\}, etc.) e personaliza cores e fontes.
+            \item Administrador salva o template.
+        \end{enumerate}
+    \item[Fluxo alternativo -- Editar template:] Administrador seleciona template existente, altera configurações e salva.
+    \item[Fluxo de exceção -- Formato inválido:] Arquivo diferente de PPTX é rejeitado com mensagem.
+    \item[Pós-condições:] Template salvo e disponível para uso na emissão de certificados.
+\end{description}
 
-\paragraph{UC003 — Gerenciar Cursos}
-\leavevmode\vspace{-\parskip}\vspace{-\baselineskip}
-\begin{itemize}[nosep,leftmargin=*,labelindent=0pt]
-    \item[\textbf{Ator:}] Administrador.
-    \item[\textbf{Pré-condições:}] Administrador autenticado.
-    \item[\textbf{Fluxo principal:}]
-    \begin{enumerate}[nosep]
-        \item Administrador acessa a seção de cursos.
-        \item Sistema exibe lista de cursos cadastrados.
-        \item Administrador preenche nome, carga horária, datas e instrutor.
-        \item Sistema valida e salva o curso.
-        \item Sistema exibe confirmação.
-    \end{enumerate}
-    \item[\textbf{Fluxo de exceção:}] \textbf{FE01 — Dados obrigatórios ausentes:} sistema bloqueia salvamento até preenchimento.
-    \item[\textbf{Pós-condições:}] Curso cadastrado e disponível para vinculação com certificados.
-\end{itemize}
+\paragraph{UC003 -- Gerenciar Cursos}
+\begin{description}
+    \item[Ator principal:] Administrador.
+    \item[Pré-condições:] Administrador autenticado.
+    \item[Fluxo principal:]
+        \begin{enumerate}
+            \item Administrador acessa seção de cursos.
+            \item Sistema exibe lista de cursos cadastrados.
+            \item Administrador preenche nome, carga horária, datas e instrutor.
+            \item Sistema valida e salva o curso.
+            \item Sistema exibe confirmação.
+        \end{enumerate}
+    \item[Fluxo de exceção -- Dados obrigatórios ausentes:] Sistema bloqueia salvamento até preenchimento completo.
+    \item[Pós-condições:] Curso cadastrado e disponível para vinculação com certificados.
+\end{description}
 
-\paragraph{UC004 — Emitir Certificado Individual}
-\leavevmode\vspace{-\parskip}\vspace{-\baselineskip}
-\begin{itemize}[nosep,leftmargin=*,labelindent=0pt]
-    \item[\textbf{Ator:}] Colaborador.
-    \item[\textbf{Pré-condições:}] Colaborador autenticado; template e curso cadastrados.
-    \item[\textbf{Fluxo principal:}]
-    \begin{enumerate}[nosep]
-        \item Colaborador acessa a seção de emissão.
-        \item Sistema exibe formulário com template, curso e participante.
-        \item Colaborador seleciona template, curso e participante.
-        \item Sistema valida vínculo do participante ao curso.
-        \item Sistema gera PDF preenchendo campos dinâmicos.
-        \item Sistema gera código único e QR Code.
-        \item Sistema registra data, hora e responsável.
-        \item Sistema exibe certificado gerado com opção de download.
-    \end{enumerate}
-    \item[\textbf{Fluxo de exceção:}] \textbf{FE01 — Participante sem vínculo:} sistema bloqueia emissão e exibe alerta.
-    \item[\textbf{Pós-condições:}] Certificado gerado, código único registrado e disponível para validação pública.
-\end{itemize}
+\paragraph{UC004 -- Emitir Certificado Individual}
+\begin{description}
+    \item[Ator principal:] Colaborador.
+    \item[Pré-condições:] Colaborador autenticado; template e curso cadastrados.
+    \item[Fluxo principal:]
+        \begin{enumerate}
+            \item Colaborador acessa a seção de emissão.
+            \item Sistema exibe formulário com campos para template, curso e participante.
+            \item Colaborador seleciona template, curso e participante.
+            \item Sistema valida vínculo do participante ao curso.
+            \item Sistema gera PDF preenchendo campos dinâmicos.
+            \item Sistema gera código único e QR Code.
+            \item Sistema registra data, hora e responsável.
+            \item Sistema exibe certificado gerado com opção de download.
+        \end{enumerate}
+    \item[Fluxo de exceção -- Participante sem vínculo:] Sistema bloqueia emissão e exibe alerta.
+    \item[Pós-condições:] Certificado gerado, código único registrado e disponível para validação pública.
+\end{description}
 
-\paragraph{UC005 — Emitir Certificados em Lote}
-\leavevmode\vspace{-\parskip}\vspace{-\baselineskip}
-\begin{itemize}[nosep,leftmargin=*,labelindent=0pt]
-    \item[\textbf{Ator:}] Colaborador.
-    \item[\textbf{Pré-condições:}] Colaborador autenticado; template e lista de participantes disponíveis.
-    \item[\textbf{Fluxo principal:}]
-    \begin{enumerate}[nosep]
-        \item Colaborador seleciona template e arquivo com lista de participantes para emissão em lote.
-        \item Sistema valida dados e enfileira as emissões.
-        \item Sistema processa cada item da fila, gerando PDF, código único e registro.
-        \item Sistema notifica o colaborador ao término.
-    \end{enumerate}
-    \item[\textbf{Fluxo de exceção:}] \textbf{FE01 — Dados inválidos na lista:} linhas com erro são ignoradas e reportadas ao final.
-    \item[\textbf{Pós-condições:}] Certificados do lote gerados e registrados no sistema.
-\end{itemize}
+\paragraph{UC005 -- Emitir Certificados em Lote}
+\begin{description}
+    \item[Ator principal:] Colaborador.
+    \item[Pré-condições:] Colaborador autenticado; template e lista de participantes disponíveis.
+    \item[Fluxo principal:]
+        \begin{enumerate}
+            \item Colaborador seleciona template e arquivo com lista de participantes.
+            \item Sistema valida dados e enfileira as emissões.
+            \item Sistema processa cada item da fila, gerando PDF, código único e registro.
+            \item Sistema notifica o colaborador ao término.
+        \end{enumerate}
+    \item[Fluxo de exceção -- Dados inválidos na lista:] Linhas com erro são ignoradas e reportadas ao final do processamento.
+    \item[Pós-condições:] Certificados do lote gerados e registrados no sistema.
+\end{description}
 
-\paragraph{UC006 — Cadastrar Participante}
-\leavevmode\vspace{-\parskip}\vspace{-\baselineskip}
-\begin{itemize}[nosep,leftmargin=*,labelindent=0pt]
-    \item[\textbf{Ator:}] Colaborador.
-    \item[\textbf{Pré-condições:}] Colaborador autenticado.
-    \item[\textbf{Fluxo principal:}]
-    \begin{enumerate}[nosep]
-        \item Colaborador acessa a seção de participantes.
-        \item Sistema exibe formulário com campos nome, e-mail e CPF (opcional).
-        \item Colaborador preenche dados e confirma.
-        \item Sistema valida e salva.
-        \item Sistema exibe confirmação.
-    \end{enumerate}
-    \item[\textbf{Fluxo de exceção:}] \textbf{FE01 — E-mail duplicado:} sistema alerta sobre registro existente.
-    \item[\textbf{Pós-condições:}] Participante cadastrado e disponível para emissão de certificados.
-\end{itemize}
+\paragraph{UC006 -- Cadastrar Participante}
+\begin{description}
+    \item[Ator principal:] Colaborador.
+    \item[Pré-condições:] Colaborador autenticado.
+    \item[Fluxo principal:]
+        \begin{enumerate}
+            \item Colaborador acessa seção de participantes.
+            \item Sistema exibe formulário com campos nome, e-mail e CPF (opcional).
+            \item Colaborador preenche dados e confirma.
+            \item Sistema valida e salva.
+            \item Sistema exibe confirmação.
+        \end{enumerate}
+    \item[Fluxo de exceção -- E-mail duplicado:] Sistema alerta sobre registro existente.
+    \item[Pós-condições:] Participante cadastrado e disponível para emissão de certificados.
+\end{description}
 
-\paragraph{UC007 — Importar Participantes}
-\leavevmode\vspace{-\parskip}\vspace{-\baselineskip}
-\begin{itemize}[nosep,leftmargin=*,labelindent=0pt]
-    \item[\textbf{Ator:}] Colaborador.
-    \item[\textbf{Pré-condições:}] Colaborador autenticado; arquivo CSV ou Excel disponível.
-    \item[\textbf{Fluxo principal:}]
-    \begin{enumerate}[nosep]
-        \item Colaborador acessa a opção de importar participantes.
-        \item Sistema exibe formulário para upload de arquivo.
-        \item Colaborador seleciona e envia o arquivo.
-        \item Sistema valida cabeçalho e dados das linhas.
-        \item Sistema importa registros válidos e exibe resumo.
-    \end{enumerate}
-    \item[\textbf{Fluxo de exceção:}] \textbf{FE01 — Formato inválido:} arquivo diferente de CSV ou XLSX é rejeitado. \textbf{FE02 — Dados inconsistentes:} linhas com erros são listadas para correção.
-    \item[\textbf{Pós-condições:}] Participantes importados disponíveis para emissão.
-\end{itemize}
+\paragraph{UC007 -- Importar Participantes}
+\begin{description}
+    \item[Ator principal:] Colaborador.
+    \item[Pré-condições:] Colaborador autenticado; arquivo CSV ou Excel disponível.
+    \item[Fluxo principal:]
+        \begin{enumerate}
+            \item Colaborador acessa opção de importar participantes.
+            \item Sistema exibe formulário para upload de arquivo.
+            \item Colaborador seleciona e envia o arquivo.
+            \item Sistema valida cabeçalho e dados das linhas.
+            \item Sistema importa registros válidos e exibe resumo.
+        \end{enumerate}
+    \item[Fluxo de exceção -- Formato inválido:] Arquivo diferente de CSV ou XLSX é rejeitado.
+    \item[Fluxo de exceção -- Dados inconsistentes:] Linhas com erros são listadas para correção.
+    \item[Pós-condições:] Participantes importados disponíveis para emissão.
+\end{description}
 
-\paragraph{UC008 — Validar Certificado}
-\leavevmode\vspace{-\parskip}\vspace{-\baselineskip}
-\begin{itemize}[nosep,leftmargin=*,labelindent=0pt]
-    \item[\textbf{Ator:}] Visitante (público).
-    \item[\textbf{Pré-condições:}] Nenhuma (portal público).
-    \item[\textbf{Fluxo principal:}]
-    \begin{enumerate}[nosep]
-        \item Visitante acessa o portal público de validação.
-        \item Sistema exibe campo para inserir código único.
-        \item Visitante insere o código presente no certificado.
-        \item Sistema consulta o código e exibe nome, curso, data e status de autenticidade.
-    \end{enumerate}
-    \item[\textbf{Fluxo alternativo:}] \textbf{FA01 — QR Code:} visitante escaneia o QR Code no certificado e é redirecionado à página com o código preenchido automaticamente.
-    \item[\textbf{Fluxo de exceção:}] \textbf{FE01 — Código inválido:} sistema exibe mensagem ``Certificado não encontrado''.
-    \item[\textbf{Pós-condições:}] Informações do certificado exibidas ao visitante.
-\end{itemize}
+\paragraph{UC008 -- Validar Certificado}
+\begin{description}
+    \item[Ator principal:] Visitante (público).
+    \item[Pré-condições:] Nenhuma (portal público).
+    \item[Fluxo principal:]
+        \begin{enumerate}
+            \item Visitante acessa portal público de validação.
+            \item Sistema exibe campo para inserir código único.
+            \item Visitante insere o código presente no certificado.
+            \item Sistema consulta o código e exibe nome, curso, data e status de autenticidade.
+        \end{enumerate}
+    \item[Fluxo alternativo -- QR Code:] Visitante escaneia QR Code no certificado e é redirecionado com o código preenchido automaticamente.
+    \item[Fluxo de exceção -- Código inválido:] Sistema exibe "Certificado não encontrado".
+    \item[Pós-condições:] Informações do certificado exibidas ao visitante.
+\end{description}
