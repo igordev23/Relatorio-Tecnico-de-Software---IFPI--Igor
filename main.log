@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 15:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -963,7 +963,7 @@ Package hyperref Info: Link coloring OFF on input line 64.
 \openout4 = `main.out'.
 
  (partes/capa.tex
-<imagens/Logo-IFPI-Vertical.png, id=258, 903.375pt x 652.4375pt>
+<imagens/Logo-IFPI-Vertical.png, id=314, 903.375pt x 652.4375pt>
 File: imagens/Logo-IFPI-Vertical.png Graphic file (type png)
 <use imagens/Logo-IFPI-Vertical.png>
 Package pdftex.def Info: imagens/Logo-IFPI-Vertical.png  used on input line 3.
@@ -985,200 +985,86 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.5 \newpage
-             [1]) [2] (main.toc)
-\tf@toc=\write5
-\openout5 = `main.toc'.
+             [1]) [2] (main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 
- [3] (partes/introducao.tex
-
-LaTeX Warning: Citation `rahman2026' on page 4 undefined on input line 7.
-
-
-LaTeX Warning: Citation `wellem2021' on page 4 undefined on input line 7.
-
-
-LaTeX Warning: Citation `kulkarni2025' on page 4 undefined on input line 9.
-
-
-LaTeX Warning: Citation `olusanya2021' on page 4 undefined on input line 9.
-
-[4]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-5.
- (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-))
-(partes/tecnologias.tex [5]
-
-LaTeX Warning: Citation `benkora2024' on page 6 undefined on input line 14.
-
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 14
-.
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-
-LaTeX Warning: Citation `typescript2025' on page 6 undefined on input line 19.
-
-[6]
-
-LaTeX Warning: Citation `tailwind2025' on page 7 undefined on input line 26.
-
-
-LaTeX Warning: Citation `shadcn2025' on page 7 undefined on input line 31.
-
-[7]
-
-LaTeX Warning: Citation `tanstackrouter2025' on page 8 undefined on input line 
-36.
-
-
-LaTeX Warning: Citation `tanstackquery2025' on page 8 undefined on input line 4
-3.
-
-[8]
-
-LaTeX Warning: Citation `reacthookform2025' on page 9 undefined on input line 4
-8.
-
-
-LaTeX Warning: Citation `sonner2025' on page 9 undefined on input line 53.
-
-
-LaTeX Warning: Citation `recharts2025' on page 9 undefined on input line 58.
-
-[9]
-
-LaTeX Warning: Citation `datefns2025' on page 10 undefined on input line 65.
-
-[10]
-
-LaTeX Warning: Citation `vite2025' on page 11 undefined on input line 72.
-
-[11]
-
-LaTeX Warning: Citation `zod2025' on page 12 undefined on input line 85.
-
-
-LaTeX Warning: Citation `nodejs2025' on page 12 undefined on input line 92.
-
-
-LaTeX Warning: Citation `nextjs2025' on page 12 undefined on input line 95.
-
-[12]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
-
- (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+[3] [4])
+\tf@toc=\write5
+\openout5 = `main.toc'.
 
-LaTeX Warning: Citation `supabase2025' on page 13 undefined on input line 104.
+ [5] (partes/introducao.tex [6]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+7.
 
-
-LaTeX Warning: Citation `postgresql2025' on page 13 undefined on input line 108
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+[7]) (partes/tecnologias.tex
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 14
 .
 
-[13]
-
-LaTeX Warning: Citation `pdfkit2025' on page 14 undefined on input line 111.
-
-
-LaTeX Warning: Citation `uuid2025' on page 14 undefined on input line 115.
-
-
-LaTeX Warning: Citation `zod2025' on page 14 undefined on input line 118.
-
-[14]
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+[8] [9] [10] [11] [12] [13] [14] [15] [16]
 Overfull \hbox (9.46085pt too wide) in paragraph at lines 121--122
 []\T1/ptm/m/n/12 A ar-qui-te-tura em ca-ma-das ado-tada no bac-kend or-ga-niza 
 o có-digo em qua-tro pa-co-tes: \T1/pcr/m/n/12 domain\T1/ptm/m/n/12 ,
  []
 
-
-LaTeX Warning: Citation `render2025' on page 15 undefined on input line 127.
-
-[15]
-
-LaTeX Warning: Citation `jest2025' on page 16 undefined on input line 134.
-
-
-LaTeX Warning: Citation `eslint2025' on page 16 undefined on input line 141.
-
-
-LaTeX Warning: Citation `prettier2025' on page 16 undefined on input line 141.
-
-
-LaTeX Warning: Citation `git2025' on page 16 undefined on input line 146.
-
-
-LaTeX Warning: Citation `github2025' on page 16 undefined on input line 146.
-
-[16]
-
-LaTeX Warning: Citation `vscode2025' on page 17 undefined on input line 151.
-
-) (partes/modelagem.tex [17]
+[17] [18]) (partes/modelagem.tex [19]
 Overfull \vbox (61.0854pt too high) has occurred while \output is active []
 
 
-[18] (partes/requisitos/rf.tex [19] [20] [21] [22] [23])
-(partes/requisitos/rfn.tex [24] [25] [26]
+[20] (partes/requisitos/rf.tex [21] [22] [23] [24] [25])
+(partes/requisitos/rfn.tex [26] [27] [28]
 Overfull \hbox (3.7261pt too wide) in paragraph at lines 75--76
 []\T1/ptm/m/n/12 RNF042 ^^U O fron-tend deve se-guir o pa-drão ar-qui-te-tu-ral
  MVVM (\T1/ptm/m/it/12 Model-View-ViewModel\T1/ptm/m/n/12 ),
  []
 
-[27]) (partes/requisitos/regras_negocio.tex)
-(partes/requisitos/rastreabilidade.tex
-
-LaTeX Warning: Reference `tab:rastreabilidade' on page 28 undefined on input li
-ne 3.
-
-[28]) (partes/diagramas/casos_de_uso.tex)
-(partes/diagramas/Diagrama_de_Classes.tex
-<imagens/diagrama-de-classes.png, id=396, 1541.76pt x 1027.84pt>
+[29]) (partes/requisitos/regras_negocio.tex)
+(partes/requisitos/rastreabilidade.tex [30]) (partes/diagramas/casos_de_uso.tex
+) (partes/diagramas/Diagrama_de_Classes.tex
+<imagens/diagrama-de-classes.png, id=598, 1541.76pt x 1027.84pt>
 File: imagens/diagrama-de-classes.png Graphic file (type png)
 <use imagens/diagrama-de-classes.png>
 Package pdftex.def Info: imagens/diagrama-de-classes.png  used on input line 5.
 
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
- [29])
-
-LaTeX Warning: Reference `fig:backend' on page 30 undefined on input line 21.
-
-
-LaTeX Warning: Reference `fig:frontend' on page 30 undefined on input line 21.
-
+ [31])
 (partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=406, 1166.3575pt x 1359.0775pt>
+<imagens/backend.png, id=607, 1166.3575pt x 1359.0775pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 477.4055pt.
 )
-(partes/diagramas/arquitetura-frontend.tex [30 <./imagens/diagrama-de-classes.p
+(partes/diagramas/arquitetura-frontend.tex [32 <./imagens/diagrama-de-classes.p
 ng (PNG copy)>]
-<imagens/frontend.png, id=414, 1541.76pt x 1027.84pt>
+<imagens/frontend.png, id=615, 1541.76pt x 1027.84pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
-) [31 <./imagens/backend.png (PNG copy)>]
+) [33 <./imagens/backend.png (PNG copy)>]
 (partes/diagramas/der.tex
-<imagens/DER.png, id=420, 1529.715pt x 1385.175pt>
+<imagens/DER.png, id=620, 1529.715pt x 1385.175pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 371.00093pt.
-) [32 <./imagens/frontend.png (PNG copy)>])
-(partes/software.tex) (partes/consideracoes.tex) [33 <./imagens/DER.png>]
-[34] (main.bbl
+) [34 <./imagens/frontend.png (PNG copy)>])
+(partes/software.tex) (partes/consideracoes.tex) [35 <./imagens/DER.png>]
+[36] (main.bbl
 Underfull \hbox (badness 5652) in paragraph at lines 23--28
 []\T1/ptm/m/n/12 KULKARNI, R. et al. A se-cure cer-ti-fi-cate authen-ti-ca-tion
  sys-tem using cryp-
@@ -1214,7 +1100,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--59
 /12 . 2025. Dis-po-ní-vel em:
  []
 
-[35]
+[37]
 Underfull \hbox (badness 3148) in paragraph at lines 78--80
 []\T1/ptm/m/n/12 KOWALSKI, E. \T1/ptm/m/it/12 Son-ner ^^V To-ast Com-po-nent fo
 r Re-act\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
@@ -1269,38 +1155,25 @@ m/m/n/12 . 2025. Dis-po-ní-vel em: $\OML/cmm/m/it/12 <$\T1/ptm/m/n/12 https://g
 it-
  []
 
-[36]
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 164--166
 []\T1/ptm/m/n/12 MICROSOFT. \T1/ptm/m/it/12 Vi-sual Stu-dio Code Do-cu-men-ta-t
 ion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-) [37] (partes/anexos.tex) [38] (main.aux)
+) [39] (partes/anexos.tex) [40] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 4EC89BAAA858F013BFCE65262EF57DA6;11062
-(rerunfilecheck)             After:  F8C0EB61A147892F9A7AC8FC518F7E0A;13223.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: F8C0EB61A147892F9A7AC8FC518F7E0A;13223.
  ) 
 Here is how much of TeX's memory you used:
- 28305 strings out of 467871
- 550023 string characters out of 5418376
+ 28321 strings out of 467871
+ 550243 string characters out of 5418376
  1239927 words of memory out of 5000000
- 56491 multiletter control sequences out of 15000+600000
+ 56505 multiletter control sequences out of 15000+600000
  661278 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,10n,94p,1198b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1311,9 +1184,9 @@ s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmri8a.pfb>
 Output written on C:\Users\franc\OneDrive\Documentos\ADS\TCC\RelatÃ³rio_TÃ©cnic
-o_de_Software___IFPI__Igor\main.pdf (40 pages, 3779389 bytes).
+o_de_Software___IFPI__Igor\main.pdf (42 pages, 3808333 bytes).
 PDF statistics:
- 552 PDF objects out of 1000 (max. 8388607)
- 155 named destinations out of 1000 (max. 500000)
- 542 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 713 PDF objects out of 1000 (max. 8388607)
+ 157 named destinations out of 1000 (max. 500000)
+ 654 words of extra memory for PDF output out of 10000 (max. 10000000)
 
