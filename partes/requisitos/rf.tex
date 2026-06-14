@@ -50,98 +50,96 @@
 \begin{itemize}
 \item RF030 – Permitir personalização do corpo do e-mail com variáveis.
 \item RF031 – Registrar status de envio (pendente, enviado, falha).
-\item RF032 – Reenviar automaticamente em caso de falha (até 3 tentativas a cada 10 min).
+\item RF032 – Reenviar automaticamente certificados com falha de envio.
 \end{itemize}
 
 \subsubsection{Módulo de Validação Pública e Antifraude}
 \begin{itemize}
 \item RF033 – Disponibilizar portal público de validação.
 \item RF034 – Validar certificado via código único.
-\item RF035 – Gerar QR Code no certificado.
-\item RF036 – Permitir personalização de cores do QR Code.
-\item RF037 – Exibir informações básicas ao validar (nome, curso, data, validade, autenticidade).
+\item RF035 – Gerar QR Code no certificado com opções de personalização.
+\item RF036 – Exibir informações básicas ao validar (nome, curso, data, validade, autenticidade).
 \end{itemize}
 
 \subsubsection{Módulo de Assinaturas Digitais}
 \begin{itemize}
-\item RF038 – Permitir adicionar assinatura digitalizada ao template.
-\item RF039 – Registrar hash de verificação da assinatura.
+\item RF037 – Permitir adicionar assinatura digitalizada ao template.
+\item RF038 – Registrar hash de verificação da assinatura.
 \end{itemize}
 
 \subsubsection{Módulo de Dashboard e Gestão}
 \begin{itemize}
-\item RF040 – Exibir lista completa de certificados emitidos.
-\item RF041 – Permitir filtros por curso, período, status e instrutor.
-\item RF042 – Exibir estatísticas mensais de emissão.
-\item RF043 – Exibir logs de ações realizadas.
+\item RF039 – Exibir lista completa de certificados emitidos.
+\item RF040 – Permitir filtros por curso, período, status e instrutor.
+\item RF041 – Exibir estatísticas mensais de emissão.
+\item RF042 – Exibir logs de ações realizadas.
 \end{itemize}
 
 \subsubsection{Módulo de Auditoria e Segurança Operacional}
 \begin{itemize}
-\item RF044 – Registrar responsável por cada certificado gerado.
-\item RF045 – Registrar data, hora e local de ações relevantes.
-\item RF046 – Permitir arquivamento de certificados como alternativa à exclusão definitiva.
+\item RF043 – Registrar responsável por cada certificado gerado.
+\item RF044 – Registrar data, hora e local de ações relevantes.
+\item RF045 – Permitir arquivamento de certificados como alternativa à exclusão definitiva.
 \end{itemize}
 
 \subsubsection{Módulo de Gestão de Cursos/Eventos}
 \begin{itemize}
-\item RF047 – Permitir cadastro de cursos/eventos.
-\item RF048 – Associar participantes ao curso.
-\item RF049 – Definir carga horária.
-\item RF050 – Registrar instrutor responsável.
-\item RF051 – Configurar datas de início e término.
-\item RF052 – Listar certificados vinculados ao curso.
-\item RF053 – Validar vínculo do participante ao curso antes de permitir a emissão.
-\item RF054 – Registrar local do curso.
+\item RF046 – Permitir cadastro de cursos/eventos.
+\item RF047 – Associar participantes ao curso.
+\item RF048 – Definir carga horária.
+\item RF049 – Registrar instrutor responsável.
+\item RF050 – Configurar datas de início e término.
+\item RF051 – Listar certificados vinculados ao curso.
+\item RF052 – Validar vínculo do participante ao curso antes de permitir a emissão.
+\item RF053 – Registrar local do curso.
 \end{itemize}
 
 \subsubsection{Módulo de Participantes}
 \begin{itemize}
-\item RF055 – Cadastro completo de participantes (nome, e-mail, CPF opcional).
-\item RF056 – Permitir edição de dados.
-\item RF057 – Importar participantes sem duplicidade.
-\item RF058 – Exibir histórico de certificados por participante.
-\item RF059 – Permitir busca por nome, e-mail e CPF.
+\item RF054 – Cadastro completo de participantes (nome, e-mail, CPF opcional).
+\item RF055 – Permitir edição de dados.
+\item RF056 – Importar participantes sem duplicidade.
+\item RF057 – Exibir histórico de certificados por participante.
+\item RF058 – Permitir busca por nome, e-mail e CPF.
 \end{itemize}
 
 \subsubsection{Módulo Multiempresa / Multi-tenant}
 \begin{itemize}
-\item RF060 – Permitir cadastro de múltiplas organizações.
-\item RF061 – Isolar dados entre organizações.
-\item RF062 – Permitir que cada empresa tenha seus próprios templates.
-\item RF063 – Permitir que administradores gerenciem usuários internos.
+\item RF059 – Permitir cadastro de organizações com dados institucionais (CNPJ, razão social, endereço e contato).
+\item RF060 – Associar usuários cadastrados à sua respectiva organização.
+\item RF061 – Permitir que cada organização gerencie seus próprios templates.
+\item RF062 – Permitir que cada organização gerencie seus próprios usuários e perfis de acesso.
 \end{itemize}
 
 \subsubsection{Módulo de Configurações do Sistema}
 \begin{itemize}
-\item RF064 – Personalizar mensagens padrão.
-\item RF065 – Ativar/desativar envio automático.
-\item RF066 – Configurar regras de reemissão.
+\item RF063 – Personalizar mensagens padrão.
+\item RF064 – Ativar/desativar envio automático.
+\item RF065 – Configurar regras de reemissão.
 \end{itemize}
 
 \subsubsection{Módulo de Armazenamento e Arquivos}
 \begin{itemize}
-\item RF067 – Permitir exclusão lógica (soft-delete) de arquivos.
-\item RF068 – Armazenar templates no sistema.
+\item RF066 – Armazenar templates no sistema.
 \end{itemize}
 
 \subsubsection{Módulo de Notificações e Alertas}
 \begin{itemize}
-\item RF069 – Notificar falhas de emissão.
-\item RF070 – Notificar sucesso no processamento de planilhas.
-\item RF071 – Alertar quando template estiver incompleto ou inválido.
+\item RF067 – Notificar falhas de emissão.
+\item RF068 – Notificar sucesso no processamento de planilhas.
+\item RF069 – Alertar quando template estiver incompleto ou inválido.
 \end{itemize}
 
 \subsubsection{Módulo de Monitoramento e Logs}
 \begin{itemize}
-\item RF072 – Registrar logs de autenticação e tentativas de acesso.
-\item RF073 – Registrar eventos críticos (falha geração PDF etc.).
-\item RF074 – Permitir exportação de logs.
+\item RF070 – Registrar logs de autenticação e tentativas de acesso.
+\item RF071 – Registrar eventos críticos (falha geração PDF etc.).
+\item RF072 – Permitir exportação de logs.
 \end{itemize}
 
 \subsubsection{Módulo de Suporte, Operação e Manutenção}
 \begin{itemize}
-\item RF075 – Permitir abertura de chamados de suporte.
-\item RF076 – Exibir status do sistema (online/manutenção).
-\item RF077 – Permitir atualização de termos de uso e políticas.
+\item RF073 – Permitir abertura de chamados de suporte.
+\item RF074 – Exibir status do sistema (online/manutenção).
+\item RF075 – Permitir atualização de termos de uso e políticas.
 \end{itemize}
