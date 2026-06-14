@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 16:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1512,43 +1512,39 @@ ignored error: Infinite glue shrinkage found in box being split [32]
 ignored error: Infinite glue shrinkage found in box being split [33]
 ignored error: Infinite glue shrinkage found in box being split [34])
 (partes/requisitos/rastreabilidade.tex) (partes/diagramas/casos_de_uso.tex
-[35]) (partes/diagramas/casos_de_uso_descricao.tex
-Overfull \hbox (1.45364pt too wide) in paragraph at lines 16--17
-[]\T1/ptm/m/n/12 Sistema re-jeita ca-das-tro com e-mail já exis-tente e exibe
- []
-
-[36] [37] [38] [39]) (partes/diagramas/Diagrama_de_Classes.tex
-<imagens/diagrama-de-classes.png, id=690, 1541.76pt x 1027.84pt>
+[35]) (partes/diagramas/casos_de_uso_descricao.tex [36] [37] [38] [39] [40])
+(partes/diagramas/Diagrama_de_Classes.tex
+<imagens/diagrama-de-classes.png, id=655, 1541.76pt x 1027.84pt>
 File: imagens/diagrama-de-classes.png Graphic file (type png)
 <use imagens/diagrama-de-classes.png>
 Package pdftex.def Info: imagens/diagrama-de-classes.png  used on input line 5.
 
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
- [40])
+ [41])
 (partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=702, 1166.3575pt x 1359.0775pt>
+<imagens/backend.png, id=665, 1166.3575pt x 1359.0775pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 477.4055pt.
 )
-(partes/diagramas/arquitetura-frontend.tex [41 <./imagens/diagrama-de-classes.p
+(partes/diagramas/arquitetura-frontend.tex [42 <./imagens/diagrama-de-classes.p
 ng (PNG copy)>]
-<imagens/frontend.png, id=711, 1541.76pt x 1027.84pt>
+<imagens/frontend.png, id=673, 1541.76pt x 1027.84pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
-) [42 <./imagens/backend.png (PNG copy)>]
+) [43 <./imagens/backend.png (PNG copy)>]
 (partes/diagramas/der.tex
-<imagens/DER.png, id=716, 1529.715pt x 1385.175pt>
+<imagens/DER.png, id=678, 1529.715pt x 1385.175pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 371.00093pt.
-) [43 <./imagens/frontend.png (PNG copy)>])
-(partes/software.tex) (partes/consideracoes.tex) [44 <./imagens/DER.png>]
-[45] (main.bbl
+) [44 <./imagens/frontend.png (PNG copy)>])
+(partes/software.tex) (partes/consideracoes.tex) [45 <./imagens/DER.png>]
+[46] (main.bbl
 Underfull \hbox (badness 5652) in paragraph at lines 23--28
 []\T1/ptm/m/n/12 KULKARNI, R. et al. A se-cure cer-ti-fi-cate authen-ti-ca-tion
  sys-tem using cryp-
@@ -1584,7 +1580,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--59
 /12 . 2025. Dis-po-ní-vel em:
  []
 
-[46]
+[47]
 Underfull \hbox (badness 3148) in paragraph at lines 78--80
 []\T1/ptm/m/n/12 KOWALSKI, E. \T1/ptm/m/it/12 Son-ner ^^V To-ast Com-po-nent fo
 r Re-act\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
@@ -1639,13 +1635,13 @@ m/m/n/12 . 2025. Dis-po-ní-vel em: $\OML/cmm/m/it/12 <$\T1/ptm/m/n/12 https://g
 it-
  []
 
-[47]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 164--166
 []\T1/ptm/m/n/12 MICROSOFT. \T1/ptm/m/it/12 Vi-sual Stu-dio Code Do-cu-men-ta-t
 ion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-) [48] (partes/anexos.tex) [49] (main.aux)
+) [49] (partes/anexos.tex) [50] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1654,10 +1650,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D0065E47AF7432329EDB994DADC54B40;13406.
  ) 
 Here is how much of TeX's memory you used:
- 28579 strings out of 467871
- 554617 string characters out of 5418376
+ 28534 strings out of 467871
+ 554251 string characters out of 5418376
  1279360 words of memory out of 5000000
- 56689 multiletter control sequences out of 15000+600000
+ 56685 multiletter control sequences out of 15000+600000
  664702 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,10n,94p,1198b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1668,9 +1664,9 @@ s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmri8a.pfb>
 Output written on C:\Users\franc\OneDrive\Documentos\ADS\TCC\RelatÃ³rio_TÃ©cnic
-o_de_Software___IFPI__Igor\main.pdf (51 pages, 3833836 bytes).
+o_de_Software___IFPI__Igor\main.pdf (52 pages, 3830350 bytes).
 PDF statistics:
- 823 PDF objects out of 1000 (max. 8388607)
- 218 named destinations out of 1000 (max. 500000)
+ 774 PDF objects out of 1000 (max. 8388607)
+ 177 named destinations out of 1000 (max. 500000)
  662 words of extra memory for PDF output out of 10000 (max. 10000000)
 
