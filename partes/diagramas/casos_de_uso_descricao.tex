@@ -1,210 +1,430 @@
-As descrições textuais a seguir detalham cada caso de uso identificado no diagrama da Figura~\ref{fig:casos-uso}. Cada descrição contempla ator principal, pré-condições, fluxo principal, fluxos alternativos e de exceção, e pós-condições.
+As descrições textuais a seguir detalham cada caso de uso identificado no diagrama da Figura~\ref{fig:casos-uso}, seguindo o formato padronizado proposto por Kr\"amer~(2024).
 
 \begin{table}[H]
 \centering
-\begin{tabular}{p{3.5cm} p{11.5cm}}
+\begin{tabular}{p{3.2cm} p{11.8cm}}
 \toprule
 \multicolumn{2}{c}{\textbf{UC001 -- Gerenciar Usuários}} \\
 \midrule
-\textbf{Ator principal} & Administrador \\
+\textbf{Dependências} & RF001, RF003, RF004, RF005, RF006 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador gerencie os usuários da plataforma, incluindo criação, edição e desativação de contas, bem como a definição de perfis de acesso. \\
+\textbf{Ator(es)} & Administrador \\
 \midrule
-\textbf{Pré-condições} & Administrador autenticado no sistema. \\
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+    \item Administrador possui permissão de gerenciamento de usuários.
+\end{enumerate} \\
 \midrule
-\textbf{Fluxo principal} & 
-1. Administrador acessa a seção de usuários. \\
-& 2. Sistema exibe lista de usuários cadastrados. \\
-& 3. Administrador seleciona criar, editar ou desativar um usuário. \\
-& 4. Sistema valida e persiste a alteração. \\
-& 5. Sistema exibe confirmação. \\
+\textbf{Sequência Ordinária} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
 \midrule
-\textbf{Fluxo alternativo} & FA01 -- Definir permissões: durante a edição, o administrador pode definir perfis de acesso do usuário. \\
+\textbf{Passo} & \textbf{Ação} \\
 \midrule
-\textbf{Fluxo de exceção} & FE01 -- E-mail duplicado: sistema rejeita cadastro e exibe mensagem. \\
+1 & O administrador acessa a seção de usuários. \\
+2 & O sistema exibe a lista de usuários cadastrados. \\
+3 & O administrador seleciona criar, editar ou desativar um usuário. \\
+4 & O sistema valida os dados informados. \\
+5 & O sistema persiste a alteração no banco de dados. \\
+6 & O sistema exibe confirmação da operação. \\
+\bottomrule
+\end{tabular} \\
 \midrule
-\textbf{Pós-condições} & Usuário criado/editado/desativado com sucesso; alterações refletidas na lista. \\
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Usuário criado, editado ou desativado com sucesso.
+    \item Alterações refletidas na lista de usuários.
+\end{enumerate} \\
+\midrule
+\textbf{Exceções} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
+\midrule
+\textbf{Passo} & \textbf{Condição} \\
+\midrule
+3 & Se o e-mail informado já existir, o sistema rejeita o cadastro e exibe mensagem de erro. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Referências} & RF001, RF003, RF004, RF005, RF006 \\
+\textbf{Comentários} & Nenhum. \\
 \bottomrule
 \end{tabular}
-\caption{Descrição do caso de uso UC001 -- Gerenciar Usuários}
+\caption{Caso de uso UC001 -- Gerenciar Usuários}
 \end{table}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{p{3.5cm} p{11.5cm}}
+\begin{tabular}{p{3.2cm} p{11.8cm}}
 \toprule
 \multicolumn{2}{c}{\textbf{UC002 -- Gerenciar Templates}} \\
 \midrule
-\textbf{Ator principal} & Administrador \\
+\textbf{Dependências} & RF008, RF009, RF010, RF012, RF013 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador gerencie templates de certificados, incluindo upload, personalização visual e configuração de campos dinâmicos. \\
+\textbf{Ator(es)} & Administrador \\
 \midrule
-\textbf{Pré-condições} & Administrador autenticado. \\
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
 \midrule
-\textbf{Fluxo principal} & 
-1. Administrador acessa a seção de templates. \\
-& 2. Sistema exibe galeria de templates existentes. \\
-& 3. Administrador faz upload de novo arquivo PPTX. \\
-& 4. Sistema valida o formato e exibe preview. \\
-& 5. Administrador configura campos dinâmicos e personaliza cores e fontes. \\
-& 6. Administrador salva o template. \\
+\textbf{Sequência Ordinária} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
 \midrule
-\textbf{Fluxo alternativo} & FA01 -- Editar template: seleciona template existente, altera configurações e salva. \\
+\textbf{Passo} & \textbf{Ação} \\
 \midrule
-\textbf{Fluxo de exceção} & FE01 -- Formato inválido: arquivo diferente de PPTX é rejeitado. \\
+1 & O administrador acessa a seção de templates. \\
+2 & O sistema exibe a galeria de templates existentes. \\
+3 & O administrador faz upload de um novo arquivo PPTX. \\
+4 & O sistema valida o formato do arquivo e exibe preview. \\
+5 & O administrador configura campos dinâmicos e personaliza cores e fontes. \\
+6 & O sistema salva o template e retorna à galeria. \\
+\bottomrule
+\end{tabular} \\
 \midrule
-\textbf{Pós-condições} & Template salvo e disponível para uso na emissão. \\
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Template salvo no sistema.
+    \item Template disponível para uso na emissão de certificados.
+\end{enumerate} \\
+\midrule
+\textbf{Exceções} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
+\midrule
+\textbf{Passo} & \textbf{Condição} \\
+\midrule
+3 & Se o arquivo enviado não for PPTX, o sistema rejeita e exibe mensagem de formato inválido. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Referências} & RF008, RF009, RF010, RF012, RF013 \\
+\textbf{Comentários} & Nenhum. \\
 \bottomrule
 \end{tabular}
-\caption{Descrição do caso de uso UC002 -- Gerenciar Templates}
+\caption{Caso de uso UC002 -- Gerenciar Templates}
 \end{table}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{p{3.5cm} p{11.5cm}}
+\begin{tabular}{p{3.2cm} p{11.8cm}}
 \toprule
 \multicolumn{2}{c}{\textbf{UC003 -- Gerenciar Cursos}} \\
 \midrule
-\textbf{Ator principal} & Administrador \\
+\textbf{Dependências} & RF046, RF048, RF050, RF053 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador cadastre e gerencie cursos, incluindo nome, carga horária, datas, local e instrutor. \\
+\textbf{Ator(es)} & Administrador \\
 \midrule
-\textbf{Pré-condições} & Administrador autenticado. \\
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
 \midrule
-\textbf{Fluxo principal} & 
-1. Administrador acessa seção de cursos. \\
-& 2. Sistema exibe lista de cursos cadastrados. \\
-& 3. Administrador preenche nome, carga horária, datas e instrutor. \\
-& 4. Sistema valida e salva o curso. \\
-& 5. Sistema exibe confirmação. \\
+\textbf{Sequência Ordinária} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
 \midrule
-\textbf{Fluxo de exceção} & FE01 -- Dados obrigatórios ausentes: sistema bloqueia salvamento. \\
+\textbf{Passo} & \textbf{Ação} \\
 \midrule
-\textbf{Pós-condições} & Curso cadastrado e disponível para vinculação com certificados. \\
+1 & O administrador acessa a seção de cursos. \\
+2 & O sistema exibe a lista de cursos cadastrados. \\
+3 & O administrador preenche nome, carga horária, datas e instrutor. \\
+4 & O sistema valida os dados obrigatórios. \\
+5 & O sistema salva o curso no banco de dados. \\
+6 & O sistema exibe confirmação. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Curso cadastrado no sistema.
+    \item Curso disponível para vinculação com certificados.
+\end{enumerate} \\
+\midrule
+\textbf{Exceções} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
+\midrule
+\textbf{Passo} & \textbf{Condição} \\
+\midrule
+4 & Se dados obrigatórios estiverem ausentes, o sistema bloqueia o salvamento e exibe os campos pendentes. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Referências} & RF046, RF048, RF050, RF053 \\
+\textbf{Comentários} & Nenhum. \\
 \bottomrule
 \end{tabular}
-\caption{Descrição do caso de uso UC003 -- Gerenciar Cursos}
+\caption{Caso de uso UC003 -- Gerenciar Cursos}
 \end{table}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{p{3.5cm} p{11.5cm}}
+\begin{tabular}{p{3.2cm} p{11.8cm}}
 \toprule
 \multicolumn{2}{c}{\textbf{UC004 -- Emitir Certificado Individual}} \\
 \midrule
-\textbf{Ator principal} & Colaborador \\
+\textbf{Dependências} & RF015, RF016, RF023, RF024, RF025, RF026, RF028, RF052 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador emita um certificado individual, selecionando template, curso e participante, e gerando PDF com código único e QR Code. \\
+\textbf{Ator(es)} & Colaborador \\
 \midrule
-\textbf{Pré-condições} & Colaborador autenticado; template e curso cadastrados. \\
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+    \item Template de certificado cadastrado.
+    \item Curso cadastrado.
+\end{enumerate} \\
 \midrule
-\textbf{Fluxo principal} & 
-1. Colaborador acessa a seção de emissão. \\
-& 2. Sistema exibe formulário com template, curso e participante. \\
-& 3. Colaborador seleciona template, curso e participante. \\
-& 4. Sistema valida vínculo do participante ao curso. \\
-& 5. Sistema gera PDF preenchendo campos dinâmicos. \\
-& 6. Sistema gera código único e QR Code. \\
-& 7. Sistema registra data, hora e responsável. \\
-& 8. Sistema exibe certificado com opção de download. \\
+\textbf{Sequência Ordinária} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
 \midrule
-\textbf{Fluxo de exceção} & FE01 -- Participante sem vínculo: sistema bloqueia emissão e exibe alerta. \\
+\textbf{Passo} & \textbf{Ação} \\
 \midrule
-\textbf{Pós-condições} & Certificado gerado, código único registrado e disponível para validação. \\
+1 & O colaborador acessa a seção de emissão. \\
+2 & O sistema exibe formulário com campos para template, curso e participante. \\
+3 & O colaborador seleciona o template e o curso. \\
+4 & O colaborador seleciona ou cadastra o participante. \\
+5 & O sistema valida o vínculo do participante ao curso. \\
+6 & O sistema gera o PDF preenchendo os campos dinâmicos. \\
+7 & O sistema gera código único e insere QR Code no PDF. \\
+8 & O sistema registra data, hora e responsável pela emissão. \\
+9 & O sistema exibe o certificado gerado com opção de download. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Certificado gerado em PDF.
+    \item Código único registrado no banco de dados.
+    \item Certificado disponível para validação pública.
+\end{enumerate} \\
+\midrule
+\textbf{Exceções} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
+\midrule
+\textbf{Passo} & \textbf{Condição} \\
+\midrule
+5 & Se o participante não estiver vinculado ao curso, o sistema bloqueia a emissão e exibe alerta. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Referências} & RF015, RF016, RF023, RF024, RF025, RF026, RF028, RF052 \\
+\textbf{Comentários} & Nenhum. \\
 \bottomrule
 \end{tabular}
-\caption{Descrição do caso de uso UC004 -- Emitir Certificado Individual}
+\caption{Caso de uso UC004 -- Emitir Certificado Individual}
 \end{table}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{p{3.5cm} p{11.5cm}}
+\begin{tabular}{p{3.2cm} p{11.8cm}}
 \toprule
 \multicolumn{2}{c}{\textbf{UC005 -- Emitir Certificados em Lote}} \\
 \midrule
-\textbf{Ator principal} & Colaborador \\
+\textbf{Dependências} & RF017, RF020, RF021, RF022 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador emita certificados em lote a partir de uma lista de participantes, processando de forma assíncrona por fila. \\
+\textbf{Ator(es)} & Colaborador \\
 \midrule
-\textbf{Pré-condições} & Colaborador autenticado; template e lista de participantes disponíveis. \\
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+    \item Template de certificado cadastrado.
+    \item Arquivo com lista de participantes disponível.
+\end{enumerate} \\
 \midrule
-\textbf{Fluxo principal} & 
-1. Colaborador seleciona template e arquivo com lista de participantes. \\
-& 2. Sistema valida dados e enfileira as emissões. \\
-& 3. Sistema processa cada item, gerando PDF, código e registro. \\
-& 4. Sistema notifica o colaborador ao término. \\
+\textbf{Sequência Ordinária} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
 \midrule
-\textbf{Fluxo de exceção} & FE01 -- Dados inválidos: linhas com erro são ignoradas e reportadas. \\
+\textbf{Passo} & \textbf{Ação} \\
 \midrule
-\textbf{Pós-condições} & Certificados do lote gerados e registrados. \\
+1 & O colaborador acessa a seção de emissão em lote. \\
+2 & O sistema exibe formulário para seleção de template e arquivo. \\
+3 & O colaborador seleciona o template e envia o arquivo. \\
+4 & O sistema valida os dados do arquivo. \\
+5 & O sistema enfileira as emissões para processamento. \\
+6 & O sistema processa cada item da fila, gerando PDF e código único. \\
+7 & O sistema notifica o colaborador ao término do processamento. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Certificados do lote gerados e registrados.
+    \item Colaborador notificado sobre o resultado.
+\end{enumerate} \\
+\midrule
+\textbf{Exceções} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
+\midrule
+\textbf{Passo} & \textbf{Condição} \\
+\midrule
+4 & Se o arquivo tiver formato inválido, o sistema rejeita e exibe mensagem. \\
+6 & Se alguma linha contiver dados inválidos, o sistema ignora e reporta ao final. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Referências} & RF017, RF020, RF021, RF022 \\
+\textbf{Comentários} & Nenhum. \\
 \bottomrule
 \end{tabular}
-\caption{Descrição do caso de uso UC005 -- Emitir Certificados em Lote}
+\caption{Caso de uso UC005 -- Emitir Certificados em Lote}
 \end{table}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{p{3.5cm} p{11.5cm}}
+\begin{tabular}{p{3.2cm} p{11.8cm}}
 \toprule
 \multicolumn{2}{c}{\textbf{UC006 -- Cadastrar Participante}} \\
 \midrule
-\textbf{Ator principal} & Colaborador \\
+\textbf{Dependências} & RF015, RF054, RF055, RF058 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador cadastre participantes individualmente, informando nome, e-mail e CPF opcional. \\
+\textbf{Ator(es)} & Colaborador \\
 \midrule
-\textbf{Pré-condições} & Colaborador autenticado. \\
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+\end{enumerate} \\
 \midrule
-\textbf{Fluxo principal} & 
-1. Colaborador acessa seção de participantes. \\
-& 2. Sistema exibe formulário com nome, e-mail e CPF (opcional). \\
-& 3. Colaborador preenche dados e confirma. \\
-& 4. Sistema valida e salva. \\
-& 5. Sistema exibe confirmação. \\
+\textbf{Sequência Ordinária} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
 \midrule
-\textbf{Fluxo de exceção} & FE01 -- E-mail duplicado: sistema alerta sobre registro existente. \\
+\textbf{Passo} & \textbf{Ação} \\
 \midrule
-\textbf{Pós-condições} & Participante cadastrado e disponível para emissão. \\
+1 & O colaborador acessa a seção de participantes. \\
+2 & O sistema exibe formulário com campos de nome, e-mail e CPF. \\
+3 & O colaborador preenche os dados e confirma. \\
+4 & O sistema valida o formato do e-mail. \\
+5 & O sistema salva o participante no banco de dados. \\
+6 & O sistema exibe confirmação. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Participante cadastrado no sistema.
+    \item Participante disponível para emissão de certificados.
+\end{enumerate} \\
+\midrule
+\textbf{Exceções} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
+\midrule
+\textbf{Passo} & \textbf{Condição} \\
+\midrule
+4 & Se o e-mail já estiver cadastrado, o sistema alerta sobre registro existente. \\
+4 & Se o formato do e-mail for inválido, o sistema rejeita e exibe mensagem. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Referências} & RF015, RF054, RF055, RF058 \\
+\textbf{Comentários} & Nenhum. \\
 \bottomrule
 \end{tabular}
-\caption{Descrição do caso de uso UC006 -- Cadastrar Participante}
+\caption{Caso de uso UC006 -- Cadastrar Participante}
 \end{table}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{p{3.5cm} p{11.5cm}}
+\begin{tabular}{p{3.2cm} p{11.8cm}}
 \toprule
 \multicolumn{2}{c}{\textbf{UC007 -- Importar Participantes}} \\
 \midrule
-\textbf{Ator principal} & Colaborador \\
+\textbf{Dependências} & RF017, RF018 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador importe participantes em lote a partir de arquivos CSV ou Excel. \\
+\textbf{Ator(es)} & Colaborador \\
 \midrule
-\textbf{Pré-condições} & Colaborador autenticado; arquivo CSV ou Excel disponível. \\
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+    \item Arquivo CSV ou Excel disponível.
+\end{enumerate} \\
 \midrule
-\textbf{Fluxo principal} & 
-1. Colaborador acessa opção de importar. \\
-& 2. Sistema exibe formulário para upload. \\
-& 3. Colaborador seleciona e envia o arquivo. \\
-& 4. Sistema valida cabeçalho e dados das linhas. \\
-& 5. Sistema importa registros válidos e exibe resumo. \\
+\textbf{Sequência Ordinária} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
 \midrule
-\textbf{Fluxo de exceção} & FE01 -- Formato inválido: arquivo diferente de CSV/XLSX é rejeitado. \\
-& FE02 -- Dados inconsistentes: linhas com erro são listadas. \\
+\textbf{Passo} & \textbf{Ação} \\
 \midrule
-\textbf{Pós-condições} & Participantes importados disponíveis para emissão. \\
+1 & O colaborador acessa a opção de importar participantes. \\
+2 & O sistema exibe formulário para upload de arquivo. \\
+3 & O colaborador seleciona e envia o arquivo. \\
+4 & O sistema valida o cabeçalho e os dados das linhas. \\
+5 & O sistema importa os registros válidos. \\
+6 & O sistema exibe resumo com quantidade de registros importados e rejeitados. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Participantes válidos importados e disponíveis para emissão.
+    \item Relatório de erros gerado para registros rejeitados.
+\end{enumerate} \\
+\midrule
+\textbf{Exceções} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
+\midrule
+\textbf{Passo} & \textbf{Condição} \\
+\midrule
+4 & Se o formato do arquivo não for CSV ou XLSX, o sistema rejeita e exibe mensagem. \\
+4 & Se alguma linha contiver dados inconsistentes, o sistema ignora e lista ao final. \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Referências} & RF017, RF018 \\
+\textbf{Comentários} & Nenhum. \\
 \bottomrule
 \end{tabular}
-\caption{Descrição do caso de uso UC007 -- Importar Participantes}
+\caption{Caso de uso UC007 -- Importar Participantes}
 \end{table}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{p{3.5cm} p{11.5cm}}
+\begin{tabular}{p{3.2cm} p{11.8cm}}
 \toprule
 \multicolumn{2}{c}{\textbf{UC008 -- Validar Certificado}} \\
 \midrule
-\textbf{Ator principal} & Visitante (público) \\
+\textbf{Dependências} & RF033, RF034, RF035, RF036 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve disponibilizar um portal público onde qualquer visitante possa validar um certificado informando o código único ou escaneando o QR Code. \\
+\textbf{Ator(es)} & Visitante \\
 \midrule
-\textbf{Pré-condições} & Nenhuma (portal público). \\
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Nenhuma (portal público, sem autenticação).
+\end{enumerate} \\
 \midrule
-\textbf{Fluxo principal} & 
-1. Visitante acessa portal público de validação. \\
-& 2. Sistema exibe campo para inserir código único. \\
-& 3. Visitante insere o código do certificado. \\
-& 4. Sistema consulta e exibe nome, curso, data e status. \\
+\textbf{Sequência Ordinária} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
 \midrule
-\textbf{Fluxo alternativo} & FA01 -- QR Code: visitante escaneia código e é redirecionado automaticamente. \\
+\textbf{Passo} & \textbf{Ação} \\
 \midrule
-\textbf{Fluxo de exceção} & FE01 -- Código inválido: sistema exibe "Certificado não encontrado". \\
+1 & O visitante acessa o portal público de validação. \\
+2 & O sistema exibe campo para inserção do código único. \\
+3 & O visitante insere o código presente no certificado. \\
+4 & O sistema consulta o código no banco de dados. \\
+5 & O sistema exibe nome, curso, data e status de autenticidade. \\
+\bottomrule
+\end{tabular} \\
 \midrule
-\textbf{Pós-condições} & Informações do certificado exibidas ao visitante. \\
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Informações do certificado exibidas ao visitante.
+\end{enumerate} \\
+\midrule
+\textbf{Exceções} &
+\begin{tabular}{p{0.7cm} p{10.5cm}}
+\midrule
+\textbf{Passo} & \textbf{Condição} \\
+\midrule
+3 & Se o visitante escanear o QR Code, o sistema redireciona com o código preenchido automaticamente. \\
+4 & Se o código não existir, o sistema exibe "Certificado não encontrado". \\
+\bottomrule
+\end{tabular} \\
+\midrule
+\textbf{Referências} & RF033, RF034, RF035, RF036 \\
+\textbf{Comentários} & A validação via QR Code elimina a necessidade de digitação manual do código. \\
 \bottomrule
 \end{tabular}
-\caption{Descrição do caso de uso UC008 -- Validar Certificado}
+\caption{Caso de uso UC008 -- Validar Certificado}
 \end{table}
