@@ -12,24 +12,29 @@ classDiagram
       -DateTime ultimoLogin
       -DateTime horarioPermitidoInicio
       -DateTime horarioPermitidoFim
+      +Boolean autenticar(String email, String senha)
+      +Certificado emitirCertificado(Participante participante, Template template)
     }
     class Participante {
       -UUID id
       -String cpf
       -DateTime dataCadastro
       -Boolean ativo
+      +void vincularCurso(Curso curso)
     }
     class Organizacao {
       -UUID id
       -String nome
       -String cnpj
       -Boolean ativo
+      +void adicionarMembro(Usuario usuario)
     }
     class Curso {
       -UUID id
       -String nome
       -Integer cargaHoraria
       -Text descricao
+      +void inscreverParticipante(Participante participante)
     }
     class ParticipanteCurso {
       -DateTime dataVinculo
@@ -42,6 +47,7 @@ classDiagram
       -Integer versao
       -Boolean ativo
       -DateTime dataCriacao
+      +void adicionarCampo(CampoDinamico campo)
     }
     class CampoDinamico {
       -UUID id
@@ -64,6 +70,9 @@ classDiagram
       -String arquivoPDF
       -String hashAssinatura
       -String qrCode
+      +void gerarPDF()
+      +Boolean assinar(AssinaturaDigital assinatura)
+      +Boolean enviarEmail(EnvioEmail envio)
     }
     class EnvioEmail {
       -UUID id
@@ -71,6 +80,7 @@ classDiagram
       -Integer tentativas
       -DateTime dataEnvio
       -Text mensagemPersonalizada
+      +Boolean enviar()
     }
     class Log {
       -UUID id
@@ -84,6 +94,7 @@ classDiagram
       -String acao
       -DateTime dataHora
       -String local
+      +void registrar(Usuario usuario)
     }
     class ConfiguracaoSistema {
       -UUID id
@@ -92,6 +103,7 @@ classDiagram
       -Text mensagemPadraoEmail
       -Text termosUso
       -Boolean sistemaOnline
+      +void aplicar()
     }
     class ChamadoSuporte {
       -UUID id
@@ -100,6 +112,8 @@ classDiagram
       -DateTime dataAbertura
       -StatusChamadoEnum status
       -DateTime dataFechamento
+      +void abrir(Usuario usuario)
+      +void fechar()
     }
 
     Pessoa <|-- Usuario
