@@ -20,6 +20,7 @@
 \textbf{Sequência Ordinária} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Ação} \\
+\hline
 1 & O administrador acessa a seção de usuários. \\
 2 & O sistema exibe a lista de usuários cadastrados. \\
 3 & O administrador seleciona criar, editar ou desativar um usuário. \\
@@ -37,6 +38,7 @@
 \textbf{Exceções} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Condição} \\
+\hline
 3 & Se o e-mail informado já existir, o sistema rejeita o cadastro e exibe mensagem de erro. \\
 \end{tabular} \\
 \hline
@@ -66,6 +68,7 @@
 \textbf{Sequência Ordinária} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Ação} \\
+\hline
 1 & O administrador acessa a seção de templates. \\
 2 & O sistema exibe a galeria de templates existentes. \\
 3 & O administrador faz upload de um novo arquivo PPTX. \\
@@ -83,6 +86,7 @@
 \textbf{Exceções} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Condição} \\
+\hline
 3 & Se o arquivo enviado não for PPTX, o sistema rejeita e exibe mensagem de formato inválido. \\
 \end{tabular} \\
 \hline
@@ -112,6 +116,7 @@
 \textbf{Sequência Ordinária} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Ação} \\
+\hline
 1 & O administrador acessa a seção de cursos. \\
 2 & O sistema exibe a lista de cursos cadastrados. \\
 3 & O administrador preenche nome, carga horária, datas e instrutor. \\
@@ -129,6 +134,7 @@
 \textbf{Exceções} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Condição} \\
+\hline
 4 & Se dados obrigatórios estiverem ausentes, o sistema bloqueia o salvamento e exibe os campos pendentes. \\
 \end{tabular} \\
 \hline
@@ -160,6 +166,7 @@
 \textbf{Sequência Ordinária} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Ação} \\
+\hline
 1 & O colaborador acessa a seção de emissão. \\
 2 & O sistema exibe formulário com campos para template, curso e participante. \\
 3 & O colaborador seleciona o template e o curso. \\
@@ -212,6 +219,7 @@
 \textbf{Sequência Ordinária} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Ação} \\
+\hline
 1 & O colaborador acessa a seção de emissão em lote. \\
 2 & O sistema exibe formulário para seleção de template e arquivo. \\
 3 & O colaborador seleciona o template e envia o arquivo. \\
@@ -230,6 +238,7 @@
 \textbf{Exceções} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Condição} \\
+\hline
 4 & Se o arquivo tiver formato inválido, o sistema rejeita e exibe mensagem. \\
 6 & Se alguma linha contiver dados inválidos, o sistema ignora e reporta ao final. \\
 \end{tabular} \\
@@ -260,6 +269,7 @@
 \textbf{Sequência Ordinária} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Ação} \\
+\hline
 1 & O colaborador acessa a seção de participantes. \\
 2 & O sistema exibe formulário com campos de nome, e-mail e CPF. \\
 3 & O colaborador preenche os dados e confirma. \\
@@ -277,6 +287,7 @@
 \textbf{Exceções} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Condição} \\
+\hline
 4 & Se o e-mail já estiver cadastrado, o sistema alerta sobre registro existente. \\
 4 & Se o formato do e-mail for inválido, o sistema rejeita e exibe mensagem. \\
 \end{tabular} \\
@@ -308,6 +319,7 @@
 \textbf{Sequência Ordinária} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Ação} \\
+\hline
 1 & O colaborador acessa a opção de importar participantes. \\
 2 & O sistema exibe formulário para upload de arquivo. \\
 3 & O colaborador seleciona e envia o arquivo. \\
@@ -325,6 +337,7 @@
 \textbf{Exceções} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Condição} \\
+\hline
 4 & Se o formato do arquivo não for CSV ou XLSX, o sistema rejeita e exibe mensagem. \\
 4 & Se alguma linha contiver dados inconsistentes, o sistema ignora e lista ao final. \\
 \end{tabular} \\
@@ -355,6 +368,7 @@
 \textbf{Sequência Ordinária} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Ação} \\
+\hline
 1 & O visitante acessa o portal público de validação. \\
 2 & O sistema exibe campo para inserção do código único. \\
 3 & O visitante insere o código presente no certificado. \\
@@ -370,6 +384,7 @@
 \textbf{Exceções} &
 \begin{tabular}{p{0.7cm}|p{10cm}}
 \textbf{Passo} & \textbf{Condição} \\
+\hline
 3 & Se o visitante escanear o QR Code, o sistema redireciona com o código preenchido automaticamente. \\
 4 & Se o código não existir, o sistema exibe "Certificado não encontrado". \\
 \end{tabular} \\
