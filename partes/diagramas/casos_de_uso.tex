@@ -5,7 +5,7 @@
     scale=0.7,
     transform shape,
     actor/.style={rectangle, draw=black, fill=blue!20, rounded corners, minimum width=1.8cm, minimum height=0.7cm},
-    usecase/.style={ellipse, draw=black, minimum width=2.5cm, minimum height=1cm, font=\small, align=center},
+    usecase/.style={ellipse, draw=black, minimum width=2.5cm, minimum height=0.8cm, font=\small},
     include/.style={->, dashed},
     extend/.style={->, dashed},
     assoc/.style={-},
@@ -24,40 +24,40 @@
 \draw[-{Triangle[open]}] (admin) -- (colab);
 
 % Casos Admin
-\node[usecase, fill=red!20] (usuarios) at (2.5,4) {Gerenciar Usuários\\\tiny(RF001-007)};
-\node[usecase, fill=red!20] (template) at (2.5,2.5) {Criar Template\\\tiny(RF008-014)};
-\node[usecase, fill=red!20] (cursos) at (2.5,1) {Gerenciar Cursos\\\tiny(RF046-053)};
+\node[usecase, fill=red!20] (usuarios) at (2.5,4) {Gerenciar Usuários};
+\node[usecase, fill=red!20] (template) at (2.5,2.5) {Criar Template};
+\node[usecase, fill=red!20] (cursos) at (2.5,1) {Gerenciar Cursos};
 
-\node[usecase, fill=yellow!30] (permissoes) at (8,4) {Definir Permissões\\\tiny(RF005-006)};
-\node[usecase, fill=red!20] (campos) at (8,2.5) {Configurar Campos\\\tiny(RF010-011)};
-\node[usecase, fill=red!20] (editar) at (8,1) {Editar Template\\\tiny(RF012-013)};
+\node[usecase, fill=yellow!30] (permissoes) at (8,4) {Definir Permissões};
+\node[usecase, fill=red!20] (campos) at (8,2.5) {Configurar Campos};
+\node[usecase, fill=red!20] (editar) at (8,1) {Editar Template};
 
-\node[usecase, fill=yellow!30] (salvar) at (13,2.5) {Salvar\\\tiny(RF010,012)};
-\node[usecase, fill=yellow!30] (preview) at (15.5,1) {Prévia\\\tiny(RF009)};
+\node[usecase, fill=yellow!30] (salvar) at (13,2.5) {Salvar};
+\node[usecase, fill=yellow!30] (preview) at (15.5,1) {Prévia};
 
-\node[usecase, fill=blue!30] (organizacoes) at (2.5,5.5) {Gerenciar Organizações\\\tiny(RF059-062)};
-\node[usecase, fill=purple!25] (configurar) at (8,5.5) {Configurar Sistema\\\tiny(RF063-065)};
-\node[usecase, fill=purple!25] (chamado) at (13,5.5) {Abrir Chamado\\\tiny(RF073)};
+\node[usecase, fill=blue!30] (organizacoes) at (2.5,5.5) {Gerenciar Organizações};
+\node[usecase, fill=purple!25] (configurar) at (8,5.5) {Configurar Sistema};
+\node[usecase, fill=purple!25] (chamado) at (13,5.5) {Abrir Chamado};
 
 % Casos Colaborador
-\node[usecase, fill=green!30] (emitir) at (2.5,-0.5) {Emitir Individual\\\tiny(RF015,023-026)};
-\node[usecase, fill=green!30] (lote) at (2.5,-2) {Emitir em Lote\\\tiny(RF017,020-022)};
-\node[usecase, fill=orange!40] (cadastro) at (2.5,-3.5) {Cadastrar Part.\\\tiny(RF015,054-055)};
-\node[usecase, fill=orange!40] (importar) at (2.5,-5) {Importar Part.\\\tiny(RF017-018)};
+\node[usecase, fill=green!30] (emitir) at (2.5,-0.5) {Emitir Individual};
+\node[usecase, fill=green!30] (lote) at (2.5,-2) {Emitir em Lote};
+\node[usecase, fill=orange!40] (cadastro) at (2.5,-3.5) {Cadastrar Part.};
+\node[usecase, fill=orange!40] (importar) at (2.5,-5) {Importar Part.};
 
-\node[usecase, fill=orange!40] (buscar) at (8,-3.5) {Buscar Part.\\\tiny(RF058)};
-\node[usecase, fill=purple!25] (historico) at (13,-3.5) {Visualizar Histórico\\\tiny(RF057)};
+\node[usecase, fill=orange!40] (buscar) at (8,-3.5) {Buscar Part.};
+\node[usecase, fill=purple!25] (historico) at (13,-3.5) {Visualizar Histórico};
 
-\node[usecase, fill=purple!25] (fila) at (8,-2) {Fila\\\tiny(RF020-022)};
-\node[usecase, fill=purple!25] (notificar) at (13,-2) {Notificar\\\tiny(RF067-069)};
+\node[usecase, fill=purple!25] (fila) at (8,-2) {Fila};
+\node[usecase, fill=purple!25] (notificar) at (13,-2) {Notificar};
 
 % Casos Visitante
-\node[usecase, fill=red!20] (validar) at (2.5,-7) {Validar Cert.\\\tiny(RF033-036)};
-\node[usecase, fill=blue!30] (dados) at (13,-7) {Exibir Dados\\\tiny(RF033-036)};
+\node[usecase, fill=red!20] (validar) at (2.5,-7) {Validar Cert.};
+\node[usecase, fill=blue!30] (dados) at (13,-7) {Exibir Dados};
 
 % Extend — comportamento opcional
-\node[usecase, fill=purple!25] (reenvio) at (8,-0.5) {Reenviar Certificado\\\tiny(RF030-032)};
-\node[usecase, fill=cyan!30] (escanear) at (8,-6.2) {Escanear QR Code\\\tiny(RF033-036)};
+\node[usecase, fill=purple!25] (reenvio) at (8,-0.5) {Reenviar Certificado};
+\node[usecase, fill=cyan!30] (escanear) at (8,-6.2) {Escanear QR Code};
 
 % Associações
 \draw[assoc] (admin) -- (usuarios);

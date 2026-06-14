@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**C:/Users/franc/OneDrive/Documentos/ADS/TCC/RelatÃ³rio_TÃ©cnico_de_Software___
-IFPI__Igor/main.tex
-
-(C:/Users/franc/OneDrive/Documentos/ADS/TCC/RelatÃ³rio_TÃ©cnico_de_Software___I
-FPI__Igor/main.tex
+**./main.tex
+(main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -794,13 +791,23 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 z/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen305
+\ar@mcellbox=\box75
+\extrarowheight=\dimen306
+\NC@list=\toks43
+\extratabsurround=\skip59
+\backup@length=\skip60
+\ar@cellbox=\box76
+)
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen305
-\pgfarrowlength=\dimen306
-\pgfarrowwidth=\dimen307
-\pgfarrowlinewidth=\dimen308
+\pgfarrowinset=\dimen307
+\pgfarrowlength=\dimen308
+\pgfarrowwidth=\dimen309
+\pgfarrowlinewidth=\dimen310
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarypositioning.code.tex
@@ -853,31 +860,31 @@ File: tikzlibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
 pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodepartlowerbox=\box75
-\pgfnodeparttwobox=\box76
-\pgfnodepartthreebox=\box77
-\pgfnodepartfourbox=\box78
-\pgfnodeparttwentybox=\box79
-\pgfnodepartnineteenbox=\box80
-\pgfnodeparteighteenbox=\box81
-\pgfnodepartseventeenbox=\box82
-\pgfnodepartsixteenbox=\box83
-\pgfnodepartfifteenbox=\box84
-\pgfnodepartfourteenbox=\box85
-\pgfnodepartthirteenbox=\box86
-\pgfnodeparttwelvebox=\box87
-\pgfnodepartelevenbox=\box88
-\pgfnodeparttenbox=\box89
-\pgfnodepartninebox=\box90
-\pgfnodeparteightbox=\box91
-\pgfnodepartsevenbox=\box92
-\pgfnodepartsixbox=\box93
-\pgfnodepartfivebox=\box94
+\pgfnodepartlowerbox=\box77
+\pgfnodeparttwobox=\box78
+\pgfnodepartthreebox=\box79
+\pgfnodepartfourbox=\box80
+\pgfnodeparttwentybox=\box81
+\pgfnodepartnineteenbox=\box82
+\pgfnodeparteighteenbox=\box83
+\pgfnodepartseventeenbox=\box84
+\pgfnodepartsixteenbox=\box85
+\pgfnodepartfifteenbox=\box86
+\pgfnodepartfourteenbox=\box87
+\pgfnodepartthirteenbox=\box88
+\pgfnodeparttwelvebox=\box89
+\pgfnodepartelevenbox=\box90
+\pgfnodeparttenbox=\box91
+\pgfnodepartninebox=\box92
+\pgfnodeparteightbox=\box93
+\pgfnodepartsevenbox=\box94
+\pgfnodepartsixbox=\box95
+\pgfnodepartfivebox=\box96
 )))
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 65
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 66
 .
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
@@ -893,24 +900,24 @@ Package babel Info: 'brazil' activates 'portuges' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -951,16 +958,16 @@ LaTeX Font Info:    ... okay on input line 65.
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count357
-\scratchdimen=\dimen309
-\scratchbox=\box95
+\scratchdimen=\dimen311
+\scratchbox=\box97
 \nofMPsegments=\count358
 \nofMParguments=\count359
-\everyMPshowfont=\toks43
+\everyMPshowfont=\toks44
 \MPscratchCnt=\count360
-\MPscratchDim=\dimen310
+\MPscratchDim=\dimen312
 \MPnumerator=\count361
 \makeMPintoPDFobject=\count362
-\everyMPtoPDFconversion=\toks44
+\everyMPtoPDFconversion=\toks45
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -981,7 +988,7 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 65.
+Package hyperref Info: Link coloring OFF on input line 66.
 
 (main.out) (main.out)
 \@outlinefile=\write4
@@ -1511,199 +1518,299 @@ ignored error: Infinite glue shrinkage found in box being split [31]
 ignored error: Infinite glue shrinkage found in box being split [32]
 ignored error: Infinite glue shrinkage found in box being split [33]
 ignored error: Infinite glue shrinkage found in box being split [34])
-(partes/requisitos/rastreabilidade.tex) (partes/diagramas/casos_de_uso.tex
-[35]) (partes/diagramas/casos_de_uso_descricao.tex
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 23--23
-[]\T1/ptm/b/n/10 Passo| 
+(partes/requisitos/rastreabilidade.tex) (partes/diagramas/casos_de_uso.tex)
+[35] (partes/diagramas/casos_de_uso_descricao.tex
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 22--22
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 21--33
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 21--37
+[]|| []| 
  []
 
 
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 43--43
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 46--46
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 41--48
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 45--51
+[]|| []| 
  []
 
 [36]
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 75--75
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 77--77
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 73--85
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 76--92
+[]|| []| 
  []
 
 
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 95--95
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 101--101
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 93--100
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 100--106
+[]|| []| 
  []
 
 [37]
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 127--127
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 132--132
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 125--137
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 131--147
+[]|| []| 
  []
 
 
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 147--147
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 156--156
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 145--152
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 155--161
+[]|| []| 
  []
 
 [38]
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 181--181
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 189--189
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 179--194
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 188--210
+[]|| []| 
  []
 
 
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 205--205
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 220--220
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 203--210
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 219--225
+[]|| []| 
  []
 
 [39]
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 239--239
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 253--253
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 237--250
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 252--270
+[]|| []| 
  []
 
 
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 260--260
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 279--279
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 258--266
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 278--286
+[]|| []| 
  []
 
 [40]
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 293--293
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 312--312
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 291--303
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 311--327
+[]|| []| 
  []
 
 
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 313--313
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 336--336
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 311--319
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 335--343
+[]|| []| 
  []
 
 [41]
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 347--347
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 370--370
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 345--357
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 369--385
+[]|| []| 
  []
 
 
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 367--367
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 394--394
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 365--373
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 393--401
+[]|| []| 
  []
 
 [42]
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 400--400
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 427--427
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 398--409
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 426--440
+[]|| []| 
  []
 
 
-Overfull \hbox (3.87294pt too wide) in paragraph at lines 418--418
-[]\T1/ptm/b/n/10 Passo| 
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 448--448
+[]|\T1/ptm/b/n/10 Passo| 
  []
 
 
-Overfull \hbox (6.92818pt too wide) in paragraph at lines 416--424
-[][]| 
+Overfull \hbox (6.0pt too wide) in paragraph at lines 447--455
+[]|| []| 
  []
 
-) [43] (partes/diagramas/Diagrama_de_Classes.tex
-<imagens/diagrama-de-classes.png, id=697, 1541.76pt x 1027.84pt>
+[43]
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 481--481
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 480--494
+[]|| []| 
+ []
+
+
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 502--502
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 501--509
+[]|| []| 
+ []
+
+[44]
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 536--536
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 535--549
+[]|| []| 
+ []
+
+
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 557--557
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 556--562
+[]|| []| 
+ []
+
+[45]
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 588--588
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 587--605
+[]|| []| 
+ []
+
+
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 614--614
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 613--621
+[]|| []| 
+ []
+
+[46]
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 647--647
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 646--664
+[]|| []| 
+ []
+
+
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 673--673
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 672--677
+[]|| []| 
+ []
+
+[47]
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 703--703
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 702--718
+[]|| []| 
+ []
+
+
+Overfull \hbox (3.87294pt too wide) in paragraph at lines 727--727
+[]|\T1/ptm/b/n/10 Passo| 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 726--732
+[]|| []| 
+ []
+
+) [48] (partes/diagramas/Diagrama_de_Classes.tex
+<imagens/diagrama-de-classes.png, id=738, 1541.76pt x 1027.84pt>
 File: imagens/diagrama-de-classes.png Graphic file (type png)
 <use imagens/diagrama-de-classes.png>
 Package pdftex.def Info: imagens/diagrama-de-classes.png  used on input line 5.
 
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
- [44])
+ [49])
 (partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=707, 1166.3575pt x 1359.0775pt>
+<imagens/backend.png, id=749, 1166.3575pt x 1359.0775pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 477.4055pt.
 )
-(partes/diagramas/arquitetura-frontend.tex [45 <./imagens/diagrama-de-classes.p
+(partes/diagramas/arquitetura-frontend.tex [50 <./imagens/diagrama-de-classes.p
 ng (PNG copy)>]
-<imagens/frontend.png, id=715, 1541.76pt x 1027.84pt>
+<imagens/frontend.png, id=757, 1541.76pt x 1027.84pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
-) [46 <./imagens/backend.png (PNG copy)>]
+) [51 <./imagens/backend.png (PNG copy)>]
 (partes/diagramas/der.tex
-<imagens/DER.png, id=720, 1529.715pt x 1385.175pt>
+<imagens/DER.png, id=762, 1529.715pt x 1385.175pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 371.00093pt.
-) [47 <./imagens/frontend.png (PNG copy)>])
-(partes/software.tex) (partes/consideracoes.tex) [48 <./imagens/DER.png>]
-[49] (main.bbl
+) [52 <./imagens/frontend.png (PNG copy)>])
+(partes/software.tex) (partes/consideracoes.tex) [53 <./imagens/DER.png>]
+[54] (main.bbl
 Underfull \hbox (badness 5652) in paragraph at lines 23--28
 []\T1/ptm/m/n/12 KULKARNI, R. et al. A se-cure cer-ti-fi-cate authen-ti-ca-tion
  sys-tem using cryp-
@@ -1739,7 +1846,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--59
 /12 . 2025. Dis-po-ní-vel em:
  []
 
-[50]
+[55]
 Underfull \hbox (badness 3148) in paragraph at lines 78--80
 []\T1/ptm/m/n/12 KOWALSKI, E. \T1/ptm/m/it/12 Son-ner ^^V To-ast Com-po-nent fo
 r Re-act\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
@@ -1794,38 +1901,37 @@ m/m/n/12 . 2025. Dis-po-ní-vel em: $\OML/cmm/m/it/12 <$\T1/ptm/m/n/12 https://g
 it-
  []
 
-[51]
+[56]
 Underfull \hbox (badness 10000) in paragraph at lines 164--166
 []\T1/ptm/m/n/12 MICROSOFT. \T1/ptm/m/it/12 Vi-sual Stu-dio Code Do-cu-men-ta-t
 ion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-) [52] (partes/anexos.tex) [53] (main.aux)
+) [57] (partes/anexos.tex) [58] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D0065E47AF7432329EDB994DADC54B40;13406.
+(rerunfilecheck)             Checksum: DE37A6704CBBAA9C44F5CC7856A20B16;13406.
  ) 
 Here is how much of TeX's memory you used:
- 28569 strings out of 467871
- 554535 string characters out of 5418376
- 1279360 words of memory out of 5000000
- 56687 multiletter control sequences out of 15000+600000
- 664702 words of font info for 92 fonts, out of 8000000 for 9000
+ 28691 strings out of 467871
+ 556084 string characters out of 5418376
+ 1280764 words of memory out of 5000000
+ 56783 multiletter control sequences out of 15000+600000
+ 667424 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,94p,1198b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,18n,94p,1112b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi12.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courie
 r/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on C:\Users\franc\OneDrive\Documentos\ADS\TCC\RelatÃ³rio_TÃ©cnic
-o_de_Software___IFPI__Igor\main.pdf (55 pages, 3840517 bytes).
+Output written on main.pdf (60 pages, 3858759 bytes).
 PDF statistics:
- 823 PDF objects out of 1000 (max. 8388607)
- 210 named destinations out of 1000 (max. 500000)
+ 872 PDF objects out of 1000 (max. 8388607)
+ 235 named destinations out of 1000 (max. 500000)
  662 words of extra memory for PDF output out of 10000 (max. 10000000)
 
