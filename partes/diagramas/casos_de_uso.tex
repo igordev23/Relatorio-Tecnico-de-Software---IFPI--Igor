@@ -12,48 +12,48 @@
 ]
 
 % Fronteira do sistema
-\draw (-0.5,-8.5) rectangle (18,5) node[above left, font=\small\bfseries, inner sep=3pt] at (18,5) {Sistema de Certificados};
+\draw (-0.5,-9) rectangle (19.5,5.5) node[above left, font=\small\bfseries, inner sep=3pt] at (19.5,5.5) {Sistema de Certificados};
 
 % Atores
-\node[actor] (admin) at (-3,1.5) {Administrador};
-\node[actor] (colab) at (-3,-1.5) {Colaborador};
-\node[actor] (visit) at (-3,-5) {Visitante};
+\node[actor] (admin) at (-3.5,2) {Administrador};
+\node[actor] (colab) at (-3.5,-1.5) {Colaborador};
+\node[actor] (visit) at (-3.5,-5.5) {Visitante};
 
 % Generalização: Administrador herda casos de uso do Colaborador
 \draw[-{Triangle[open]}] (admin) -- (colab);
 
 % Casos Admin
-\node[usecase, fill=red!20] (usuarios) at (2.5,3.5) {Gerenciar Usuários};
-\node[usecase, fill=red!20] (template) at (2.5,1.8) {Criar Template};
-\node[usecase, fill=red!20] (cursos) at (2.5,0) {Gerenciar Cursos};
+\node[usecase, fill=red!20] (usuarios) at (2.5,4) {Gerenciar Usuários};
+\node[usecase, fill=red!20] (template) at (2.5,2.5) {Criar Template};
+\node[usecase, fill=red!20] (cursos) at (2.5,1) {Gerenciar Cursos};
 
-\node[usecase, fill=yellow!30] (permissoes) at (7.5,3.5) {Definir Permissões};
-\node[usecase, fill=red!20] (campos) at (7.5,1.8) {Configurar Campos};
-\node[usecase, fill=red!20] (editar) at (7.5,0) {Editar Template};
+\node[usecase, fill=yellow!30] (permissoes) at (8,4) {Definir Permissões};
+\node[usecase, fill=red!20] (campos) at (8,2.5) {Configurar Campos};
+\node[usecase, fill=red!20] (editar) at (8,1) {Editar Template};
 
-\node[usecase, fill=yellow!30] (salvar) at (12,1.8) {Salvar};
-\node[usecase, fill=yellow!30] (preview) at (16,0) {Prévia};
+\node[usecase, fill=yellow!30] (salvar) at (13,2.5) {Salvar};
+\node[usecase, fill=yellow!30] (preview) at (17,1) {Prévia};
 
 % Casos Colaborador
-\node[usecase, fill=green!30] (emitir) at (2.5,-1.5) {Emitir Individual};
-\node[usecase, fill=green!30] (lote) at (2.5,-3) {Emitir em Lote};
-\node[usecase, fill=orange!40] (cadastro) at (2.5,-4.2) {Cadastrar Part.};
-\node[usecase, fill=orange!40] (importar) at (2.5,-5.2) {Importar Part.};
+\node[usecase, fill=green!30] (emitir) at (2.5,-0.5) {Emitir Individual};
+\node[usecase, fill=green!30] (lote) at (2.5,-2) {Emitir em Lote};
+\node[usecase, fill=orange!40] (cadastro) at (2.5,-3.5) {Cadastrar Part.};
+\node[usecase, fill=orange!40] (importar) at (2.5,-5) {Importar Part.};
 
-\node[usecase, fill=purple!25] (pdf) at (7.5,-1.5) {Gerar PDF};
-\node[usecase, fill=purple!25] (codigo) at (11,-1.5) {Gerar Código};
-\node[usecase, fill=purple!25] (registro) at (14.5,-1.5) {Registrar};
+\node[usecase, fill=purple!25] (pdf) at (8,-0.5) {Gerar PDF};
+\node[usecase, fill=purple!25] (codigo) at (13,-0.5) {Gerar Código};
+\node[usecase, fill=purple!25] (registro) at (17,-0.5) {Registrar};
 
-\node[usecase, fill=purple!25] (fila) at (7.5,-3) {Fila};
-\node[usecase, fill=purple!25] (notificar) at (11,-3) {Notificar};
-\node[usecase, fill=purple!25] (email) at (14.5,-3) {Email};
+\node[usecase, fill=purple!25] (fila) at (8,-2) {Fila};
+\node[usecase, fill=purple!25] (notificar) at (13,-2) {Notificar};
+\node[usecase, fill=purple!25] (email) at (17,-2) {Email};
 
-\node[usecase, fill=blue!30] (validardados) at (7.5,-5.2) {Validar Dados};
+\node[usecase, fill=blue!30] (validardados) at (8,-5) {Validar Dados};
 
 % Casos Visitante
-\node[usecase, fill=red!20] (validar) at (2.5,-6.8) {Validar Cert.};
-\node[usecase, fill=blue!30] (consultar) at (7.5,-6.8) {Consultar Cód.};
-\node[usecase, fill=blue!30] (dados) at (11,-6.8) {Exibir Dados};
+\node[usecase, fill=red!20] (validar) at (2.5,-7) {Validar Cert.};
+\node[usecase, fill=blue!30] (consultar) at (8,-7) {Consultar Cód.};
+\node[usecase, fill=blue!30] (dados) at (13,-7) {Exibir Dados};
 
 % Associações
 \draw[assoc] (admin) -- (usuarios);
