@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 19:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  14 JUN 2026 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -22,16 +22,13 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
 \babel@savecnt=\count283
@@ -51,14 +48,12 @@ LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?)
 on input line 2101.
 \U@D=\dimen149
 \l@unhyphenated=\language79
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count284
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
 (babel)             Reported on input line 4196.
-
 *************************************
 * Local config file bblopts.cfg used
 *
@@ -82,23 +77,17 @@ Language: portuges 2026/01/24 v1.2u Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
 (babel)             (\language56). Reported on input line 100.
 Package babel Info: Making " an active character on input line 132.
-))
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.sty
+)) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
@@ -114,14 +103,11 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen156
 \Gm@layoutvoffset=\dimen157
 \Gm@dimlist=\toks20
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
@@ -143,8 +129,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box53
 \@float@everytoks=\toks22
 \@floatcapt=\box54
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count289
 \lst@gtempboxa=\box55
 \lst@token=\toks23
@@ -157,17 +142,14 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \lst@newlines=\count293
 \lst@lineno=\count294
 \lst@maxwidth=\dimen163
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 \c@lstnumber=\count295
 \lst@skipnumbers=\count296
 \lst@framebox=\box56
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
 Package: listings 2025/11/14 1.11b (Carsten Heinz)
@@ -179,7 +161,6 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
@@ -196,7 +177,6 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen164
@@ -213,8 +193,7 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count298
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen172
 \lightrulewidth=\dimen173
@@ -233,8 +212,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count301
 \@lastruleclass=\count302
 \@thisrulewidth=\dimen184
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip51
 \LTright=\skip52
@@ -252,8 +230,7 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \c@LT@tables=\count306
 \c@LT@chunks=\count307
 \LT@p@ftn=\toks24
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
@@ -266,7 +243,6 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
 ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
@@ -282,13 +258,10 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-))
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+)) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
@@ -300,8 +273,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count308
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count309
 )
@@ -313,7 +285,7 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 \@linkdim=\dimen186
 \Hy@linkcounter=\count310
 \Hy@pagecounter=\count311
- (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
@@ -321,7 +293,7 @@ Now handling font encoding PD1 ...
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count312
- (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -334,14 +306,12 @@ Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count313
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen187
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
@@ -365,7 +335,6 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 \c@Hfootnote=\count317
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count318
@@ -383,25 +352,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
 \Hy@SectionHShift=\skip55
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip56
-
 For additional information on amsmath, use the `?' option.
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks25
 \ex@=\dimen190
-))
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+)) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen191
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count320
@@ -451,10 +415,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -468,11 +430,10 @@ Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 ) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
 \@enLab=\toks30
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
-eys2e.sty
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+eys2e.sty (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl
+3.sty
 Package: expl3 2025-12-24 L3 programming layer (loader) 
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
@@ -486,12 +447,11 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count333
 \l__lipsum_a_int=\count334
 \l__lipsum_b_int=\count335
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.
 sty
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
 y
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
@@ -505,8 +465,8 @@ y
 \pgfutil@abb=\box64
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
-code.tex
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+code.tex (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revi
+sion.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
 Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
@@ -739,8 +699,8 @@ y
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
 ty
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-.code.tex))
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+.code.tex)) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pg
+fmath.sty
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
 .tex))
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
@@ -790,8 +750,7 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+))) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen305
 \ar@mcellbox=\box75
@@ -880,13 +839,12 @@ File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodepartsevenbox=\box94
 \pgfnodepartsixbox=\box95
 \pgfnodepartfivebox=\box96
-)))
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+))) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 66
 .
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -918,7 +876,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -983,29 +940,26 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 66.
-
 (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
- (partes/capa.tex
+(partes/capa.tex
 <imagens/Logo-IFPI-Vertical.png, id=318, 903.375pt x 652.4375pt>
 File: imagens/Logo-IFPI-Vertical.png Graphic file (type png)
 <use imagens/Logo-IFPI-Vertical.png>
 Package pdftex.def Info: imagens/Logo-IFPI-Vertical.png  used on input line 3.
 (pdftex.def)             Requested size: 284.52756pt x 205.48903pt.
- [1
+[1
 
 {C:/Users/franc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/fran
 c/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./imagens/Logo-IF
-PI-Vertical.png>])
-(partes/folha_rosto.tex
+PI-Vertical.png>]) (partes/folha_rosto.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1019,34 +973,27 @@ been already used, duplicate ignored
 l.5 \newpage
              [1]) [2] (main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-[3] [4])
+) [3] [4])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [5] (partes/introducao.tex [6]
+[5] (partes/introducao.tex [6]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
 7.
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-[7]) (partes/tecnologias.tex
+) [7]) (partes/tecnologias.tex
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 14
 .
-
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-[8] [9] [10] [11] [12] [13] [14] [15] [16]
+) [8] [9] [10] [11] [12] [13] [14] [15] [16]
 Overfull \hbox (9.46085pt too wide) in paragraph at lines 121--122
 []\T1/ptm/m/n/12 A ar-qui-te-tura em ca-ma-das ado-tada no bac-kend or-ga-niza 
 o có-digo em qua-tro pa-co-tes: \T1/pcr/m/n/12 domain\T1/ptm/m/n/12 ,
@@ -1055,16 +1002,15 @@ o có-digo em qua-tro pa-co-tes: \T1/pcr/m/n/12 domain\T1/ptm/m/n/12 ,
 [17] [18]) (partes/modelagem.tex [19]
 Overfull \vbox (61.0854pt too high) has occurred while \output is active []
 
-
-[20] (partes/requisitos/rf.tex [21] [22] [23] [24] [25])
-(partes/requisitos/rfn.tex [26] [27] [28]
+[20] (partes/requisitos/rf.tex [21] [22] [23] [24] [25]) (partes/requisitos/rfn
+.tex [26] [27] [28]
 Overfull \hbox (3.7261pt too wide) in paragraph at lines 78--79
 []\T1/ptm/m/n/12 RNF042 ^^U O fron-tend deve se-guir o pa-drão ar-qui-te-tu-ral
  MVVM (\T1/ptm/m/it/12 Model-View-ViewModel\T1/ptm/m/n/12 ),
  []
 
-[29]) (partes/requisitos/regras_negocio.tex [30])
-(partes/requisitos/criterios_aceitacao.tex
+[29]) (partes/requisitos/regras_negocio.tex [30]) (partes/requisitos/criterios_
+aceitacao.tex
 Overfull \hbox (7.5472pt too wide) in alignment at lines 7--13
  [] [] [] 
  []
@@ -1517,9 +1463,9 @@ Overfull \hbox (7.5472pt too wide) in alignment at lines 21--114
 ignored error: Infinite glue shrinkage found in box being split [31]
 ignored error: Infinite glue shrinkage found in box being split [32]
 ignored error: Infinite glue shrinkage found in box being split [33]
-ignored error: Infinite glue shrinkage found in box being split [34])
-(partes/requisitos/rastreabilidade.tex) (partes/diagramas/casos_de_uso.tex)
-[35] (partes/diagramas/casos_de_uso_descricao.tex
+ignored error: Infinite glue shrinkage found in box being split [34]) (partes/r
+equisitos/rastreabilidade.tex) (partes/diagramas/casos_de_uso.tex) [35] (partes
+/diagramas/casos_de_uso_descricao.tex
 Overfull \hbox (3.87294pt too wide) in paragraph at lines 22--22
 []|\T1/ptm/b/n/10 Passo| 
  []
@@ -1779,48 +1725,40 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 726--732
 []|| []| 
  []
 
-) [48] (partes/diagramas/Diagrama_de_Classes.tex [49]
-Overfull \hbox (23.88573pt too wide) in paragraph at lines 13--14
-[]\T1/ptm/m/n/12 Para au-di-to-ria, \T1/pcr/m/n/12 Log \T1/ptm/m/n/12 re-gis-tr
-a even-tos ge-né-ri-cos vin-cu-la-dos ao usu-á-rio, en-quanto \T1/pcr/m/n/12 Lo
-gAuditoria
+) [48] (partes/diagramas/Diagrama_de_Classes.tex
+Overfull \hbox (3.59525pt too wide) in paragraph at lines 5--6
+\T1/ptm/m/n/12 Par-ti-ci-pante ar-ma-zena da-dos ca-das-trais (cpf, da-ta-Ca-da
+s-tro), com o mé-todo vin-cu-lar-Curso(curso).
  []
 
-
-Overfull \hbox (30.12854pt too wide) in paragraph at lines 15--16
-\T1/ptm/m/n/12 mado e à or-ga-ni-za-ção. As con-fi-gu-ra-ções do sis-tema são c
-en-tra-li-za-das em \T1/pcr/m/n/12 ConfiguracaoSistema\T1/ptm/m/n/12 ,
- []
-
-<imagens/diagrama-de-classes.pdf, id=748, 614.295pt x 794.97pt>
+[49] [50]
+<imagens/diagrama-de-classes.pdf, id=752, 614.295pt x 794.97pt>
 File: imagens/diagrama-de-classes.pdf Graphic file (type pdf)
 <use imagens/diagrama-de-classes.pdf>
-Package pdftex.def Info: imagens/diagrama-de-classes.pdf  used on input line 19
+Package pdftex.def Info: imagens/diagrama-de-classes.pdf  used on input line 21
 .
 (pdftex.def)             Requested size: 409.71692pt x 530.22536pt.
-[50]) (partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=755, 1166.3575pt x 1359.0775pt>
+) [51] (partes/diagramas/arquitetura-backend.tex
+<imagens/backend.png, id=759, 1166.3575pt x 1359.0775pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 477.4055pt.
-)
-(partes/diagramas/arquitetura-frontend.tex [51 <./imagens/diagrama-de-classes.p
-df>]
-<imagens/frontend.png, id=776, 1541.76pt x 1027.84pt>
+) (partes/diagramas/arquitetura-frontend.tex [52 <./imagens/diagrama-de-classes
+.pdf>]
+<imagens/frontend.png, id=780, 1541.76pt x 1027.84pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
-) [52 <./imagens/backend.png (PNG copy)>] (partes/diagramas/der.tex
-<imagens/DER.png, id=781, 1529.715pt x 1385.175pt>
+) [53 <./imagens/backend.png (PNG copy)>] (partes/diagramas/der.tex
+<imagens/DER.png, id=786, 1529.715pt x 1385.175pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 371.00093pt.
-)
-[53 <./imagens/frontend.png (PNG copy)>]) (partes/software.tex)
-(partes/consideracoes.tex) [54 <./imagens/DER.png>] [55] (main.bbl
+) [54 <./imagens/frontend.png (PNG copy)>]) (partes/software.tex) (partes/consi
+deracoes.tex) [55 <./imagens/DER.png>] [56] (main.bbl
 Underfull \hbox (badness 5652) in paragraph at lines 23--28
 []\T1/ptm/m/n/12 KULKARNI, R. et al. A se-cure cer-ti-fi-cate authen-ti-ca-tion
  sys-tem using cryp-
@@ -1856,7 +1794,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--59
 /12 . 2025. Dis-po-ní-vel em:
  []
 
-[56]
+[57]
 Underfull \hbox (badness 3148) in paragraph at lines 78--80
 []\T1/ptm/m/n/12 KOWALSKI, E. \T1/ptm/m/it/12 Son-ner ^^V To-ast Com-po-nent fo
 r Re-act\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
@@ -1911,13 +1849,13 @@ m/m/n/12 . 2025. Dis-po-ní-vel em: $\OML/cmm/m/it/12 <$\T1/ptm/m/n/12 https://g
 it-
  []
 
-[57]
+[58]
 Underfull \hbox (badness 10000) in paragraph at lines 164--166
 []\T1/ptm/m/n/12 MICROSOFT. \T1/ptm/m/it/12 Vi-sual Stu-dio Code Do-cu-men-ta-t
 ion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-) [58] (partes/anexos.tex) [59] (main.aux)
+) [59] (partes/anexos.tex) [60] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1926,8 +1864,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DE37A6704CBBAA9C44F5CC7856A20B16;13406.
  ) 
 Here is how much of TeX's memory you used:
- 28692 strings out of 467871
- 556115 string characters out of 5418376
+ 28693 strings out of 467871
+ 556122 string characters out of 5418376
  1280764 words of memory out of 5000000
  56783 multiletter control sequences out of 15000+600000
  667424 words of font info for 94 fonts, out of 8000000 for 9000
@@ -1939,9 +1877,9 @@ r/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (61 pages, 2592419 bytes).
+Output written on main.pdf (62 pages, 2590804 bytes).
 PDF statistics:
- 892 PDF objects out of 1000 (max. 8388607)
- 236 named destinations out of 1000 (max. 500000)
+ 896 PDF objects out of 1000 (max. 8388607)
+ 237 named destinations out of 1000 (max. 500000)
  662 words of extra memory for PDF output out of 10000 (max. 10000000)
 

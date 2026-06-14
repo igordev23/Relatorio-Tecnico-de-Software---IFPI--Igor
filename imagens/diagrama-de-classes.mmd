@@ -4,37 +4,34 @@ classDiagram
       -UUID id
       -String nome
       -String email
+      -Boolean ativo
     }
     class Usuario {
-      -UUID id
       -PerfilEnum perfil
-      -Boolean ativo
       -DateTime ultimoLogin
       -DateTime horarioPermitidoInicio
       -DateTime horarioPermitidoFim
-      +Boolean autenticar(String email, String senha)
-      +Certificado emitirCertificado(Participante participante, Template template)
+      +Boolean autenticar(email, senha)
+      +Certificado emitirCertificado(participante, template)
     }
     class Participante {
-      -UUID id
       -String cpf
       -DateTime dataCadastro
-      -Boolean ativo
-      +void vincularCurso(Curso curso)
+      +void vincularCurso(curso)
     }
     class Organizacao {
       -UUID id
       -String nome
       -String cnpj
       -Boolean ativo
-      +void adicionarMembro(Usuario usuario)
+      +void adicionarMembro(usuario)
     }
     class Curso {
       -UUID id
       -String nome
       -Integer cargaHoraria
       -Text descricao
-      +void inscreverParticipante(Participante participante)
+      +void inscreverParticipante(participante)
     }
     class ParticipanteCurso {
       -DateTime dataVinculo
@@ -47,7 +44,7 @@ classDiagram
       -Integer versao
       -Boolean ativo
       -DateTime dataCriacao
-      +void adicionarCampo(CampoDinamico campo)
+      +void adicionarCampo(campo)
     }
     class CampoDinamico {
       -UUID id
@@ -68,11 +65,10 @@ classDiagram
       -String localEmissao
       -StatusCertificadoEnum status
       -String arquivoPDF
-      -String hashAssinatura
       -String qrCode
       +void gerarPDF()
-      +Boolean assinar(AssinaturaDigital assinatura)
-      +Boolean enviarEmail(EnvioEmail envio)
+      +Boolean assinar(assinatura)
+      +Boolean enviarEmail(envio)
     }
     class EnvioEmail {
       -UUID id
@@ -94,7 +90,7 @@ classDiagram
       -String acao
       -DateTime dataHora
       -String local
-      +void registrar(Usuario usuario)
+      +void registrar(usuario)
     }
     class ConfiguracaoSistema {
       -UUID id
@@ -112,7 +108,7 @@ classDiagram
       -DateTime dataAbertura
       -StatusChamadoEnum status
       -DateTime dataFechamento
-      +void abrir(Usuario usuario)
+      +void abrir(usuario)
       +void fechar()
     }
 
@@ -127,7 +123,8 @@ classDiagram
     Organizacao "1" -- "1" ConfiguracaoSistema
     Organizacao "1" -- "0..*" ChamadoSuporte
 
-    Participante "0..*" -- "0..*" Curso : ParticipanteCurso
+    Participante "1" -- "0..*" ParticipanteCurso
+    Curso "1" -- "0..*" ParticipanteCurso
     Template "1" -- "0..*" CampoDinamico
     Template "1" -- "0..1" AssinaturaDigital
 
