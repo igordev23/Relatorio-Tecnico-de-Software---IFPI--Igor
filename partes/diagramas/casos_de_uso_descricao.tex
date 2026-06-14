@@ -2,184 +2,184 @@
 
 \begin{table}[H]
 \centering\footnotesize
-\begin{tabular}{p{3.2cm} p{11.8cm}}
-\toprule
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
 \textbf{UC001} & \textbf{Gerenciar Usuários} \\
-\midrule
+\hline
 \textbf{Dependências} & RF001, RF003, RF004, RF005, RF006 \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o administrador gerencie os usuários da plataforma, incluindo criação, edição e desativação de contas, bem como a definição de perfis de acesso. \\
 \textbf{Ator(es)} & Administrador \\
-\midrule
+\hline
 \textbf{Pré-condições} &
 \begin{enumerate}
     \item Administrador autenticado no sistema.
     \item Administrador possui permissão de gerenciamento de usuários.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Sequência Ordinária} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Ação} \\
-\midrule
+\hline
 1 & O administrador acessa a seção de usuários. \\
 2 & O sistema exibe a lista de usuários cadastrados. \\
 3 & O administrador seleciona criar, editar ou desativar um usuário. \\
 4 & O sistema valida os dados informados. \\
 5 & O sistema persiste a alteração no banco de dados. \\
 6 & O sistema exibe confirmação da operação. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Pós-condições} &
 \begin{enumerate}
     \item Usuário criado, editado ou desativado com sucesso.
     \item Alterações refletidas na lista de usuários.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Exceções} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Condição} \\
-\midrule
+\hline
 3 & Se o e-mail informado já existir, o sistema rejeita o cadastro e exibe mensagem de erro. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Referências} & RF001, RF003, RF004, RF005, RF006 \\
 \textbf{Comentários} & Nenhum. \\
-\bottomrule
+\hline
 \end{tabular}
 \caption{Caso de uso UC001 -- Gerenciar Usuários}
 \end{table}
 
 \begin{table}[H]
 \centering\footnotesize
-\begin{tabular}{p{3.2cm} p{11.8cm}}
-\toprule
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
 \textbf{UC002} & \textbf{Gerenciar Templates} \\
-\midrule
+\hline
 \textbf{Dependências} & RF008, RF009, RF010, RF012, RF013 \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o administrador gerencie templates de certificados, incluindo upload, personalização visual e configuração de campos dinâmicos. \\
 \textbf{Ator(es)} & Administrador \\
-\midrule
+\hline
 \textbf{Pré-condições} &
 \begin{enumerate}
     \item Administrador autenticado no sistema.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Sequência Ordinária} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Ação} \\
-\midrule
+\hline
 1 & O administrador acessa a seção de templates. \\
 2 & O sistema exibe a galeria de templates existentes. \\
 3 & O administrador faz upload de um novo arquivo PPTX. \\
 4 & O sistema valida o formato do arquivo e exibe preview. \\
 5 & O administrador configura campos dinâmicos e personaliza cores e fontes. \\
 6 & O sistema salva o template e retorna à galeria. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Pós-condições} &
 \begin{enumerate}
     \item Template salvo no sistema.
     \item Template disponível para uso na emissão de certificados.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Exceções} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Condição} \\
-\midrule
+\hline
 3 & Se o arquivo enviado não for PPTX, o sistema rejeita e exibe mensagem de formato inválido. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Referências} & RF008, RF009, RF010, RF012, RF013 \\
 \textbf{Comentários} & Nenhum. \\
-\bottomrule
+\hline
 \end{tabular}
 \caption{Caso de uso UC002 -- Gerenciar Templates}
 \end{table}
 
 \begin{table}[H]
 \centering\footnotesize
-\begin{tabular}{p{3.2cm} p{11.8cm}}
-\toprule
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
 \textbf{UC003} & \textbf{Gerenciar Cursos} \\
-\midrule
+\hline
 \textbf{Dependências} & RF046, RF048, RF050, RF053 \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o administrador cadastre e gerencie cursos, incluindo nome, carga horária, datas, local e instrutor. \\
 \textbf{Ator(es)} & Administrador \\
-\midrule
+\hline
 \textbf{Pré-condições} &
 \begin{enumerate}
     \item Administrador autenticado no sistema.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Sequência Ordinária} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Ação} \\
-\midrule
+\hline
 1 & O administrador acessa a seção de cursos. \\
 2 & O sistema exibe a lista de cursos cadastrados. \\
 3 & O administrador preenche nome, carga horária, datas e instrutor. \\
 4 & O sistema valida os dados obrigatórios. \\
 5 & O sistema salva o curso no banco de dados. \\
 6 & O sistema exibe confirmação. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Pós-condições} &
 \begin{enumerate}
     \item Curso cadastrado no sistema.
     \item Curso disponível para vinculação com certificados.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Exceções} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Condição} \\
-\midrule
+\hline
 4 & Se dados obrigatórios estiverem ausentes, o sistema bloqueia o salvamento e exibe os campos pendentes. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Referências} & RF046, RF048, RF050, RF053 \\
 \textbf{Comentários} & Nenhum. \\
-\bottomrule
+\hline
 \end{tabular}
 \caption{Caso de uso UC003 -- Gerenciar Cursos}
 \end{table}
 
 \begin{table}[H]
 \centering\footnotesize
-\begin{tabular}{p{3.2cm} p{11.8cm}}
-\toprule
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
 \textbf{UC004} & \textbf{Emitir Certificado Individual} \\
-\midrule
+\hline
 \textbf{Dependências} & RF015, RF016, RF023, RF024, RF025, RF026, RF028, RF052 \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador emita um certificado individual, selecionando template, curso e participante, e gerando PDF com código único e QR Code. \\
 \textbf{Ator(es)} & Colaborador \\
-\midrule
+\hline
 \textbf{Pré-condições} &
 \begin{enumerate}
     \item Colaborador autenticado no sistema.
     \item Template de certificado cadastrado.
     \item Curso cadastrado.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Sequência Ordinária} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Ação} \\
-\midrule
+\hline
 1 & O colaborador acessa a seção de emissão. \\
 2 & O sistema exibe formulário com campos para template, curso e participante. \\
 3 & O colaborador seleciona o template e o curso. \\
@@ -189,55 +189,55 @@
 7 & O sistema gera código único e insere QR Code no PDF. \\
 8 & O sistema registra data, hora e responsável pela emissão. \\
 9 & O sistema exibe o certificado gerado com opção de download. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Pós-condições} &
 \begin{enumerate}
     \item Certificado gerado em PDF.
     \item Código único registrado no banco de dados.
     \item Certificado disponível para validação pública.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Exceções} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Condição} \\
-\midrule
+\hline
 5 & Se o participante não estiver vinculado ao curso, o sistema bloqueia a emissão e exibe alerta. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Referências} & RF015, RF016, RF023, RF024, RF025, RF026, RF028, RF052 \\
 \textbf{Comentários} & Nenhum. \\
-\bottomrule
+\hline
 \end{tabular}
 \caption{Caso de uso UC004 -- Emitir Certificado Individual}
 \end{table}
 
 \begin{table}[H]
 \centering\footnotesize
-\begin{tabular}{p{3.2cm} p{11.8cm}}
-\toprule
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
 \textbf{UC005} & \textbf{Emitir Certificados em Lote} \\
-\midrule
+\hline
 \textbf{Dependências} & RF017, RF020, RF021, RF022 \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador emita certificados em lote a partir de uma lista de participantes, processando de forma assíncrona por fila. \\
 \textbf{Ator(es)} & Colaborador \\
-\midrule
+\hline
 \textbf{Pré-condições} &
 \begin{enumerate}
     \item Colaborador autenticado no sistema.
     \item Template de certificado cadastrado.
     \item Arquivo com lista de participantes disponível.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Sequência Ordinária} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Ação} \\
-\midrule
+\hline
 1 & O colaborador acessa a seção de emissão em lote. \\
 2 & O sistema exibe formulário para seleção de template e arquivo. \\
 3 & O colaborador seleciona o template e envia o arquivo. \\
@@ -245,186 +245,186 @@
 5 & O sistema enfileira as emissões para processamento. \\
 6 & O sistema processa cada item da fila, gerando PDF e código único. \\
 7 & O sistema notifica o colaborador ao término do processamento. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Pós-condições} &
 \begin{enumerate}
     \item Certificados do lote gerados e registrados.
     \item Colaborador notificado sobre o resultado.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Exceções} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Condição} \\
-\midrule
+\hline
 4 & Se o arquivo tiver formato inválido, o sistema rejeita e exibe mensagem. \\
 6 & Se alguma linha contiver dados inválidos, o sistema ignora e reporta ao final. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Referências} & RF017, RF020, RF021, RF022 \\
 \textbf{Comentários} & Nenhum. \\
-\bottomrule
+\hline
 \end{tabular}
 \caption{Caso de uso UC005 -- Emitir Certificados em Lote}
 \end{table}
 
 \begin{table}[H]
 \centering\footnotesize
-\begin{tabular}{p{3.2cm} p{11.8cm}}
-\toprule
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
 \textbf{UC006} & \textbf{Cadastrar Participante} \\
-\midrule
+\hline
 \textbf{Dependências} & RF015, RF054, RF055, RF058 \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador cadastre participantes individualmente, informando nome, e-mail e CPF opcional. \\
 \textbf{Ator(es)} & Colaborador \\
-\midrule
+\hline
 \textbf{Pré-condições} &
 \begin{enumerate}
     \item Colaborador autenticado no sistema.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Sequência Ordinária} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Ação} \\
-\midrule
+\hline
 1 & O colaborador acessa a seção de participantes. \\
 2 & O sistema exibe formulário com campos de nome, e-mail e CPF. \\
 3 & O colaborador preenche os dados e confirma. \\
 4 & O sistema valida o formato do e-mail. \\
 5 & O sistema salva o participante no banco de dados. \\
 6 & O sistema exibe confirmação. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Pós-condições} &
 \begin{enumerate}
     \item Participante cadastrado no sistema.
     \item Participante disponível para emissão de certificados.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Exceções} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Condição} \\
-\midrule
+\hline
 4 & Se o e-mail já estiver cadastrado, o sistema alerta sobre registro existente. \\
 4 & Se o formato do e-mail for inválido, o sistema rejeita e exibe mensagem. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Referências} & RF015, RF054, RF055, RF058 \\
 \textbf{Comentários} & Nenhum. \\
-\bottomrule
+\hline
 \end{tabular}
 \caption{Caso de uso UC006 -- Cadastrar Participante}
 \end{table}
 
 \begin{table}[H]
 \centering\footnotesize
-\begin{tabular}{p{3.2cm} p{11.8cm}}
-\toprule
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
 \textbf{UC007} & \textbf{Importar Participantes} \\
-\midrule
+\hline
 \textbf{Dependências} & RF017, RF018 \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador importe participantes em lote a partir de arquivos CSV ou Excel. \\
 \textbf{Ator(es)} & Colaborador \\
-\midrule
+\hline
 \textbf{Pré-condições} &
 \begin{enumerate}
     \item Colaborador autenticado no sistema.
     \item Arquivo CSV ou Excel disponível.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Sequência Ordinária} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Ação} \\
-\midrule
+\hline
 1 & O colaborador acessa a opção de importar participantes. \\
 2 & O sistema exibe formulário para upload de arquivo. \\
 3 & O colaborador seleciona e envia o arquivo. \\
 4 & O sistema valida o cabeçalho e os dados das linhas. \\
 5 & O sistema importa os registros válidos. \\
 6 & O sistema exibe resumo com quantidade de registros importados e rejeitados. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Pós-condições} &
 \begin{enumerate}
     \item Participantes válidos importados e disponíveis para emissão.
     \item Relatório de erros gerado para registros rejeitados.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Exceções} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Condição} \\
-\midrule
+\hline
 4 & Se o formato do arquivo não for CSV ou XLSX, o sistema rejeita e exibe mensagem. \\
 4 & Se alguma linha contiver dados inconsistentes, o sistema ignora e lista ao final. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Referências} & RF017, RF018 \\
 \textbf{Comentários} & Nenhum. \\
-\bottomrule
+\hline
 \end{tabular}
 \caption{Caso de uso UC007 -- Importar Participantes}
 \end{table}
 
 \begin{table}[H]
 \centering\footnotesize
-\begin{tabular}{p{3.2cm} p{11.8cm}}
-\toprule
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
 \textbf{UC008} & \textbf{Validar Certificado} \\
-\midrule
+\hline
 \textbf{Dependências} & RF033, RF034, RF035, RF036 \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve disponibilizar um portal público onde qualquer visitante possa validar um certificado informando o código único ou escaneando o QR Code. \\
 \textbf{Ator(es)} & Visitante \\
-\midrule
+\hline
 \textbf{Pré-condições} &
 \begin{enumerate}
     \item Nenhuma (portal público, sem autenticação).
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Sequência Ordinária} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Ação} \\
-\midrule
+\hline
 1 & O visitante acessa o portal público de validação. \\
 2 & O sistema exibe campo para inserção do código único. \\
 3 & O visitante insere o código presente no certificado. \\
 4 & O sistema consulta o código no banco de dados. \\
 5 & O sistema exibe nome, curso, data e status de autenticidade. \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Pós-condições} &
 \begin{enumerate}
     \item Informações do certificado exibidas ao visitante.
 \end{enumerate} \\
-\midrule
+\hline
 \textbf{Exceções} &
-\begin{tabular}{p{0.7cm} p{10cm}}
-\midrule
+\begin{tabular}{|p{0.7cm}|p{10cm}|}
+\hline
 \textbf{Passo} & \textbf{Condição} \\
-\midrule
+\hline
 3 & Se o visitante escanear o QR Code, o sistema redireciona com o código preenchido automaticamente. \\
 4 & Se o código não existir, o sistema exibe "Certificado não encontrado". \\
-\bottomrule
+\hline
 \end{tabular} \\
-\midrule
+\hline
 \textbf{Referências} & RF033, RF034, RF035, RF036 \\
 \textbf{Comentários} & A validação via QR Code elimina a necessidade de digitação manual do código. \\
-\bottomrule
+\hline
 \end{tabular}
 \caption{Caso de uso UC008 -- Validar Certificado}
 \end{table}
