@@ -19,6 +19,9 @@
 \node[actor] (colab) at (-1.5,-1.5) {Colaborador};
 \node[actor] (visit) at (-1.5,-5) {Visitante};
 
+% Generalização: Administrador herda casos de uso do Colaborador
+\draw[-{Triangle[open]}] (admin) -- (colab);
+
 % Casos Admin (mais compactos)
 \node[usecase, fill=red!20] (usuarios) at (2.5,2.5) {Gerenciar Usuários};
 \node[usecase, fill=red!20] (template) at (2.5,1.2) {Criar Template};
