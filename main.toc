@@ -65,15 +65,15 @@
 \contentsline {subsection}{\numberline {3.3}Critérios de Aceitação}{31}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Matriz de Rastreabilidade}{35}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Diagramas de casos de uso}{36}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Diagramas de classe}{45}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Arquitetura do Sistema}{45}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Diagrama Entidade-Relacionamento}{48}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Interfaces}{48}{subsection.3.9}%
-\contentsline {section}{\numberline {4.0}Software}{48}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Implantação}{48}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Testes}{48}{subsection.4.2}%
-\contentsline {section}{\numberline {5.0}Considerações Finais}{49}{section.5}%
-\contentsline {section}{Referências}{52}{section*.19}%
-\contentsline {section}{\numberline {6.0}Anexos}{53}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{53}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{53}{subsection.6.2}%
+\contentsline {subsection}{\numberline {3.6}Diagramas de classe}{37}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Arquitetura do Sistema}{37}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Diagrama Entidade-Relacionamento}{40}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Interfaces}{40}{subsection.3.9}%
+\contentsline {section}{\numberline {4.0}Software}{40}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Implantação}{40}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Testes}{40}{subsection.4.2}%
+\contentsline {section}{\numberline {5.0}Considerações Finais}{41}{section.5}%
+\contentsline {section}{Referências}{44}{section*.19}%
+\contentsline {section}{\numberline {6.0}Anexos}{45}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{45}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{45}{subsection.6.2}%
