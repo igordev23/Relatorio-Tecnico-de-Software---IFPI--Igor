@@ -1,0 +1,130 @@
+%%{init: {'theme': 'neutral', 'themeVariables': {'lineColor': '#333333', 'primaryTextColor': '#222222', 'primaryColor': '#f4f4f4', 'primaryBorderColor': '#333333', 'secondaryColor': '#ffffff'}}}%%
+classDiagram
+    class Pessoa {
+      -UUID id
+      -String nome
+      -String email
+    }
+    class Usuario {
+      -UUID id
+      -PerfilEnum perfil
+      -Boolean ativo
+      -DateTime ultimoLogin
+      -DateTime horarioPermitidoInicio
+      -DateTime horarioPermitidoFim
+    }
+    class Participante {
+      -UUID id
+      -String cpf
+      -DateTime dataCadastro
+      -Boolean ativo
+    }
+    class Organizacao {
+      -UUID id
+      -String nome
+      -String cnpj
+      -Boolean ativo
+    }
+    class Curso {
+      -UUID id
+      -String nome
+      -Integer cargaHoraria
+      -Text descricao
+    }
+    class ParticipanteCurso {
+      -DateTime dataVinculo
+    }
+    class Template {
+      -UUID id
+      -String nome
+      -TipoArquivoEnum tipoArquivo
+      -String caminhoArquivo
+      -Integer versao
+      -Boolean ativo
+      -DateTime dataCriacao
+    }
+    class CampoDinamico {
+      -UUID id
+      -String nomeCampo
+      -String marcador
+      -String tipo
+    }
+    class AssinaturaDigital {
+      -UUID id
+      -String imagemAssinatura
+      -String hashVerificacao
+      -DateTime dataRegistro
+    }
+    class Certificado {
+      -UUID id
+      -String codigoUnico
+      -DateTime dataEmissao
+      -String localEmissao
+      -StatusCertificadoEnum status
+      -String arquivoPDF
+      -String hashAssinatura
+      -String qrCode
+    }
+    class EnvioEmail {
+      -UUID id
+      -StatusEnvioEnum status
+      -Integer tentativas
+      -DateTime dataEnvio
+      -Text mensagemPersonalizada
+    }
+    class Log {
+      -UUID id
+      -String tipo
+      -Text descricao
+      -DateTime dataHora
+      -String ip
+    }
+    class LogAuditoria {
+      -UUID id
+      -String acao
+      -DateTime dataHora
+      -String local
+    }
+    class ConfiguracaoSistema {
+      -UUID id
+      -Boolean envioAutomatico
+      -String regraReemissao
+      -Text mensagemPadraoEmail
+      -Text termosUso
+      -Boolean sistemaOnline
+    }
+    class ChamadoSuporte {
+      -UUID id
+      -String titulo
+      -Text descricao
+      -DateTime dataAbertura
+      -StatusChamadoEnum status
+      -DateTime dataFechamento
+    }
+
+    Pessoa <|-- Usuario
+    Pessoa <|-- Participante
+
+    Organizacao "1" -- "0..*" Usuario
+    Organizacao "1" -- "0..*" Participante
+    Organizacao "1" -- "0..*" Curso
+    Organizacao "1" -- "0..*" Template
+    Organizacao "1" -- "0..*" Certificado
+    Organizacao "1" -- "1" ConfiguracaoSistema
+    Organizacao "1" -- "0..*" ChamadoSuporte
+
+    Participante "0..*" -- "0..*" Curso : ParticipanteCurso
+    Template "1" -- "0..*" CampoDinamico
+    Template "1" -- "0..1" AssinaturaDigital
+
+    Usuario "1" -- "0..*" Certificado : emitiu
+    Usuario "1" -- "0..*" Log
+    Usuario "1" -- "0..*" LogAuditoria
+    Usuario "1" -- "0..*" ChamadoSuporte : abriu
+
+    Participante "0..*" -- "0..*" Certificado
+    Curso "0..*" -- "0..*" Certificado
+
+    Certificado "1" -- "0..1" EnvioEmail
+    Certificado "1" -- "1" Template
+    Certificado "1" -- "1" AssinaturaDigital : assinadoCom
