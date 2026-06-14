@@ -1,18 +1,18 @@
-O diagrama de classes da Figura~\ref{fig:diagrama-classes} modela a estrutura de dados do sistema de certificados, organizando as entidades em módulos funcionais que refletem a separação de responsabilidades definida nos requisitos. As classes foram agrupadas por domínio, resultando nos seguintes módulos:
+O diagrama de classes da Figura~\ref{fig:diagrama-classes} modela a estrutura de dados do sistema de certificados, organizando as entidades em módulos funcionais que refletem a separação de responsabilidades definida nos requisitos.
 
-\textbf{Autenticação e Controle de Acesso} --- as classes \texttt{User}, \texttt{Role} e \texttt{Permission} implementam o modelo RBAC (\textit{Role-Based Access Control}), em que um usuário possui um ou mais perfis, e cada perfil agrega um conjunto de permissões que definem o acesso a funcionalidades específicas do sistema.
+A hierarquia de herança tem como base a classe abstrata \texttt{Pessoa}, que concentra os atributos comuns de identificação (id, nome, email). Dela derivam \texttt{Usuario} --- que representa os colaboradores e administradores do sistema, com controle de perfil, status e horários permitidos --- e \texttt{Participante}, que armazena os dados cadastrais como CPF e data de cadastro. Essa generalização evita a duplicação de atributos e centraliza a lógica comum de pessoas.
 
-\textbf{Templates e Certificados} --- a classe \texttt{Template} representa o modelo de certificado com campos dinâmicos modelados por \texttt{DynamicField}, usando o padrão \textit{Composite} para permitir que um template contenha múltiplos campos configuráveis. O versionamento é tratado por \texttt{TemplateVersion}, que registra o histórico de alterações. A classe \texttt{Certificate} é a entidade central do sistema, associada a um template, um participante e um curso, e contém atributos como código único e \texttt{QRCode} para validação pública.
+O modelo multi-tenant é implementado pela classe \texttt{Organizacao}, que se associa a todas as entidades principais do sistema: usuários, participantes, cursos, templates, certificados, configurações e chamados de suporte. Cada organização opera de forma isolada, garantindo que os dados de um inquilino não sejam acessíveis por outro.
 
-\textbf{Participantes e Cursos} --- \texttt{Participant} armazena dados cadastrais e mantém uma associação muitos-para-muitos com \texttt{Course} por meio de \texttt{CourseParticipant}, permitindo que um participante esteja vinculado a múltiplos cursos e vice-versa.
+A relação entre \texttt{Participante} e \texttt{Curso} é muitos-para-muitos, materializada pela classe associativa \texttt{ParticipanteCurso}, que armazena a data de vínculo entre as duas entidades.
 
-\textbf{Organizações (Multi-tenant)} --- as classes \texttt{Organization} e \texttt{OrganizationUser} implementam o modelo multi-inquilino, em que cada organização gerencia seus próprios usuários, templates e certificados de forma isolada.
+No módulo de templates, a classe \texttt{Template} armazena o arquivo e a versão atual, enquanto \texttt{CampoDinamico} modela os marcadores que serão preenchidos durante a emissão. A assinatura digital é representada por \texttt{AssinaturaDigital}, vinculada ao template que a contém.
 
-\textbf{Processamento e Notificações} --- \texttt{CertificateQueue} gerencia a fila de emissão em lote, e \texttt{Notification} trata o envio de notificações sobre o andamento do processamento.
+A classe \texttt{Certificado} é a entidade central do sistema, associada a organização, usuário responsável pela emissão, participante, curso e template. Cada certificado possui um código único, hash de verificação e QR Code para validação pública. O envio por e-mail é modelado pela classe \texttt{EnvioEmail}, com controle de status e tentativas.
 
-\textbf{Suporte e Auditoria} --- \texttt{SupportTicket} registra chamados de suporte, enquanto \texttt{AuditLog} e \texttt{Log} armazenam o histórico de ações relevantes para fins de auditoria e rastreabilidade.
+Para auditoria, \texttt{Log} registra eventos genéricos vinculados ao usuário, enquanto \texttt{LogAuditoria} armazena ações específicas sobre certificados, permitindo rastrear quem emitiu ou alterou cada certificado e em qual local.
 
-A escolha por composição em vez de herança foi adotada sempre que possível, priorizando o reúso por meio de associações entre classes independentes. O padrão \textit{Singleton} foi aplicado à classe \texttt{SystemConfig} para garantir uma única instância das configurações globais do sistema durante a execução.
+O suporte técnico é tratado por \texttt{ChamadoSuporte}, associado ao usuário que abriu o chamado e à organização. As configurações do sistema são centralizadas em \texttt{ConfiguracaoSistema}, com uma instância por organização para controle de envio automático, regras de reemissão e mensagens padrão.
 
 \begin{figure}[H]
     \centering
