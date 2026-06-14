@@ -13,7 +13,7 @@
 ]
 
 % Fronteira do sistema
-\draw (-0.5,-8) rectangle (17,5.5) node[above left, font=\small\bfseries, inner sep=3pt] at (17,5.5) {Sistema de Certificados};
+\draw (-0.5,-8) rectangle (17,7) node[above left, font=\small\bfseries, inner sep=3pt] at (17,7) {Sistema de Certificados};
 
 % Atores
 \node[actor] (admin) at (-3.5,2) {Administrador};
@@ -35,11 +35,17 @@
 \node[usecase, fill=yellow!30] (salvar) at (13,2.5) {Salvar};
 \node[usecase, fill=yellow!30] (preview) at (15.5,1) {Prévia};
 
+\node[usecase, fill=blue!30] (organizacoes) at (2.5,5.5) {Gerenciar Organizações};
+\node[usecase, fill=purple!25] (configurar) at (8,5.5) {Configurar Sistema};
+
 % Casos Colaborador
 \node[usecase, fill=green!30] (emitir) at (2.5,-0.5) {Emitir Individual};
 \node[usecase, fill=green!30] (lote) at (2.5,-2) {Emitir em Lote};
 \node[usecase, fill=orange!40] (cadastro) at (2.5,-3.5) {Cadastrar Part.};
 \node[usecase, fill=orange!40] (importar) at (2.5,-5) {Importar Part.};
+
+\node[usecase, fill=orange!40] (buscar) at (8,-3.5) {Buscar Part.};
+\node[usecase, fill=purple!25] (historico) at (13,-3.5) {Visualizar Histórico};
 
 \node[usecase, fill=purple!25] (fila) at (8,-2) {Fila};
 \node[usecase, fill=purple!25] (notificar) at (13,-2) {Notificar};
@@ -57,12 +63,16 @@
 \draw[assoc] (admin) -- (template);
 \draw[assoc] (admin) -- (cursos);
 \draw[assoc] (admin) -- (emitir);
+\draw[assoc] (admin) -- (organizacoes);
+\draw[assoc] (admin) -- (configurar);
 
 \draw[assoc] (colab) -- (emitir);
 \draw[assoc] (colab) -- (lote);
 \draw[assoc] (colab) -- (cadastro);
 \draw[assoc] (colab) -- (importar);
 \draw[assoc] (colab) -- (reenvio);
+\draw[assoc] (colab) -- (buscar);
+\draw[assoc] (colab) -- (historico);
 
 \draw[assoc] (visit) -- (validar);
 \draw[assoc] (visit) -- (escanear);
@@ -83,6 +93,7 @@
 % Extend
 \draw[extend] (escanear) -- (validar) node[midway, above, font=\tiny] {\guillemotleft extend\guillemotright};
 \draw[extend] (reenvio) -- (emitir) node[midway, above, font=\tiny] {\guillemotleft extend\guillemotright};
+\draw[extend] (historico) -- (buscar) node[midway, above, font=\tiny] {\guillemotleft extend\guillemotright};
 
 \end{tikzpicture}
 }
