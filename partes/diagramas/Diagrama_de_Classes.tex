@@ -4,7 +4,7 @@ A hierarquia de herança tem como base a classe abstrata Pessoa, que concentra o
 
 Usuario representa colaboradores e administradores, com controle de perfil (PerfilEnum), ativo, ultimoLogin e restrição de horários permitidos (horarioPermitidoInicio, horarioPermitidoFim). Participante armazena dados cadastrais (cpf, dataCadastro) e status ativo. Essa generalização segue o princípio de herança da orientação a objetos, evitando duplicação de atributos e centralizando a lógica comum de pessoas.
 
-O modelo multi-tenant é implementado pela classe Organizacao (nome, cnpj, ativo), que se associa em cardinalidade 1 para 0..* a Usuario, Participante, Curso, Template e Certificado, e em 1 para 1 com ConfiguracaoSistema. Cada organização opera de forma isolada, garantindo que os dados de um inquilino não sejam acessíveis por outro.
+O modelo multi-tenant é implementado pela classe Organizacao (nome, cnpj, ativo), que se associa em cardinalidade 1 para 0..* a Usuario, Participante, Curso (nome, cargaHoraria, descricao), Template e Certificado, e em 1 para 1 com ConfiguracaoSistema, além de 1 para 0..* com ChamadoSuporte. Cada organização opera de forma isolada, garantindo que os dados de um inquilino não sejam acessíveis por outro.
 
 A relação entre Participante e Curso é muitos-para-muitos (0..* para 0..*), materializada pela classe associativa ParticipanteCurso, que armazena dataVinculo entre as duas entidades. Essa modelagem foi escolhida por permitir rastrear historicamente quando um participante se vinculou a cada curso, além de facilitar consultas futuras como ``alunos ativos por período''.
 
@@ -12,9 +12,9 @@ No módulo de templates, a classe Template armazena nome, tipoArquivo (TipoArqui
 
 A classe Certificado é a entidade central do sistema, associada a Organizacao, ao Usuario que o emitiu (relação nomeada ``emitiu''), a Participante (0..* para 0..*), a Curso (0..* para 0..*) e obrigatoriamente a Template (1 para 1). Seus atributos incluem codigoUnico, dataEmissao, localEmissao, status (StatusCertificadoEnum), arquivoPDF, hashAssinatura e qrCode. O envio por e-mail é modelado pela classe EnvioEmail (status em StatusEnvioEnum, tentativas, dataEnvio, mensagemPersonalizada), em associação 1 para 0..1 com Certificado. A assinatura digital do certificado é vinculada diretamente pela relação ``assinadoCom'' entre Certificado e AssinaturaDigital (1 para 1).
 
-Para auditoria, Log registra eventos genéricos (tipo, descricao, dataHora, ip) vinculados ao usuário (1 para 0..*), enquanto LogAuditoria armazena ações específicas sobre certificados (acao, dataHora, local), permitindo rastrear quem emitiu ou alterou cada certificado e em qual local.
+Para auditoria, Log registra eventos genéricos (tipo, descricao, dataHora, ip) vinculados ao usuário (1 para 0..*), enquanto LogAuditoria armazena ações específicas sobre certificados (acao, dataHora, local), também vinculada ao usuário em 1 para 0..*, permitindo rastrear quem emitiu ou alterou cada certificado e em qual local.
 
-O suporte técnico é tratado por ChamadoSuporte (titulo, descricao, dataAbertura, status em StatusChamadoEnum, dataFechamento), associado ao usuário que abriu o chamado (relação nomeada ``abriu'') e à organização. As configurações do sistema são centralizadas em ConfiguracaoSistema (envioAutomatico, regraReemissao, mensagemPadraoEmail, termosUso, sistemaOnline), com uma instância por organização (1 para 1) para controle individualizado de cada inquilino.
+O suporte técnico é tratado por ChamadoSuporte (titulo, descricao, dataAbertura, status em StatusChamadoEnum, dataFechamento), associado em 1 para 0..* ao usuário que abriu o chamado (relação nomeada ``abriu'') e em 1 para 0..* à organização. As configurações do sistema são centralizadas em ConfiguracaoSistema (envioAutomatico, regraReemissao, mensagemPadraoEmail, termosUso, sistemaOnline), com uma instância por organização (1 para 1) para controle individualizado de cada inquilino.
 
 \begin{figure}[H]
     \centering
