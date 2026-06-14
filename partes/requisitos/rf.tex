@@ -8,8 +8,8 @@
 \item RF003 – Validar credenciais antes de conceder acesso.
 \item RF004 – Permitir cadastro de novos usuários (apenas administrador).
 \item RF005 – Permitir gerenciamento de perfis e permissões.
-\item RF006 – Impedir acesso a áreas restritas sem autenticação.
-\item RF007 – Impedir acesso simultâneo com a mesma conta.
+\item RF006 – Controlar acesso a áreas restritas com base no status de autenticação do usuário.
+\item RF007 – Controlar sessões ativas por conta, permitindo apenas uma sessão simultânea.
 \end{itemize}
 
 \subsubsection{Módulo de Templates de Certificados}
@@ -80,8 +80,8 @@
 \begin{itemize}
 \item RF044 – Registrar responsável por cada certificado gerado.
 \item RF045 – Registrar data, hora e local de ações relevantes.
-\item RF046 – Impedir exclusão definitiva de certificados (somente arquivamento).
-\item RF047 – Restringir horário de emissão por perfil de colaborador.
+\item RF046 – Permitir arquivamento de certificados como alternativa à exclusão definitiva.
+\item RF047 – Permitir configurar horários permitidos para emissão por perfil de colaborador.
 \end{itemize}
 
 \subsubsection{Módulo de Gestão de Cursos/Eventos}
@@ -92,7 +92,7 @@
 \item RF051 – Registrar instrutor responsável.
 \item RF052 – Configurar datas de início e término.
 \item RF053 – Listar certificados vinculados ao curso.
-\item RF054 – Impedir emissão para participante não vinculado.
+\item RF054 – Validar vínculo do participante ao curso antes de permitir a emissão.
 \item RF055 – Registrar local do curso.
 \end{itemize}
 
