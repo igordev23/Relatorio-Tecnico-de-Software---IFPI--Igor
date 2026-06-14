@@ -459,3 +459,225 @@
 \end{tabular}
 \caption{Caso de uso UC008 -- Validar Certificado}
 \end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC009} & \textbf{Buscar Participantes} \\
+\hline
+\textbf{Dependências} & RF058 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador busque participantes por nome, e-mail ou CPF, exibindo os resultados de forma rápida e paginada. \\
+\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O colaborador acessa a seção de participantes. \\
+\hline
+2 & O sistema exibe campo de busca e lista completa de participantes. \\
+\hline
+3 & O colaborador digita nome, e-mail ou CPF e confirma. \\
+\hline
+4 & O sistema filtra os registros correspondentes. \\
+\hline
+5 & O sistema exibe os resultados em menos de 2 segundos. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Lista de participantes filtrada exibida ao colaborador.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se nenhum registro corresponder à busca, o sistema exibe mensagem "Nenhum participante encontrado". \\
+\hline
+4 & Se a busca estiver vazia, o sistema retorna a lista completa. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF058 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC009 -- Buscar Participantes}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC010} & \textbf{Visualizar Histórico de Certificados} \\
+\hline
+\textbf{Dependências} & RF057, RF058 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve exibir o histórico completo de certificados emitidos para um participante específico, incluindo data de emissão, template utilizado e status de validade. \\
+\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Colaborador autenticado no sistema.
+    \item Participante localizado via busca.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O colaborador acessa a página do participante. \\
+\hline
+2 & O sistema exibe os dados cadastrais do participante. \\
+\hline
+3 & O colaborador seleciona a opção "Histórico de Certificados". \\
+\hline
+4 & O sistema consulta todos os certificados associados ao participante. \\
+\hline
+5 & O sistema exibe lista com data, template, curso e status de cada certificado. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Histórico de certificados exibido ao colaborador.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se o participante não possuir certificados, o sistema exibe "Nenhum certificado encontrado". \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF057, RF058 \\
+\textbf{Comentários} & Estende o caso de uso Buscar Participantes. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC010 -- Visualizar Histórico de Certificados}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC011} & \textbf{Gerenciar Organizações} \\
+\hline
+\textbf{Dependências} & RF059, RF060, RF061, RF062 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador cadastre e gerencie organizações (multi-tenant), incluindo CNPJ, razão social, endereço e contato, bem como a associação de usuários e templates a cada organização. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de organizações. \\
+\hline
+2 & O sistema exibe a lista de organizações cadastradas. \\
+\hline
+3 & O administrador seleciona criar, editar ou desativar uma organização. \\
+\hline
+4 & O administrador preenche CNPJ, razão social, endereço e contato. \\
+\hline
+5 & O sistema valida o CNPJ e os dados obrigatórios. \\
+\hline
+6 & O sistema persiste a organização no banco de dados. \\
+\hline
+7 & O sistema exibe confirmação da operação. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Organização cadastrada, editada ou desativada com sucesso.
+    \item Organização disponível para associação de usuários e templates.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+5 & Se o CNPJ já estiver cadastrado, o sistema rejeita e exibe mensagem de duplicidade. \\
+\hline
+5 & Se o CNPJ for inválido, o sistema rejeita e exibe mensagem. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF059, RF060, RF061, RF062 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC011 -- Gerenciar Organizações}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC012} & \textbf{Configurar Sistema} \\
+\hline
+\textbf{Dependências} & RF063, RF064, RF065, RF067 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador configure parâmetros gerais do sistema, incluindo personalização de mensagens padrão, ativação de envio automático e regras de reemissão de certificados. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de configurações. \\
+\hline
+2 & O sistema exibe os painéis de configuração disponíveis. \\
+\hline
+3 & O administrador personaliza mensagens padrão de e-mail. \\
+\hline
+4 & O administrador ativa ou desativa o envio automático. \\
+\hline
+5 & O administrador configura limites e regras de reemissão. \\
+\hline
+6 & O sistema valida e persiste as configurações. \\
+\hline
+7 & O sistema exibe confirmação da operação. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Configurações do sistema atualizadas.
+    \item Novas regras e mensagens aplicadas às próximas operações.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+6 & Se algum valor obrigatório estiver ausente, o sistema bloqueia o salvamento e exibe os campos pendentes. \\
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF063, RF064, RF065, RF067 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC012 -- Configurar Sistema}
+\end{table}
