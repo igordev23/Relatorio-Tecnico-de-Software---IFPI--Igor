@@ -12,7 +12,7 @@
 ]
 
 % Fronteira do sistema
-\draw (-0.5,-7.5) rectangle (15.5,4.5) node[above left, font=\small\bfseries, inner sep=3pt] at (15.5,4.5) {Sistema de Certificados};
+\draw (-0.5,-8.5) rectangle (16.5,5) node[above left, font=\small\bfseries, inner sep=3pt] at (16.5,5) {Sistema de Certificados};
 
 % Atores
 \node[actor] (admin) at (-3,1.5) {Administrador};
@@ -23,39 +23,39 @@
 \draw[-{Triangle[open]}] (admin) -- (colab);
 
 % Casos Admin
-\node[usecase, fill=red!20] (usuarios) at (2.5,3.2) {Gerenciar Usuários};
-\node[usecase, fill=red!20] (template) at (2.5,1.6) {Criar Template};
+\node[usecase, fill=red!20] (usuarios) at (2.5,3.5) {Gerenciar Usuários};
+\node[usecase, fill=red!20] (template) at (2.5,1.8) {Criar Template};
 \node[usecase, fill=red!20] (cursos) at (2.5,0) {Gerenciar Cursos};
 
-\node[usecase, fill=yellow!30] (permissoes) at (8,3.2) {Definir Permissões};
-\node[usecase, fill=red!20] (campos) at (6.5,1.6) {Configurar Campos};
-\node[usecase, fill=red!20] (editar) at (6.5,0) {Editar Template};
+\node[usecase, fill=yellow!30] (permissoes) at (7.5,3.5) {Definir Permissões};
+\node[usecase, fill=red!20] (campos) at (7.5,1.8) {Configurar Campos};
+\node[usecase, fill=red!20] (editar) at (7.5,0) {Editar Template};
 
-\node[usecase, fill=yellow!30] (salvar) at (10.5,1.6) {Salvar};
-\node[usecase, fill=yellow!30] (preview) at (13,0) {Prévia};
+\node[usecase, fill=yellow!30] (salvar) at (11,1.8) {Salvar};
+\node[usecase, fill=yellow!30] (preview) at (14.5,0) {Prévia};
 
-% Casos Colaborador (mais compactos)
-\node[usecase, fill=green!30] (emitir) at (2.5,-1) {Emitir Individual};
-\node[usecase, fill=green!30] (lote) at (2.5,-2.2) {Emitir em Lote};
-\node[usecase, fill=orange!40] (cadastro) at (2.5,-3.4) {Cadastrar Part.};
-\node[usecase, fill=orange!40] (importar) at (2.5,-4.6) {Importar Part.};
+% Casos Colaborador
+\node[usecase, fill=green!30] (emitir) at (2.5,-1.5) {Emitir Individual};
+\node[usecase, fill=green!30] (lote) at (2.5,-3) {Emitir em Lote};
+\node[usecase, fill=orange!40] (cadastro) at (2.5,-4.2) {Cadastrar Part.};
+\node[usecase, fill=orange!40] (importar) at (2.5,-5.2) {Importar Part.};
 
-\node[usecase, fill=purple!25] (pdf) at (6.5,-1) {Gerar PDF};
-\node[usecase, fill=purple!25] (codigo) at (9.5,-1) {Gerar Código};
-\node[usecase, fill=purple!25] (registro) at (12.5,-1) {Registrar};
+\node[usecase, fill=purple!25] (pdf) at (7.5,-1.5) {Gerar PDF};
+\node[usecase, fill=purple!25] (codigo) at (11,-1.5) {Gerar Código};
+\node[usecase, fill=purple!25] (registro) at (13.5,-1.5) {Registrar};
 
-\node[usecase, fill=purple!25] (fila) at (6.5,-3) {Fila};
-\node[usecase, fill=purple!25] (notificar) at (9.5,-3) {Notificar};
-\node[usecase, fill=purple!25] (email) at (12.5,-2.5) {Email};
+\node[usecase, fill=purple!25] (fila) at (7.5,-3) {Fila};
+\node[usecase, fill=purple!25] (notificar) at (11,-3) {Notificar};
+\node[usecase, fill=purple!25] (email) at (13.5,-3) {Email};
 
-\node[usecase, fill=blue!30] (validardados) at (6.5,-5) {Validar Dados};
+\node[usecase, fill=blue!30] (validardados) at (7.5,-5.2) {Validar Dados};
 
-% Casos Visitante (mais compactos)
-\node[usecase, fill=red!20] (validar) at (2.5,-6.2) {Validar Cert.};
-\node[usecase, fill=blue!30] (consultar) at (6.5,-6.2) {Consultar Cód.};
-\node[usecase, fill=blue!30] (dados) at (10.5,-6.2) {Exibir Dados};
+% Casos Visitante
+\node[usecase, fill=red!20] (validar) at (2.5,-6.8) {Validar Cert.};
+\node[usecase, fill=blue!30] (consultar) at (7.5,-6.8) {Consultar Cód.};
+\node[usecase, fill=blue!30] (dados) at (11,-6.8) {Exibir Dados};
 
-% Associações (linhas mais curtas)
+% Associações
 \draw[assoc] (admin) -- (usuarios);
 \draw[assoc] (admin) -- (template);
 \draw[assoc] (admin) -- (cursos);
@@ -68,7 +68,7 @@
 
 \draw[assoc] (visit) -- (validar);
 
-% Includes (setas mais curtas)
+% Includes
 \draw[include] (usuarios) -- (permissoes);
 \draw[include] (template) -- (campos);
 \draw[include] (template) -- (editar);
@@ -94,4 +94,3 @@
 \caption{Diagrama de casos de uso do sistema de certificados}
 \label{fig:casos-uso}
 \end{figure}
-
