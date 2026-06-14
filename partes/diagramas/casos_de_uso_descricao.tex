@@ -681,3 +681,58 @@
 \end{tabular}
 \caption{Caso de uso UC012 -- Configurar Sistema}
 \end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC013} & \textbf{Abrir Chamado de Suporte} \\
+\hline
+\textbf{Dependências} & RF073 \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador abra chamados de suporte técnico, informando descrição do problema, prioridade e dados de contato. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de suporte. \\
+\hline
+2 & O sistema exibe o formulário de abertura de chamado. \\
+\hline
+3 & O administrador preenche descrição, prioridade e contato. \\
+\hline
+4 & O sistema valida os dados obrigatórios. \\
+\hline
+5 & O sistema registra o chamado no banco de dados. \\
+\hline
+6 & O sistema exibe confirmação com número do chamado. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Chamado registrado no sistema.
+    \item Chamado disponível para acompanhamento pela equipe de suporte.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+4 & Se campos obrigatórios estiverem ausentes, o sistema bloqueia o envio e exibe os campos pendentes. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & RF073 \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC013 -- Abrir Chamado de Suporte}
+\end{table}
