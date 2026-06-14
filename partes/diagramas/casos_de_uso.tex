@@ -22,16 +22,16 @@
 % Generalização: Administrador herda casos de uso do Colaborador
 \draw[-{Triangle[open]}] (admin) -- (colab);
 
-% Casos Admin (mais compactos)
-\node[usecase, fill=red!20] (usuarios) at (2.5,2.5) {Gerenciar Usuários};
-\node[usecase, fill=red!20] (template) at (2.5,1.2) {Criar Template};
+% Casos Admin
+\node[usecase, fill=red!20] (usuarios) at (2.5,3.2) {Gerenciar Usuários};
+\node[usecase, fill=red!20] (template) at (2.5,1.6) {Criar Template};
 \node[usecase, fill=red!20] (cursos) at (2.5,0) {Gerenciar Cursos};
 
-\node[usecase, fill=yellow!30] (permissoes) at (6.5,2.5) {Definir Permissões};
-\node[usecase, fill=red!20] (campos) at (6.5,1.2) {Configurar Campos};
+\node[usecase, fill=yellow!30] (permissoes) at (6.5,3.2) {Definir Permissões};
+\node[usecase, fill=red!20] (campos) at (6.5,1.6) {Configurar Campos};
 \node[usecase, fill=red!20] (editar) at (6.5,0) {Editar Template};
 
-\node[usecase, fill=yellow!30] (salvar) at (10.5,1.2) {Salvar};
+\node[usecase, fill=yellow!30] (salvar) at (10.5,1.6) {Salvar};
 \node[usecase, fill=yellow!30] (preview) at (13,0) {Prévia};
 
 % Casos Colaborador (mais compactos)
