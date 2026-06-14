@@ -71,17 +71,17 @@
 
 \subsubsection{Arquitetura e Tecnologia}
 \begin{itemize}
-\item RNF041 – O sistema deve adotar arquitetura baseada em microserviços, com serviços independentes e desacoplados.
-\item RNF042 – Cada microserviço deve possuir responsabilidade única e bem definida (ex.: autenticação, geração de certificados, envio de e-mail, validação pública).
-\item RNF043 – A comunicação entre microserviços deve ocorrer via API REST segura ou mensageria assíncrona.
-\item RNF044 – O sistema deve utilizar API Gateway como ponto único de entrada para requisições externas.
-\item RNF045 – A geração em lote deve ser processada por um microserviço específico de processamento assíncrono utilizando fila de mensagens.
-\item RNF046 – Cada microserviço deve permitir deploy independente sem impactar os demais.
-\item RNF047 – O sistema deve permitir escalabilidade horizontal individual por serviço.
-\item RNF048 – O sistema deve utilizar banco de dados relacional com integridade referencial (PostgreSQL).
-\item RNF049 – O sistema deve definir estratégia de isolamento multi-tenant (por schema ou coluna organizacional).
-\item RNF050 – O sistema deve implementar monitoramento e observabilidade centralizada (logs, métricas e rastreamento).
-\item RNF051 – O sistema deve permitir deploy em ambiente cloud compatível com containers (ex.: Docker).
+\item RNF041 – O sistema deve ser composto por duas aplicações independentes: uma \textit{Single Page Application} (SPA) para o frontend e uma API REST para o backend, cada uma com seu próprio ciclo de vida de desenvolvimento e deploy.
+\item RNF042 – O frontend deve seguir o padrão arquitetural MVVM (\textit{Model-View-ViewModel}), separando a lógica de apresentação (hooks e estado assíncrono) dos componentes de interface.
+\item RNF043 – O backend deve adotar arquitetura em camadas (domínio, aplicação e infraestrutura), com as dependências apontando para a camada de domínio (princípio de inversão de dependências).
+\item RNF044 – A comunicação entre frontend e backend deve ocorrer exclusivamente via API REST sobre HTTPS, com autenticação baseada em token JWT.
+\item RNF045 – A geração de certificados em lote deve ser processada de forma assíncrona por meio de fila de processamento, sem bloquear a aplicação principal.
+\item RNF046 – O sistema deve utilizar banco de dados relacional com integridade referencial (PostgreSQL), gerenciado pelo Supabase.
+\item RNF047 – O sistema deve implementar estratégia de isolamento multi-tenant (por schema ou coluna organizacional).
+\item RNF048 – O sistema deve implementar monitoramento e observabilidade centralizada (logs, métricas e rastreamento).
+\item RNF049 – O frontend deve ser compilado como site estático e implantado em plataforma de hospedagem com deploy contínuo a partir do repositório Git.
+\item RNF050 – O backend deve ser implantado como serviço web independente em plataforma cloud compatível com Node.js.
+\item RNF051 – O sistema deve permitir extensibilidade, garantindo que novos módulos possam ser adicionados seguindo os mesmos padrões arquiteturais já estabelecidos.
 \end{itemize}
 
 \subsubsection{Manutenção e Monitoramento}
