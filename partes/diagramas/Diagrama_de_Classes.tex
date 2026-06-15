@@ -1,9 +1,24 @@
+O diagrama de classes da Figura~\ref{fig:diagrama-classes} modela as entidades de domínio do sistema de certificados com 15 classes distribuídas em módulos funcionais que refletem a separação de responsabilidades definida nos requisitos. Cada classe é identificada por um UUID único, garantindo escalabilidade e independência entre ambientes. Este diagrama corresponde à camada de domínio (\textit{domain layer}) da arquitetura em camadas adotada --- as camadas de aplicação (\textit{use cases}, DTOs) e infraestrutura (\textit{repositories}, serviços externos) são representadas no diagrama de arquitetura da Figura~\ref{fig:backend}.
+
+A hierarquia de herança tem como base a classe abstrata Pessoa, que concentra os atributos comuns de identificação (id, nome, email) e o status ativo. Dela derivam Usuario e Participante.
+
+Usuario representa colaboradores e administradores, com controle de perfil (PerfilEnum), ultimoLogin e restrição de horários permitidos (horarioPermitidoInicio, horarioPermitidoFim), além dos métodos públicos autenticar(email, senha) e emitirCertificado(participante, template). Participante armazena dados cadastrais (cpf, dataCadastro), com o método vincularCurso(curso). Essa generalização segue o princípio de herança da orientação a objetos, evitando duplicação de atributos e centralizando a lógica comum de pessoas.
+
+O modelo multi-tenant é implementado pela classe Organizacao (nome, cnpj, ativo), que se associa em cardinalidade 1 para 0..* a Usuario, Participante, Curso (nome, cargaHoraria, descricao), Template e Certificado, e em 1 para 1 com ConfiguracaoSistema, além de 1 para 0..* com ChamadoSuporte, expondo o método adicionarMembro(usuario). Cada organização opera de forma isolada, garantindo que os dados de um inquilino não sejam acessíveis por outro. A relação direta com Participante se justifica porque a organização pode cadastrar participantes manualmente, independentemente de matrícula em curso específico. Curso oferece inscreverParticipante(participante) para matricular alunos.
+
+A relação entre Participante e Curso é muitos-para-muitos (0..* para 0..*), materializada pela classe associativa ParticipanteCurso, que armazena dataVinculo entre as duas entidades. Essa modelagem foi escolhida por permitir rastrear historicamente quando um participante se vinculou a cada curso, além de facilitar consultas futuras como ``alunos ativos por período''.
+
+No módulo de templates, a classe Template armazena nome, tipoArquivo (TipoArquivoEnum), caminhoArquivo, versao, ativo e dataCriacao, e disponibiliza adicionarCampo(campo). CampoDinamico --- com nomeCampo, marcador e tipo --- modela os marcadores preenchidos na emissão, em composição 1 para 0..* com Template. A assinatura digital é representada por AssinaturaDigital (imagemAssinatura, hashVerificacao, dataRegistro), opcionalmente vinculada ao template (1 para 0..1). Essa assinatura do template é independente da assinatura do certificado --- servem a propósitos distintos: a do template é uma referência visual opcional do modelo, enquanto a do certificado é a assinatura efetiva que valida o documento emitido.
+
+A classe Certificado é a entidade central do sistema, associada a Organizacao, ao Usuario que o emitiu (relação nomeada ``emitiu''), a Participante (0..* para 0..*), a Curso (0..* para 0..*) e obrigatoriamente a Template (1 para 1). Seus atributos incluem codigoUnico, dataEmissao, localEmissao, status (StatusCertificadoEnum), arquivoPDF e qrCode, com os métodos gerarPDF(), assinar(assinatura) e enviarEmail(envio). O envio por e-mail é modelado pela classe EnvioEmail (status em StatusEnvioEnum, tentativas, dataEnvio, mensagemPersonalizada), com o método enviar(), em associação 1 para 0..1 com Certificado. A assinatura digital do certificado é vinculada diretamente pela relação ``assinadoCom'' entre Certificado e AssinaturaDigital (1 para 1).
+
+Para auditoria, Log registra eventos genéricos (tipo, descricao, dataHora, ip) vinculados ao usuário (1 para 0..*), enquanto LogAuditoria armazena ações específicas sobre certificados (acao, dataHora, local), com o método registrar(usuario), também vinculada ao usuário em 1 para 0..*, permitindo rastrear quem emitiu ou alterou cada certificado e em qual local.
+
+O suporte técnico é tratado por ChamadoSuporte (titulo, descricao, dataAbertura, status em StatusChamadoEnum, dataFechamento), com os métodos abrir(usuario) e fechar(), associado em 1 para 0..* ao usuário que abriu o chamado (relação nomeada ``abriu'') e em 1 para 0..* à organização. As configurações do sistema são centralizadas em ConfiguracaoSistema (envioAutomatico, regraReemissao, mensagemPadraoEmail, termosUso, sistemaOnline), com o método aplicar(), e uma instância por organização (1 para 1) para controle individualizado de cada inquilino.
+
 \begin{figure}[H]
     \centering
-    % Substitua "nome_do_arquivo" pelo nome real da sua imagem
-    % Exemplos: diagrama.png, diagrama.jpg, diagrama.pdf, classes_uml.png
-    \includegraphics[width=0.9\textwidth]{imagens/diagrama-de-classes.png}
-    \caption{Diagrama de Classes - Sistema de Certificados}
+    \includegraphics[width=\textwidth]{imagens/diagrama-de-classes-v2.png}
+    \caption{Diagrama de Classes --- Sistema de Certificados}
     \label{fig:diagrama-classes}
 \end{figure}
-
