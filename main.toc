@@ -68,12 +68,12 @@
 \contentsline {subsection}{\numberline {3.6}Diagramas de classe}{49}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}Arquitetura do Sistema}{52}{subsection.3.7}%
 \contentsline {subsection}{\numberline {3.8}Diagrama Entidade-Relacionamento}{55}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Interfaces}{55}{subsection.3.9}%
-\contentsline {section}{\numberline {4.0}Software}{55}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Implantação}{55}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Testes}{55}{subsection.4.2}%
+\contentsline {subsection}{\numberline {3.9}Interfaces}{56}{subsection.3.9}%
+\contentsline {section}{\numberline {4.0}Software}{56}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Implantação}{56}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Testes}{56}{subsection.4.2}%
 \contentsline {section}{\numberline {5.0}Considerações Finais}{56}{section.5}%
-\contentsline {section}{Referências}{59}{section*.24}%
+\contentsline {section}{Referências}{59}{section*.25}%
 \contentsline {section}{\numberline {6.0}Anexos}{60}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{60}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{60}{subsection.6.2}%
