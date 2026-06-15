@@ -80,6 +80,7 @@ classDiagram
       +Boolean enviar()
     }
     class Log {
+      <<systemLog>>
       -UUID id
       -String tipo
       -Text descricao
@@ -87,6 +88,7 @@ classDiagram
       -String ip
     }
     class LogAuditoria {
+      <<auditLog>>
       -UUID id
       -String acao
       -DateTime dataHora
