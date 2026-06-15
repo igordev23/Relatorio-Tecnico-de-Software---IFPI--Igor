@@ -115,6 +115,46 @@ classDiagram
       +void fechar()
     }
 
+    class ICertificateRepository {
+      <<interface>>
+      +findById(id: string): Promise<Certificate | null>
+      +findByCPFAndCode(cpf: string, code: string): Promise<Certificate | null>
+      +findAll(): Promise<Certificate[]>
+      +create(cert: Certificate): Promise<Certificate>
+      +update(cert: Certificate): Promise<Certificate>
+      +delete(id: string): Promise<void>
+    }
+    class ITemplateRepository {
+      <<interface>>
+      +findById(id: string): Promise<Template | null>
+      +findAll(): Promise<Template[]>
+      +create(tpl: Template): Promise<Template>
+      +update(tpl: Template): Promise<Template>
+      +delete(id: string): Promise<void>
+    }
+    class IPDFService {
+      <<interface>>
+      +generateCertificatePDF(cert: Certificate, tpl: Template): Promise<Buffer>
+    }
+    class SupabaseCertificateRepository {
+      +findById(id: string): Promise<Certificate | null>
+      +findByCPFAndCode(cpf: string, code: string): Promise<Certificate | null>
+      +findAll(): Promise<Certificate[]>
+      +create(cert: Certificate): Promise<Certificate>
+      +update(cert: Certificate): Promise<Certificate>
+      +delete(id: string): Promise<void>
+    }
+    class SupabaseTemplateRepository {
+      +findById(id: string): Promise<Template | null>
+      +findAll(): Promise<Template[]>
+      +create(tpl: Template): Promise<Template>
+      +update(tpl: Template): Promise<Template>
+      +delete(id: string): Promise<void>
+    }
+    class PDFKitService {
+      +generateCertificatePDF(cert: Certificate, tpl: Template): Promise<Buffer>
+    }
+
     class PerfilEnum {
       <<enumeration>>
       ADMIN
@@ -180,3 +220,7 @@ classDiagram
     Certificado ..> StatusCertificadoEnum : usa
     EnvioEmail ..> StatusEnvioEnum : usa
     ChamadoSuporte ..> StatusChamadoEnum : usa
+
+    ICertificateRepository <|.. SupabaseCertificateRepository
+    ITemplateRepository <|.. SupabaseTemplateRepository
+    IPDFService <|.. PDFKitService
