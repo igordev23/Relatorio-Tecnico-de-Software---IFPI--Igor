@@ -113,6 +113,38 @@ classDiagram
       +void fechar()
     }
 
+    class PerfilEnum {
+      <<enumeration>>
+      ADMIN
+      COLABORADOR
+    }
+    class TipoArquivoEnum {
+      <<enumeration>>
+      PDF
+      HTML
+      DOCX
+    }
+    class StatusCertificadoEnum {
+      <<enumeration>>
+      EMITIDO
+      REVOGADO
+      EXPIRADO
+    }
+    class StatusEnvioEnum {
+      <<enumeration>>
+      PENDENTE
+      ENVIADO
+      FALHA
+      CANCELADO
+    }
+    class StatusChamadoEnum {
+      <<enumeration>>
+      ABERTO
+      EM_ANDAMENTO
+      FECHADO
+      CANCELADO
+    }
+
     Pessoa <|-- Usuario
     Pessoa <|-- Participante
 
@@ -140,3 +172,9 @@ classDiagram
     Certificado "1" -- "0..1" EnvioEmail
     Certificado "1" -- "1" Template
     Certificado "1" -- "1" AssinaturaDigital : assinadoCom
+
+    Usuario ..> PerfilEnum : usa
+    Template ..> TipoArquivoEnum : usa
+    Certificado ..> StatusCertificadoEnum : usa
+    EnvioEmail ..> StatusEnvioEnum : usa
+    ChamadoSuporte ..> StatusChamadoEnum : usa
