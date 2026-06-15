@@ -1,5 +1,7 @@
-%%{init: {'theme': 'neutral', 'themeVariables': {'lineColor': '#333333', 'primaryTextColor': '#222222', 'primaryColor': '#f4f4f4', 'primaryBorderColor': '#333333', 'secondaryColor': '#ffffff', 'fontSize': '16px', 'fontFamily': 'Arial'}}}%%
+%%{init: {'theme': 'neutral', 'themeVariables': {'lineColor': '#333333', 'primaryTextColor': '#222222', 'primaryColor': '#f4f4f4', 'primaryBorderColor': '#333333', 'secondaryColor': '#ffffff', 'fontSize': '18px', 'fontFamily': 'Arial'}}}%%
 classDiagram
+    direction TB
+
     class Pessoa {
       <<abstract>>
       -UUID id
@@ -115,46 +117,6 @@ classDiagram
       +void fechar()
     }
 
-    class ICertificateRepository {
-      <<interface>>
-      +findById(id: string): Promise<Certificate | null>
-      +findByCPFAndCode(cpf: string, code: string): Promise<Certificate | null>
-      +findAll(): Promise<Certificate[]>
-      +create(cert: Certificate): Promise<Certificate>
-      +update(cert: Certificate): Promise<Certificate>
-      +delete(id: string): Promise<void>
-    }
-    class ITemplateRepository {
-      <<interface>>
-      +findById(id: string): Promise<Template | null>
-      +findAll(): Promise<Template[]>
-      +create(tpl: Template): Promise<Template>
-      +update(tpl: Template): Promise<Template>
-      +delete(id: string): Promise<void>
-    }
-    class IPDFService {
-      <<interface>>
-      +generateCertificatePDF(cert: Certificate, tpl: Template): Promise<Buffer>
-    }
-    class SupabaseCertificateRepository {
-      +findById(id: string): Promise<Certificate | null>
-      +findByCPFAndCode(cpf: string, code: string): Promise<Certificate | null>
-      +findAll(): Promise<Certificate[]>
-      +create(cert: Certificate): Promise<Certificate>
-      +update(cert: Certificate): Promise<Certificate>
-      +delete(id: string): Promise<void>
-    }
-    class SupabaseTemplateRepository {
-      +findById(id: string): Promise<Template | null>
-      +findAll(): Promise<Template[]>
-      +create(tpl: Template): Promise<Template>
-      +update(tpl: Template): Promise<Template>
-      +delete(id: string): Promise<void>
-    }
-    class PDFKitService {
-      +generateCertificatePDF(cert: Certificate, tpl: Template): Promise<Buffer>
-    }
-
     class PerfilEnum {
       <<enumeration>>
       ADMIN
@@ -187,6 +149,48 @@ classDiagram
       CANCELADO
     }
 
+    %% Interfaces e implementações (embaixo)
+    class ICertificateRepository {
+      <<interface>>
+      +findById(id): Promise<Certificate | null>
+      +findByCPFAndCode(cpf, code): Promise<Certificate | null>
+      +findAll(): Promise<Certificate[]>
+      +create(cert): Promise<Certificate>
+      +update(cert): Promise<Certificate>
+      +delete(id): Promise<void>
+    }
+    class ITemplateRepository {
+      <<interface>>
+      +findById(id): Promise<Template | null>
+      +findAll(): Promise<Template[]>
+      +create(tpl): Promise<Template>
+      +update(tpl): Promise<Template>
+      +delete(id): Promise<void>
+    }
+    class IPDFService {
+      <<interface>>
+      +generateCertificatePDF(cert, tpl): Promise<Buffer>
+    }
+    class SupabaseCertificateRepository {
+      +findById(id): Promise<Certificate | null>
+      +findByCPFAndCode(cpf, code): Promise<Certificate | null>
+      +findAll(): Promise<Certificate[]>
+      +create(cert): Promise<Certificate>
+      +update(cert): Promise<Certificate>
+      +delete(id): Promise<void>
+    }
+    class SupabaseTemplateRepository {
+      +findById(id): Promise<Template | null>
+      +findAll(): Promise<Template[]>
+      +create(tpl): Promise<Template>
+      +update(tpl): Promise<Template>
+      +delete(id): Promise<void>
+    }
+    class PDFKitService {
+      +generateCertificatePDF(cert, tpl): Promise<Buffer>
+    }
+
+    %% Relacionamentos principais (topo)
     Pessoa <|-- Usuario
     Pessoa <|-- Participante
 
@@ -215,12 +219,14 @@ classDiagram
     Certificado "1" -- "1" Template
     Certificado "1" -- "1" AssinaturaDigital : assinadoCom
 
+    %% Dependências de enumerações
     Usuario ..> PerfilEnum : usa
     Template ..> TipoArquivoEnum : usa
     Certificado ..> StatusCertificadoEnum : usa
     EnvioEmail ..> StatusEnvioEnum : usa
     ChamadoSuporte ..> StatusChamadoEnum : usa
 
+    %% Interfaces e realizações (embaixo - fluxo vertical)
     ICertificateRepository <|.. SupabaseCertificateRepository
     ITemplateRepository <|.. SupabaseTemplateRepository
     IPDFService <|.. PDFKitService
