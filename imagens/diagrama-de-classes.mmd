@@ -2,195 +2,200 @@
 classDiagram
     direction TB
 
-    class Pessoa {
-      <<abstract>>
-      -UUID id
-      -String nome
-      -String email
-      -Boolean ativo
-    }
-    class Usuario {
-      -PerfilEnum perfil
-      -DateTime ultimoLogin
-      -DateTime horarioPermitidoInicio
-      -DateTime horarioPermitidoFim
-      +Boolean autenticar(email, senha)
-      +Certificado emitirCertificado(participante, template)
-    }
-    class Participante {
-      -String cpf
-      -DateTime dataCadastro
-      +void vincularCurso(curso)
-    }
-    class Organizacao {
-      -UUID id
-      -String nome
-      -String cnpj
-      -Boolean ativo
-      +void adicionarMembro(usuario)
-    }
-    class Curso {
-      -UUID id
-      -String nome
-      -Integer cargaHoraria
-      -Text descricao
-      +void inscreverParticipante(participante)
-    }
-    class ParticipanteCurso {
-      -DateTime dataVinculo
-    }
-    class Template {
-      -UUID id
-      -String nome
-      -TipoArquivoEnum tipoArquivo
-      -String caminhoArquivo
-      -Integer versao
-      -Boolean ativo
-      -DateTime dataCriacao
-      +void adicionarCampo(campo)
-    }
-    class CampoDinamico {
-      -UUID id
-      -String nomeCampo
-      -String marcador
-      -String tipo
-    }
-    class AssinaturaDigital {
-      -UUID id
-      -String imagemAssinatura
-      -String hashVerificacao
-      -DateTime dataRegistro
-    }
-    class Certificado {
-      -UUID id
-      -String codigoUnico
-      -DateTime dataEmissao
-      -String localEmissao
-      -StatusCertificadoEnum status
-      -String arquivoPDF
-      -String qrCode
-      +void gerarPDF()
-      +Boolean assinar(assinatura)
-      +Boolean enviarEmail(envio)
-    }
-    class EnvioEmail {
-      -UUID id
-      -StatusEnvioEnum status
-      -Integer tentativas
-      -DateTime dataEnvio
-      -Text mensagemPersonalizada
-      +Boolean enviar()
-    }
-    class Log {
-      <<systemLog>>
-      -UUID id
-      -String tipo
-      -Text descricao
-      -DateTime dataHora
-      -String ip
-    }
-    class LogAuditoria {
-      <<auditLog>>
-      -UUID id
-      -String acao
-      -DateTime dataHora
-      -String local
-      +void registrar(usuario)
-    }
-    class ConfiguracaoSistema {
-      -UUID id
-      -Boolean envioAutomatico
-      -String regraReemissao
-      -Text mensagemPadraoEmail
-      -Text termosUso
-      -Boolean sistemaOnline
-      +void aplicar()
-    }
-    class ChamadoSuporte {
-      -UUID id
-      -String titulo
-      -Text descricao
-      -DateTime dataAbertura
-      -StatusChamadoEnum status
-      -DateTime dataFechamento
-      +void abrir(usuario)
-      +void fechar()
-    }
+    subgraph "Domínio"
+        class Pessoa {
+          <<abstract>>
+          -UUID id
+          -String nome
+          -String email
+          -Boolean ativo
+        }
+        class Usuario {
+          -PerfilEnum perfil
+          -DateTime ultimoLogin
+          -DateTime horarioPermitidoInicio
+          -DateTime horarioPermitidoFim
+          +Boolean autenticar(email, senha)
+          +Certificado emitirCertificado(participante, template)
+        }
+        class Participante {
+          -String cpf
+          -DateTime dataCadastro
+          +void vincularCurso(curso)
+        }
+        class Organizacao {
+          -UUID id
+          -String nome
+          -String cnpj
+          -Boolean ativo
+          +void adicionarMembro(usuario)
+        }
+        class Curso {
+          -UUID id
+          -String nome
+          -Integer cargaHoraria
+          -Text descricao
+          +void inscreverParticipante(participante)
+        }
+        class ParticipanteCurso {
+          -DateTime dataVinculo
+        }
+        class Template {
+          -UUID id
+          -String nome
+          -TipoArquivoEnum tipoArquivo
+          -String caminhoArquivo
+          -Integer versao
+          -Boolean ativo
+          -DateTime dataCriacao
+          +void adicionarCampo(campo)
+        }
+        class CampoDinamico {
+          -UUID id
+          -String nomeCampo
+          -String marcador
+          -String tipo
+        }
+        class AssinaturaDigital {
+          -UUID id
+          -String imagemAssinatura
+          -String hashVerificacao
+          -DateTime dataRegistro
+        }
+        class Certificado {
+          -UUID id
+          -String codigoUnico
+          -DateTime dataEmissao
+          -String localEmissao
+          -StatusCertificadoEnum status
+          -String arquivoPDF
+          -String qrCode
+          +void gerarPDF()
+          +Boolean assinar(assinatura)
+          +Boolean enviarEmail(envio)
+        }
+        class EnvioEmail {
+          -UUID id
+          -StatusEnvioEnum status
+          -Integer tentativas
+          -DateTime dataEnvio
+          -Text mensagemPersonalizada
+          +Boolean enviar()
+        }
+        class Log {
+          <<systemLog>>
+          -UUID id
+          -String tipo
+          -Text descricao
+          -DateTime dataHora
+          -String ip
+        }
+        class LogAuditoria {
+          <<auditLog>>
+          -UUID id
+          -String acao
+          -DateTime dataHora
+          -String local
+          +void registrar(usuario)
+        }
+        class ConfiguracaoSistema {
+          -UUID id
+          -Boolean envioAutomatico
+          -String regraReemissao
+          -Text mensagemPadraoEmail
+          -Text termosUso
+          -Boolean sistemaOnline
+          +void aplicar()
+        }
+        class ChamadoSuporte {
+          -UUID id
+          -String titulo
+          -Text descricao
+          -DateTime dataAbertura
+          -StatusChamadoEnum status
+          -DateTime dataFechamento
+          +void abrir(usuario)
+          +void fechar()
+        }
+    end
 
-    class PerfilEnum {
-      <<enumeration>>
-      ADMIN
-      COLABORADOR
-    }
-    class TipoArquivoEnum {
-      <<enumeration>>
-      PDF
-      HTML
-      DOCX
-    }
-    class StatusCertificadoEnum {
-      <<enumeration>>
-      EMITIDO
-      REVOGADO
-      EXPIRADO
-    }
-    class StatusEnvioEnum {
-      <<enumeration>>
-      PENDENTE
-      ENVIADO
-      FALHA
-      CANCELADO
-    }
-    class StatusChamadoEnum {
-      <<enumeration>>
-      ABERTO
-      EM_ANDAMENTO
-      FECHADO
-      CANCELADO
-    }
+    subgraph "Enumerações"
+        class PerfilEnum {
+          <<enumeration>>
+          ADMIN
+          COLABORADOR
+        }
+        class TipoArquivoEnum {
+          <<enumeration>>
+          PDF
+          HTML
+          DOCX
+        }
+        class StatusCertificadoEnum {
+          <<enumeration>>
+          EMITIDO
+          REVOGADO
+          EXPIRADO
+        }
+        class StatusEnvioEnum {
+          <<enumeration>>
+          PENDENTE
+          ENVIADO
+          FALHA
+          CANCELADO
+        }
+        class StatusChamadoEnum {
+          <<enumeration>>
+          ABERTO
+          EM_ANDAMENTO
+          FECHADO
+          CANCELADO
+        }
+    end
 
-    %% Interfaces e implementações (embaixo)
-    class ICertificateRepository {
-      <<interface>>
-      +findById(id): Promise<Certificate | null>
-      +findByCPFAndCode(cpf, code): Promise<Certificate | null>
-      +findAll(): Promise<Certificate[]>
-      +create(cert): Promise<Certificate>
-      +update(cert): Promise<Certificate>
-      +delete(id): Promise<void>
-    }
-    class ITemplateRepository {
-      <<interface>>
-      +findById(id): Promise<Template | null>
-      +findAll(): Promise<Template[]>
-      +create(tpl): Promise<Template>
-      +update(tpl): Promise<Template>
-      +delete(id): Promise<void>
-    }
-    class IPDFService {
-      <<interface>>
-      +generateCertificatePDF(cert, tpl): Promise<Buffer>
-    }
-    class SupabaseCertificateRepository {
-      +findById(id): Promise<Certificate | null>
-      +findByCPFAndCode(cpf, code): Promise<Certificate | null>
-      +findAll(): Promise<Certificate[]>
-      +create(cert): Promise<Certificate>
-      +update(cert): Promise<Certificate>
-      +delete(id): Promise<void>
-    }
-    class SupabaseTemplateRepository {
-      +findById(id): Promise<Template | null>
-      +findAll(): Promise<Template[]>
-      +create(tpl): Promise<Template>
-      +update(tpl): Promise<Template>
-      +delete(id): Promise<void>
-    }
-    class PDFKitService {
-      +generateCertificatePDF(cert, tpl): Promise<Buffer>
-    }
+    subgraph "Infraestrutura (Clean Architecture)"
+        class ICertificateRepository {
+          <<interface>>
+          +findById(id): Promise<Certificate | null>
+          +findByCPFAndCode(cpf, code): Promise<Certificate | null>
+          +findAll(): Promise<Certificate[]>
+          +create(cert): Promise<Certificate>
+          +update(cert): Promise<Certificate>
+          +delete(id): Promise<void>
+        }
+        class ITemplateRepository {
+          <<interface>>
+          +findById(id): Promise<Template | null>
+          +findAll(): Promise<Template[]>
+          +create(tpl): Promise<Template>
+          +update(tpl): Promise<Template>
+          +delete(id): Promise<void>
+        }
+        class IPDFService {
+          <<interface>>
+          +generateCertificatePDF(cert, tpl): Promise<Buffer>
+        }
+        class SupabaseCertificateRepository {
+          +findById(id): Promise<Certificate | null>
+          +findByCPFAndCode(cpf, code): Promise<Certificate | null>
+          +findAll(): Promise<Certificate[]>
+          +create(cert): Promise<Certificate>
+          +update(cert): Promise<Certificate>
+          +delete(id): Promise<void>
+        }
+        class SupabaseTemplateRepository {
+          +findById(id): Promise<Template | null>
+          +findAll(): Promise<Template[]>
+          +create(tpl): Promise<Template>
+          +update(tpl): Promise<Template>
+          +delete(id): Promise<void>
+        }
+        class PDFKitService {
+          +generateCertificatePDF(cert, tpl): Promise<Buffer>
+        }
+    end
 
-    %% Relacionamentos principais (topo)
+    %% Relacionamentos principais (domínio)
     Pessoa <|-- Usuario
     Pessoa <|-- Participante
 
@@ -226,7 +231,13 @@ classDiagram
     EnvioEmail ..> StatusEnvioEnum : usa
     ChamadoSuporte ..> StatusChamadoEnum : usa
 
-    %% Interfaces e realizações (embaixo - fluxo vertical)
+    %% Interfaces e realizações (infraestrutura)
     ICertificateRepository <|.. SupabaseCertificateRepository
     ITemplateRepository <|.. SupabaseTemplateRepository
     IPDFService <|.. PDFKitService
+
+    %% Conexões invisíveis para forçar layout vertical (domínio -> infra)
+    Certificado ..> SupabaseCertificateRepository : 
+    Template ..> SupabaseTemplateRepository : 
+    Certificado ..> PDFKitService : 
+    Template ..> PDFKitService : 
