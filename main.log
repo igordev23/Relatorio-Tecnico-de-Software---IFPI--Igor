@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUN 2026 10:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUN 2026 10:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1046,7 +1046,14 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 12
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-[8] [9] [10] [11] [12]
+[8] [9] [10]
+Overfull \hbox (68.57433pt too wide) in paragraph at lines 43--44
+[]\T1/ptm/m/n/12 No sis-tema, o \T1/pcr/m/n/12 QueryClient \T1/ptm/m/n/12 é ins
+-tan-ci-ado em \T1/pcr/m/n/12 router.tsx \T1/ptm/m/n/12 e in-je-tado via \T1/pc
+r/m/n/12 QueryClientProvider
+ []
+
+[11] [12]
 Overfull \hbox (90.34416pt too wide) in paragraph at lines 75--76
 \T1/ptm/m/n/12 clu-indo os do shadcn/ui. A ca-mada \T1/ptm/m/it/12 Vi-ew-Mo-del
  \T1/ptm/m/n/12 é com-posta por cus-tom ho-oks (\T1/pcr/m/n/12 useCertificatesV
@@ -1975,7 +1982,7 @@ s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmbi8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (64 pages, 880109 bytes).
+Output written on main.pdf (64 pages, 880050 bytes).
 PDF statistics:
  907 PDF objects out of 1000 (max. 8388607)
  244 named destinations out of 1000 (max. 500000)
