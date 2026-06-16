@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUN 2026 09:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUN 2026 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1046,7 +1046,14 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 12
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-[8] [9] [10] [11] [12] [13] [14] [15] [16]
+[8] [9] [10] [11] [12]
+Overfull \hbox (90.34416pt too wide) in paragraph at lines 75--76
+\T1/ptm/m/n/12 clu-indo os do shadcn/ui. A ca-mada \T1/ptm/m/it/12 Vi-ew-Mo-del
+ \T1/ptm/m/n/12 é com-posta por cus-tom ho-oks (\T1/pcr/m/n/12 useCertificatesV
+iewModel\T1/ptm/m/n/12 ,
+ []
+
+[13] [14] [15] [16]
 Overfull \hbox (9.46085pt too wide) in paragraph at lines 119--120
 []\T1/ptm/m/n/12 A ar-qui-te-tura em ca-ma-das ado-tada no bac-kend or-ga-niza 
 o có-digo em qua-tro pa-co-tes: \T1/pcr/m/n/12 domain\T1/ptm/m/n/12 ,
@@ -1057,13 +1064,8 @@ Overfull \vbox (61.0854pt too high) has occurred while \output is active []
 
 
 [20] (partes/requisitos/rf.tex [21] [22] [23] [24] [25])
-(partes/requisitos/rfn.tex [26] [27] [28]
-Overfull \hbox (3.7261pt too wide) in paragraph at lines 78--79
-[]\T1/ptm/m/n/12 RNF042 ^^U O fron-tend deve se-guir o pa-drão ar-qui-te-tu-ral
- MVVM (\T1/ptm/m/it/12 Model-View-ViewModel\T1/ptm/m/n/12 ),
- []
-
-[29]) (partes/requisitos/regras_negocio.tex [30])
+(partes/requisitos/rfn.tex [26] [27] [28] [29])
+(partes/requisitos/regras_negocio.tex [30])
 (partes/requisitos/criterios_aceitacao.tex
 Overfull \hbox (7.5472pt too wide) in alignment at lines 7--13
  [] [] [] 
@@ -1819,7 +1821,13 @@ Overfull \hbox (22.25793pt too wide) in paragraph at lines 33--34
 /n/12 , \T1/pcr/m/n/12 SupabaseTemplateRepository
  []
 
-[53] (partes/diagramas/arquitetura-backend.tex
+[53]
+Overfull \hbox (9.61089pt too wide) in paragraph at lines 38--39
+\T1/ptm/m/n/12 for-mada por cus-tom ho-oks (\T1/pcr/m/n/12 useCertificatesViewM
+odel\T1/ptm/m/n/12 , \T1/pcr/m/n/12 useDashboardViewModel\T1/ptm/m/n/12 ,
+ []
+
+(partes/diagramas/arquitetura-backend.tex
 <imagens/backend.png, id=776, 1808.7575pt x 1567.8575pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
@@ -1827,11 +1835,11 @@ Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 355.14507pt.
 )
 (partes/diagramas/arquitetura-frontend.tex [54]
-<imagens/frontend.png, id=782, 1541.76pt x 1027.84pt>
+<imagens/frontend.png, id=782, 1808.7575pt x 1367.1075pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
-(pdftex.def)             Requested size: 409.71692pt x 273.14479pt.
+(pdftex.def)             Requested size: 409.71692pt x 309.67195pt.
 ) [55 <./imagens/backend.png>]
 (partes/diagramas/der.tex
 <imagens/DER.png, id=788, 1529.715pt x 1385.175pt>
@@ -1839,9 +1847,9 @@ File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 371.00093pt.
-) [56 <./imagens/frontend.png (PNG copy)>]
+) [56 <./imagens/frontend.png>]
 (partes/diagramas/interfaces.tex
-<imagens/interface.png, id=793, 2569.6pt x 1606.0pt>
+<imagens/interface.png, id=794, 2569.6pt x 1606.0pt>
 File: imagens/interface.png Graphic file (type png)
 <use imagens/interface.png>
 Package pdftex.def Info: imagens/interface.png  used on input line 3.
@@ -1959,7 +1967,7 @@ Here is how much of TeX's memory you used:
  56797 multiletter control sequences out of 15000+600000
  670192 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,94p,1274b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,18n,94p,1664b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi12.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courie
 r/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
@@ -1967,9 +1975,9 @@ s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmbi8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (64 pages, 1954715 bytes).
+Output written on main.pdf (64 pages, 880109 bytes).
 PDF statistics:
- 906 PDF objects out of 1000 (max. 8388607)
+ 907 PDF objects out of 1000 (max. 8388607)
  244 named destinations out of 1000 (max. 500000)
  667 words of extra memory for PDF output out of 10000 (max. 10000000)
 
