@@ -37,11 +37,6 @@ No sistema, as rotas foram organizadas em uma árvore aninhada que reflete a hie
 
 O React Router DOM, embora mais difundido, foi preterido por não oferecer tipagem nativa para \textit{search params} e \textit{path params} — o desenvolvedor precisa declarar tipos manualmente ou usar bibliotecas auxiliares como \texttt{zod-router}. O TanStack Router infere os tipos automaticamente a partir da definição da rota, eliminando uma fonte comum de erros em tempo de execução. Além disso, seu modelo de \textit{loaders} e \textit{actions} elimina a necessidade de \texttt{useEffect} para buscar dados durante a navegação, substituindo-o por funções assíncronas executadas antes da renderização da rota.
 
-\subsubsection{TanStack React Query}
-O TanStack React Query (anteriormente React Query) é uma biblioteca para gerenciamento de estado assíncrono que abstrai o ciclo de vida completo de requisições a servidores: cache, \textit{background refetching}, \textit{paginação}, \textit{optimistic updates} e \textit{deduplicação} de requisições simultâneas \cite{tanstackquery2025}.
-
-No sistema, o \texttt{QueryClient} é instanciado em \texttt{router.tsx} e injetado via \texttt{QueryClientProvider} no componente raiz (\texttt{\_\_root.tsx}), estando disponível para uso futuro. Os \textit{ViewModels} atuais, no entanto, gerenciam estado manualmente com \texttt{useState} e \texttt{useEffect} em vez de utilizar \texttt{useQuery} ou \texttt{useMutation} --- a infraestrutura do React Query foi configurada como preparação para uma migração futura, quando o número de requisições justificar a adoção de cache e \textit{background refetching}.
-
 \subsubsection{React Hook Form}
 React Hook Form é uma biblioteca para gerenciamento de formulários em React que minimiza o número de re-renderizações ao utilizar refs em vez de estado controlado \cite{reacthookform2025}. Diferentemente do Formik, que mantém o estado do formulário no React state e dispara uma re-renderização a cada tecla digitada, o React Hook Form registra os campos via refs e só re-renderiza componentes específicos quando necessário — o que resulta em melhor desempenho em formulários com muitos campos. Sua integração com o Zod via \texttt{@hookform/resolvers} permite que os esquemas de validação definidos com Zod sejam reutilizados como regras de formulário, garantindo que as mesmas validações aplicadas no backend sejam executadas no frontend antes do envio.
 
@@ -169,7 +164,6 @@ TypeScript & 5.x & Tipagem estática e segurança em tempo de compilação \\
 Tailwind CSS & 4.x & Estilização utilitária com configuração CSS-first \\
 shadcn/ui & \textasciitilde 2.x & Componentes reutilizáveis baseados em Radix UI \\
 TanStack Router & \textasciitilde 1.x & Roteamento declarativo com proteção de rotas \\
-TanStack React Query & \textasciitilde 5.x & Gerenciamento de cache e estado assíncrono \\
 React Hook Form & \textasciitilde 7.x & Gerenciamento performático de formulários \\
 Sonner & \textasciitilde 2.x & Notificações toast acessíveis \\
 Recharts & \textasciitilde 2.x & Gráficos declarativos para dashboard \\
