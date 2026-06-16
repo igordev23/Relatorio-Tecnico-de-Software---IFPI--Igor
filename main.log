@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUN 2026 10:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUN 2026 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1827,15 +1827,15 @@ Overfull \hbox (9.61089pt too wide) in paragraph at lines 38--39
 odel\T1/ptm/m/n/12 , \T1/pcr/m/n/12 useDashboardViewModel\T1/ptm/m/n/12 ,
  []
 
-(partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=769, 1808.7575pt x 1567.8575pt>
+[54] (partes/diagramas/arquitetura-backend.tex
+<imagens/backend.png, id=773, 1808.7575pt x 1728.4575pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
-(pdftex.def)             Requested size: 409.71692pt x 355.14507pt.
+(pdftex.def)             Requested size: 409.71692pt x 391.52357pt.
 )
-(partes/diagramas/arquitetura-frontend.tex [54]
-<imagens/frontend.png, id=775, 1808.7575pt x 1367.1075pt>
+(partes/diagramas/arquitetura-frontend.tex
+<imagens/frontend.png, id=774, 1808.7575pt x 1367.1075pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
@@ -1961,10 +1961,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5ACF7C83F838D0DF115CF6C1759A0304;13231.
  ) 
 Here is how much of TeX's memory you used:
- 28717 strings out of 467871
- 556731 string characters out of 5418376
+ 28718 strings out of 467871
+ 556747 string characters out of 5418376
  1280764 words of memory out of 5000000
- 56796 multiletter control sequences out of 15000+600000
+ 56797 multiletter control sequences out of 15000+600000
  670192 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,18n,94p,1902b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1975,7 +1975,7 @@ s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmbi8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (64 pages, 877884 bytes).
+Output written on main.pdf (64 pages, 884662 bytes).
 PDF statistics:
  901 PDF objects out of 1000 (max. 8388607)
  243 named destinations out of 1000 (max. 500000)
