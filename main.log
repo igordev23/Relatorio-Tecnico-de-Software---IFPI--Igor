@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUN 2026 10:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUN 2026 10:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -995,7 +995,7 @@ Package hyperref Info: Link coloring OFF on input line 66.
 \openout4 = `main.out'.
 
  (partes/capa.tex
-<imagens/Logo-IFPI-Vertical.png, id=318, 903.375pt x 652.4375pt>
+<imagens/Logo-IFPI-Vertical.png, id=314, 903.375pt x 652.4375pt>
 File: imagens/Logo-IFPI-Vertical.png Graphic file (type png)
 <use imagens/Logo-IFPI-Vertical.png>
 Package pdftex.def Info: imagens/Logo-IFPI-Vertical.png  used on input line 3.
@@ -1788,7 +1788,7 @@ s-tro), com o mé-todo vin-cu-lar-Curso(curso).
  []
 
 [49] [50]
-<imagens/diagrama-de-classes-v2.png, id=752, 2675.9975pt x 3336.465pt>
+<imagens/diagrama-de-classes-v2.png, id=747, 2675.9975pt x 3336.465pt>
 File: imagens/diagrama-de-classes-v2.png Graphic file (type png)
 <use imagens/diagrama-de-classes-v2.png>
 Package pdftex.def Info: imagens/diagrama-de-classes-v2.png  used on input line
@@ -1828,28 +1828,28 @@ odel\T1/ptm/m/n/12 , \T1/pcr/m/n/12 useDashboardViewModel\T1/ptm/m/n/12 ,
  []
 
 (partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=774, 1808.7575pt x 1567.8575pt>
+<imagens/backend.png, id=769, 1808.7575pt x 1567.8575pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 355.14507pt.
 )
 (partes/diagramas/arquitetura-frontend.tex [54]
-<imagens/frontend.png, id=780, 1808.7575pt x 1367.1075pt>
+<imagens/frontend.png, id=775, 1808.7575pt x 1367.1075pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 309.67195pt.
 ) [55 <./imagens/backend.png>]
 (partes/diagramas/der.tex
-<imagens/DER.png, id=786, 1529.715pt x 1385.175pt>
+<imagens/DER.png, id=781, 1529.715pt x 1385.175pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 371.00093pt.
 ) [56 <./imagens/frontend.png>]
 (partes/diagramas/interfaces.tex
-<imagens/interface.png, id=792, 2569.6pt x 1606.0pt>
+<imagens/interface.png, id=787, 2569.6pt x 1606.0pt>
 File: imagens/interface.png Graphic file (type png)
 <use imagens/interface.png>
 Package pdftex.def Info: imagens/interface.png  used on input line 3.
@@ -1957,41 +1957,27 @@ ion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: BAD7A7AC5D46E6926AD343FE0B7DE3E3;13406
-(rerunfilecheck)             After:  5ACF7C83F838D0DF115CF6C1759A0304;13231.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 5ACF7C83F838D0DF115CF6C1759A0304;13231.
  ) 
 Here is how much of TeX's memory you used:
- 28719 strings out of 467871
- 556773 string characters out of 5418376
+ 28717 strings out of 467871
+ 556731 string characters out of 5418376
  1280764 words of memory out of 5000000
- 56797 multiletter control sequences out of 15000+600000
+ 56796 multiletter control sequences out of 15000+600000
  670192 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,94p,1664b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{subsubsection.2.1.12} has been referenced but does 
-not exist, replaced by a fixed one
-
-<C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/
-ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
-utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
-utmbi8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
-/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on main.pdf (64 pages, 878086 bytes).
+ 84i,18n,94p,1902b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi12.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courie
+r/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
+s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
+s/utmbi8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
+es/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on main.pdf (64 pages, 877884 bytes).
 PDF statistics:
- 906 PDF objects out of 1000 (max. 8388607)
- 244 named destinations out of 1000 (max. 500000)
- 667 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 901 PDF objects out of 1000 (max. 8388607)
+ 243 named destinations out of 1000 (max. 500000)
+ 659 words of extra memory for PDF output out of 10000 (max. 10000000)
 
