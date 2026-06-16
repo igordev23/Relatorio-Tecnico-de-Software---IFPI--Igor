@@ -1,7 +1,16 @@
 \section{Software}
 
 \subsection{Implantação}
-Instruções de instalação e execução.
+
+O sistema é composto por duas aplicações independentes implantadas no Render: o frontend como Static Site e o backend como Web Service. Ambos utilizam auto-deploy do Render, que escuta pushes na branch main do repositório GitHub, compila e publica automaticamente a nova versão.
+
+O frontend é uma SPA construída com Vite. Durante o deploy, o Vite gera os artefatos estáticos (HTML, CSS, JS) na pasta dist, que o Render serve diretamente. O roteamento no lado do cliente é gerenciado pelo TanStack Router via History API, sem necessidade de configuração adicional no servidor.
+
+O backend é um servidor Node.js (Next.js) executado como Web Service no Render. O Render inicia a aplicação com npm start e expõe a porta definida pela variável de ambiente PORT. O banco de dados PostgreSQL é hospedado no Supabase, que fornece um serviço gerenciado com backups automáticos e SSL obrigatório. O backend se conecta ao Supabase via DATABASE\_URL configurada no painel do Render.
+
+A Figura~\ref{fig:deploy} ilustra o fluxo de implantação: o desenvolvedor realiza push no GitHub, o Render detecta a mudança na branch main, executa o build de cada serviço e publica a nova versão automaticamente.
+
+\input{partes/diagramas/deploy}
 
 
 
