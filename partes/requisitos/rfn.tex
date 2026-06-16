@@ -75,7 +75,7 @@ Os valores numéricos apresentados a seguir são estimativas definidas pelo dese
 \subsubsection{Arquitetura e Tecnologia}
 \begin{itemize}
 \item RNF041 – O sistema deve ser composto por duas aplicações independentes: uma \textit{Single Page Application} (SPA) para o frontend e uma API REST para o backend, cada uma com seu próprio ciclo de vida de desenvolvimento e deploy.
-\item RNF042 – O frontend deve seguir o padrão arquitetural MVVM (\textit{Model-View-ViewModel}), separando a lógica de apresentação (hooks e estado assíncrono) dos componentes de interface.
+\item RNF042 – O frontend deve adotar arquitetura em camadas com React, com quatro camadas: (i) \textit{View} --- componentes de interface; (ii) \textit{ViewModel} --- custom hooks que encapsulam estado e ações; (iii) \textit{Service} --- cliente de comunicação com a API; (iv) \textit{Model} --- interfaces TypeScript que definem as entidades de domínio.
 \item RNF043 – O backend deve adotar arquitetura em camadas (domínio, aplicação e infraestrutura), com as dependências apontando para a camada de domínio (princípio de inversão de dependências).
 \item RNF044 – A comunicação entre frontend e backend deve ocorrer exclusivamente via API REST sobre HTTPS, com autenticação baseada em token JWT.
 \item RNF045 – A geração de certificados em lote deve ser processada de forma assíncrona por meio de fila de processamento, sem bloquear a aplicação principal.
