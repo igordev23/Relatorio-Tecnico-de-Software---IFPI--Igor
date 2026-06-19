@@ -11,39 +11,39 @@ A Tabela~\ref{tab:rastreabilidade} apresenta a matriz de rastreabilidade que rel
 \hline
 \textbf{Módulo / RFs} & \textbf{Casos de Uso} & \textbf{Classes} & \textbf{Tabelas} \\
 \hline
-Autenticação e Controle de Acesso (RF001–RF007) & Gerenciar Usuários, Definir Permissões & User, Role, Permission & users, roles, permissions \\
+Autenticação e Controle de Acesso (RF001–RF007) & Gerenciar Usuários, Definir Permissões & Usuario, UsuarioOrganizacao, Sessao & USUARIO, USUARIO\_ORGANIZACAO, SESSAO \\
 \hline
-Templates de Certificados (RF008–RF014) & Criar Template, Editar Template, Configurar Campos, Salvar, Prévia & Template, DynamicField, TemplateVersion & templates, template\_fields, template\_versions \\
+Templates de Certificados (RF008–RF014) & Criar Template, Editar Template, Configurar Campos, Salvar, Prévia & Template, CampoDinamico, TemplateVersao & TEMPLATE, CAMPO\_DINAMICO, TEMPLATE\_VERSAO \\
 \hline
-Entrada de Dados (RF015–RF022) & Cadastrar Part., Importar Part., Emitir Individual, Emitir em Lote & Participant, ImportLog & participants, import\_logs \\
+Entrada de Dados (RF015–RF022) & Cadastrar Part., Importar Part., Emitir Individual, Emitir em Lote & Participante, Importacao & PESSOA, PARTICIPANTE, IMPORTACAO \\
 \hline
-Geração de Certificados (RF023–RF029) & Emitir Individual, Emitir em Lote, Fila, Notificar & Certificate, CertificateQueue, CertificateCode & certificates, certificate\_queue \\
+Geração de Certificados (RF023–RF029) & Emitir Individual, Emitir em Lote, Fila, Notificar & Certificado, ValorCampo, FilaProcessamento & CERTIFICADO, VALOR\_CAMPO, FILA\_PROCESSAMENTO \\
 \hline
-Envio e Comunicação (RF030–RF032) & Notificar & EmailLog, Notification & email\_logs, notifications \\
+Envio e Comunicação (RF030–RF032) & Notificar & EnvioEmail & ENVIO\_EMAIL \\
 \hline
-Validação Pública e Antifraude (RF033–RF036) & Validar Cert., Exibir Dados, Escanear QR Code & Validation, QRCode & certificates \\
+Validação Pública e Antifraude (RF033–RF036) & Validar Cert., Exibir Dados, Escanear QR Code & Certificado & CERTIFICADO \\
 \hline
-Assinaturas Digitais (RF037–RF038) & Emitir Individual & Signature, HashRecord & signatures, certificate\_hashes \\
+Assinaturas Digitais (RF037–RF038) & Emitir Individual & AssinaturaDigital & ASSINATURA\_DIGITAL \\
 \hline
-Dashboard e Gestão (RF039–RF042) & --- & Dashboard, Certificate & views / consultas SQL \\
+Dashboard e Gestão (RF039–RF042) & --- & --- & views / consultas SQL \\
 \hline
-Auditoria e Segurança (RF043–RF045) & --- & AuditLog, LogEntry & audit\_logs \\
+Auditoria e Segurança (RF043–RF045) & --- & Log, LogAuditoria & LOGSISTEMA, LOG\_AUDITORIA \\
 \hline
-Gestão de Cursos/Eventos (RF046–RF053) & Gerenciar Cursos & Course, Event, CourseParticipant & courses, course\_participants \\
+Gestão de Cursos/Eventos (RF046–RF053) & Gerenciar Cursos & Curso, Matricula & CURSO, MATRICULA \\
 \hline
-Participantes (RF054–RF058) & Cadastrar Part., Importar Part., Buscar Part., Visualizar Histórico & Participant & participants \\
+Participantes (RF054–RF058) & Cadastrar Part., Importar Part., Buscar Part., Visualizar Histórico & Participante & PESSOA, PARTICIPANTE \\
 \hline
-Multiempresa (RF059–RF062) & Gerenciar Organizações & Organization, OrganizationUser & organizations, organization\_users \\
+Multiempresa (RF059–RF062) & Gerenciar Organizações & Organizacao, UsuarioOrganizacao & ORGANIZACAO, USUARIO\_ORGANIZACAO \\
 \hline
-Configurações do Sistema (RF063–RF065) & Configurar Sistema & SystemConfig & system\_configs \\
+Configurações do Sistema (RF063–RF065) & Configurar Sistema & ConfiguracaoSistema & CONFIGURACAO\_SISTEMA \\
 \hline
-Armazenamento e Arquivos (RF066) & --- & FileStorage & file\_storage \\
+Armazenamento e Arquivos (RF066) & Criar Template, Editar Template & Template, TemplateVersao & TEMPLATE, TEMPLATE\_VERSAO \\
 \hline
-Notificações e Alertas (RF067–RF069) & Notificar & Notification, Alert & notifications, alerts \\
+Notificações e Alertas (RF067–RF069) & Notificar & EnvioEmail & ENVIO\_EMAIL \\
 \hline
-Monitoramento e Logs (RF070–RF072) & --- & Log, SystemLog & logs, system\_logs \\
+Monitoramento e Logs (RF070–RF072) & --- & Log, LogAuditoria & LOGSISTEMA, LOG\_AUDITORIA \\
 \hline
-Suporte e Operação (RF073–RF075) & Abrir Chamado & SupportTicket & support\_tickets \\
+Suporte e Operação (RF073–RF075) & Abrir Chamado & ChamadoSuporte & CHAMADO\_SUPORTE \\
 \hline
 \end{tabular}%
 }
