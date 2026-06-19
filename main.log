@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  18 JUN 2026 23:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  18 JUN 2026 23:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1855,18 +1855,12 @@ Overfull \hbox (19.35405pt too wide) in paragraph at lines 18--19
 T1/ptm/m/n/12 e \T1/pcr/m/n/12 carga_horaria\T1/ptm/m/n/12 ;
  []
 
-
-Overfull \hbox (48.8249pt too wide) in paragraph at lines 19--20
-\T1/ptm/m/n/12 pante (RF057); ín-dice com-posto em \T1/pcr/m/n/12 certificados.
-organizacao_id + data_emissao
- []
-
 <imagens/DER.png, id=793, 1175.39125pt x 987.69pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 25.
 (pdftex.def)             Requested size: 409.71692pt x 344.28001pt.
-) [58] (partes/diagramas/interfaces.tex
+[58]) (partes/diagramas/interfaces.tex
 <imagens/interface.png, id=798, 2569.6pt x 1606.0pt>
 File: imagens/interface.png Graphic file (type png)
 <use imagens/interface.png>
@@ -2000,7 +1994,7 @@ s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmbi8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (67 pages, 645518 bytes).
+Output written on main.pdf (67 pages, 645728 bytes).
 PDF statistics:
  919 PDF objects out of 1000 (max. 8388607)
  246 named destinations out of 1000 (max. 500000)
