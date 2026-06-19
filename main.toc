@@ -66,13 +66,13 @@
 \contentsline {subsection}{\numberline {3.5}Diagramas de casos de uso}{36}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Diagramas de classe}{49}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}Arquitetura do Sistema}{52}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Diagrama Entidade-Relacionamento}{57}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Interfaces}{58}{subsection.3.9}%
-\contentsline {section}{\numberline {4.0}Software}{58}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Implantação}{58}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Testes}{59}{subsection.4.2}%
-\contentsline {section}{\numberline {5.0}Considerações Finais}{59}{section.5}%
-\contentsline {section}{Referências}{62}{section*.26}%
-\contentsline {section}{\numberline {6.0}Anexos}{63}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{63}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{63}{subsection.6.2}%
+\contentsline {subsection}{\numberline {3.8}Diagrama Entidade-Relacionamento}{56}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Interfaces}{59}{subsection.3.9}%
+\contentsline {section}{\numberline {4.0}Software}{59}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Implantação}{59}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Testes}{60}{subsection.4.2}%
+\contentsline {section}{\numberline {5.0}Considerações Finais}{60}{section.5}%
+\contentsline {section}{Referências}{63}{section*.26}%
+\contentsline {section}{\numberline {6.0}Anexos}{64}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{64}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{64}{subsection.6.2}%
