@@ -27,7 +27,7 @@ RF005 & Gerenciar perfis & Administrador pode listar, criar, editar e desativar 
 RF006 & Controle de acesso & Usuário não autenticado é redirecionado para login ao acessar qualquer rota administrativa. \\
 RF007 & Sessão única & Login em novo dispositivo invalida sessão anterior; sessão expira após 30 min de inatividade. \\
 \midrule
-RF008 & Upload de templates & Arquivo .pptx é aceito; formatos .exe, .zip são rejeitados com mensagem clara; template aparece na galeria após upload. \\
+RF008 & Upload de templates & Arquivos .pptx e .pdf são aceitos; formatos .exe, .zip são rejeitados com mensagem clara; template aparece na galeria após upload. \\
 RF009 & Personalização & Cores, fontes e bordas configuradas são refletidas no preview visual. \\
 RF010 & Selecionar template & Galeria exibe templates salvos com nome e preview; seleção carrega o template para edição. \\
 RF011 & Identificar campos automáticos & Sistema sugere campos \{\{nome\}\}, \{\{curso\}\} ao fazer upload; sugestões são editáveis. \\
@@ -46,17 +46,17 @@ RF022 & Notificar término & Processamento concluído envia notificação na tel
 \midrule
 RF023 & Gerar PDF & PDF gerado preserva layout, cores e fontes do template; campos preenchidos aparecem nas posições corretas; geração leva menos de 5 segundos. \\
 RF024 & Preencher campos & Dados do participante substituem corretamente os \{\{placeholders\}\} no PDF. \\
-RF025 & Código único & Cada certificado possui código alfanumérico de 8 caracteres; consulta no banco retorna apenas um registro. \\
+RF025 & Código único & Cada certificado possui código único (UUID v4); consulta no banco retorna apenas um registro. \\
 RF026 & Data/hora/local & Certificado exibe data e hora da emissão; localização é definida pelo curso ou configuração. \\
 RF027 & Reemissão & Reemissão gera novo PDF com novo código; histórico lista versão anterior com data. \\
-RF028 & Download individual & PDF é baixado com nome no formato \texttt{Nome\_Curso\_Data.pdf}. \\
+RF028 & Download individual & PDF é baixado com nome no formato \code{Nome\_Curso\_Data.pdf}. \\
 RF029 & Download em lote & Selecionar múltiplos certificados e baixar gera arquivo .zip com todos os PDFs. \\
 \midrule
 RF030 & Personalizar e-mail & Variáveis \{\{nome\}\}, \{\{link\}\} são substituídas no corpo do e-mail enviado. \\
 RF031 & Status de envio & Certificado exibe status "Pendente", "Enviado" ou "Falha"; status é atualizado em tempo real. \\
-RF032 & Reenvio automático & Falha de envio dispara nova tentativa após 5 min, até 3 tentativas. \\
+RF032 & Reenvio automático & Falha de envio dispara nova tentativa após 10 min, até 3 tentativas. \\
 \midrule
-RF033 & Portal de validação & URL pública \texttt{/validar} exibe campo para inserir código; página é responsiva. \\
+RF033 & Portal de validação & URL pública \code{/validar} exibe campo para inserir código; página é responsiva. \\
 RF034 & Validar via código & Código válido exibe dados do certificado; inválido mostra "Certificado não encontrado". \\
 RF035 & QR Code & QR Code no PDF redireciona para URL de validação com código como parâmetro. \\
 RF036 & Exibir informações & Tela de validação mostra nome, curso, data, carga horária e status "Autêntico". \\
@@ -65,7 +65,7 @@ RF037 & Assinatura digitalizada & Imagem de assinatura aparece na posição conf
 RF038 & Hash da assinatura & Hash SHA-256 da assinatura é armazenado e verificável. \\
 \midrule
 RF039 & Lista de certificados & Tabela exibe certificados com colunas: nome, curso, data, status; paginação de 20 itens. \\
-RF040 & Filtros & Filtrar por curso, período e status atualiza a tabela sem recarregar a página. \\
+RF040 & Filtros & Filtrar por curso, período, status e instrutor atualiza a tabela sem recarregar a página. \\
 RF041 & Estatísticas mensais & Dashboard exibe total de emissões por mês em gráfico de barras; dados são atualizados automaticamente. \\
 RF042 & Logs de ações & Tabela de logs exibe ação, usuário, data e detalhes; ordenada por data decrescente. \\
 \midrule
