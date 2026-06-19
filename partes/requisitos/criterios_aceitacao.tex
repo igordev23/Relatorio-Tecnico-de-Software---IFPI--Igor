@@ -49,14 +49,14 @@ RF024 & Preencher campos & Dados do participante substituem corretamente os \{\{
 RF025 & Código único & Cada certificado possui código único (UUID v4); consulta no banco retorna apenas um registro. \\
 RF026 & Data/hora/local & Certificado exibe data e hora da emissão; localização é definida pelo curso ou configuração. \\
 RF027 & Reemissão & Reemissão gera novo PDF com novo código; histórico lista versão anterior com data. \\
-RF028 & Download individual & PDF é baixado com nome no formato \texttt{Nome\_Curso\_Data.pdf}. \\
+RF028 & Download individual & PDF é baixado com nome no formato \code{Nome\_Curso\_Data.pdf}. \\
 RF029 & Download em lote & Selecionar múltiplos certificados e baixar gera arquivo .zip com todos os PDFs. \\
 \midrule
 RF030 & Personalizar e-mail & Variáveis \{\{nome\}\}, \{\{link\}\} são substituídas no corpo do e-mail enviado. \\
 RF031 & Status de envio & Certificado exibe status "Pendente", "Enviado" ou "Falha"; status é atualizado em tempo real. \\
 RF032 & Reenvio automático & Falha de envio dispara nova tentativa após 10 min, até 3 tentativas. \\
 \midrule
-RF033 & Portal de validação & URL pública \texttt{/validar} exibe campo para inserir código; página é responsiva. \\
+RF033 & Portal de validação & URL pública \code{/validar} exibe campo para inserir código; página é responsiva. \\
 RF034 & Validar via código & Código válido exibe dados do certificado; inválido mostra "Certificado não encontrado". \\
 RF035 & QR Code & QR Code no PDF redireciona para URL de validação com código como parâmetro. \\
 RF036 & Exibir informações & Tela de validação mostra nome, curso, data, carga horária e status "Autêntico". \\
