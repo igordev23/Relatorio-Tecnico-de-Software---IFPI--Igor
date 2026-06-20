@@ -4,21 +4,33 @@
 
 O sistema é composto por duas aplicações independentes implantadas na plataforma Render, a partir de um repositório central no GitHub (exemplo: \url{https://github.com/usuario/repositorio}). O sistema é publicado sob subdomínios automáticos fornecidos pela plataforma, garantindo tráfego criptografado via SSL/HTTPS de forma nativa. O frontend pode ser acessado, por exemplo, em \url{https://meu-app-frontend.onrender.com}, enquanto a API do backend responde em \url{https://meu-app-backend.onrender.com}.
 
+\subsubsection{Arquitetura e Execução}
+
 Para a execução e construção do projeto, é estipulado o uso do Node.js, configurado no Render através da variável de ambiente \texttt{NODE\_VERSION}. A implantação distingue a arquitetura das duas aplicações:
+
 \begin{itemize}
     \item \textbf{Frontend (Static Site):} Trata-se de uma \textit{Single Page Application} (SPA) em Vite. O serviço de \textit{Static Site} serve exclusivamente arquivos estáticos (HTML, CSS e JavaScript gerados na pasta \texttt{dist}) diretamente, sem manter um processo de execução ativo (\textit{runtime} Node). O roteamento no lado do cliente é delegado ao TanStack Router via \textit{History API}.
     \item \textbf{Backend (Web Service):} Construído em Next.js (utilizando recursos de servidor Node.js), opera como um \textit{Web Service}, ou seja, mantém um processo vivo que processa requisições HTTP dinâmicas em tempo real. O processo de implantação exige a execução do comando de compilação (\texttt{npm run build}) antes da inicialização do servidor com \texttt{npm start}.
 \end{itemize}
 
+\subsubsection{CI/CD e Pipeline de Implantação}
+
 O fluxo de implantação baseia-se em um pipeline de CI/CD (Integração e Entrega Contínuas). A cada \textit{push} na branch \texttt{main}, suítes de testes são executadas (antes da publicação). O Render inicia a compilação e, em caso de falha nos testes ou no \textit{build}, o processo é interrompido, impedindo que código defeituoso seja publicado. Caso um comportamento inesperado chegue a produção, a plataforma fornece uma estratégia simples de \textit{rollback}, permitindo reverter imediatamente para o \textit{deploy} anterior funcional com um único clique. A Figura~\ref{fig:deploy} ilustra o fluxo.
 
+\subsubsection{Configuração de Ambiente}
+
 Para assegurar o isolamento das configurações sensíveis, utilizam-se variáveis de ambiente não expostas no código. Os modelos de configuração adotados incluem:
+
 \begin{itemize}
     \item \textbf{Frontend:} \texttt{VITE\_API\_URL} (aponta para a URL do Web Service backend).
     \item \textbf{Backend:} \texttt{DATABASE\_URL} (string de conexão PostgreSQL), \texttt{NEXT\_PUBLIC\_SUPABASE\_URL}, e \texttt{NEXT\_PUBLIC\_SUPABASE\_ANON\_KEY}.
 \end{itemize}
 
-O armazenamento é delegando ao PostgreSQL hospedado via Supabase. O banco de dados utiliza \textit{connection pooling} nativo (gerenciamento de conexões otimizado) para alta concorrência e conta com política de backup automático gerida pela plataforma. As atualizações estruturais (\textit{schema}) são aplicadas através de migrações executadas automaticamente na fase de \textit{build}.
+\subsubsection{Banco de Dados}
+
+O armazenamento é delegado ao PostgreSQL hospedado via Supabase. O banco de dados utiliza \textit{connection pooling} nativo (gerenciamento de conexões otimizado) para alta concorrência e conta com política de backup automático gerida pela plataforma. As atualizações estruturais (\textit{schema}) são aplicadas através de migrações executadas automaticamente na fase de \textit{build}.
+
+\subsubsection{Monitoramento e Observabilidade}
 
 Por fim, a observabilidade do sistema e o monitoramento (\textit{health checks}) são garantidos pelos logs em tempo real nativos do Render, permitindo diagnóstico ágil de eventuais gargalos de desempenho e verificação de saúde da aplicação.
 
