@@ -47,11 +47,11 @@ O fluxo de comunicação entre as duas aplicações ocorre da seguinte forma: o 
 \input{partes/diagramas/der}
 \subsection{Interfaces}
 
-O sistema é composto por sete telas principais, organizadas entre páginas públicas (acessíveis sem autenticação) e páginas do painel administrativo (com sidebar de navegação). As figuras a seguir apresentam cada tela com sua respectiva descrição.
+No escopo do MVP, foram implementadas sete telas principais que atendem aos requisitos funcionais prioritários (\textit{Must have} e \textit{Should have}). As telas estão organizadas entre páginas públicas (acessíveis sem autenticação) e páginas do painel administrativo (com sidebar de navegação). As figuras a seguir apresentam cada tela com sua respectiva descrição e os requisitos funcionais atendidos.
 
 \subsubsection{Tela Inicial}
 
-A Figura~\ref{fig:home} apresenta a landing page do sistema, que exibe o nome "CertifyHub", uma breve descrição do propósito do sistema e dois botões de ação principais: "Começar agora" (direciona ao painel administrativo) e "Verificar um certificado" (direciona à página pública de verificação). A seção inferior apresenta quatro cards com os principais recursos: Templates, Emissão, Envio por e-mail e Verificação.
+A Figura~\ref{fig:home} apresenta a \textit{landing page} do sistema, que exibe o nome "CertifyHub", uma breve descrição do propósito do sistema e dois botões de ação principais: "Começar agora" (direciona ao painel administrativo) e "Verificar um certificado" (direciona à página pública de verificação). A seção inferior apresenta quatro cards com os principais recursos: Templates, Emissão, Envio por e-mail e Verificação. Esta tela não está vinculada a um requisito funcional específico, servindo como porta de entrada para as demais funcionalidades do sistema.
 
 \begin{figure}[H]
 \centering
@@ -62,7 +62,7 @@ A Figura~\ref{fig:home} apresenta a landing page do sistema, que exibe o nome "C
 
 \subsubsection{Dashboard}
 
-A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, acessível a partir do menu lateral. O dashboard apresenta quatro cartões de estatísticas (certificados emitidos, certificados ativos, templates e envios) e dois atalhos de navegação para as páginas de gerenciamento de templates e certificados.
+A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, acessível a partir do menu lateral. O dashboard apresenta quatro cartões de estatísticas (certificados emitidos, certificados ativos, templates e envios) e dois atalhos de navegação para as páginas de gerenciamento de templates e certificados. Esta tela atende aos requisitos \textbf{RF039} (exibir lista de certificados), \textbf{RF040} (filtros) e \textbf{RF041} (estatísticas de emissão).
 
 \begin{figure}[H]
 \centering
@@ -73,7 +73,7 @@ A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, ac
 
 \subsubsection{Templates}
 
-A Figura~\ref{fig:templates} apresenta a página de gerenciamento de templates. Nela, o usuário pode criar novos modelos de certificado, visualizar a lista de templates existentes e personalizar a aparência de cada um (cores, fontes, bordas) através de um editor visual inline com pré-visualização em tempo real.
+A Figura~\ref{fig:templates} apresenta a página de gerenciamento de templates. Nela, o usuário pode criar novos modelos de certificado, visualizar a lista de templates existentes e personalizar a aparência de cada um (cores, fontes, bordas) através de um editor visual inline com pré-visualização em tempo real. Esta tela atende aos requisitos \textbf{RF008} (upload de templates), \textbf{RF009} (personalização), \textbf{RF010} (selecionar template da galeria), \textbf{RF012} (criação de campos dinâmicos) e \textbf{RF013} (salvar configurações de mapeamento).
 
 \begin{figure}[H]
 \centering
@@ -84,7 +84,7 @@ A Figura~\ref{fig:templates} apresenta a página de gerenciamento de templates. 
 
 \subsubsection{Emissão de Certificados}
 
-A Figura~\ref{fig:certificados-novo} mostra o formulário de emissão de certificados. O usuário seleciona um template, preenche os dados do participante (nome, CPF, curso, carga horária, e-mail opcional e data de validade) e confirma a emissão. O sistema gera automaticamente um código de verificação único e registra o envio por e-mail quando o endereço é informado.
+A Figura~\ref{fig:certificados-novo} mostra o formulário de emissão de certificados. O usuário seleciona um template, preenche os dados do participante (nome, CPF, curso, carga horária, e-mail opcional e data de validade) e confirma a emissão. O sistema gera automaticamente um código de verificação único e registra o envio por e-mail quando o endereço é informado. Esta tela atende aos requisitos \textbf{RF015} (cadastro de participantes), \textbf{RF016} (emissão manual), \textbf{RF023} (gerar PDF), \textbf{RF024} (preenchimento automático de campos), \textbf{RF025} (código único), \textbf{RF026} (registro de data e hora) e \textbf{RF028} (download individual).
 
 \begin{figure}[H]
 \centering
@@ -95,7 +95,7 @@ A Figura~\ref{fig:certificados-novo} mostra o formulário de emissão de certifi
 
 \subsubsection{Lista de Certificados}
 
-A Figura~\ref{fig:certificados} exibe a lista de certificados emitidos, com campo de busca por nome, CPF ou código de verificação. Cada certificado exibe o status (ativo ou vencido), o curso, a carga horária e opções de ação: copiar código de verificação, editar validade, baixar PDF e editar dados do certificado.
+A Figura~\ref{fig:certificados} exibe a lista de certificados emitidos, com campo de busca por nome, CPF ou código de verificação. Cada certificado exibe o status (ativo ou vencido), o curso, a carga horária e opções de ação: copiar código de verificação, editar validade, baixar PDF e editar dados do certificado. Esta tela atende aos requisitos \textbf{RF027} (reemissão mantendo histórico), \textbf{RF028} (download individual), \textbf{RF039} (lista completa de certificados) e \textbf{RF040} (filtros por curso, período e status).
 
 \begin{figure}[H]
 \centering
@@ -106,7 +106,7 @@ A Figura~\ref{fig:certificados} exibe a lista de certificados emitidos, com camp
 
 \subsubsection{Envios}
 
-A Figura~\ref{fig:envios} apresenta o histórico de envios de e-mail realizados pelo sistema. Cada registro exibe o destinatário, o nome do participante, a data do envio e o status (enviado, falhou ou pendente).
+A Figura~\ref{fig:envios} apresenta o histórico de envios de e-mail realizados pelo sistema. Cada registro exibe o destinatário, o nome do participante, a data do envio e o status (enviado, falhou ou pendente). Esta tela atende ao requisito \textbf{RF031} (registrar status de envio).
 
 \begin{figure}[H]
 \centering
@@ -117,7 +117,7 @@ A Figura~\ref{fig:envios} apresenta o histórico de envios de e-mail realizados 
 
 \subsubsection{Verificação Pública}
 
-A Figura~\ref{fig:verificar} mostra a página pública de verificação de autenticidade de certificados. O usuário informa o CPF do participante e o código de verificação presente no certificado. O sistema consulta a base de dados e retorna o resultado: certificado válido, expirado ou não encontrado.
+A Figura~\ref{fig:verificar} mostra a página pública de verificação de autenticidade de certificados. O usuário informa o CPF do participante e o código de verificação presente no certificado. O sistema consulta a base de dados e retorna o resultado: certificado válido, expirado ou não encontrado. Esta tela atende aos requisitos \textbf{RF033} (portal público de validação), \textbf{RF034} (validação via código único) e \textbf{RF036} (exibir informações do certificado).
 
 \begin{figure}[H]
 \centering
