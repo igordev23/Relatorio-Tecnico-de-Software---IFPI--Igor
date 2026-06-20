@@ -16,13 +16,19 @@ A Figura~\ref{fig:deploy} ilustra o fluxo de implantação: o desenvolvedor real
 
 \subsection{Testes}
 
-Conforme definido no objetivo específico da Seção~1.2.2, foram planejados e executados testes unitários para validação dos módulos implementados no escopo do MVP. Os testes foram escritos com base nos critérios de aceitação definidos na Tabela~\ref{tab:criterios} e abrangem os requisitos funcionais classificados como \textit{Must have} [M] e \textit{Should have} [S] — essenciais para a primeira versão do sistema.
+Conforme definido no objetivo específico da Seção~1.2.2, foram planejados e executados testes unitários para validação dos módulos implementados no escopo do MVP. Os casos de teste foram elaborados com base nos critérios de aceitação apresentados na Tabela~\ref{tab:criterios} e abrangem os requisitos funcionais classificados como prioritários — \textit{Must have} [M] e \textit{Should have} [S] — essenciais para a primeira versão do sistema.
 
-O framework Jest foi utilizado em ambos os módulos do sistema, totalizando 251 testes, todos aprovados.
+Os testes foram classificados como unitários, uma vez que cada módulo (frontend e backend) foi testado de forma isolada, com dependências externas (banco de dados, APIs de terceiros, bibliotecas de geração de PDF) substituídas por \textit{mocks}. Testes de integração, ponta a ponta (\textit{E2E}), desempenho e segurança não foram incluídos no escopo do MVP, podendo ser abordados em versões futuras do sistema. Todos os testes foram executados em ambiente local, com Node.js 22, e integraram o pipeline de CI/CD do Render, que executa a suíte completa a cada \textit{push} na branch \texttt{main}.
+
+\input{partes/plano_testes}
+
+A Tabela~\ref{tab:plano-testes} relaciona 51 casos de teste planejados. Cada caso pode ser validado por um ou mais testes automatizados, totalizando 251 testes unitários implementados com o framework Jest. As subseções seguintes detalham os resultados da execução em cada módulo.
 
 \subsubsection{Frontend (Certificate Hub)}
 
-O frontend contém 10 suítes de testes com 102 testes unitários, abrangendo as \textit{ViewModels} dos módulos de autenticação (RF001--RF007), templates (RF008--RF014), certificados (RF023--RF029), dashboard (RF039--RF041) e validação pública (RF033--RF036), além dos serviços de API e modelos de domínio. A Figura~\ref{fig:coverage-frontend} apresenta o relatório de cobertura gerado pelo Jest.
+O frontend contém 10 suítes de testes com 102 testes unitários, abrangendo as \textit{ViewModels} dos módulos de templates (RF008--RF014), certificados (RF023--RF029), \textit{dashboard} (RF039--RF041) e validação pública (RF033--RF036), além dos serviços de API e dos modelos de domínio.
+
+A métrica de cobertura, gerada automaticamente pelo Jest por meio da ferramenta Istanbul, indica a proporção do código-fonte que é exercitada durante a execução dos testes. O relatório é organizado em quatro categorias: \textit{Statements} (comandos executados), \textit{Branches} (ramos de decisão, como \texttt{if/else}), \textit{Functions} (funções chamadas) e \textit{Lines} (linhas de código percorridas). A Figura~\ref{fig:coverage-frontend} apresenta o relatório de cobertura gerado para o frontend.
 
 \begin{figure}[H]
 \centering
@@ -31,9 +37,13 @@ O frontend contém 10 suítes de testes com 102 testes unitários, abrangendo as
 \label{fig:coverage-frontend}
 \end{figure}
 
+Conforme ilustrado, o frontend atingiu 98,11\% de cobertura de comandos (\textit{Statements}), 91,04\% de ramos (\textit{Branches}), 96,96\% de funções (\textit{Functions}) e 99,57\% de linhas (\textit{Lines}). O diretório \texttt{models} obteve cobertura total (100\%), enquanto \texttt{services} alcançou 97,22\% e \texttt{view-models} 98,23\% em comandos. A cobertura de ramos em \texttt{services} (88,88\%) reflete a presença de tratamentos condicionais de erro que não foram todos exercitados nos testes.
+
 \subsubsection{Backend (Certificate Server)}
 
-O backend contém 16 suítes de testes com 149 testes unitários, cobrindo casos de uso (emissão RF023--RF028, reemissão RF027, validação RF033--RF036, templates RF008--RF014), entidades de domínio (Certificate, Template, VerificationCode), repositórios (Supabase) e serviços (PDFKit) — principais camadas da arquitetura limpa adotada no MVP. A Figura~\ref{fig:coverage-backend} apresenta o relatório de cobertura gerado pelo Jest.
+O backend contém 16 suítes de testes com 149 testes unitários, cobrindo casos de uso (emissão e reemissão RF023--RF028, validação RF033--RF036, templates RF008--RF014), entidades de domínio (\texttt{Certificate}, \texttt{Template}, \texttt{VerificationCode}), repositórios (Supabase) e serviços (PDFKit) — principais camadas da arquitetura limpa adotada no MVP.
+
+A Figura~\ref{fig:coverage-backend} apresenta o relatório de cobertura gerado pelo Jest para o backend.
 
 \begin{figure}[H]
 \centering
@@ -42,22 +52,28 @@ O backend contém 16 suítes de testes com 149 testes unitários, cobrindo casos
 \label{fig:coverage-backend}
 \end{figure}
 
+O backend atingiu 97,62\% de cobertura de comandos, 95,38\% de ramos, 96,66\% de funções e 97,62\% de linhas. As camadas de \textit{application/dtos}, \textit{application/use-cases}, \textit{domain/entities} e \textit{infrastructure/repositories} apresentaram cobertura integral (100\%), evidenciando que as regras de negócio e a lógica de persistência foram amplamente exercitadas pelos testes. A camada \textit{infrastructure/services} registrou 99,05\% em comandos e 45,45\% em ramos, diferença atribuída às condicionais de configuração do PDFKit que não foram totalmente cobertas. As interfaces \textit{domain/repositories} e \textit{domain/services} aparecem com 0\% por se tratarem de contratos abstratos (interfaces) sem implementação concreta a ser testada diretamente.
+
+\subsubsection{Limitações}
+
+Embora a cobertura geral tenha atingido percentuais elevados, algumas limitações devem ser registradas. O módulo de autenticação e controle de acesso (RF001--RF007) não possui testes automatizados, uma vez que sua implementação estava em andamento no momento da elaboração deste relatório. Testes de integração com o banco de dados Supabase não foram realizados — os repositórios foram testados com o cliente Supabase \textit{mockado}. Da mesma forma, não foram implementados testes de interface gráfica (\textit{E2E}) ou de desempenho, por estarem fora do escopo do MVP. Essas lacunas representam oportunidades de melhoria para versões futuras do sistema.
+
 \subsubsection{Resumo Geral}
 
-A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os módulos.
+A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os módulos, incluindo as métricas de cobertura. Ambos os módulos superam o limiar mínimo de 75\% de cobertura definido na configuração do Jest e validado no pipeline de CI.
 
 \begin{table}[H]
 \centering
 \caption{Resumo geral dos testes}
 \label{tab:testes-resumo}
-\begin{tabular}{lccc}
+\begin{tabular}{lcccc}
 \toprule
-\textbf{Módulo} & \textbf{Suítes} & \textbf{Testes} & \textbf{Tempo} \\
+\textbf{Módulo} & \textbf{Suítes} & \textbf{Testes} & \textbf{Cobertura} & \textbf{Tempo} \\
 \midrule
-Frontend (Certificate Hub) & 10 & 102 & 22,34\,s \\
-Backend (Certificate Server) & 16 & 149 & 5,73\,s \\
+Frontend (Certificate Hub) & 10 & 102 & 98,11\% & 22,34\,s \\
+Backend (Certificate Server) & 16 & 149 & 97,62\% & 5,73\,s \\
 \midrule
-\textbf{Total} & \textbf{26} & \textbf{251} & \textbf{28,07\,s} \\
+\textbf{Total} & \textbf{26} & \textbf{251} & \textbf{--} & \textbf{28,07\,s} \\
 \bottomrule
 \end{tabular}
 \end{table}
