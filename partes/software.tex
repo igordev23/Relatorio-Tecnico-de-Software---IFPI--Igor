@@ -18,7 +18,7 @@ A Figura~\ref{fig:deploy} ilustra o fluxo de implantação: o desenvolvedor real
 
 Conforme definido no objetivo específico da Seção~1.2.2, foram planejados e executados testes unitários para validação dos módulos implementados no escopo do MVP. Os casos de teste foram elaborados com base nos critérios de aceitação apresentados na Tabela~\ref{tab:criterios} e abrangem os requisitos funcionais classificados como prioritários — \textit{Must have} [M] e \textit{Should have} [S] — essenciais para a primeira versão do sistema.
 
-Os testes foram classificados como unitários, uma vez que cada módulo (frontend e backend) foi testado de forma isolada, com dependências externas (banco de dados, APIs de terceiros, bibliotecas de geração de PDF) substituídas por \textit{mocks}. Testes de integração, ponta a ponta (\textit{E2E}), desempenho e segurança não foram incluídos no escopo do MVP, podendo ser abordados em versões futuras do sistema. Todos os testes foram executados em ambiente local, com Node.js 22, e integraram o pipeline de CI/CD do Render, que executa a suíte completa a cada \textit{push} na branch \texttt{main}.
+Os testes foram classificados como unitários, uma vez que cada módulo (frontend e backend) foi testado de forma isolada, com dependências externas (banco de dados, APIs de terceiros, bibliotecas de geração de PDF) substituídas por \textit{mocks}. Testes de integração, desempenho e segurança não foram incluídos no escopo do MVP, podendo ser abordados em versões futuras do sistema. Testes \textit{end-to-end} (E2E) foram implementados com Playwright para validar o fluxo completo do sistema, conforme descrito na Seção~\ref{subsubsec:e2e}. Todos os testes foram executados em ambiente local, com Node.js 22, e integraram o pipeline de CI/CD do Render, que executa a suíte completa a cada \textit{push} na branch \texttt{main}.
 
 \input{partes/plano_testes}
 
@@ -54,9 +54,23 @@ A Figura~\ref{fig:coverage-backend} apresenta o relatório de cobertura gerado p
 
 O backend atingiu 97,62\% de cobertura de comandos, 95,38\% de ramos, 96,66\% de funções e 97,62\% de linhas. As camadas de \textit{application/dtos}, \textit{application/use-cases}, \textit{domain/entities} e \textit{infrastructure/repositories} apresentaram cobertura integral (100\%), evidenciando que as regras de negócio e a lógica de persistência foram amplamente exercitadas pelos testes. A camada \textit{infrastructure/services} registrou 99,05\% em comandos e 45,45\% em ramos, diferença atribuída às condicionais de configuração do PDFKit que não foram totalmente cobertas. As interfaces \textit{domain/repositories} e \textit{domain/services} aparecem com 0\% por se tratarem de contratos abstratos (interfaces) sem implementação concreta a ser testada diretamente.
 
+\subsubsection{Testes End-to-End}
+\label{subsubsec:e2e}
+
+Para validar a integração entre frontend e backend em cenário realista, foi implementado um teste \textit{end-to-end} com Playwright que percorre o fluxo completo: criar um template, emitir um certificado e verificar a autenticidade pela página pública. O teste é executado contra o servidor de desenvolvimento local (Vite na porta 5173) e depende do backend rodando simultaneamente (Next.js na porta 3000). Todo o processo é orquestrado automaticamente pelo Playwright, que inicia o frontend via \texttt{npm run dev} antes da execução.
+
+O teste demonstra que o sistema suporta o fluxo crítico de ponta a ponta sem intervenção manual. Durante o desenvolvimento, foi identificado e corrigido um erro de configuração de CORS no backend (\texttt{next.config.ts}), que impedia a comunicação entre os serviços em \texttt{localhost}. A Figura~\ref{fig:e2e-report} apresenta o relatório gerado pelo Playwright, que exibe o passo a passo da execução, incluindo as capturas de tela de cada etapa e o resultado final (aprovado).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/e2e-report.png}
+\caption{Relatório do teste end-to-end gerado pelo Playwright}
+\label{fig:e2e-report}
+\end{figure}
+
 \subsubsection{Limitações}
 
-Embora a cobertura geral tenha atingido percentuais elevados, algumas limitações devem ser registradas. O módulo de autenticação e controle de acesso (RF001--RF007) possui testes apenas para o \textit{middleware} de autenticação, mas o fluxo completo de login, redefinição de senha e gerenciamento de sessões ainda não foi testado. Testes de integração com o banco de dados Supabase não foram realizados — os repositórios foram testados com o cliente Supabase \textit{mockado}. Testes de acessibilidade (\textit{a11y}) foram implementados apenas para o formulário de validação, e os testes \textit{end-to-end} foram configurados com Playwright, mas dependem de um servidor de desenvolvimento ativo para execução. Cenários de carga e desempenho foram testados para geração de PDF, porém não para os demais \textit{endpoints}. Essas lacunas representam oportunidades de melhoria para versões futuras do sistema.
+Embora a cobertura geral tenha atingido percentuais elevados, algumas limitações devem ser registradas. O módulo de autenticação e controle de acesso (RF001--RF007) possui testes apenas para o \textit{middleware} de autenticação, mas o fluxo completo de login, redefinição de senha e gerenciamento de sessões ainda não foi testado. Testes de integração com o banco de dados Supabase não foram realizados — os repositórios foram testados com o cliente Supabase \textit{mockado}. Testes de acessibilidade (\textit{a11y}) foram implementados apenas para o formulário de validação. O teste E2E atualmente cobre apenas o fluxo principal (\textit{happy path}); cenários de erro, como template ausente ou CPF inválido, não são abordados. Cenários de carga e desempenho foram testados para geração de PDF, porém não para os demais \textit{endpoints}. Essas lacunas representam oportunidades de melhoria para versões futuras do sistema.
 
 \subsubsection{Resumo Geral}
 
