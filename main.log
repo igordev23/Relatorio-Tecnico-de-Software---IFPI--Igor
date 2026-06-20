@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  20 JUN 2026 20:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  20 JUN 2026 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -998,7 +998,7 @@ Package hyperref Info: Link coloring OFF on input line 68.
 \openout4 = `main.out'.
 
  (partes/capa.tex
-<imagens/Logo-IFPI-Vertical.png, id=338, 903.375pt x 652.4375pt>
+<imagens/Logo-IFPI-Vertical.png, id=370, 903.375pt x 652.4375pt>
 File: imagens/Logo-IFPI-Vertical.png Graphic file (type png)
 <use imagens/Logo-IFPI-Vertical.png>
 Package pdftex.def Info: imagens/Logo-IFPI-Vertical.png  used on input line 3.
@@ -1775,7 +1775,7 @@ s-tro), com o mé-todo vin-cu-lar-Curso(curso).
  []
 
 [49] [50]
-<imagens/Diagrama-de-classes.png, id=777, 1235.61626pt x 1251.67625pt>
+<imagens/Diagrama-de-classes.png, id=817, 1235.61626pt x 1251.67625pt>
 File: imagens/Diagrama-de-classes.png Graphic file (type png)
 <use imagens/Diagrama-de-classes.png>
 Package pdftex.def Info: imagens/Diagrama-de-classes.png  used on input line 23
@@ -1783,41 +1783,84 @@ Package pdftex.def Info: imagens/Diagrama-de-classes.png  used on input line 23
 (pdftex.def)             Requested size: 455.24411pt x 461.16487pt.
 ) [51] [52 <./imagens/Diagrama-de-classes.png>] [53]
 (partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=799, 1808.7575pt x 1728.4575pt>
+<imagens/backend.png, id=839, 1808.7575pt x 1728.4575pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 391.52357pt.
 )
 (partes/diagramas/arquitetura-frontend.tex [54]
-<imagens/frontend.png, id=805, 1808.7575pt x 1367.1075pt>
+<imagens/frontend.png, id=845, 1808.7575pt x 1367.1075pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 309.67195pt.
 ) [55 <./imagens/backend.png>]
 (partes/diagramas/der.tex [56 <./imagens/frontend.png>] [57] [58]
-<imagens/DER.png, id=827, 1175.39125pt x 1084.05pt>
+<imagens/DER.png, id=867, 1175.39125pt x 1084.05pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 33.
 (pdftex.def)             Requested size: 409.71692pt x 377.8683pt.
 )
 (partes/diagramas/interfaces.tex
-<imagens/interface.png, id=828, 2569.6pt x 1606.0pt>
+<imagens/interface.png, id=868, 2569.6pt x 1606.0pt>
 File: imagens/interface.png Graphic file (type png)
 <use imagens/interface.png>
 Package pdftex.def Info: imagens/interface.png  used on input line 3.
 (pdftex.def)             Requested size: 455.24411pt x 284.50949pt.
-)) (partes/software.tex [59 <./imagens/DER.png>] [60 <./imagens/interface.png>]
- (partes/diagramas/deploy.tex
-<imagens/deploy.png, id=842, 2007.5pt x 762.85pt>
+)) (partes/software.tex [59 <./imagens/DER.png>]
+<imagens/home.png, id=876, 1445.4pt x 903.375pt>
+File: imagens/home.png Graphic file (type png)
+<use imagens/home.png>
+Package pdftex.def Info: imagens/home.png  used on input line 13.
+(pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
+ [60 <./imagens/interface.png>]
+<imagens/dashboard.png, id=885, 1445.4pt x 903.375pt>
+File: imagens/dashboard.png Graphic file (type png)
+<use imagens/dashboard.png>
+Package pdftex.def Info: imagens/dashboard.png  used on input line 24.
+(pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
+ [61 <./imagens/home.png (PNG copy)>]
+<imagens/templates.png, id=892, 1445.4pt x 1336.995pt>
+File: imagens/templates.png Graphic file (type png)
+<use imagens/templates.png>
+Package pdftex.def Info: imagens/templates.png  used on input line 35.
+(pdftex.def)             Requested size: 455.24411pt x 421.09445pt.
+ [62 <./imagens/dashboard.png (PNG copy)>]
+<imagens/certificados-novo.png, id=899, 1445.4pt x 903.375pt>
+File: imagens/certificados-novo.png Graphic file (type png)
+<use imagens/certificados-novo.png>
+Package pdftex.def Info: imagens/certificados-novo.png  used on input line 46.
+(pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
+ [63 <./imagens/templates.png (PNG copy)>]
+<imagens/certificados.png, id=906, 1445.4pt x 1574.88374pt>
+File: imagens/certificados.png Graphic file (type png)
+<use imagens/certificados.png>
+Package pdftex.def Info: imagens/certificados.png  used on input line 57.
+(pdftex.def)             Requested size: 455.24411pt x 496.01892pt.
+
+[64 <./imagens/certificados-novo.png (PNG copy)>]
+<imagens/envios.png, id=913, 1445.4pt x 903.375pt>
+File: imagens/envios.png Graphic file (type png)
+<use imagens/envios.png>
+Package pdftex.def Info: imagens/envios.png  used on input line 68.
+(pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
+ [65 <./imagens/certificados.png (PNG copy)>]
+<imagens/verificar.png, id=921, 1445.4pt x 903.375pt>
+File: imagens/verificar.png Graphic file (type png)
+<use imagens/verificar.png>
+Package pdftex.def Info: imagens/verificar.png  used on input line 79.
+(pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
+ [66 <./imagens/envios.png (PNG copy)>]
+(partes/diagramas/deploy.tex
+<imagens/deploy.png, id=928, 2007.5pt x 762.85pt>
 File: imagens/deploy.png Graphic file (type png)
 <use imagens/deploy.png>
 Package pdftex.def Info: imagens/deploy.png  used on input line 3.
 (pdftex.def)             Requested size: 386.96027pt x 147.03822pt.
-)
-(partes/plano_testes.tex [61 <./imagens/deploy.png>]
+ [67 <./imagens/verificar.png (PNG copy)>])
+(partes/plano_testes.tex [68 <./imagens/deploy.png>]
 Overfull \hbox (21.77359pt too wide) in alignment at lines 20--26
  [] [] [] 
  []
@@ -1903,30 +1946,32 @@ Overfull \hbox (21.77359pt too wide) in alignment at lines 34--146
  [] [] [] 
  []
 
-ignored error: Infinite glue shrinkage found in box being split [62]
-ignored error: Infinite glue shrinkage found in box being split [63]
-ignored error: Infinite glue shrinkage found in box being split [64]
-ignored error: Infinite glue shrinkage found in box being split [65]) [66]
-<imagens/coverage-frontend.png, id=879, 1284.8pt x 803.0pt>
+ignored error: Infinite glue shrinkage found in box being split [69]
+ignored error: Infinite glue shrinkage found in box being split [70]
+ignored error: Infinite glue shrinkage found in box being split [71]
+ignored error: Infinite glue shrinkage found in box being split [72])
+<imagens/coverage-frontend.png, id=965, 1284.8pt x 803.0pt>
 File: imagens/coverage-frontend.png Graphic file (type png)
 <use imagens/coverage-frontend.png>
-Package pdftex.def Info: imagens/coverage-frontend.png  used on input line 35.
+Package pdftex.def Info: imagens/coverage-frontend.png  used on input line 117.
+
 (pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
-<imagens/coverage-backend.png, id=881, 1284.8pt x 803.0pt>
+ [73]
+<imagens/coverage-backend.png, id=972, 1284.8pt x 803.0pt>
 File: imagens/coverage-backend.png Graphic file (type png)
 <use imagens/coverage-backend.png>
-Package pdftex.def Info: imagens/coverage-backend.png  used on input line 50.
+Package pdftex.def Info: imagens/coverage-backend.png  used on input line 132.
 (pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
 
-[67 <./imagens/coverage-frontend.png (PNG copy)>] [68 <./imagens/coverage-backe
+[74 <./imagens/coverage-frontend.png (PNG copy)>] [75 <./imagens/coverage-backe
 nd.png (PNG copy)>]
-<imagens/e2e-report.png, id=893, 1284.8pt x 722.7pt>
+<imagens/e2e-report.png, id=983, 1284.8pt x 722.7pt>
 File: imagens/e2e-report.png Graphic file (type png)
 <use imagens/e2e-report.png>
-Package pdftex.def Info: imagens/e2e-report.png  used on input line 66.
+Package pdftex.def Info: imagens/e2e-report.png  used on input line 148.
 (pdftex.def)             Requested size: 455.24411pt x 256.06956pt.
- [69 <./imagens/e2e-report.png (PNG copy)>])
-(partes/consideracoes.tex) [70] (main.bbl
+ [76 <./imagens/e2e-report.png (PNG copy)>])
+(partes/consideracoes.tex) [77] (main.bbl
 Underfull \hbox (badness 5652) in paragraph at lines 23--28
 []\T1/ptm/m/n/12 KULKARNI, R. et al. A se-cure cer-ti-fi-cate authen-ti-ca-tion
  sys-tem using cryp-
@@ -1968,7 +2013,7 @@ Underfull \hbox (badness 3148) in paragraph at lines 73--75
 r Re-act\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-[71]
+[78]
 Underfull \hbox (badness 10000) in paragraph at lines 83--85
 []\T1/ptm/m/n/12 CONTRIBUTORS date-fns. \T1/ptm/m/it/12 date-fns Do-cu-men-ta-t
 ion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
@@ -2017,25 +2062,25 @@ m/m/n/12 . 2025. Dis-po-ní-vel em: $\OML/cmm/m/it/12 <$\T1/ptm/m/n/12 https://g
 it-
  []
 
-[72]
+[79]
 Underfull \hbox (badness 10000) in paragraph at lines 159--161
 []\T1/ptm/m/n/12 MICROSOFT. \T1/ptm/m/it/12 Vi-sual Stu-dio Code Do-cu-men-ta-t
 ion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-) [73] (partes/anexos.tex) [74] (main.aux)
+) [80] (partes/anexos.tex) [81] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DE149366B2E7EDA81CC5B6482FF1719D;14221.
+(rerunfilecheck)             Checksum: 66C9152B13D1D38F517BBB5C9B5E4563;15391.
  ) 
 Here is how much of TeX's memory you used:
- 28841 strings out of 467871
- 559646 string characters out of 5418376
+ 28928 strings out of 467871
+ 561634 string characters out of 5418376
  1280999 words of memory out of 5000000
- 56883 multiletter control sequences out of 15000+600000
+ 56948 multiletter control sequences out of 15000+600000
  677356 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,18n,94p,1868b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2046,9 +2091,9 @@ s/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmbi8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (76 pages, 802506 bytes).
+Output written on main.pdf (83 pages, 1367419 bytes).
 PDF statistics:
- 1011 PDF objects out of 1200 (max. 8388607)
- 268 named destinations out of 1000 (max. 500000)
- 727 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1106 PDF objects out of 1200 (max. 8388607)
+ 290 named destinations out of 1000 (max. 500000)
+ 826 words of extra memory for PDF output out of 10000 (max. 10000000)
 
