@@ -1,0 +1,111 @@
+\subsubsection{Plano de Testes}
+
+O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.1) e nos critérios de aceitação (Tabela~\ref{tab:criterios}), contemplando exclusivamente os módulos implementados no escopo do MVP. Cada caso de teste é identificado por um código único (CT\textit{nnn}) e descreve o cenário avaliado juntamente com o resultado esperado. A Tabela~\ref{tab:plano-testes} apresenta o plano completo.
+
+\renewcommand{\arraystretch}{0.85}
+\small
+\begin{longtable}{p{1.2cm} p{4.8cm} p{9.5cm}}
+\caption{Plano de testes do sistema}
+\label{tab:plano-testes}\\
+\toprule
+\textbf{Caso} & \textbf{Descrição} & \textbf{Resultados Esperados} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Caso} & \textbf{Descrição} & \textbf{Resultados Esperados} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+
+\multicolumn{3}{l}{\textbf{Módulo de Templates de Certificados (RF008--RF014)}} \\
+\midrule
+
+CT001 & Criação de template & Template é criado com nome, descrição e \textit{layout} mesclado aos valores padrão. \\
+CT002 & Listagem de templates & \textit{Endpoint} retorna lista de templates cadastrados. \\
+CT003 & Obtenção de template por ID & \textit{Endpoint} retorna template específico; lança erro \texttt{TemplateNotFoundError} se não existir. \\
+CT004 & Edição de template & Nome, descrição e configurações de \textit{layout} são alterados e persistem. \\
+CT005 & Exclusão de template & Template é removido após confirmação do usuário; \textit{endpoint} \texttt{delete} é chamado. \\
+CT006 & Personalização de \textit{layout} & Configurações parciais são mescladas com os valores padrão (\texttt{DEFAULT\_LAYOUT}). \\
+
+\midrule
+\multicolumn{3}{l}{\textbf{Módulo de Geração de Certificados (RF023--RF029)}} \\
+\midrule
+
+CT007 & Emissão manual de certificado & Selecionar template, preencher dados e confirmar gera certificado com código único. \\
+CT008 & Geração de PDF & PDF gerado preserva layout, cores e fontes do template; resultado é um \textit{Buffer} binário. \\
+CT009 & Geração de PDF com cores personalizadas & PDF é gerado com \texttt{backgroundColor}, \texttt{primaryColor} e \texttt{borderColor} personalizados. \\
+CT010 & Geração de PDF sem borda & PDF é gerado corretamente com \texttt{showBorder = false}. \\
+CT011 & Erro na geração de PDF & Falha no PDFKit rejeita a \textit{Promise} com mensagem de erro. \\
+CT012 & Obtenção de certificado por ID & \textit{Endpoint} retorna certificado específico; lança erro \texttt{CertificateNotFoundError} se não existir. \\
+CT013 & Listagem de certificados & \textit{Endpoint} retorna lista de certificados cadastrados. \\
+CT014 & Atualização de certificado & Nome, CPF, carga horária, curso e \texttt{templateId} são alterados individual ou simultaneamente. \\
+CT015 & Atualização de validade & Data de validade é atualizada; data passada é rejeitada. \\
+CT016 & Validação de dados de entrada & Nome vazio, CPF inválido, carga horária negativa e \texttt{templateId} não-UUID são rejeitados. \\
+CT017 & Validação de CPF & CPF com dígitos verificadores incorretos ou todos iguais é rejeitado. \\
+CT018 & Formatação de CPF & CPF é automaticamente formatado (XXX.XXX.XXX-XX) durante a digitação. \\
+CT019 & Emissão com template inexistente & \textit{Endpoint} lança \texttt{TemplateNotFoundError} se o \texttt{templateId} não existir. \\
+
+\midrule
+\multicolumn{3}{l}{\textbf{Módulo de Validação Pública e Antifraude (RF033--RF036)}} \\
+\midrule
+
+CT020 & Validação via código único & Código válido retorna certificado com status autêntico e válido. \\
+CT021 & Certificado expirado & Certificado com validade vencida é retornado como autêntico, porém inválido. \\
+CT022 & Código não encontrado & Código inexistente é rejeitado e a validação retorna certificado não localizado. \\
+CT023 & \textit{Case insensitive} na consulta & Código digitado em minúsculo é convertido para maiúsculo antes da consulta no banco. \\
+CT024 & Remoção de máscara do CPF & CPF com pontuação tem os caracteres não numéricos removidos antes da consulta. \\
+CT025 & Tratamento de erro na validação & Erros retornados pela API são exibidos ao usuário e o estado de carregamento é gerenciado corretamente. \\
+
+\midrule
+\multicolumn{3}{l}{\textbf{Módulo de \textit{Dashboard} e Gestão (RF039--RF041)}} \\
+\midrule
+
+CT026 & Listagem de certificados & Tabela exibe certificados carregados da API com gerenciamento do estado de carregamento. \\
+CT027 & Filtro por nome, CPF e código & Digitar texto no campo de busca filtra a lista em tempo real. \\
+CT028 & Cópia do código de verificação & Botão copia o código para a área de transferência. \\
+CT029 & Atualização de validade na interface & Usuário altera data de validade; a requisição é enviada ao servidor e a lista é recarregada. \\
+CT030 & Estatísticas do \textit{dashboard} & Painel exibe total de certificados, ativos, templates e envios. \\
+CT031 & Cálculo de certificados ativos & Certificados expirados são excluídos da contagem de ativos. \\
+
+\midrule
+\multicolumn{3}{l}{\textbf{Entidades de Domínio}} \\
+\midrule
+
+CT032 & Criação de certificado válido & Entidade \texttt{Certificate} é criada com todos os campos obrigatórios. \\
+CT033 & Validações da entidade Certificate & Nome vazio, CPF inválido, curso vazio, carga horária zero/negativa e \texttt{templateId} vazio disparam erro de domínio. \\
+CT034 & Data de validade futura & Certificado com validade futura retorna \texttt{isValid = true}. \\
+CT035 & Data de validade passada & Certificado com validade passada retorna \texttt{isValid = false}. \\
+CT036 & Criação de template válido & Entidade \texttt{Template} é criada com \textit{layout} mesclado aos valores \textit{default}. \\
+CT037 & Validações da entidade Template & Nome vazio ou com apenas espaços dispara erro de domínio. \\
+CT038 & Geração de código de verificação & Código gerado possui exatamente 8 caracteres do \textit{charset} definido. \\
+CT039 & Comparação de códigos & Método \texttt{equals()} compara dois códigos corretamente; \textit{case insensitive}. \\
+CT040 & Erros de domínio & Classes de erro (\texttt{CertificateNotFoundError}, \texttt{InvalidCPFError}, etc.) possuem mensagens e \textit{status} HTTP adequados. \\
+CT041 & Restauração a partir de persistência & Dados vindos do banco são convertidos corretamente para instâncias das entidades. \\
+
+\midrule
+\multicolumn{3}{l}{\textbf{Camada de Infraestrutura}} \\
+\midrule
+
+CT042 & Repositório de certificados — consultas & Operações \texttt{findById}, \texttt{findByCPFAndCode} e \texttt{findAll} retornam certificados ou \texttt{null}. \\
+CT043 & Repositório de certificados — escrita & Operações \texttt{create}, \texttt{update} e \texttt{delete} persistem no Supabase e tratam erros. \\
+CT044 & Repositório de templates — consultas & Operações \texttt{findById} e \texttt{findAll} retornam templates ou \texttt{null} com \textit{fallback} de valores. \\
+CT045 & Repositório de templates — escrita & Operações \texttt{create}, \texttt{update} e \texttt{delete} persistem no Supabase e tratam erros. \\
+CT046 & Geração de PDF com PDFKit & PDF é gerado como \textit{Buffer}; cores e bordas são aplicadas; erro no PDFKit é tratado. \\
+CT047 & Tratamento de erros da API & Erros de domínio (404, 400), erros Zod (400) e erros inesperados (500) são mapeados para \textit{status code} HTTP corretos. \\
+
+\midrule
+\multicolumn{3}{l}{\textbf{Utilitários (\textit{Frontend})}} \\
+\midrule
+
+CT048 & Chamadas HTTP da API & Métodos \textit{GET}, \textit{POST}, \textit{PUT}, \textit{DELETE} encapsulam \texttt{fetch} com tratamento de erro e \textit{parsing} JSON. \\
+CT049 & Serviço de envios (\textit{localStorage}) & Operações de listagem e adição de registros de envio persistem no \textit{localStorage} com tratamento de erro. \\
+CT050 & Detecção de \textit{mobile} & Hook \texttt{useIsMobile} retorna \texttt{true} para larguras menores que 768 px; \textit{listener} é limpo no desmonte. \\
+CT051 & Função \texttt{isExpired} & Datas passadas retornam \texttt{true}; datas futuras e presentes retornam \texttt{false}. \\
+
+\bottomrule
+\end{longtable}
+\normalsize
+\renewcommand{\arraystretch}{1.0}
