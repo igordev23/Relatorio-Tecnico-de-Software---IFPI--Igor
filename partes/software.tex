@@ -22,11 +22,11 @@ Os testes foram classificados como unitários, uma vez que cada módulo (fronten
 
 \input{partes/plano_testes}
 
-A Tabela~\ref{tab:plano-testes} relaciona 51 casos de teste planejados. Cada caso pode ser validado por um ou mais testes automatizados, totalizando 251 testes unitários implementados com o framework Jest. As subseções seguintes detalham os resultados da execução em cada módulo.
+A Tabela~\ref{tab:plano-testes} relaciona 60 casos de teste planejados, incluindo cenários funcionais, não-funcionais, \textit{end-to-end} e de resiliência. Cada caso pode ser validado por um ou mais testes automatizados, totalizando 276 testes unitários implementados com o framework Jest. As subseções seguintes detalham os resultados da execução em cada módulo.
 
 \subsubsection{Frontend (Certificate Hub)}
 
-O frontend contém 10 suítes de testes com 102 testes unitários, abrangendo as \textit{ViewModels} dos módulos de templates (RF008--RF014), certificados (RF023--RF029), \textit{dashboard} (RF039--RF041) e validação pública (RF033--RF036), além dos serviços de API e dos modelos de domínio.
+O frontend contém 11 suítes de testes com 108 testes unitários, abrangendo as \textit{ViewModels} dos módulos de templates (RF008--RF014), certificados (RF023--RF029), \textit{dashboard} (RF039--RF041) e validação pública (RF033--RF036), além dos serviços de API, componentes de formulário e dos modelos de domínio.
 
 A métrica de cobertura, gerada automaticamente pelo Jest por meio da ferramenta Istanbul, indica a proporção do código-fonte que é exercitada durante a execução dos testes. O relatório é organizado em quatro categorias: \textit{Statements} (comandos executados), \textit{Branches} (ramos de decisão, como \texttt{if/else}), \textit{Functions} (funções chamadas) e \textit{Lines} (linhas de código percorridas). A Figura~\ref{fig:coverage-frontend} apresenta o relatório de cobertura gerado para o frontend.
 
@@ -41,7 +41,7 @@ Conforme ilustrado, o frontend atingiu 98,11\% de cobertura de comandos (\textit
 
 \subsubsection{Backend (Certificate Server)}
 
-O backend contém 16 suítes de testes com 149 testes unitários, cobrindo casos de uso (emissão e reemissão RF023--RF028, validação RF033--RF036, templates RF008--RF014), entidades de domínio (\texttt{Certificate}, \texttt{Template}, \texttt{VerificationCode}), repositórios (Supabase) e serviços (PDFKit) — principais camadas da arquitetura limpa adotada no MVP.
+O backend contém 19 suítes de testes com 168 testes unitários, cobrindo casos de uso (emissão e reemissão RF023--RF028, validação RF033--RF036, templates RF008--RF014), entidades de domínio (\texttt{Certificate}, \texttt{Template}, \texttt{VerificationCode}), repositórios (Supabase), serviços (PDFKit) e \textit{middleware} de autenticação e \textit{rate limiting} — principais camadas da arquitetura limpa adotada no MVP.
 
 A Figura~\ref{fig:coverage-backend} apresenta o relatório de cobertura gerado pelo Jest para o backend.
 
@@ -56,7 +56,7 @@ O backend atingiu 97,62\% de cobertura de comandos, 95,38\% de ramos, 96,66\% de
 
 \subsubsection{Limitações}
 
-Embora a cobertura geral tenha atingido percentuais elevados, algumas limitações devem ser registradas. O módulo de autenticação e controle de acesso (RF001--RF007) não possui testes automatizados, uma vez que sua implementação estava em andamento no momento da elaboração deste relatório. Testes de integração com o banco de dados Supabase não foram realizados — os repositórios foram testados com o cliente Supabase \textit{mockado}. Da mesma forma, não foram implementados testes de interface gráfica (\textit{E2E}) ou de desempenho, por estarem fora do escopo do MVP. Essas lacunas representam oportunidades de melhoria para versões futuras do sistema.
+Embora a cobertura geral tenha atingido percentuais elevados, algumas limitações devem ser registradas. O módulo de autenticação e controle de acesso (RF001--RF007) possui testes apenas para o \textit{middleware} de autenticação, mas o fluxo completo de login, redefinição de senha e gerenciamento de sessões ainda não foi testado. Testes de integração com o banco de dados Supabase não foram realizados — os repositórios foram testados com o cliente Supabase \textit{mockado}. Testes de acessibilidade (\textit{a11y}) foram implementados apenas para o formulário de validação, e os testes \textit{end-to-end} foram configurados com Playwright, mas dependem de um servidor de desenvolvimento ativo para execução. Cenários de carga e desempenho foram testados para geração de PDF, porém não para os demais \textit{endpoints}. Essas lacunas representam oportunidades de melhoria para versões futuras do sistema.
 
 \subsubsection{Resumo Geral}
 
@@ -70,10 +70,10 @@ A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os 
 \toprule
 \textbf{Módulo} & \textbf{Suítes} & \textbf{Testes} & \textbf{Cobertura} & \textbf{Tempo} \\
 \midrule
-Frontend (Certificate Hub) & 10 & 102 & 98,11\% & 22,34\,s \\
-Backend (Certificate Server) & 16 & 149 & 97,62\% & 5,73\,s \\
+Frontend (Certificate Hub) & 11 & 108 & 98,11\% & 18,92\,s \\
+Backend (Certificate Server) & 19 & 168 & 97,62\% & 7,64\,s \\
 \midrule
-\textbf{Total} & \textbf{26} & \textbf{251} & \textbf{--} & \textbf{28,07\,s} \\
+\textbf{Total} & \textbf{30} & \textbf{276} & \textbf{--} & \textbf{26,56\,s} \\
 \bottomrule
 \end{tabular}
 \end{table}

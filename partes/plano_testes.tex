@@ -1,6 +1,19 @@
 \subsubsection{Plano de Testes}
 
-O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.1) e nos critérios de aceitação (Tabela~\ref{tab:criterios}), contemplando exclusivamente os módulos implementados no escopo do MVP. Cada caso de teste é identificado por um código único (CT\textit{nnn}) e descreve o cenário avaliado juntamente com o resultado esperado. A Tabela~\ref{tab:plano-testes} apresenta o plano completo.
+\paragraph{Estratégia de Testes}
+
+O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.1) e nos critérios de aceitação (Tabela~\ref{tab:criterios}), contemplando exclusivamente os módulos implementados no escopo do MVP. A estratégia adotada prioriza testes unitários como primeira camada de defesa, combinada com testes de integração para validação das camadas de infraestrutura.
+
+\begin{itemize}
+    \item \textbf{Ferramentas:} Jest como \textit{test runner} e \textit{framework} de asserção; React Testing Library para testes de \textit{ViewModels} no frontend; \textit{Mocking} manual via \texttt{jest.mock} para isolar dependências externas (Supabase, PDFKit, \texttt{fetch}).
+    \item \textbf{Execução em CI/CD:} A suíte completa é executada automaticamente pelo Render a cada \textit{push} na branch \texttt{main}. O pipeline valida que todos os testes passem antes da implantação.
+    \item \textbf{Meta de cobertura:} O projeto define cobertura mínima de 75\% em \textit{Statements}, \textit{Functions} e \textit{Lines}, configurada no Jest e validada no pipeline de CI. As camadas de domínio e casos de uso no backend têm meta informal de 100\%.
+    \item \textbf{Massa de dados:} Os testes de repositório utilizam o cliente Supabase \textit{mockado}, dispensando banco de dados real. Para testes das entidades de domínio, os dados são construídos em memória (\textit{in-memory}), garantindo isolamento total entre cenários.
+\end{itemize}
+
+\paragraph{Casos de Teste}
+
+Cada caso de teste é identificado por um código único (CT\textit{nnn}) e descreve o cenário avaliado juntamente com o resultado esperado. A Tabela~\ref{tab:plano-testes} apresenta o plano completo, organizado por módulo e tipo de teste.
 
 \renewcommand{\arraystretch}{0.85}
 \small
@@ -104,6 +117,30 @@ CT048 & Chamadas HTTP da API & Métodos \textit{GET}, \textit{POST}, \textit{PUT
 CT049 & Serviço de envios (\textit{localStorage}) & Operações de listagem e adição de registros de envio persistem no \textit{localStorage} com tratamento de erro. \\
 CT050 & Detecção de \textit{mobile} & Hook \texttt{useIsMobile} retorna \texttt{true} para larguras menores que 768 px; \textit{listener} é limpo no desmonte. \\
 CT051 & Função \texttt{isExpired} & Datas passadas retornam \texttt{true}; datas futuras e presentes retornam \texttt{false}. \\
+
+\midrule
+\multicolumn{3}{l}{\textbf{Testes Não-Funcionais}} \\
+\midrule
+
+CT052 & Carga — Geração simultânea de PDFs & Múltiplas requisições concorrentes de geração de PDF não causam falhas em cascata; o sistema permanece responsivo. \\
+CT053 & Segurança — Acesso não autenticado & Endpoints de criação, edição e exclusão de templates e certificados rejeitam requisições sem token de autenticação (status 401). \\
+CT054 & Segurança — Força bruta na validação & Requisições repetidas ao endpoint de validação são limitadas (\textit{rate limiting}); o sistema bloqueia temporariamente após múltiplas tentativas inválidas. \\
+CT055 & Acessibilidade — Navegação por teclado & Todos os campos do formulário de validação pública são acessíveis via tecla \texttt{Tab}; o botão de busca pode ser acionado via \texttt{Enter}. \\
+
+\midrule
+\multicolumn{3}{l}{\textbf{Testes End-to-End (E2E)}} \\
+\midrule
+
+CT056 & Fluxo completo de emissão e validação & Usuário cria template, emite certificado e valida o código no portal público; todas as etapas são concluídas com sucesso. \\
+CT057 & Validação via \textit{QR Code} & \textit{QR Code} gerado no PDF, quando escaneado, redireciona para a URL de validação com o código correto como parâmetro. \\
+
+\midrule
+\multicolumn{3}{l}{\textbf{Cenários de Resiliência}} \\
+\midrule
+
+CT058 & Indisponibilidade do Supabase & Cliente Supabase retorna erro de conexão; o sistema exibe mensagem amigável ao usuário sem interromper as demais funcionalidades. \\
+CT059 & Concorrência — Edição simultânea & Dois administradores editam o mesmo template ao mesmo tempo; o último salvamento prevalece e o conflito é registrado em log. \\
+CT060 & \textit{Timeout} na geração de PDF & Geração de PDF excede o tempo limite; o sistema cancela a operação e notifica o usuário sobre a falha. \\
 
 \bottomrule
 \end{longtable}
