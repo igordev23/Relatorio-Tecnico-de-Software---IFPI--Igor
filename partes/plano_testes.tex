@@ -2,10 +2,10 @@
 
 \paragraph{Estratégia de Testes}
 
-O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.1) e nos critérios de aceitação (Tabela~\ref{tab:criterios}), contemplando exclusivamente os módulos implementados no escopo do MVP. A estratégia adotada prioriza testes unitários como primeira camada de defesa, combinada com testes de integração para validação das camadas de infraestrutura.
+O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.1) e nos critérios de aceitação (Tabela~\ref{tab:criterios}), contemplando exclusivamente os módulos implementados no escopo do MVP. A estratégia adotada prioriza testes unitários como primeira camada de defesa, combinada com testes de integração para validação das camadas de infraestrutura e testes \textit{end-to-end} (E2E) para verificação do fluxo completo do sistema.
 
 \begin{itemize}
-    \item \textbf{Ferramentas:} Jest como \textit{test runner} e \textit{framework} de asserção; React Testing Library para testes de \textit{ViewModels} no frontend; \textit{Mocking} manual via \texttt{jest.mock} para isolar dependências externas (Supabase, PDFKit, \texttt{fetch}).
+    \item \textbf{Ferramentas:} Jest como \textit{test runner} e \textit{framework} de asserção; React Testing Library para testes de \textit{ViewModels} no frontend; Playwright para testes \textit{end-to-end}; \textit{Mocking} manual via \texttt{jest.mock} para isolar dependências externas (Supabase, PDFKit, \texttt{fetch}).
     \item \textbf{Execução em CI/CD:} A suíte completa é executada automaticamente pelo Render a cada \textit{push} na branch \texttt{main}. O pipeline valida que todos os testes passem antes da implantação.
     \item \textbf{Meta de cobertura:} O projeto define cobertura mínima de 75\% em \textit{Statements}, \textit{Functions} e \textit{Lines}, configurada no Jest e validada no pipeline de CI. As camadas de domínio e casos de uso no backend têm meta informal de 100\%.
     \item \textbf{Massa de dados:} Os testes de repositório utilizam o cliente Supabase \textit{mockado}, dispensando banco de dados real. Para testes das entidades de domínio, os dados são construídos em memória (\textit{in-memory}), garantindo isolamento total entre cenários.
@@ -131,7 +131,7 @@ CT055 & Acessibilidade — Navegação por teclado & Todos os campos do formulá
 \multicolumn{3}{l}{\textbf{Testes End-to-End (E2E)}} \\
 \midrule
 
-CT056 & Fluxo completo de emissão e validação & Usuário cria template, emite certificado e valida o código no portal público; todas as etapas são concluídas com sucesso. \\
+CT056 & Fluxo completo de emissão e validação & Usuário cria template, emite certificado e valida o código no portal público; todas as etapas são concluídas com sucesso. (Automatizado com Playwright.) \\
 CT057 & Validação via \textit{QR Code} & \textit{QR Code} gerado no PDF, quando escaneado, redireciona para a URL de validação com o código correto como parâmetro. \\
 
 \midrule
