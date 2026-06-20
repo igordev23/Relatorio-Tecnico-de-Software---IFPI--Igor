@@ -15,4 +15,49 @@ A Figura~\ref{fig:deploy} ilustra o fluxo de implantação: o desenvolvedor real
 
 
 \subsection{Testes}
-Tabela de testes.
+
+Conforme definido no objetivo específico da Seção~1.2.2, foram planejados e executados testes unitários para validação dos módulos implementados no escopo do MVP. Os testes foram escritos com base nos critérios de aceitação definidos na Tabela~\ref{tab:criterios} e abrangem os requisitos funcionais classificados como \textit{Must have} [M] e \textit{Should have} [S] — essenciais para a primeira versão do sistema.
+
+O framework Jest foi utilizado em ambos os módulos do sistema, totalizando 251 testes, todos aprovados.
+
+\subsubsection{Frontend (Certificate Hub)}
+
+O frontend contém 10 suítes de testes com 102 testes unitários, abrangendo as \textit{ViewModels} dos módulos de autenticação (RF001--RF007), templates (RF008--RF014), certificados (RF023--RF029), dashboard (RF039--RF041) e validação pública (RF033--RF036), além dos serviços de API e modelos de domínio. A Figura~\ref{fig:coverage-frontend} apresenta o relatório de cobertura gerado pelo Jest.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/coverage-frontend.png}
+\caption{Relatório de cobertura dos testes — frontend}
+\label{fig:coverage-frontend}
+\end{figure}
+
+\subsubsection{Backend (Certificate Server)}
+
+O backend contém 16 suítes de testes com 149 testes unitários, cobrindo casos de uso (emissão RF023--RF028, reemissão RF027, validação RF033--RF036, templates RF008--RF014), entidades de domínio (Certificate, Template, VerificationCode), repositórios (Supabase) e serviços (PDFKit) — principais camadas da arquitetura limpa adotada no MVP. A Figura~\ref{fig:coverage-backend} apresenta o relatório de cobertura gerado pelo Jest.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/coverage-backend.png}
+\caption{Relatório de cobertura dos testes — backend}
+\label{fig:coverage-backend}
+\end{figure}
+
+\subsubsection{Resumo Geral}
+
+A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os módulos.
+
+\begin{table}[H]
+\centering
+\caption{Resumo geral dos testes}
+\label{tab:testes-resumo}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Módulo} & \textbf{Suítes} & \textbf{Testes} & \textbf{Tempo} \\
+\midrule
+Frontend (Certificate Hub) & 10 & 102 & 22,34\,s \\
+Backend (Certificate Server) & 16 & 149 & 5,73\,s \\
+\midrule
+\textbf{Total} & \textbf{26} & \textbf{251} & \textbf{28,07\,s} \\
+\bottomrule
+\end{tabular}
+\end{table}
