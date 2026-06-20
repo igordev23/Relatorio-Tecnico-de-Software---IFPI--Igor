@@ -52,7 +52,7 @@ A Figura~\ref{fig:coverage-backend} apresenta o relatório de cobertura gerado p
 \label{fig:coverage-backend}
 \end{figure}
 
-O backend atingiu 97,62\% de cobertura de comandos, 95,38\% de ramos, 96,66\% de funções e 97,62\% de linhas. As camadas de \textit{application/dtos}, \textit{application/use-cases}, \textit{domain/entities} e \textit{infrastructure/repositories} apresentaram cobertura integral (100\%), evidenciando que as regras de negócio e a lógica de persistência foram amplamente exercitadas pelos testes. A camada \textit{infrastructure/services} registrou 99,05\% em comandos e 45,45\% em ramos, diferença atribuída às condicionais de configuração do PDFKit que não foram totalmente cobertas. As interfaces \textit{domain/repositories} e \textit{domain/services} aparecem com 0\% por se tratarem de contratos abstratos (interfaces) sem implementação concreta a ser testada diretamente.
+O backend atingiu 97,39\% de cobertura de comandos, 93,04\% de ramos, 96,87\% de funções e 97,39\% de linhas. As camadas de \textit{application/dtos}, \textit{application/use-cases}, \textit{domain/entities} e \textit{infrastructure/repositories} apresentaram cobertura integral (100\%), evidenciando que as regras de negócio e a lógica de persistência foram amplamente exercitadas pelos testes. A camada \textit{infrastructure/services} registrou 99,09\% em comandos e 45,45\% em ramos, diferença atribuída às condicionais de configuração do PDFKit que não foram totalmente cobertas. As interfaces \textit{domain/repositories} e \textit{domain/services} aparecem com 0\% por se tratarem de contratos abstratos (interfaces) sem implementação concreta a ser testada diretamente.
 
 \subsubsection{Testes End-to-End}
 \label{subsubsec:e2e}
@@ -85,9 +85,9 @@ A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os 
 \textbf{Módulo} & \textbf{Suítes} & \textbf{Testes} & \textbf{Cobertura} & \textbf{Tempo} \\
 \midrule
 Frontend (Certificate Hub) & 11 & 108 & 98,11\% & 18,92\,s \\
-Backend (Certificate Server) & 19 & 168 & 97,62\% & 7,64\,s \\
+Backend (Certificate Server) & 19 & 168 & 97,39\% & 6,36\,s \\
 \midrule
-\textbf{Total} & \textbf{30} & \textbf{276} & \textbf{--} & \textbf{26,56\,s} \\
+\textbf{Total} & \textbf{30} & \textbf{276} & \textbf{--} & \textbf{35,41\,s} \\
 \bottomrule
 \end{tabular}
 \end{table}
