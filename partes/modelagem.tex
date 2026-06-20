@@ -46,4 +46,84 @@ O fluxo de comunicação entre as duas aplicações ocorre da seguinte forma: o 
 \subsection{Diagrama Entidade-Relacionamento}
 \input{partes/diagramas/der}
 \subsection{Interfaces}
+
+O sistema é composto por sete telas principais, organizadas entre páginas públicas (acessíveis sem autenticação) e páginas do painel administrativo (com sidebar de navegação). As figuras a seguir apresentam cada tela com sua respectiva descrição.
+
+\subsubsection{Tela Inicial}
+
+A Figura~\ref{fig:home} apresenta a landing page do sistema, que exibe o nome "CertifyHub", uma breve descrição do propósito do sistema e dois botões de ação principais: "Começar agora" (direciona ao painel administrativo) e "Verificar um certificado" (direciona à página pública de verificação). A seção inferior apresenta quatro cards com os principais recursos: Templates, Emissão, Envio por e-mail e Verificação.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/home.png}
+\caption{Tela inicial — \textit{landing page}}
+\label{fig:home}
+\end{figure}
+
+\subsubsection{Dashboard}
+
+A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, acessível a partir do menu lateral. O dashboard apresenta quatro cartões de estatísticas (certificados emitidos, certificados ativos, templates e envios) e dois atalhos de navegação para as páginas de gerenciamento de templates e certificados.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/dashboard.png}
+\caption{Dashboard — visão geral do sistema}
+\label{fig:dashboard}
+\end{figure}
+
+\subsubsection{Templates}
+
+A Figura~\ref{fig:templates} apresenta a página de gerenciamento de templates. Nela, o usuário pode criar novos modelos de certificado, visualizar a lista de templates existentes e personalizar a aparência de cada um (cores, fontes, bordas) através de um editor visual inline com pré-visualização em tempo real.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/templates.png}
+\caption{Gerenciamento de templates}
+\label{fig:templates}
+\end{figure}
+
+\subsubsection{Emissão de Certificados}
+
+A Figura~\ref{fig:certificados-novo} mostra o formulário de emissão de certificados. O usuário seleciona um template, preenche os dados do participante (nome, CPF, curso, carga horária, e-mail opcional e data de validade) e confirma a emissão. O sistema gera automaticamente um código de verificação único e registra o envio por e-mail quando o endereço é informado.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/certificados-novo.png}
+\caption{Formulário de emissão de certificado}
+\label{fig:certificados-novo}
+\end{figure}
+
+\subsubsection{Lista de Certificados}
+
+A Figura~\ref{fig:certificados} exibe a lista de certificados emitidos, com campo de busca por nome, CPF ou código de verificação. Cada certificado exibe o status (ativo ou vencido), o curso, a carga horária e opções de ação: copiar código de verificação, editar validade, baixar PDF e editar dados do certificado.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/certificados.png}
+\caption{Lista de certificados emitidos}
+\label{fig:certificados}
+\end{figure}
+
+\subsubsection{Envios}
+
+A Figura~\ref{fig:envios} apresenta o histórico de envios de e-mail realizados pelo sistema. Cada registro exibe o destinatário, o nome do participante, a data do envio e o status (enviado, falhou ou pendente).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/envios.png}
+\caption{Histórico de envios de e-mail}
+\label{fig:envios}
+\end{figure}
+
+\subsubsection{Verificação Pública}
+
+A Figura~\ref{fig:verificar} mostra a página pública de verificação de autenticidade de certificados. O usuário informa o CPF do participante e o código de verificação presente no certificado. O sistema consulta a base de dados e retorna o resultado: certificado válido, expirado ou não encontrado.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{imagens/verificar.png}
+\caption{Página pública de verificação de certificados}
+\label{fig:verificar}
+\end{figure}
+
 \input{partes/diagramas/interfaces}
