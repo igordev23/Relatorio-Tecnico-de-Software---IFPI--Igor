@@ -15,7 +15,7 @@ Para a execução e construção do projeto, é estipulado o uso do Node.js, con
 
 \subsubsection{CI/CD e Pipeline de Implantação}
 
-O fluxo de implantação baseia-se em um pipeline de CI/CD (Integração e Entrega Contínuas). A cada \textit{push} na branch \texttt{main}, suítes de testes são executadas (antes da publicação). O Render inicia a compilação e, em caso de falha nos testes ou no \textit{build}, o processo é interrompido, impedindo que código defeituoso seja publicado. Caso um comportamento inesperado chegue a produção, a plataforma fornece uma estratégia simples de \textit{rollback}, permitindo reverter imediatamente para o \textit{deploy} anterior funcional com um único clique. A Figura~\ref{fig:deploy} ilustra o fluxo.
+O fluxo de implantação baseia-se em um pipeline de CI/CD (Integração e Entrega Contínuas). A etapa de \textit{Continuous Integration} (CI) é gerenciada pelo GitHub Actions, que executa automaticamente as suítes de testes a cada \textit{push} na branch \texttt{main}. Se os testes passarem com sucesso, a etapa de \textit{Continuous Deployment} (CD) é acionada no Render, que compila e publica a nova versão. Em caso de falha nos testes (no GitHub Actions) ou no \textit{build} (no Render), o processo é interrompido, impedindo que código defeituoso chegue a produção. Caso um comportamento inesperado ocorra pós-deploy, a plataforma fornece uma estratégia simples de \textit{rollback}, permitindo reverter imediatamente para o \textit{deploy} anterior funcional com um único clique. A Figura~\ref{fig:deploy} ilustra o fluxo.
 
 \subsubsection{Configuração de Ambiente}
 
