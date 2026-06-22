@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  20 JUN 2026 23:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  21 JUN 2026 21:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -745,7 +745,7 @@ Package hyperref Info: Link coloring OFF on input line 68.
 \openout4 = `main.out'.
 
  (partes/capa.tex
-<imagens/Logo-IFPI-Vertical.png, id=386, 903.375pt x 652.4375pt>
+<imagens/Logo-IFPI-Vertical.png, id=394, 903.375pt x 652.4375pt>
 File: imagens/Logo-IFPI-Vertical.png Graphic file (type png)
 <use imagens/Logo-IFPI-Vertical.png>
 Package pdftex.def Info: imagens/Logo-IFPI-Vertical.png  used on input line 3.
@@ -1501,66 +1501,66 @@ Overfull \hbox (3.59525pt too wide) in paragraph at lines 5--6
  []
 
 [50] [51]
-<imagens/Diagrama-de-classes.png, id=841, 1235.61626pt x 1251.67625pt>
+<imagens/Diagrama-de-classes.png, id=851, 1235.61626pt x 1251.67625pt>
 File: imagens/Diagrama-de-classes.png Graphic file (type png)
 <use imagens/Diagrama-de-classes.png>
 Package pdftex.def Info: imagens/Diagrama-de-classes.png  used on input line 23.
 (pdftex.def)             Requested size: 455.24411pt x 461.16487pt.
 ) [52] [53 <./imagens/Diagrama-de-classes.png>] [54] (partes/diagramas/arquitetura-backend.tex
-<imagens/backend.png, id=863, 1808.7575pt x 1728.4575pt>
+<imagens/backend.png, id=873, 1808.7575pt x 1728.4575pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 3.
 (pdftex.def)             Requested size: 409.71692pt x 391.52357pt.
 ) (partes/diagramas/arquitetura-frontend.tex [55]
-<imagens/frontend.png, id=869, 1808.7575pt x 1367.1075pt>
+<imagens/frontend.png, id=879, 1808.7575pt x 1367.1075pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 309.67195pt.
 ) [56 <./imagens/backend.png>] (partes/diagramas/der.tex [57 <./imagens/frontend.png>] [58] [59]
-<imagens/DER.png, id=892, 1175.39125pt x 1084.05pt>
+<imagens/DER.png, id=902, 1175.39125pt x 1084.05pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 33.
 (pdftex.def)             Requested size: 409.71692pt x 377.8683pt.
 ) [60 <./imagens/DER.png>]
-<imagens/home.png, id=899, 1445.4pt x 903.375pt>
+<imagens/home.png, id=909, 1445.4pt x 903.375pt>
 File: imagens/home.png Graphic file (type png)
 <use imagens/home.png>
 Package pdftex.def Info: imagens/home.png  used on input line 58.
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
  [61 <./imagens/home.png (PNG copy)>]
-<imagens/dashboard.png, id=906, 1445.4pt x 903.375pt>
+<imagens/dashboard.png, id=916, 1445.4pt x 903.375pt>
 File: imagens/dashboard.png Graphic file (type png)
 <use imagens/dashboard.png>
 Package pdftex.def Info: imagens/dashboard.png  used on input line 69.
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
-<imagens/templates.png, id=908, 1445.4pt x 1336.995pt>
+<imagens/templates.png, id=918, 1445.4pt x 1336.995pt>
 File: imagens/templates.png Graphic file (type png)
 <use imagens/templates.png>
 Package pdftex.def Info: imagens/templates.png  used on input line 80.
 (pdftex.def)             Requested size: 455.24411pt x 421.09445pt.
  [62 <./imagens/dashboard.png (PNG copy)>]
-<imagens/certificados-novo.png, id=916, 1445.4pt x 903.375pt>
+<imagens/certificados-novo.png, id=926, 1445.4pt x 903.375pt>
 File: imagens/certificados-novo.png Graphic file (type png)
 <use imagens/certificados-novo.png>
 Package pdftex.def Info: imagens/certificados-novo.png  used on input line 91.
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
  [63 <./imagens/templates.png (PNG copy)>]
-<imagens/certificados.png, id=923, 1445.4pt x 1574.88374pt>
+<imagens/certificados.png, id=933, 1445.4pt x 1574.88374pt>
 File: imagens/certificados.png Graphic file (type png)
 <use imagens/certificados.png>
 Package pdftex.def Info: imagens/certificados.png  used on input line 102.
 (pdftex.def)             Requested size: 455.24411pt x 496.01892pt.
  [64 <./imagens/certificados-novo.png (PNG copy)>]
-<imagens/envios.png, id=930, 1445.4pt x 903.375pt>
+<imagens/envios.png, id=940, 1445.4pt x 903.375pt>
 File: imagens/envios.png Graphic file (type png)
 <use imagens/envios.png>
 Package pdftex.def Info: imagens/envios.png  used on input line 113.
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
  [65 <./imagens/certificados.png (PNG copy)>]
-<imagens/verificar.png, id=938, 1445.4pt x 903.375pt>
+<imagens/verificar.png, id=948, 1445.4pt x 903.375pt>
 File: imagens/verificar.png Graphic file (type png)
 <use imagens/verificar.png>
 Package pdftex.def Info: imagens/verificar.png  used on input line 124.
@@ -1571,12 +1571,12 @@ Overfull \hbox (3.7506pt too wide) in paragraph at lines 13--14
  []
 
 [68] (partes/diagramas/deploy.tex
-<imagens/deploy.png, id=958, 2007.5pt x 762.85pt>
+<imagens/deploy.png, id=968, 2007.5pt x 762.85pt>
 File: imagens/deploy.png Graphic file (type png)
 <use imagens/deploy.png>
 Package pdftex.def Info: imagens/deploy.png  used on input line 3.
 (pdftex.def)             Requested size: 386.96027pt x 147.03822pt.
-) (partes/plano_testes.tex [69 <./imagens/deploy.png>]
+) [69 <./imagens/deploy.png>] (partes/plano_testes.tex
 Overfull \hbox (21.77359pt too wide) in alignment at lines 20--26
  [] [] [] 
  []
@@ -1660,23 +1660,29 @@ partes/plano_testes.tex:146: ignored error: Infinite glue shrinkage found in box
 partes/plano_testes.tex:146: ignored error: Infinite glue shrinkage found in box being split [71]
 partes/plano_testes.tex:146: ignored error: Infinite glue shrinkage found in box being split [72]
 partes/plano_testes.tex:146: ignored error: Infinite glue shrinkage found in box being split [73]) [74]
-<imagens/coverage-frontend.png, id=994, 1284.8pt x 803.0pt>
+<imagens/coverage-frontend.png, id=1004, 1284.8pt x 803.0pt>
 File: imagens/coverage-frontend.png Graphic file (type png)
 <use imagens/coverage-frontend.png>
 Package pdftex.def Info: imagens/coverage-frontend.png  used on input line 64.
 (pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
-<imagens/coverage-backend.png, id=996, 1284.8pt x 803.0pt>
+ [75 <./imagens/coverage-frontend.png (PNG copy)>]
+<imagens/coverage-backend.png, id=1011, 1284.8pt x 803.0pt>
 File: imagens/coverage-backend.png Graphic file (type png)
 <use imagens/coverage-backend.png>
 Package pdftex.def Info: imagens/coverage-backend.png  used on input line 79.
 (pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
- [75 <./imagens/coverage-frontend.png (PNG copy)>] [76 <./imagens/coverage-backend.png (PNG copy)>]
-<imagens/e2e-report.png, id=1008, 1284.8pt x 722.7pt>
+ [76 <./imagens/coverage-backend.png (PNG copy)>]
+<imagens/e2e-report.png, id=1018, 1284.8pt x 722.7pt>
 File: imagens/e2e-report.png Graphic file (type png)
 <use imagens/e2e-report.png>
 Package pdftex.def Info: imagens/e2e-report.png  used on input line 95.
 (pdftex.def)             Requested size: 455.24411pt x 256.06956pt.
- [77 <./imagens/e2e-report.png (PNG copy)>]) (partes/consideracoes.tex) [78] (main.bbl
+ [77 <./imagens/e2e-report.png (PNG copy)>]) (partes/consideracoes.tex
+Overfull \hbox (12.42209pt too wide) in paragraph at lines 5--6
+[]\T1/ptm/m/n/12 A ar-qui-te-tura em duas apli-ca-ções in-de-pen-den-tes (fron-tend SPA e bac-kend API REST) mostrou-
+ []
+
+[78]) [79] [80] (main.bbl
 Underfull \hbox (badness 5652) in paragraph at lines 23--28
 []\T1/ptm/m/n/12 KULKARNI, R. et al. A se-cure cer-ti-fi-cate authen-ti-ca-tion sys-tem using cryp-
  []
@@ -1711,7 +1717,7 @@ Underfull \hbox (badness 3148) in paragraph at lines 73--75
 []\T1/ptm/m/n/12 KOWALSKI, E. \T1/ptm/m/it/12 Son-ner ^^V To-ast Com-po-nent for Re-act\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-[79]
+[81]
 Underfull \hbox (badness 10000) in paragraph at lines 83--85
 []\T1/ptm/m/n/12 CONTRIBUTORS date-fns. \T1/ptm/m/it/12 date-fns Do-cu-men-ta-tion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
@@ -1751,31 +1757,31 @@ Underfull \hbox (badness 2662) in paragraph at lines 149--151
 []\T1/ptm/m/n/12 CONSERVANCY, S. F. \T1/ptm/m/it/12 Git Do-cu-men-ta-tion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em: $\OML/cmm/m/it/12 <$\T1/ptm/m/n/12 https://git-
  []
 
-[80]
+[82]
 Underfull \hbox (badness 10000) in paragraph at lines 159--161
 []\T1/ptm/m/n/12 MICROSOFT. \T1/ptm/m/it/12 Vi-sual Stu-dio Code Do-cu-men-ta-tion\T1/ptm/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-) [81] (partes/anexos.tex) [82] (main.aux)
+) [83] (partes/anexos.tex) [84] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7B76BE205C9326018F8199309B00E402;16226.
+(rerunfilecheck)             Checksum: 9F9A9AE7D9E1DED4FB789E534A37B00A;16486.
  ) 
 Here is how much of TeX's memory you used:
- 28930 strings out of 467871
- 561848 string characters out of 5418376
+ 28936 strings out of 467871
+ 561922 string characters out of 5418376
  1280999 words of memory out of 5000000
- 56944 multiletter control sequences out of 15000+600000
+ 56946 multiletter control sequences out of 15000+600000
  677356 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,18n,94p,1954b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (84 pages, 1358444 bytes).
+Output written on main.pdf (86 pages, 1364745 bytes).
 PDF statistics:
- 1131 PDF objects out of 1200 (max. 8388607)
- 294 named destinations out of 1000 (max. 500000)
- 853 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1151 PDF objects out of 1200 (max. 8388607)
+ 298 named destinations out of 1000 (max. 500000)
+ 869 words of extra memory for PDF output out of 10000 (max. 10000000)
 
