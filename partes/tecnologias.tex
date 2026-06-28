@@ -1,7 +1,7 @@
 \section{Tecnologias Envolvidas}
 \label{sec:tecnologias}
 
-Este capítulo apresenta as tecnologias empregadas no desenvolvimento do sistema, organizadas em frontend, backend e infraestrutura, com uma discussão sobre o papel de cada uma, os motivos de sua escolha e as alternativas consideradas durante o processo de decisão. As seções a seguir detalham as tecnologias de cada camada.
+Este capítulo apresenta as tecnologias empregadas no desenvolvimento do sistema, organizadas em seis categorias: frontend, integração com a API REST, backend, banco de dados, geração de documentos e infraestrutura e ferramentas, com uma discussão sobre o papel de cada uma, os motivos de sua escolha e as alternativas consideradas durante o processo de decisão. As seções a seguir detalham as tecnologias de cada camada.
 
 \subsection{Frontend}
 \label{sec:frontend}
@@ -93,6 +93,14 @@ No sistema, os \textit{Route Handlers} atuam como a camada mais externa: recebem
 
 Alternativas como Express e Fastify foram descartadas por exigirem configuração manual de middlewares, roteamento e TypeScript. O Next.js oferece essas funcionalidades de forma nativa (roteamento baseado em arquivos, TypeScript sem \textit{tsconfig} adicional, validação de variáveis de ambiente via \code{next.config.ts}), além de simplificar o deploy com um único artefato \textit{serverless}. O NestJS foi preterido por sua curva de aprendizado acentuada e pela sobrecarga de abstrações (decorators, módulos, injetores) que não se alinhavam à simplicidade almejada.
 
+\subsubsection{Zod}
+Zod é uma biblioteca de validação de esquemas que, na versão 4, oferece inferência automática de tipos e composição de esquemas \cite{zod2025}. No backend, os esquemas são definidos em \code{application/dtos/index.ts} e utilizados nos \textit{Route Handlers} para validar o corpo das requisições antes de repassá-los aos \textit{use cases}. Essa validação centralizada garante que apenas dados consistentes cheguem à camada de domínio.
+
+\subsubsection{Arquitetura e Padrões}
+A arquitetura em camadas adotada no backend organiza o código em quatro pacotes: \code{domain}, \code{application}, \code{infrastructure} e \code{app}. O pacote \code{domain} contém as entidades e interfaces de repositório. O pacote \code{application} abriga os \textit{use cases} de emissão, geração e verificação, além dos DTOs. O pacote \code{infrastructure} implementa os repositórios (\code{SupabaseCertificateRepository}, \code{SupabaseTemplateRepository}) e serviços (\code{PDFKitService}). O \code{app} contém os \textit{Route Handlers}. Cada \textit{use case} possui uma única responsabilidade, e as entidades encapsulam regras de negócio --- \code{Certificate} valida a data antes de alterá-la.
+
+\subsection{Banco de Dados}
+
 \subsubsection{Supabase e PostgreSQL}
 Supabase é uma plataforma \textit{open-source} que oferece PostgreSQL como serviço gerenciado, com APIs REST auto-geradas e autenticação integrada \cite{supabase2025}. Diferentemente do Firebase (Google), que utiliza um banco NoSQL proprietário, o Supabase utiliza PostgreSQL, um banco relacional maduro que permite consultas complexas, integridade referencial e transações ACID.
 
@@ -100,18 +108,14 @@ A escolha do Supabase em vez de alternativas como Firebase foi motivada pelo mod
 
 No sistema, o Supabase é utilizado exclusivamente como banco de dados relacional. As consultas são feitas via \code{@supabase/supabase-js} e \code{@supabase/ssr}, sem ORMs como Prisma ou TypeORM. O PostgreSQL 16 \cite{postgresql2025} é o banco subjacente. A opção por SQL direto deu-se pelo controle fino sobre as consultas: operações como inserção em lote e CTEs são expressas de forma mais natural em SQL puro. O esquema contém duas tabelas principais: \code{templates} (coluna \code{layout\_config} do tipo JSONB) e \code{certificates} (índices em \code{recipient\_cpf} e \code{verification\_code}). A nomenclatura segue \textit{snake\_case} no banco e \textit{camelCase} no código, com mapeamento manual nos repositórios.
 
+\subsection{Geração de Documentos}
+
 \subsubsection{PDFKit}
 PDFKit é uma biblioteca Node.js para geração de documentos PDF no lado do servidor, sem dependência de ferramentas externas como wkhtmltopdf ou LaTeX \cite{pdfkit2025}. Suporta texto com fontes embutidas, imagens, vetores e cores personalizadas.
 
 A escolha do PDFKit em detrimento de alternativas como Puppeteer baseou-se em eficiência de recursos: o Puppeteer exige a execução de um navegador Chromium headless completo para rasterizar HTML em PDF, consumindo tipicamente mais de 100 MB de memória por instância. Em um ambiente serverless, onde cada requisição pode inicializar uma nova instância, esse custo inviabiliza o uso. O PDFKit opera exclusivamente em Node.js, com footprint de memória da ordem de dezenas de megabytes, e permite controle programático preciso sobre cada elemento do documento — posicionamento absoluto, fontes embutidas e cores arbitrárias — sem a intermediação de um motor de renderização HTML. Bibliotecas como jsPDF foram descartadas por operarem no lado do cliente (navegador), o que as tornaria inadequadas para um fluxo de geração server-side.
 
 No sistema, o PDFKitService implementa a interface \code{IPDFService} definida no domínio, seguindo o princípio de inversão de dependência. O certificado é gerado em formato paisagem A4, com fundo colorido, bordas decorativas, título ``CERTIFICADO'', nome do destinatário, curso, carga horária, datas de emissão e validade, CPF formatado e código de verificação gerado com UUID v4 \cite{uuid2025}. Todas as cores, tamanhos e visibilidade dos elementos são controlados pelo \code{layoutConfig} do template, armazenado como JSONB no banco de dados. O PDF é retornado como \code{Buffer} e streamado diretamente na resposta HTTP.
-
-\subsubsection{Zod}
-Zod é uma biblioteca de validação de esquemas que, na versão 4, oferece inferência automática de tipos e composição de esquemas \cite{zod2025}. No backend, os esquemas são definidos em \code{application/dtos/index.ts} e utilizados nos \textit{Route Handlers} para validar o corpo das requisições antes de repassá-los aos \textit{use cases}. Essa validação centralizada garante que apenas dados consistentes cheguem à camada de domínio.
-
-\subsubsection{Arquitetura e Padrões}
-A arquitetura em camadas adotada no backend organiza o código em quatro pacotes: \code{domain}, \code{application}, \code{infrastructure} e \code{app}. O pacote \code{domain} contém as entidades e interfaces de repositório. O pacote \code{application} abriga os \textit{use cases} de emissão, geração e verificação, além dos DTOs. O pacote \code{infrastructure} implementa os repositórios (\code{SupabaseCertificateRepository}, \code{SupabaseTemplateRepository}) e serviços (\code{PDFKitService}). O \code{app} contém os \textit{Route Handlers}. Cada \textit{use case} possui uma única responsabilidade, e as entidades encapsulam regras de negócio --- \code{Certificate} valida a data antes de alterá-la.
 
 \subsection{Infraestrutura e Ferramentas}
 \label{sec:infra}
