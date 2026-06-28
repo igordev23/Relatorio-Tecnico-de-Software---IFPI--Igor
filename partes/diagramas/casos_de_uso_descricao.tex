@@ -6,7 +6,7 @@
 \hline
 \textbf{UC001} & \textbf{Gerenciar Usuários} \\
 \hline
-\textbf{Dependências} & RF001, RF003, RF004, RF005, RF006 \\
+\textbf{Dependências} & \ref{rf:login-email}, \ref{rf:validar-credenciais}, \ref{rf:cadastro-usuario}, \ref{rf:gerenciamento-perfis}, \ref{rf:controle-acesso-restrito} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o administrador gerencie os usuários da plataforma, incluindo criação, edição e desativação de contas, bem como a definição de perfis de acesso. \\
 \textbf{Ator(es)} & Administrador \\
@@ -27,11 +27,15 @@
 \hline
 3 & O administrador seleciona criar, editar ou desativar um usuário. \\
 \hline
-4 & O sistema valida os dados informados. \\
+4 & O administrador preenche os dados do usuário (nome, e-mail e senha). \\
 \hline
-5 & O sistema persiste a alteração no banco de dados. \\
+5 & O administrador define os perfis de acesso e permissões do usuário. \\
 \hline
-6 & O sistema exibe confirmação da operação. \\
+6 & O sistema valida os dados informados. \\
+\hline
+7 & O sistema persiste a alteração no banco de dados. \\
+\hline
+8 & O sistema exibe confirmação da operação. \\
 \hline
 \end{tabular} \\
 \hline
@@ -49,7 +53,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF001, RF003, RF004, RF005, RF006 \\
+\textbf{Referências} & \ref{rf:login-email}, \ref{rf:validar-credenciais}, \ref{rf:cadastro-usuario}, \ref{rf:gerenciamento-perfis}, \ref{rf:controle-acesso-restrito} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -62,7 +66,7 @@
 \hline
 \textbf{UC002} & \textbf{Gerenciar Templates} \\
 \hline
-\textbf{Dependências} & RF008, RF009, RF010, RF012, RF013 \\
+\textbf{Dependências} & \ref{rf:upload-templates}, \ref{rf:personalizacao-templates}, \ref{rf:selecionar-template-galeria}, \ref{rf:edicao-campos-dinamicos}, \ref{rf:mapeamento-campos} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o administrador gerencie templates de certificados, incluindo upload, personalização visual e configuração de campos dinâmicos. \\
 \textbf{Ator(es)} & Administrador \\
@@ -80,13 +84,15 @@
 \hline
 2 & O sistema exibe a galeria de templates existentes. \\
 \hline
-3 & O administrador faz upload de um novo arquivo PPTX ou PDF. \\
+3 & O administrador seleciona criar um novo template ou editar um existente. \\
 \hline
-4 & O sistema valida o formato do arquivo e exibe preview. \\
+4 & O administrador faz upload de um novo arquivo PPTX ou PDF (ou mantém o template existente). \\
 \hline
-5 & O administrador configura campos dinâmicos e personaliza cores e fontes. \\
+5 & O sistema valida o formato do arquivo e exibe preview. \\
 \hline
-6 & O sistema salva o template e retorna à galeria. \\
+6 & O administrador configura campos dinâmicos e personaliza cores e fontes. \\
+\hline
+7 & O sistema salva o template e retorna à galeria. \\
 \hline
 \end{tabular} \\
 \hline
@@ -104,7 +110,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF008, RF009, RF010, RF012, RF013 \\
+\textbf{Referências} & \ref{rf:upload-templates}, \ref{rf:personalizacao-templates}, \ref{rf:selecionar-template-galeria}, \ref{rf:edicao-campos-dinamicos}, \ref{rf:mapeamento-campos} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -117,7 +123,7 @@
 \hline
 \textbf{UC003} & \textbf{Gerenciar Cursos} \\
 \hline
-\textbf{Dependências} & RF046, RF047, RF048, RF049, RF050, RF053 \\
+\textbf{Dependências} & \ref{rf:cadastro-curso}, \ref{rf:associar-participante-curso}, \ref{rf:carga-horaria}, \ref{rf:instrutor-responsavel}, \ref{rf:datas-curso}, \ref{rf:local-curso} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o administrador cadastre e gerencie cursos, incluindo nome, carga horária, datas, local e instrutor. \\
 \textbf{Ator(es)} & Administrador \\
@@ -159,7 +165,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF046, RF047, RF048, RF049, RF050, RF053 \\
+\textbf{Referências} & \ref{rf:cadastro-curso}, \ref{rf:associar-participante-curso}, \ref{rf:carga-horaria}, \ref{rf:instrutor-responsavel}, \ref{rf:datas-curso}, \ref{rf:local-curso} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -172,7 +178,7 @@
 \hline
 \textbf{UC004} & \textbf{Emitir Certificado Individual} \\
 \hline
-\textbf{Dependências} & RF015, RF016, RF023, RF024, RF025, RF026, RF028, RF052 \\
+\textbf{Dependências} & \ref{rf:cadastro-participante}, \ref{rf:emissao-manual}, \ref{rf:gerar-pdf}, \ref{rf:preencher-campos-dinamicos}, \ref{rf:codigo-unico}, \ref{rf:registro-emissao}, \ref{rf:download-individual}, \ref{rf:validar-vinculo-participante}, \ref{rf:status-envio}, \ref{rf:reenviar-falha} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador emita um certificado individual, selecionando template, curso e participante, e gerando PDF com código único e QR Code. \\
 \textbf{Ator(es)} & Colaborador \\
@@ -206,6 +212,8 @@
 \hline
 9 & O sistema exibe o certificado gerado com opção de download. \\
 \hline
+10 & O sistema envia o certificado por e-mail para o participante (quando configurado). \\
+\hline
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
@@ -221,9 +229,11 @@
 \hline
 5 & Se o participante não estiver vinculado ao curso, o sistema bloqueia a emissão e exibe alerta. \\
 \hline
+10 & Se o envio por e-mail falhar, o sistema registra a falha e agenda reenvio automático. \\
+\hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF015, RF016, RF023, RF024, RF025, RF026, RF028, RF052 \\
+\textbf{Referências} & \ref{rf:cadastro-participante}, \ref{rf:emissao-manual}, \ref{rf:gerar-pdf}, \ref{rf:preencher-campos-dinamicos}, \ref{rf:codigo-unico}, \ref{rf:registro-emissao}, \ref{rf:download-individual}, \ref{rf:validar-vinculo-participante}, \ref{rf:status-envio}, \ref{rf:reenviar-falha} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -236,7 +246,7 @@
 \hline
 \textbf{UC005} & \textbf{Emitir Certificados em Lote} \\
 \hline
-\textbf{Dependências} & RF017, RF020, RF021, RF022 \\
+\textbf{Dependências} & \ref{rf:importar-csv}, \ref{rf:upload-lista-lote}, \ref{rf:processar-fila}, \ref{rf:notificar-processamento} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador emita certificados em lote a partir de uma lista de participantes, processando de forma assíncrona por fila. \\
 \textbf{Ator(es)} & Colaborador \\
@@ -284,7 +294,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF017, RF020, RF021, RF022 \\
+\textbf{Referências} & \ref{rf:importar-csv}, \ref{rf:upload-lista-lote}, \ref{rf:processar-fila}, \ref{rf:notificar-processamento} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -297,7 +307,7 @@
 \hline
 \textbf{UC006} & \textbf{Cadastrar Participante} \\
 \hline
-\textbf{Dependências} & RF015, RF054, RF055, RF058 \\
+\textbf{Dependências} & \ref{rf:cadastro-participante}, \ref{rf:cadastro-completo-participante}, \ref{rf:edicao-participante}, \ref{rf:busca-participante} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador cadastre participantes individualmente, informando nome, e-mail e CPF opcional. \\
 \textbf{Ator(es)} & Colaborador \\
@@ -341,7 +351,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF015, RF054, RF055, RF058 \\
+\textbf{Referências} & \ref{rf:cadastro-participante}, \ref{rf:cadastro-completo-participante}, \ref{rf:edicao-participante}, \ref{rf:busca-participante} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -354,7 +364,7 @@
 \hline
 \textbf{UC007} & \textbf{Importar Participantes} \\
 \hline
-\textbf{Dependências} & RF017, RF018, RF056 \\
+\textbf{Dependências} & \ref{rf:importar-csv}, \ref{rf:importar-excel}, \ref{rf:importar-sem-duplicidade} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador importe participantes em lote a partir de arquivos CSV ou Excel. \\
 \textbf{Ator(es)} & Colaborador \\
@@ -399,7 +409,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF017, RF018, RF056 \\
+\textbf{Referências} & \ref{rf:importar-csv}, \ref{rf:importar-excel}, \ref{rf:importar-sem-duplicidade} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -412,7 +422,7 @@
 \hline
 \textbf{UC008} & \textbf{Validar Certificado} \\
 \hline
-\textbf{Dependências} & RF033, RF034, RF035, RF036 \\
+\textbf{Dependências} & \ref{rf:portal-validacao}, \ref{rf:validar-certificado}, \ref{rf:qrcode}, \ref{rf:exibir-validacao} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve disponibilizar um portal público onde qualquer visitante possa validar um certificado informando o código único ou escaneando o QR Code. \\
 \textbf{Ator(es)} & Visitante \\
@@ -453,7 +463,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF033, RF034, RF035, RF036 \\
+\textbf{Referências} & \ref{rf:portal-validacao}, \ref{rf:validar-certificado}, \ref{rf:qrcode}, \ref{rf:exibir-validacao} \\
 \textbf{Comentários} & A validação via QR Code elimina a necessidade de digitação manual do código. \\
 \hline
 \end{tabular}
@@ -466,7 +476,7 @@
 \hline
 \textbf{UC009} & \textbf{Buscar Participantes} \\
 \hline
-\textbf{Dependências} & RF058 \\
+\textbf{Dependências} & \ref{rf:busca-participante} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador busque participantes por nome, e-mail ou CPF, exibindo os resultados de forma rápida e paginada. \\
 \textbf{Ator(es)} & Colaborador \\
@@ -507,7 +517,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF058 \\
+\textbf{Referências} & \ref{rf:busca-participante} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -520,7 +530,7 @@
 \hline
 \textbf{UC010} & \textbf{Visualizar Histórico de Certificados} \\
 \hline
-\textbf{Dependências} & RF057, RF058 \\
+\textbf{Dependências} & \ref{rf:historico-participante}, \ref{rf:busca-participante} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve exibir o histórico completo de certificados emitidos para um participante específico, incluindo data de emissão, template utilizado e status de validade. \\
 \textbf{Ator(es)} & Colaborador \\
@@ -560,7 +570,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF057, RF058 \\
+\textbf{Referências} & \ref{rf:historico-participante}, \ref{rf:busca-participante} \\
 \textbf{Comentários} & Estende o caso de uso Buscar Participantes. \\
 \hline
 \end{tabular}
@@ -573,7 +583,7 @@
 \hline
 \textbf{UC011} & \textbf{Gerenciar Organizações} \\
 \hline
-\textbf{Dependências} & RF059, RF060, RF061, RF062 \\
+\textbf{Dependências} & \ref{rf:cadastro-organizacao}, \ref{rf:associar-usuario-organizacao}, \ref{rf:organizacao-templates}, \ref{rf:organizacao-usuarios} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o administrador cadastre e gerencie organizações (multi-tenant), incluindo CNPJ, razão social, endereço e contato, bem como a associação de usuários e templates a cada organização. \\
 \textbf{Ator(es)} & Administrador \\
@@ -619,7 +629,7 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF059, RF060, RF061, RF062 \\
+\textbf{Referências} & \ref{rf:cadastro-organizacao}, \ref{rf:associar-usuario-organizacao}, \ref{rf:organizacao-templates}, \ref{rf:organizacao-usuarios} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -632,7 +642,7 @@
 \hline
 \textbf{UC012} & \textbf{Configurar Sistema} \\
 \hline
-\textbf{Dependências} & RF063, RF064, RF065 \\
+\textbf{Dependências} & \ref{rf:personalizar-mensagens}, \ref{rf:envio-automatico}, \ref{rf:regras-reemissao} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o administrador configure parâmetros gerais do sistema, incluindo personalização de mensagens padrão, ativação de envio automático e regras de reemissão de certificados. \\
 \textbf{Ator(es)} & Administrador \\
@@ -675,7 +685,7 @@
 6 & Se algum valor obrigatório estiver ausente, o sistema bloqueia o salvamento e exibe os campos pendentes. \\
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF063, RF064, RF065 \\
+\textbf{Referências} & \ref{rf:personalizar-mensagens}, \ref{rf:envio-automatico}, \ref{rf:regras-reemissao} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -688,7 +698,7 @@
 \hline
 \textbf{UC013} & \textbf{Abrir Chamado de Suporte} \\
 \hline
-\textbf{Dependências} & RF073 \\
+\textbf{Dependências} & \ref{rf:chamados-suporte} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o administrador abra chamados de suporte técnico, informando descrição do problema, prioridade e dados de contato. \\
 \textbf{Ator(es)} & Administrador \\
@@ -730,9 +740,117 @@
 \hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & RF073 \\
+\textbf{Referências} & \ref{rf:chamados-suporte} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
 \caption{Caso de uso UC013 -- Abrir Chamado de Suporte}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC014} & \textbf{Visualizar Dashboard} \\
+\hline
+\textbf{Dependências} & \ref{rf:lista-certificados}, \ref{rf:filtros-certificados}, \ref{rf:estatisticas-emissao}, \ref{rf:logs-acoes} \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve exibir um dashboard com a lista de certificados emitidos, filtros por curso, período, status e instrutor, estatísticas mensais de emissão e logs de ações realizadas. \\
+\textbf{Ator(es)} & Administrador, Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Usuário autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O usuário acessa a seção de dashboard. \\
+\hline
+2 & O sistema exibe a lista de certificados emitidos com filtros disponíveis. \\
+\hline
+3 & O usuário aplica filtros por curso, período, status ou instrutor. \\
+\hline
+4 & O sistema exibe os resultados filtrados. \\
+\hline
+5 & O sistema exibe estatísticas mensais de emissão. \\
+\hline
+6 & O sistema exibe logs de ações realizadas. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Dashboard exibido com dados atualizados.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+3 & Se nenhum certificado corresponder aos filtros, o sistema exibe "Nenhum resultado encontrado". \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & \ref{rf:lista-certificados}, \ref{rf:filtros-certificados}, \ref{rf:estatisticas-emissao}, \ref{rf:logs-acoes} \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC014 -- Visualizar Dashboard}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC015} & \textbf{Consultar Logs} \\
+\hline
+\textbf{Dependências} & \ref{rf:logs-autenticacao}, \ref{rf:eventos-criticos}, \ref{rf:exportacao-logs} \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador consulte logs de autenticação e eventos críticos do sistema, com opção de exportação dos registros. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de logs. \\
+\hline
+2 & O sistema exibe os logs de autenticação e eventos críticos. \\
+\hline
+3 & O administrador aplica filtros por período ou tipo de evento. \\
+\hline
+4 & O sistema exibe os registros filtrados. \\
+\hline
+5 & O administrador solicita a exportação dos logs. \\
+\hline
+6 & O sistema exporta os registros no formato selecionado. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Logs consultados e/ou exportados com sucesso.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+3 & Se não houver registros no período, o sistema exibe "Nenhum log encontrado". \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & \ref{rf:logs-autenticacao}, \ref{rf:eventos-criticos}, \ref{rf:exportacao-logs} \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC015 -- Consultar Logs}
 \end{table}

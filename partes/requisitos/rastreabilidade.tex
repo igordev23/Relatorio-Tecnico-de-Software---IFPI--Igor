@@ -1,52 +1,51 @@
 \subsection{Matriz de Rastreabilidade}
 
-A Tabela~\ref{tab:rastreabilidade} apresenta a matriz de rastreabilidade que relaciona os requisitos funcionais aos casos de uso, às principais classes do diagrama de classes e às entidades do banco de dados, garantindo a rastreabilidade entre os artefatos do projeto.
+A Tabela~\ref{tab:rastreabilidade} apresenta a matriz de rastreabilidade que relaciona os requisitos funcionais aos casos de uso, às principais classes do diagrama de classes e às entidades do banco de dados, garantindo a rastreabilidade entre os artefatos do projeto. A tabela foi disposta em orientação paisagem para preservar a legibilidade de seu conteúdo, uma vez que possui quatro colunas com textos extensos.
 
-\begin{table}[H]
+\begin{sidewaystable}[htbp]
 \centering
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|l|l|}
+\renewcommand{\arraystretch}{0.9}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Módulo / RFs} & \textbf{Casos de Uso} & \textbf{Classes} & \textbf{Tabelas} \\
 \hline
-Autenticação e Controle de Acesso (RF001–RF007) & Gerenciar Usuários, Definir Permissões & Usuario, UsuarioOrganizacao, Sessao & USUARIO, USUARIO\_ORGANIZACAO, SESSAO \\
+Autenticação e Controle de Acesso (\ref{rf:login-email}–\ref{rf:bloqueio-sessoes}) & Gerenciar Usuários, Definir Permissões & Usuario, UsuarioOrganizacao, Sessao & USUARIO, USUARIO\_ORGANIZACAO, SESSAO \\
 \hline
-Templates de Certificados (RF008–RF014) & Criar Template, Editar Template, Configurar Campos, Salvar, Prévia & Template, CampoDinamico, TemplateVersao & TEMPLATE, CAMPO\_DINAMICO, TEMPLATE\_VERSAO \\
+Templates de Certificados (\ref{rf:upload-templates}–\ref{rf:duplicar-templates}) & Criar Template, Editar Template, Configurar Campos, Salvar, Prévia & Template, CampoDinamico, TemplateVersao & TEMPLATE, CAMPO\_DINAMICO, TEMPLATE\_VERSAO \\
 \hline
-Entrada de Dados (RF015–RF022) & Cadastrar Part., Importar Part., Emitir Individual, Emitir em Lote & Participante, Importacao & PESSOA, PARTICIPANTE, IMPORTACAO \\
+Entrada de Dados (\ref{rf:cadastro-participante}–\ref{rf:notificar-processamento}) & Cadastrar Part., Importar Part., Emitir Individual, Emitir em Lote & Participante, Importacao & PESSOA, PARTICIPANTE, IMPORTACAO \\
 \hline
-Geração de Certificados (RF023–RF029) & Emitir Individual, Emitir em Lote, Fila, Notificar & Certificado, ValorCampo, FilaProcessamento & CERTIFICADO, VALOR\_CAMPO, FILA\_PROCESSAMENTO \\
+Geração de Certificados (\ref{rf:gerar-pdf}–\ref{rf:download-lote}) & Emitir Individual, Emitir em Lote, Fila, Notificar & Certificado, ValorCampo, FilaProcessamento & CERTIFICADO, VALOR\_CAMPO, FILA\_PROCESSAMENTO \\
 \hline
-Envio e Comunicação (RF030–RF032) & Notificar & EnvioEmail & ENVIO\_EMAIL \\
+Envio e Comunicação (\ref{rf:personalizacao-email}–\ref{rf:reenviar-falha}) & Notificar & EnvioEmail & ENVIO\_EMAIL \\
 \hline
-Validação Pública e Antifraude (RF033–RF036) & Validar Cert., Exibir Dados, Escanear QR Code & Certificado & CERTIFICADO \\
+Validação Pública e Antifraude (\ref{rf:portal-validacao}–\ref{rf:exibir-validacao}) & Validar Cert., Exibir Dados, Escanear QR Code & Certificado & CERTIFICADO \\
 \hline
-Assinaturas Digitais (RF037–RF038) & Emitir Individual & AssinaturaDigital & ASSINATURA\_DIGITAL \\
+Assinaturas Digitais (\ref{rf:assinatura-digitalizada}–\ref{rf:hash-assinatura}) & Emitir Individual & AssinaturaDigital & ASSINATURA\_DIGITAL \\
 \hline
-Dashboard e Gestão (RF039–RF042) & --- & --- & views / consultas SQL \\
+Dashboard e Gestão (\ref{rf:lista-certificados}–\ref{rf:logs-acoes}) & Visualizar Dashboard & --- & views / consultas SQL \\
 \hline
-Auditoria e Segurança (RF043–RF045) & --- & LogSistema, LogAuditoria & LOGSISTEMA, LOG\_AUDITORIA \\
+Auditoria e Segurança (\ref{rf:responsavel-certificado}–\ref{rf:arquivamento-certificados}) & Emitir Individual & LogSistema, LogAuditoria & LOGSISTEMA, LOG\_AUDITORIA \\
 \hline
-Gestão de Cursos/Eventos (RF046–RF053) & Gerenciar Cursos & Curso, Matricula & CURSO, MATRICULA \\
+Gestão de Cursos/Eventos (\ref{rf:cadastro-curso}–\ref{rf:local-curso}) & Gerenciar Cursos & Curso, Matricula & CURSO, MATRICULA \\
 \hline
-Participantes (RF054–RF058) & Cadastrar Part., Importar Part., Buscar Part., Visualizar Histórico & Participante & PESSOA, PARTICIPANTE \\
+Participantes (\ref{rf:cadastro-completo-participante}–\ref{rf:busca-participante}) & Cadastrar Part., Importar Part., Buscar Part., Visualizar Histórico & Participante & PESSOA, PARTICIPANTE \\
 \hline
-Multiempresa (RF059–RF062) & Gerenciar Organizações & Organizacao, UsuarioOrganizacao & ORGANIZACAO, USUARIO\_ORGANIZACAO \\
+Multiempresa (\ref{rf:cadastro-organizacao}–\ref{rf:organizacao-usuarios}) & Gerenciar Organizações & Organizacao, UsuarioOrganizacao & ORGANIZACAO, USUARIO\_ORGANIZACAO \\
 \hline
-Configurações do Sistema (RF063–RF065) & Configurar Sistema & ConfiguracaoSistema & CONFIGURACAO\_SISTEMA \\
+Configurações do Sistema (\ref{rf:personalizar-mensagens}–\ref{rf:regras-reemissao}) & Configurar Sistema & ConfiguracaoSistema & CONFIGURACAO\_SISTEMA \\
 \hline
-Armazenamento e Arquivos (RF066) & Criar Template, Editar Template & Template, TemplateVersao & TEMPLATE, TEMPLATE\_VERSAO \\
+Armazenamento e Arquivos (\ref{rf:armazenar-templates}) & Criar Template, Editar Template & Template, TemplateVersao & TEMPLATE, TEMPLATE\_VERSAO \\
 \hline
-Notificações e Alertas (RF067–RF069) & Notificar & EnvioEmail & ENVIO\_EMAIL \\
+Notificações e Alertas (\ref{rf:notificar-falhas}–\ref{rf:alertar-template-invalido}) & Notificar & EnvioEmail & ENVIO\_EMAIL \\
 \hline
-Monitoramento e Logs (RF070–RF072) & --- & LogSistema, LogAuditoria & LOGSISTEMA, LOG\_AUDITORIA \\
+Monitoramento e Logs (\ref{rf:logs-autenticacao}–\ref{rf:exportacao-logs}) & Consultar Logs & LogSistema, LogAuditoria & LOGSISTEMA, LOG\_AUDITORIA \\
 \hline
-Suporte e Operação (RF073–RF075) & Abrir Chamado & ChamadoSuporte & CHAMADO\_SUPORTE \\
+Suporte e Operação (\ref{rf:chamados-suporte}–\ref{rf:termos-uso}) & Abrir Chamado & ChamadoSuporte & CHAMADO\_SUPORTE \\
 \hline
-\end{tabular}%
-}
+\end{tabularx}
 \caption{Matriz de rastreabilidade entre requisitos funcionais, casos de uso, classes e tabelas do banco de dados}
 \label{tab:rastreabilidade}
-\end{table}
+\end{sidewaystable}
