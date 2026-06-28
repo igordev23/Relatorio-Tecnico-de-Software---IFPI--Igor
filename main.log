@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  28 JUN 2026 14:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  28 JUN 2026 14:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1559,18 +1559,18 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 844--850
 []|| []| 
  []
 
-) [52] (partes/diagramas/Diagrama_de_Classes.tex
+) [52] (partes/diagramas/Diagrama_de_Classes.tex [53]
 Overfull \hbox (3.59525pt too wide) in paragraph at lines 5--6
 \T1/ptm/m/n/12 Par-ti-ci-pante ar-ma-zena da-dos ca-das-trais (cpf, da-ta-Ca-das-tro), com o mé-todo vin-cu-lar-Curso(curso).
  []
 
-[53] [54]
-<imagens/Diagrama-de-classes.png, id=1298, 1273.75874pt x 1629.08624pt>
+[54] [55]
+<imagens/Diagrama-de-classes.png, id=1302, 1273.75874pt x 1629.08624pt>
 File: imagens/Diagrama-de-classes.png Graphic file (type png)
 <use imagens/Diagrama-de-classes.png>
 Package pdftex.def Info: imagens/Diagrama-de-classes.png  used on input line 23.
 (pdftex.def)             Requested size: 455.24411pt x 582.21992pt.
- [55]) [56 <./imagens/Diagrama-de-classes.png>] [57] [58] (partes/diagramas/arquitetura-backend.tex
+) [56 <./imagens/Diagrama-de-classes.png>] [57] [58] (partes/diagramas/arquitetura-backend.tex
 <imagens/backend.png, id=1324, 1808.7575pt x 1728.4575pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
@@ -1583,11 +1583,11 @@ File: imagens/frontend.png Graphic file (type png)
 Package pdftex.def Info: imagens/frontend.png  used on input line 4.
 (pdftex.def)             Requested size: 409.71692pt x 309.67195pt.
 ) [59 <./imagens/backend.png>] (partes/diagramas/der.tex [60 <./imagens/frontend.png>] [61] [62]
-<imagens/DER.png, id=1363, 1175.39125pt x 1084.05pt>
+<imagens/DER.png, id=1363, 1325.95375pt x 1214.5375pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 33.
-(pdftex.def)             Requested size: 409.71692pt x 377.8683pt.
+(pdftex.def)             Requested size: 409.71692pt x 375.2796pt.
 ) [63 <./imagens/DER.png>]
 <imagens/home.png, id=1370, 1445.4pt x 903.375pt>
 File: imagens/home.png Graphic file (type png)
@@ -1838,7 +1838,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,18n,94p,1954b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/franc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (87 pages, 1462867 bytes).
+Output written on main.pdf (87 pages, 1494103 bytes).
 PDF statistics:
  1680 PDF objects out of 1728 (max. 8388607)
  443 named destinations out of 1000 (max. 500000)
