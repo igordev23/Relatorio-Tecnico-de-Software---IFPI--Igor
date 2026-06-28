@@ -79,6 +79,9 @@
 \draw[assoc] (visit) -- (validar);
 \draw[assoc] (visit) -- (escanear);
 
+\node[usecase, fill=purple!25] (dashboard) at (13,0.5) {Visualizar Dashboard};
+\node[usecase, fill=purple!25] (logs) at (15.5,4) {Consultar Logs};
+
 % Includes
 \draw[include] (usuarios) -- (permissoes) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
 \draw[include] (template) -- (campos) node[midway, above, font=\tiny] {\guillemotleft include\guillemotright};
@@ -96,6 +99,9 @@
 \draw[extend] (escanear) -- (validar) node[midway, above, font=\tiny] {\guillemotleft extend\guillemotright};
 \draw[extend] (reenvio) -- (emitir) node[midway, above, font=\tiny] {\guillemotleft extend\guillemotright};
 \draw[extend] (historico) -- (buscar) node[midway, above, font=\tiny] {\guillemotleft extend\guillemotright};
+
+\draw[assoc] (colab) -- (dashboard);
+\draw[assoc] (admin) -- (logs);
 
 \end{tikzpicture}
 }
