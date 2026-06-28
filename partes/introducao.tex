@@ -4,9 +4,9 @@ A emissão de certificados é uma atividade essencial para empresas de treinamen
 
 Essas práticas resultam em retrabalho, inconsistências, falta de padronização e dificuldade de controle operacional. Além disso, ferramentas como AutoCrat e documentos espalhados entre diferentes plataformas não foram projetados para uso profissional em escala, o que gera limitação, fragilidade e risco de inconsistências.
 
-A ausência de um sistema integrado compromete a rastreabilidade e a credibilidade dos certificados, uma vez que não há mecanismos oficiais de validação pública, histórico centralizado, indicadores gerenciais ou emissão em lote eficiente. Estudos recentes mostram que sistemas baseados em QR Code têm se destacado como alternativa eficaz para verificação de credenciais acadêmicas \cite{rahman2026}, combinando criptografia e códigos bidimensionais para garantir a autenticidade dos documentos \cite{wellem2021}. Esse cenário se agrava com o crescimento de cursos online e da necessidade de certificação confiável.
+A ausência de um sistema integrado compromete a rastreabilidade e a credibilidade dos certificados, uma vez que não há mecanismos oficiais de validação pública, histórico centralizado, indicadores gerenciais ou emissão em lote eficiente. Estudos têm mostrado que sistemas baseados em QR Code têm se destacado como alternativa eficaz para verificação de credenciais acadêmicas \cite{rahman2026}, combinando criptografia e códigos bidimensionais para garantir a autenticidade dos documentos \cite{wellem2021}. Esse cenário se agrava com o crescimento de cursos online e da necessidade de certificação confiável.
 
-Diante disso, justifica-se o desenvolvimento de uma solução centralizada e automatizada, capaz de reduzir erros humanos, otimizar o tempo operacional e garantir segurança, conformidade e profissionalismo. Recursos como códigos únicos, validação via QR Code e assinaturas digitais ampliam a confiabilidade dos certificados e fortalecem a imagem institucional das organizações emissoras \cite{kulkarni2025}. Soluções semelhantes já foram implementadas com sucesso utilizando criptografia AES e QR Code para verificação de certificados acadêmicos \cite{olusanya2021}.
+Diante disso, justifica-se o desenvolvimento de uma solução centralizada e automatizada, capaz de reduzir erros humanos, otimizar o tempo operacional e garantir segurança, conformidade e profissionalismo. Recursos como códigos únicos, validação via QR Code e assinaturas digitais ampliam a confiabilidade dos certificados e fortalecem a imagem institucional das organizações emissoras \cite{kulkarni2025}.
 
 O presente trabalho consiste no desenvolvimento de um Sistema Web — produto do tipo SaaS (Software as a Service) com arquitetura multi-tenant — destinado à emissão, gestão e autenticação de certificados. O sistema foi projetado com base nas necessidades reais de uma empresa parceira do ramo de treinamentos corporativos, que atualmente enfrenta as limitações operacionais descritas. Dessa forma, o escopo abrange desde a automatização da criação e personalização de certificados até a disponibilização de um portal público de validação, visando substituir processos manuais por uma plataforma profissional, segura e escalável.
 
@@ -19,7 +19,7 @@ Este relatório técnico está organizado da seguinte forma: a Seção 2 apresen
 
 \subsubsection{Geral}
 
-Projetar e implementar um sistema web automatizado para emissão, gestão, envio e validação de certificados, destinado a empresas de treinamento corporativo, instituições educacionais e demais organizações que necessitem certificar participantes em cursos, capacitações e eventos, a fim de eliminar a dependência de processos manuais e soluções improvisadas, garantindo padronização dos documentos, rastreabilidade do histórico de emissões, autenticação confiável via código único e QR Code, emissão em lote eficiente e centralização dos dados em uma única plataforma.
+Projetar e implementar um sistema web automatizado para emissão, gestão, envio e validação de certificados, destinado a empresas de treinamento corporativo, instituições educacionais e demais organizações que necessitem certificar participantes em cursos, capacitações e eventos, a fim de eliminar a dependência de processos manuais e soluções improvisadas, garantindo padronização dos documentos, rastreabilidade do histórico de emissões, autenticação confiável via código único e QR Code, centralização dos dados em uma única plataforma e estabelecendo as bases para emissão em lote eficiente em versões futuras.
 
 \subsubsection{Específicos}
 
@@ -28,7 +28,9 @@ Projetar e implementar um sistema web automatizado para emissão, gestão, envio
     \item desenvolver a funcionalidade de importação de dados a partir de arquivos CSV e Excel (.xlsx) com processamento em fila para emissão em lote;
     \item implementar um módulo de notificação por e-mail com suporte a variáveis dinâmicas e reenvio automático em caso de falha;
     \item desenvolver um mecanismo de autenticação pública via código único e QR Code para garantir a integridade dos certificados e prevenir fraudes;
-    \item desenvolver um módulo de dashboard com indicadores gerenciais, filtros por período, curso e status;
+    \item desenvolver um módulo de dashboard com indicadores gerenciais para apoiar o controle operacional e a tomada de decisão das organizações sobre suas emissões, dispondo de filtros por período, curso e status;
     \item planejar e executar testes unitários e de integração para validação dos módulos implementados;
-    \item configurar o ambiente de implantação do sistema em infraestrutura cloud com deploys automáticos a partir do repositório Git.
+    \item configurar o ambiente de implantação do sistema em infraestrutura cloud com deploys automáticos a partir do repositório Git;
+    \item implementar mecanismos de conformidade com a LGPD, incluindo registro de consentimento, anonimização de dados pessoais, controle de acesso a logs sensíveis e trilha de auditoria para operações críticas;
+    \item projetar e implementar a arquitetura multi-tenant do sistema, garantindo isolamento de dados entre organizações, segurança por tenant e escalabilidade horizontal.
 \end{itemize}

@@ -38,7 +38,7 @@ O fluxo de dados percorre as camadas da seguinte forma: uma requisição HTTP ch
 
 O frontend adota uma arquitetura em camadas com React, composta por quatro camadas que separam responsabilidades de forma clara. A \textbf{View} (apresentação) contém os componentes React que renderizam a interface do usuário, divididos em páginas (\code{views/}) e componentes reutilizáveis (\code{components/}), incluindo os do shadcn/ui. A \textbf{ViewModel} (lógica de apresentação) é formada por custom hooks (\code{useCertificatesViewModel}, \code{useDashboardViewModel}, etc.) que encapsulam estado (\code{useState}), efeitos colaterais (\code{useEffect}) e dados derivados (\code{useMemo}), expondo um objeto com estado e manipuladores para a camada View. O \textbf{Service} (infraestrutura) centraliza a comunicação com o backend: o módulo \code{api.ts} consome a API REST via \code{fetch}, e o módulo \code{envios.ts} gerencia a fila local de envios de e-mail no \code{localStorage} --- armazenando apenas dados operacionais (nome e e-mail do destinatário, \textit{status} da entrega), sem tokens de autenticação ou credenciais. O \textbf{Model} (domínio) reúne as interfaces TypeScript que definem as entidades do sistema (\code{Certificate}, \code{Template}, \code{VerifyResult}, \code{EnvioEmail}). O TanStack Router orquestra a navegação entre as Views, e o Tailwind CSS gerencia a estilização em todas as camadas de apresentação. Essa separação permite testar a lógica de apresentação independentemente da interface, utilizando Jest para validar os ViewModels sem depender de um navegador. Como limitação, o aumento do número de ViewModels eleva a quantidade de arquivos e hooks, o que pode tornar a navegação entre camadas mais custosa em projetos de grande escala.
 
-O fluxo de comunicação entre as duas aplicações ocorre da seguinte forma: o frontend SPA, executado no navegador, faz requisições HTTPS aos \textit{Route Handlers} do backend por meio do módulo \code{api.ts} (camada Service), que encapsula a \code{fetch} API nativa. As requisições são autenticadas via token JWT gerenciado pelo Supabase Auth e trafegam sobre HTTPS (TLS 1.2), conforme RNF044. O backend processa a requisição através de suas quatro camadas --- Apresentação, Aplicação, Domínio e Infraestrutura --- e retorna a resposta padronizada ao frontend. Esse fluxo ponta a ponta está representado nos diagramas das Figuras~\ref{fig:backend} e~\ref{fig:frontend}, onde a seta "HTTPS REST + JWT" conecta o frontend SPA aos \textit{Route Handlers} do backend.
+O fluxo de comunicação entre as duas aplicações ocorre da seguinte forma: o frontend SPA, executado no navegador, faz requisições HTTPS aos \textit{Route Handlers} do backend por meio do módulo \code{api.ts} (camada Service), que encapsula a \code{fetch} API nativa. As requisições são autenticadas via token JWT gerenciado pelo Supabase Auth e trafegam sobre HTTPS (TLS 1.2), conforme \ref{rnf:api-communication}. O backend processa a requisição através de suas quatro camadas --- Apresentação, Aplicação, Domínio e Infraestrutura --- e retorna a resposta padronizada ao frontend. Esse fluxo ponta a ponta está representado nos diagramas das Figuras~\ref{fig:backend} e~\ref{fig:frontend}, onde a seta "HTTPS REST + JWT" conecta o frontend SPA aos \textit{Route Handlers} do backend.
 
 \input{partes/diagramas/arquitetura-backend}
 \input{partes/diagramas/arquitetura-frontend}
@@ -62,7 +62,7 @@ A Figura~\ref{fig:home} apresenta a \textit{landing page} do sistema, que exibe 
 
 \subsubsection{Dashboard}
 
-A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, acessível a partir do menu lateral. O dashboard apresenta quatro cartões de estatísticas (certificados emitidos, certificados ativos, templates e envios) e dois atalhos de navegação para as páginas de gerenciamento de templates e certificados. Esta tela atende aos requisitos \textbf{RF039} (exibir lista de certificados), \textbf{RF040} (filtros) e \textbf{RF041} (estatísticas de emissão).
+A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, acessível a partir do menu lateral. O dashboard apresenta quatro cartões de estatísticas (certificados emitidos, certificados ativos, templates e envios) e dois atalhos de navegação para as páginas de gerenciamento de templates e certificados. Esta tela atende aos requisitos \textbf{\ref{rf:lista-certificados}} (exibir lista de certificados), \textbf{\ref{rf:filtros-certificados}} (filtros) e \textbf{\ref{rf:estatisticas-emissao}} (estatísticas de emissão).
 
 \begin{figure}[H]
 \centering
@@ -73,7 +73,7 @@ A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, ac
 
 \subsubsection{Templates}
 
-A Figura~\ref{fig:templates} apresenta a página de gerenciamento de templates. Nela, o usuário pode criar novos modelos de certificado, visualizar a lista de templates existentes e personalizar a aparência de cada um (cores, fontes, bordas) através de um editor visual inline com pré-visualização em tempo real. Esta tela atende aos requisitos \textbf{RF008} (upload de templates), \textbf{RF009} (personalização), \textbf{RF010} (selecionar template da galeria), \textbf{RF012} (criação de campos dinâmicos) e \textbf{RF013} (salvar configurações de mapeamento).
+A Figura~\ref{fig:templates} apresenta a página de gerenciamento de templates. Nela, o usuário pode criar novos modelos de certificado, visualizar a lista de templates existentes e personalizar a aparência de cada um (cores, fontes, bordas) através de um editor visual inline com pré-visualização em tempo real. Esta tela atende aos requisitos \textbf{\ref{rf:upload-templates}} (upload de templates), \textbf{\ref{rf:personalizacao-templates}} (personalização), \textbf{\ref{rf:selecionar-template-galeria}} (selecionar template da galeria), \textbf{\ref{rf:edicao-campos-dinamicos}} (criação de campos dinâmicos) e \textbf{\ref{rf:mapeamento-campos}} (salvar configurações de mapeamento).
 
 \begin{figure}[H]
 \centering
@@ -84,7 +84,7 @@ A Figura~\ref{fig:templates} apresenta a página de gerenciamento de templates. 
 
 \subsubsection{Emissão de Certificados}
 
-A Figura~\ref{fig:certificados-novo} mostra o formulário de emissão de certificados. O usuário seleciona um template, preenche os dados do participante (nome, CPF, curso, carga horária, e-mail opcional e data de validade) e confirma a emissão. O sistema gera automaticamente um código de verificação único e registra o envio por e-mail quando o endereço é informado. Esta tela atende aos requisitos \textbf{RF015} (cadastro de participantes), \textbf{RF016} (emissão manual), \textbf{RF023} (gerar PDF), \textbf{RF024} (preenchimento automático de campos), \textbf{RF025} (código único), \textbf{RF026} (registro de data e hora) e \textbf{RF028} (download individual).
+A Figura~\ref{fig:certificados-novo} mostra o formulário de emissão de certificados. O usuário seleciona um template, preenche os dados do participante (nome, CPF, curso, carga horária, e-mail opcional e data de validade) e confirma a emissão. O sistema gera automaticamente um código de verificação único e registra o envio por e-mail quando o endereço é informado. Esta tela atende aos requisitos \textbf{\ref{rf:cadastro-participante}} (cadastro de participantes), \textbf{\ref{rf:emissao-manual}} (emissão manual), \textbf{\ref{rf:gerar-pdf}} (gerar PDF), \textbf{\ref{rf:preencher-campos-dinamicos}} (preenchimento automático de campos), \textbf{\ref{rf:codigo-unico}} (código único), \textbf{\ref{rf:registro-emissao}} (registro de data e hora) e \textbf{\ref{rf:download-individual}} (download individual).
 
 \begin{figure}[H]
 \centering
@@ -95,7 +95,7 @@ A Figura~\ref{fig:certificados-novo} mostra o formulário de emissão de certifi
 
 \subsubsection{Lista de Certificados}
 
-A Figura~\ref{fig:certificados} exibe a lista de certificados emitidos, com campo de busca por nome, CPF ou código de verificação. Cada certificado exibe o status (ativo ou vencido), o curso, a carga horária e opções de ação: copiar código de verificação, editar validade, baixar PDF e editar dados do certificado. Esta tela atende aos requisitos \textbf{RF027} (reemissão mantendo histórico), \textbf{RF028} (download individual), \textbf{RF039} (lista completa de certificados) e \textbf{RF040} (filtros por curso, período e status).
+A Figura~\ref{fig:certificados} exibe a lista de certificados emitidos, com campo de busca por nome, CPF ou código de verificação. Cada certificado exibe o status (ativo ou vencido), o curso, a carga horária e opções de ação: copiar código de verificação, editar validade, baixar PDF e editar dados do certificado. Esta tela atende aos requisitos \textbf{\ref{rf:reemissao-historico}} (reemissão mantendo histórico), \textbf{\ref{rf:download-individual}} (download individual), \textbf{\ref{rf:lista-certificados}} (lista completa de certificados) e \textbf{\ref{rf:filtros-certificados}} (filtros por curso, período e status).
 
 \begin{figure}[H]
 \centering
@@ -106,7 +106,7 @@ A Figura~\ref{fig:certificados} exibe a lista de certificados emitidos, com camp
 
 \subsubsection{Envios}
 
-A Figura~\ref{fig:envios} apresenta o histórico de envios de e-mail realizados pelo sistema. Cada registro exibe o destinatário, o nome do participante, a data do envio e o status (enviado, falhou ou pendente). Esta tela atende ao requisito \textbf{RF031} (registrar status de envio).
+A Figura~\ref{fig:envios} apresenta o histórico de envios de e-mail realizados pelo sistema. Cada registro exibe o destinatário, o nome do participante, a data do envio e o status (enviado, falhou ou pendente). Esta tela atende ao requisito \textbf{\ref{rf:status-envio}} (registrar status de envio).
 
 \begin{figure}[H]
 \centering
@@ -117,7 +117,7 @@ A Figura~\ref{fig:envios} apresenta o histórico de envios de e-mail realizados 
 
 \subsubsection{Verificação Pública}
 
-A Figura~\ref{fig:verificar} mostra a página pública de verificação de autenticidade de certificados. O usuário informa o CPF do participante e o código de verificação presente no certificado. O sistema consulta a base de dados e retorna o resultado: certificado válido, expirado ou não encontrado. Esta tela atende aos requisitos \textbf{RF033} (portal público de validação), \textbf{RF034} (validação via código único) e \textbf{RF036} (exibir informações do certificado).
+A Figura~\ref{fig:verificar} mostra a página pública de verificação de autenticidade de certificados. O usuário informa o CPF do participante e o código de verificação presente no certificado. O sistema consulta a base de dados e retorna o resultado: certificado válido, expirado ou não encontrado. Esta tela atende aos requisitos \textbf{\ref{rf:portal-validacao}} (portal público de validação), \textbf{\ref{rf:validar-certificado}} (validação via código único) e \textbf{\ref{rf:exibir-validacao}} (exibir informações do certificado).
 
 \begin{figure}[H]
 \centering

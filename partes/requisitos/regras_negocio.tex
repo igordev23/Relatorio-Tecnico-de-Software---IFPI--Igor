@@ -3,9 +3,8 @@
 Além dos requisitos funcionais, foram identificadas regras de negócio que impõem restrições ou condições sobre as funcionalidades do sistema:
 
 \begin{itemize}
-\item RN001 – Não deve ser permitido acesso a áreas restritas sem autenticação prévia.
-\item RN002 – Não deve ser permitido acesso simultâneo com a mesma conta.
-\item RN003 – Certificados não podem ser excluídos definitivamente, devendo ser arquivados.
-\item RN004 – Certificados só podem ser emitidos para participantes previamente vinculados ao curso ou evento.
-\item RN006 – O reenvio automático de certificados com falha deve respeitar o limite máximo de 3 tentativas com intervalo mínimo de 10 minutos entre cada uma.
+\rnitem{rn:acesso-restrito}{Não deve ser permitido acesso a áreas restritas sem autenticação prévia.}
+\rnitem{rn:certificado-arquivado}{Certificados não podem ser excluídos definitivamente, devendo ser arquivados.}
+\rnitem{rn:vinculo-participante}{Certificados só podem ser emitidos para participantes previamente vinculados ao curso ou evento.}
+\rnitem{rn:reenvio-limite}{O reenvio automático de certificados com falha deve respeitar o limite máximo de 3 tentativas com intervalo mínimo de 10 minutos entre cada uma.}
 \end{itemize}
