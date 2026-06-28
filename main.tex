@@ -32,6 +32,30 @@
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
 
+% Contadores automáticos para requisitos
+\newcounter{rf}
+\newcounter{rnf}
+\newcounter{rn}
+
+\renewcommand{\therf}{RF\ifnum\value{rf}<10 0\fi\ifnum\value{rf}<100 0\fi\arabic{rf}}
+\renewcommand{\thernf}{RNF\ifnum\value{rnf}<10 0\fi\ifnum\value{rnf}<100 0\fi\arabic{rnf}}
+\renewcommand{\thern}{RN\ifnum\value{rn}<10 0\fi\arabic{rn}}
+
+\newcommand{\rfitem}[3]{%
+  \refstepcounter{rf}%
+  \item \label{#1}\therf\ [#2] -- #3%
+}
+
+\newcommand{\rnfitem}[2]{%
+  \refstepcounter{rnf}%
+  \item \label{#1}\thernf\ -- #2%
+}
+
+\newcommand{\rnitem}[2]{%
+  \refstepcounter{rn}%
+  \item \label{#1}\thern\ -- #2%
+}
+
 % Configuração dos códigos
 \lstset{
     language=Python,
