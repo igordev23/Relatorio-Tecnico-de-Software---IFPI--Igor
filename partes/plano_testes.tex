@@ -33,7 +33,7 @@ Cada caso de teste é identificado por um código único (CT\textit{nnn}) e desc
 \bottomrule
 \endlastfoot
 
-\multicolumn{3}{l}{\textbf{Módulo de Templates de Certificados (RF008--RF014)}} \\
+\multicolumn{3}{l}{\textbf{Módulo de Templates de Certificados (\ref{rf:upload-templates}--\ref{rf:duplicar-templates})}} \\
 \midrule
 
 CT001 & Criação de template & Template é criado com nome, descrição e \textit{layout} mesclado aos valores padrão. \\
@@ -44,7 +44,7 @@ CT005 & Exclusão de template & Template é removido após confirmação do usu�
 CT006 & Personalização de \textit{layout} & Configurações parciais são mescladas com os valores padrão (\texttt{DEFAULT\_LAYOUT}). \\
 
 \midrule
-\multicolumn{3}{l}{\textbf{Módulo de Geração de Certificados (RF023--RF029)}} \\
+\multicolumn{3}{l}{\textbf{Módulo de Geração de Certificados (\ref{rf:gerar-pdf}--\ref{rf:download-lote})}} \\
 \midrule
 
 CT007 & Emissão manual de certificado & Selecionar template, preencher dados e confirmar gera certificado com código único. \\
@@ -62,7 +62,7 @@ CT018 & Formatação de CPF & CPF é automaticamente formatado (XXX.XXX.XXX-XX) 
 CT019 & Emissão com template inexistente & \textit{Endpoint} lança \texttt{TemplateNotFoundError} se o \texttt{templateId} não existir. \\
 
 \midrule
-\multicolumn{3}{l}{\textbf{Módulo de Validação Pública e Antifraude (RF033--RF036)}} \\
+\multicolumn{3}{l}{\textbf{Módulo de Validação Pública e Antifraude (\ref{rf:portal-validacao}--\ref{rf:exibir-validacao})}} \\
 \midrule
 
 CT020 & Validação via código único & Código válido retorna certificado com status autêntico e válido. \\
@@ -73,7 +73,7 @@ CT024 & Remoção de máscara do CPF & CPF com pontuação tem os caracteres nã
 CT025 & Tratamento de erro na validação & Erros retornados pela API são exibidos ao usuário e o estado de carregamento é gerenciado corretamente. \\
 
 \midrule
-\multicolumn{3}{l}{\textbf{Módulo de \textit{Dashboard} e Gestão (RF039--RF041)}} \\
+\multicolumn{3}{l}{\textbf{Módulo de \textit{Dashboard} e Gestão (\ref{rf:lista-certificados}--\ref{rf:estatisticas-emissao})}} \\
 \midrule
 
 CT026 & Listagem de certificados & Tabela exibe certificados carregados da API com gerenciamento do estado de carregamento. \\
