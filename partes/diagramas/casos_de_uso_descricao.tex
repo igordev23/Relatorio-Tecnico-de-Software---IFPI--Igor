@@ -27,11 +27,15 @@
 \hline
 3 & O administrador seleciona criar, editar ou desativar um usuário. \\
 \hline
-4 & O sistema valida os dados informados. \\
+4 & O administrador preenche os dados do usuário (nome, e-mail e senha). \\
 \hline
-5 & O sistema persiste a alteração no banco de dados. \\
+5 & O administrador define os perfis de acesso e permissões do usuário. \\
 \hline
-6 & O sistema exibe confirmação da operação. \\
+6 & O sistema valida os dados informados. \\
+\hline
+7 & O sistema persiste a alteração no banco de dados. \\
+\hline
+8 & O sistema exibe confirmação da operação. \\
 \hline
 \end{tabular} \\
 \hline
@@ -80,13 +84,15 @@
 \hline
 2 & O sistema exibe a galeria de templates existentes. \\
 \hline
-3 & O administrador faz upload de um novo arquivo PPTX ou PDF. \\
+3 & O administrador seleciona criar um novo template ou editar um existente. \\
 \hline
-4 & O sistema valida o formato do arquivo e exibe preview. \\
+4 & O administrador faz upload de um novo arquivo PPTX ou PDF (ou mantém o template existente). \\
 \hline
-5 & O administrador configura campos dinâmicos e personaliza cores e fontes. \\
+5 & O sistema valida o formato do arquivo e exibe preview. \\
 \hline
-6 & O sistema salva o template e retorna à galeria. \\
+6 & O administrador configura campos dinâmicos e personaliza cores e fontes. \\
+\hline
+7 & O sistema salva o template e retorna à galeria. \\
 \hline
 \end{tabular} \\
 \hline
@@ -172,7 +178,7 @@
 \hline
 \textbf{UC004} & \textbf{Emitir Certificado Individual} \\
 \hline
-\textbf{Dependências} & \ref{rf:cadastro-participante}, \ref{rf:emissao-manual}, \ref{rf:gerar-pdf}, \ref{rf:preencher-campos-dinamicos}, \ref{rf:codigo-unico}, \ref{rf:registro-emissao}, \ref{rf:download-individual}, \ref{rf:validar-vinculo-participante} \\
+\textbf{Dependências} & \ref{rf:cadastro-participante}, \ref{rf:emissao-manual}, \ref{rf:gerar-pdf}, \ref{rf:preencher-campos-dinamicos}, \ref{rf:codigo-unico}, \ref{rf:registro-emissao}, \ref{rf:download-individual}, \ref{rf:validar-vinculo-participante}, \ref{rf:status-envio}, \ref{rf:reenviar-falha} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
 \textbf{Descrição} & O sistema deve permitir que o colaborador emita um certificado individual, selecionando template, curso e participante, e gerando PDF com código único e QR Code. \\
 \textbf{Ator(es)} & Colaborador \\
@@ -206,6 +212,8 @@
 \hline
 9 & O sistema exibe o certificado gerado com opção de download. \\
 \hline
+10 & O sistema envia o certificado por e-mail para o participante (quando configurado). \\
+\hline
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
@@ -221,9 +229,11 @@
 \hline
 5 & Se o participante não estiver vinculado ao curso, o sistema bloqueia a emissão e exibe alerta. \\
 \hline
+10 & Se o envio por e-mail falhar, o sistema registra a falha e agenda reenvio automático. \\
+\hline
 \end{tabular} \\
 \hline
-\textbf{Referências} & \ref{rf:cadastro-participante}, \ref{rf:emissao-manual}, \ref{rf:gerar-pdf}, \ref{rf:preencher-campos-dinamicos}, \ref{rf:codigo-unico}, \ref{rf:registro-emissao}, \ref{rf:download-individual}, \ref{rf:validar-vinculo-participante} \\
+\textbf{Referências} & \ref{rf:cadastro-participante}, \ref{rf:emissao-manual}, \ref{rf:gerar-pdf}, \ref{rf:preencher-campos-dinamicos}, \ref{rf:codigo-unico}, \ref{rf:registro-emissao}, \ref{rf:download-individual}, \ref{rf:validar-vinculo-participante}, \ref{rf:status-envio}, \ref{rf:reenviar-falha} \\
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
