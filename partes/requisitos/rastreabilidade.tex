@@ -1,13 +1,13 @@
 \subsection{Matriz de Rastreabilidade}
 
-A Tabela~\ref{tab:rastreabilidade} apresenta a matriz de rastreabilidade que relaciona os requisitos funcionais aos casos de uso, às principais classes do diagrama de classes e às entidades do banco de dados, garantindo a rastreabilidade entre os artefatos do projeto.
+A Tabela~\ref{tab:rastreabilidade} apresenta a matriz de rastreabilidade que relaciona os requisitos funcionais aos casos de uso, às principais classes do diagrama de classes e às entidades do banco de dados, garantindo a rastreabilidade entre os artefatos do projeto. A tabela foi disposta em orientação paisagem para preservar a legibilidade de seu conteúdo, uma vez que possui quatro colunas com textos extensos.
 
-\begin{table}[H]
+\begin{sidewaystable}[htbp]
 \centering
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|l|l|}
+\renewcommand{\arraystretch}{0.9}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Módulo / RFs} & \textbf{Casos de Uso} & \textbf{Classes} & \textbf{Tabelas} \\
 \hline
@@ -45,8 +45,7 @@ Monitoramento e Logs (\ref{rf:logs-autenticacao}–\ref{rf:exportacao-logs}) & -
 \hline
 Suporte e Operação (\ref{rf:chamados-suporte}–\ref{rf:termos-uso}) & Abrir Chamado & ChamadoSuporte & CHAMADO\_SUPORTE \\
 \hline
-\end{tabular}%
-}
+\end{tabularx}
 \caption{Matriz de rastreabilidade entre requisitos funcionais, casos de uso, classes e tabelas do banco de dados}
 \label{tab:rastreabilidade}
-\end{table}
+\end{sidewaystable}
