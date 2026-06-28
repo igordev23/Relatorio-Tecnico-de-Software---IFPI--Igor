@@ -746,3 +746,111 @@
 \end{tabular}
 \caption{Caso de uso UC013 -- Abrir Chamado de Suporte}
 \end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC014} & \textbf{Visualizar Dashboard} \\
+\hline
+\textbf{Dependências} & \ref{rf:lista-certificados}, \ref{rf:filtros-certificados}, \ref{rf:estatisticas-emissao}, \ref{rf:logs-acoes} \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve exibir um dashboard com a lista de certificados emitidos, filtros por curso, período, status e instrutor, estatísticas mensais de emissão e logs de ações realizadas. \\
+\textbf{Ator(es)} & Administrador, Colaborador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Usuário autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O usuário acessa a seção de dashboard. \\
+\hline
+2 & O sistema exibe a lista de certificados emitidos com filtros disponíveis. \\
+\hline
+3 & O usuário aplica filtros por curso, período, status ou instrutor. \\
+\hline
+4 & O sistema exibe os resultados filtrados. \\
+\hline
+5 & O sistema exibe estatísticas mensais de emissão. \\
+\hline
+6 & O sistema exibe logs de ações realizadas. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Dashboard exibido com dados atualizados.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+3 & Se nenhum certificado corresponder aos filtros, o sistema exibe "Nenhum resultado encontrado". \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & \ref{rf:lista-certificados}, \ref{rf:filtros-certificados}, \ref{rf:estatisticas-emissao}, \ref{rf:logs-acoes} \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC014 -- Visualizar Dashboard}
+\end{table}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{UC015} & \textbf{Consultar Logs} \\
+\hline
+\textbf{Dependências} & \ref{rf:logs-autenticacao}, \ref{rf:eventos-criticos}, \ref{rf:exportacao-logs} \\
+\textbf{Autor} & Francisco Igor Silva Santos \\
+\textbf{Descrição} & O sistema deve permitir que o administrador consulte logs de autenticação e eventos críticos do sistema, com opção de exportação dos registros. \\
+\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Pré-condições} &
+\begin{enumerate}
+    \item Administrador autenticado no sistema.
+\end{enumerate} \\
+\hline
+\textbf{Sequência Ordinária} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Ação} \\
+\hline
+1 & O administrador acessa a seção de logs. \\
+\hline
+2 & O sistema exibe os logs de autenticação e eventos críticos. \\
+\hline
+3 & O administrador aplica filtros por período ou tipo de evento. \\
+\hline
+4 & O sistema exibe os registros filtrados. \\
+\hline
+5 & O administrador solicita a exportação dos logs. \\
+\hline
+6 & O sistema exporta os registros no formato selecionado. \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Pós-condições} &
+\begin{enumerate}
+    \item Logs consultados e/ou exportados com sucesso.
+\end{enumerate} \\
+\hline
+\textbf{Exceções} &
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{0.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-0.7cm-\arrayrulewidth\relax}@{}}
+\textbf{Passo} & \textbf{Condição} \\
+\hline
+3 & Se não houver registros no período, o sistema exibe "Nenhum log encontrado". \\
+\hline
+\end{tabular} \\
+\hline
+\textbf{Referências} & \ref{rf:logs-autenticacao}, \ref{rf:eventos-criticos}, \ref{rf:exportacao-logs} \\
+\textbf{Comentários} & Nenhum. \\
+\hline
+\end{tabular}
+\caption{Caso de uso UC015 -- Consultar Logs}
+\end{table}
