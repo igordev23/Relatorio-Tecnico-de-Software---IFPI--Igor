@@ -81,20 +81,20 @@
 \contentsline {subsection}{\numberline {4.1}Implantação}{70}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Arquitetura e Execução}{70}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}CI/CD e Pipeline de Implantação}{71}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Configuração de Ambiente}{71}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3}Configuração de Ambiente}{72}{subsubsection.4.1.3}%
 \contentsline {subsubsection}{\numberline {4.1.4}Banco de Dados}{72}{subsubsection.4.1.4}%
 \contentsline {subsubsection}{\numberline {4.1.5}Monitoramento e Observabilidade}{72}{subsubsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.2}Testes}{72}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Testes}{73}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Plano de Testes}{73}{subsubsection.4.2.1}%
-\contentsline {paragraph}{Estratégia de Testes}{73}{section*.34}%
-\contentsline {paragraph}{Casos de Teste}{73}{section*.35}%
+\contentsline {paragraph}{Estratégia de Testes}{73}{section*.36}%
+\contentsline {paragraph}{Casos de Teste}{74}{section*.37}%
 \contentsline {subsubsection}{\numberline {4.2.2}Frontend (Certificate Hub)}{78}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Backend (Certificate Server)}{79}{subsubsection.4.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.4}Testes End-to-End}{80}{subsubsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.5}Limitações}{80}{subsubsection.4.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.6}Resumo Geral}{81}{subsubsection.4.2.6}%
-\contentsline {section}{\numberline {5.0}Considerações Finais}{81}{section.5}%
-\contentsline {section}{Referências}{84}{section*.40}%
-\contentsline {section}{\numberline {6.0}Anexos}{85}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{85}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{85}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {4.2.5}Limitações}{81}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Resumo Geral}{82}{subsubsection.4.2.6}%
+\contentsline {section}{\numberline {5.0}Considerações Finais}{82}{section.5}%
+\contentsline {section}{Referências}{85}{section*.42}%
+\contentsline {section}{\numberline {6.0}Anexos}{86}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{86}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{86}{subsection.6.2}%
