@@ -1,2 +1,54 @@
 \section{Considerações Finais}
-Síntese, limitações e sugestões.
+
+Este capítulo apresenta as conclusões consolidadas ao longo do desenvolvimento do sistema, retomando os objetivos propostos na Seção~1.2 e avaliando em que medida foram alcançados. Além disso, destacam-se as principais contribuições técnicas do trabalho, as restrições identificadas no escopo atual e as perspectivas para evolução contínua da arquitetura.
+
+O objetivo geral deste trabalho consistiu em projetar e implementar um sistema web automatizado para emissão, gestão e validação pública de certificados. O produto de software foi desenvolvido com êxito e encontra-se operando em ambiente de produção. Através do acesso via navegador, a plataforma fornece funcionalidades robustas de emissão, gerenciamento de \textit{templates} visuais, \textit{dashboard} gerencial e um portal público de validação. Sob a ótica da engenharia de software, conclui-se que o objetivo central foi plenamente atingido, entregando um Produto Mínimo Viável (MVP) funcional e perfeitamente alinhado aos requisitos de negócio.
+
+Em relação aos objetivos específicos propostos:
+
+\begin{itemize}
+    \item O módulo de \textbf{\textit{templates} configuráveis} foi concebido com um editor visual \textit{inline} e renderização em tempo real, permitindo personalização dinâmica de atributos visuais (\ref{rf:upload-templates}, \ref{rf:personalizacao-templates});
+    \item O \textbf{mecanismo de autenticação pública}, ancorado em códigos únicos e \textit{QR Codes}, foi integrado ao portal de validação, mitigando riscos de fraudes e falsificações (\ref{rf:portal-validacao}, \ref{rf:validar-certificado});
+    \item O \textbf{\textit{dashboard} com indicadores gerenciais} foi implantado, fornecendo telemetria sobre estatísticas de emissão, certificados ativos e uso de \textit{templates} (\ref{rf:estatisticas-emissao});
+    \item A \textbf{qualidade do software} foi assegurada através de uma suíte abrangente de \textbf{testes automatizados}, englobando testes unitários (atingindo cobertura superior a 97\% nos módulos \textit{frontend} e \textit{backend}) e \textit{end-to-end}, devidamente integrados ao \textit{pipeline} de integração contínua (Seção~4.2);
+    \item O \textbf{ambiente de implantação} foi orquestrado em infraestrutura \textit{cloud} (Render), adotando \textit{pipelines} de Integração e Entrega Contínuas (CI/CD) nativos a partir do GitHub, garantindo \textit{deploys} contínuos e resilientes (Seção~4.1).
+\end{itemize}
+
+Devido à adoção da abordagem iterativa e às restrições inerentes ao escopo de um MVP, alguns objetivos específicos foram estrategicamente postergados para iterações futuras. O suporte a importação de dados em lote via arquivos (CSV e Excel) e o serviço de mensageria para envio automático de e-mails não foram incorporados ao \textit{backend} nesta versão. Adicionalmente, os mecanismos rígidos de conformidade com a LGPD e a implementação integral da arquitetura \textit{multi-tenant} requerem validações jurídicas e de infraestrutura, sendo mapeados como evoluções necessárias para o \textit{roadmap} futuro.
+
+\subsection{Principais Contribuições}
+
+O sistema desenvolvido entrega valor significativo ao propor uma solução tecnológica moderna e eficiente para o problema identificado:
+
+\begin{itemize}
+    \item \textbf{Digitalização do fluxo de emissão:} a transição de ferramentas de escritório genéricas para um fluxo automatizado e dedicado reduz a fricção operacional, mitigando falhas humanas e retrabalho;
+    \item \textbf{Verificabilidade e Transparência:} a introdução de um portal público, acessível via \textit{QR Code}, descentraliza o processo de auditoria de certificados, provendo verificação em tempo real sem ônus operacional para a instituição emissora;
+    \item \textbf{Governança de Dados:} a persistência de registros de emissão em banco de dados relacional com carimbo de tempo e autoria garante rastreabilidade total do ciclo de vida dos certificados;
+    \item \textbf{Arquitetura Desacoplada e Escalável:} a segregação entre \textit{frontend} (Vite/React) e \textit{backend} (Next.js), orientada a princípios de arquitetura limpa, promove alta coesão, testabilidade e facilita a evolução independente dos microsserviços;
+    \item \textbf{Esteira de CI/CD Automatizada:} a implementação de fluxos de CI/CD robustos eleva o nível de maturidade do desenvolvimento, garantindo que incrementos de código sejam exaustivamente testados antes de atingirem o ambiente de produção.
+\end{itemize}
+
+\subsection{Limitações}
+
+Do ponto de vista arquitetural e funcional, o produto atual apresenta as seguintes limitações, oriundas de \textit{trade-offs} assumidos no escopo do MVP:
+
+\begin{itemize}
+    \item O fluxo de \textbf{emissão em lote} é atualmente sequencial e manual na interface; a ausência de um \textit{message broker} (processamento em fila) e de suporte à importação de arquivos (CSV/Excel) limita o rendimento para volumes massivos de dados;
+    \item A \textbf{notificação ativa (E-mail)} não foi implementada no lado do servidor (sem integração com provedores SMTP). O artefato atual no \textit{frontend} (\code{envios.ts}) apenas estrutura o agendamento em armazenamento local (\code{localStorage}) de forma simulada;
+    \item A \textbf{arquitetura \textit{multi-tenant}} não foi finalizada — o banco de dados opera sob o paradigma de \textit{tenant} único, sem o particionamento lógico de dados essencial para um modelo SaaS em larga escala;
+    \item A \textbf{adequação à LGPD} carece de refinamento — mecanismos como ofuscação/anonimização de dados pessoais e gestão granular de consentimento ainda não estão materializados no código;
+    \item A suíte de testes carece de \textbf{testes de carga e estresse}, os quais são fundamentais para atestar o comportamento e as garantias do serviço de geração de PDFs sob alta concorrência.
+\end{itemize}
+
+\subsection{Trabalhos Futuros}
+
+Vislumbrando a evolução contínua da plataforma, recomenda-se a exploração dos seguintes aprimoramentos técnicos e funcionais:
+
+\begin{itemize}
+    \item Adoção de um \textbf{serviço de mensageria / fila} (como Redis/BullMQ ou RabbitMQ) para orquestrar o processamento assíncrono de emissões em lote e processamento de arquivos CSV/Excel;
+    \item Integração com provedores de nuvem para \textbf{envio transacional de e-mails}, implementando retentativas exponenciais (\textit{exponential backoff}) e \textit{templates} ricos;
+    \item Refatoração do modelo de dados para suportar plenamente o \textbf{isolamento \textit{multi-tenant}}, com políticas de segurança de linha (\textit{Row Level Security} - RLS) via Supabase;
+    \item Implementação nativa de um módulo de \textbf{auditoria e conformidade com a LGPD}, incorporando \textit{logs} imutáveis e fluxos automatizados para a exclusão de dados pessoais;
+    \item Execução de campanhas de \textbf{testes não-funcionais} (carga/desempenho) e \textbf{análise automatizada de vulnerabilidades} na esteira de CI/CD;
+    \item Investigação sobre a viabilidade de ancoragem criptográfica dos certificados através de \textbf{Assinatura Digital (ICP-Brasil)} ou redes \textbf{Blockchain}, visando segurança e imutabilidade incontestáveis.
+\end{itemize}
