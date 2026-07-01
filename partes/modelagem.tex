@@ -25,7 +25,7 @@ O levantamento de requisitos foi realizado por meio de uma entrevista semiestrut
 
 A arquitetura do sistema foi projetada para atender aos requisitos de independência entre camadas, testabilidade e facilidade de manutenção. Optou-se por uma abordagem de duas aplicações independentes --- frontend e backend --- que se comunicam exclusivamente via API REST. Essa separação permite que cada aplicação seja desenvolvida, testada, implantada e escalada de forma independente, sem acoplamento tecnológico entre as camadas de apresentação e lógica de negócio.
 
-O backend adota uma arquitetura em quatro camadas, organizadas pelo princípio de inversão de dependências, em que camadas externas dependem de camadas internas:
+O backend adota uma arquitetura em quatro camadas, organizadas pelo princípio de inversão de dependências (do inglês \textit{Dependency Inversion Principle} — DIP), em que camadas externas dependem de camadas internas:
 
 \begin{enumerate}
     \item \textbf{Apresentação (\textit{App})} --- \textit{Route Handlers} do Next.js que expõem os endpoints REST (\code{/api/certificates}, \code{/api/templates}, \code{/api/verify}) e o utilitário \texttt{handle\-Api\-Error}, que converte exceções de domínio e erros de validação Zod em respostas HTTP padronizadas. Esta camada recebe a requisição, faz o \textit{parse} do JSON, aciona a validação do DTO e delega a execução ao \textit{use case}.
