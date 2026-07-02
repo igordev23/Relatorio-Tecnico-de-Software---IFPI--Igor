@@ -6,7 +6,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
-\usepackage{times}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{setspace}
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -15,13 +16,17 @@
 \usepackage{xcolor}
 \usepackage{seqsplit}
 \usepackage{caption}
+\usepackage[tableposition=top]{caption}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{hyperref}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt}
+\usepackage{enumitem}
 \newcommand{\code}[1]{\texttt{\seqsplit{#1}}}
 \usepackage{amsmath, amssymb}
 \usepackage{indentfirst}
-\usepackage{enumerate}
+%\usepackage{enumerate}
 \usepackage{rotating}
 \usepackage{lipsum}
 \usepackage{tikz}
@@ -33,6 +38,32 @@
 \renewcommand{\thesection}{\arabic{section}.0}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+% Ambiente para Quadros (dados textuais, ABNT)
+\floatstyle{plaintop}
+\newfloat{quadro}{htbp}{loq}
+\floatname{quadro}{Quadro}
+\captionsetup[quadro]{labelsep=endash, font={sf,small}}
+\captionsetup[table]{position=above}
+% Mesmo contador para quadros e tabelas (numeração única sequencial)
+\makeatletter
+\let\c@quadro\c@table
+\makeatother
+
+% Sumário
+\renewcommand{\contentsname}{SUMÁRIO}
+
+% Configuração de página (numeração)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{pretextual}{
+  \fancyhf{}
+  \fancyhead[R]{}
+  \renewcommand{\headrulewidth}{0pt}
+  \pagenumbering{gobble}
+}
 
 % Contadores automáticos para requisitos
 \newcounter{rf}
@@ -76,9 +107,11 @@
     tabsize=4
 }
 
-\geometry{a4paper, left=3cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\geometry{a4paper, left=3cm, right=2cm, top=3cm, bottom=2cm}
 \setstretch{1.5}
-\captionsetup{labelfont=bf, labelsep=endash}
+\setlength{\parindent}{1.25cm}
+\captionsetup{labelfont=bf, labelsep=endash, font={sf,small}}
+\renewcommand{\arraystretch}{0.9}
 
 % Dados do trabalho
 \newcommand{\Instituicao}{INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO PIAUÍ}
@@ -94,14 +127,28 @@
 \begin{document}
 
 % ================= IMPORTANDO ARQUIVOS =================
+\thispagestyle{pretextual}
 \input{partes/capa}
+\thispagestyle{pretextual}
 \input{partes/folha_rosto}
+\thispagestyle{pretextual}
 \input{partes/resumo}
 
 \newpage
+\thispagestyle{pretextual}
+\input{partes/siglas}
+\newpage
+\thispagestyle{pretextual}
+\bgroup
+\renewcommand{\contentsname}{}
+\begin{center}
+\textbf{SUMÁRIO}
+\end{center}
 \tableofcontents
+\egroup
 \newpage
 
+\pagenumbering{arabic}
 \input{partes/introducao}
 \input{partes/tecnologias}
 \input{partes/modelagem}

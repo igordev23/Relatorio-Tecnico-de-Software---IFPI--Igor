@@ -1,10 +1,16 @@
-\section*{Resumo}
+\begin{center}
+\textbf{RESUMO}
+\end{center}
+
 Empresas de treinamento e instituições educacionais ainda dependem de processos manuais e soluções improvisadas para emissão de certificados, o que gera retrabalho, inconsistências e ausência de mecanismos confiáveis de validação. Este trabalho apresenta o desenvolvimento de um sistema web no modelo SaaS (Software as a Service) para emissão, gestão e autenticação pública de certificados. A solução adota uma arquitetura desacoplada estruturada em duas aplicações independentes: um \textit{frontend} do tipo \textit{Single Page Application} (SPA) desenvolvido com React e TypeScript, e um \textit{backend} (Next.js) orientado aos princípios da Arquitetura Limpa, organizado nas camadas de apresentação, aplicação, domínio e infraestrutura. A persistência de dados ocorre em um banco relacional (PostgreSQL), enquanto a geração de PDFs é processada no servidor. As funcionalidades implementadas incluem \textit{templates} configuráveis com editor visual, emissão individual com código único e \textit{QR Code}, \textit{dashboard} gerencial e portal público de validação. O ciclo de vida da aplicação conta com \textit{pipeline} de CI/CD para integração e implantação contínuas em nuvem. A qualidade do software foi atestada por uma robusta suíte de testes automatizados (276 casos de teste), alcançando cobertura de código superior a 97\% em ambos os módulos. Conclui-se que o produto, operando em produção como um Produto Mínimo Viável (MVP), atingiu os objetivos propostos, superando as restrições do fluxo manual por meio de uma plataforma escalável e segura.
 
 \noindent\textbf{Palavras-chave:} emissão de certificados; SaaS; arquitetura limpa; React; validação pública.
 
 \newpage
-\section*{Abstract}
+\begin{center}
+\textbf{ABSTRACT}
+\end{center}
+
 Training companies and educational institutions still rely on manual processes and improvised solutions for certificate issuance, leading to rework, inconsistencies, and a lack of reliable validation mechanisms. This work presents the development of a SaaS (Software as a Service) web system for issuing, managing, and publicly authenticating certificates. The solution adopts a decoupled architecture structured in two independent applications: a Single Page Application (SPA) frontend developed with React and TypeScript, and a backend (Next.js) oriented towards Clean Architecture principles, organized into presentation, application, domain, and infrastructure layers. Data persistence is handled by a relational database (PostgreSQL), while PDF generation is processed on the server-side. Implemented features include configurable templates with a visual editor, individual issuance with unique codes and QR Codes, a management dashboard, and a public validation portal. The application lifecycle is supported by a CI/CD pipeline for continuous integration and cloud deployment. Software quality was ensured by a robust automated testing suite (276 test cases), achieving over 97\% code coverage in both modules. It is concluded that the product, running in production as a Minimum Viable Product (MVP), achieved the proposed objectives, overcoming the constraints of the manual workflow through a scalable and secure platform.
 
 \noindent\textbf{Keywords:} certificate issuance; SaaS; clean architecture; React; public validation.

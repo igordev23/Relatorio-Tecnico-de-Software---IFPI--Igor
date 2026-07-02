@@ -2,7 +2,7 @@
 
 \paragraph{Estratégia de Testes}
 
-O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.1) e nos critérios de aceitação (Tabela~\ref{tab:criterios}), contemplando exclusivamente os módulos implementados no escopo do MVP. A estratégia adotada prioriza testes unitários como primeira camada de defesa, combinada com testes de integração para validação das camadas de infraestrutura e testes \textit{end-to-end} (E2E) para verificação do fluxo completo do sistema.
+O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.1) e nos critérios de aceitação (Quadro~\ref{qua:criterios}), contemplando exclusivamente os módulos implementados no escopo do MVP. A estratégia adotada prioriza testes unitários como primeira camada de defesa, combinada com testes de integração para validação das camadas de infraestrutura e testes \textit{end-to-end} (E2E) para verificação do fluxo completo do sistema.
 
 \begin{itemize}
     \item \textbf{Ferramentas:} Jest como \textit{test runner} e \textit{framework} de asserção; React Testing Library para testes de \textit{ViewModels} no frontend; Playwright para testes \textit{end-to-end}; \textit{Mocking} manual via \texttt{jest.mock} para isolar dependências externas (Supabase, PDFKit, \texttt{fetch}).
@@ -13,13 +13,15 @@ O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.
 
 \paragraph{Casos de Teste}
 
-Cada caso de teste é identificado por um código único (CT\textit{nnn}) e descreve o cenário avaliado juntamente com o resultado esperado. A Tabela~\ref{tab:plano-testes} apresenta o plano completo, organizado por módulo e tipo de teste.
+Cada caso de teste é identificado por um código único (CT\textit{nnn}) e descreve o cenário avaliado juntamente com o resultado esperado. O Quadro~\ref{qua:plano-testes} apresenta o plano completo, organizado por módulo e tipo de teste.
 
 \renewcommand{\arraystretch}{0.85}
 \small
+\begingroup
+\renewcommand{\tablename}{Quadro}
 \begin{longtable}{p{1.2cm} p{4.8cm} p{9.5cm}}
 \caption{Plano de testes do sistema}
-\label{tab:plano-testes}\\
+\label{qua:plano-testes}\\
 \toprule
 \textbf{Caso} & \textbf{Descrição} & \textbf{Resultados Esperados} \\
 \midrule
@@ -144,5 +146,6 @@ CT060 & \textit{Timeout} na geração de PDF & Geração de PDF excede o tempo l
 
 \bottomrule
 \end{longtable}
+\endgroup
 \normalsize
 \renewcommand{\arraystretch}{1.0}
