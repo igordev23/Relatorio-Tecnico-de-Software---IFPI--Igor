@@ -5,143 +5,143 @@ Os requisitos foram priorizados segundo o método MoSCoW, alinhado à abordagem 
 
 \subsubsection{Módulo de Autenticação e Controle de Acesso}
 \begin{itemize}
-\rfitem{rf:login-email}[M]{Permitir login por e-mail e senha.}
-\rfitem{rf:reset-password}[S]{Permitir redefinição de senha via e-mail.}
-\rfitem{rf:validar-credenciais}[M]{Validar credenciais antes de conceder acesso.}
-\rfitem{rf:cadastro-usuario}[S]{Permitir cadastro de novos usuários (apenas administrador).}
-\rfitem{rf:gerenciamento-perfis}[M]{Permitir gerenciamento de perfis e permissões.}
-\rfitem{rf:controle-acesso-restrito}[M]{Controlar acesso a áreas restritas com base no status de autenticação do usuário.}
-\rfitem{rf:bloqueio-sessoes}[S]{Implementar bloqueio de múltiplas sessões simultâneas por conta.}
+\rfitem{rf:login-email}{M}{Permitir login por e-mail e senha.}
+\rfitem{rf:reset-password}{S}{Permitir redefinição de senha via e-mail.}
+\rfitem{rf:validar-credenciais}{M}{Validar credenciais antes de conceder acesso.}
+\rfitem{rf:cadastro-usuario}{S}{Permitir cadastro de novos usuários (apenas administrador).}
+\rfitem{rf:gerenciamento-perfis}{M}{Permitir gerenciamento de perfis e permissões.}
+\rfitem{rf:controle-acesso-restrito}{M}{Controlar acesso a áreas restritas com base no status de autenticação do usuário.}
+\rfitem{rf:bloqueio-sessoes}{S}{Implementar bloqueio de múltiplas sessões simultâneas por conta.}
 \end{itemize}
 
 \subsubsection{Módulo de Templates de Certificados}
 \begin{itemize}
-\rfitem{rf:upload-templates}[M]{Permitir upload de templates (PPTX, PDF).}
-\rfitem{rf:personalizacao-templates}[M]{Permitir personalização de templates.}
-\rfitem{rf:selecionar-template-galeria}[M]{Permitir selecionar template da galeria interna.}
-\rfitem{rf:campos-dinamicos-auto}[C]{Identificar campos dinâmicos automaticamente.}
-\rfitem{rf:edicao-campos-dinamicos}[M]{Permitir criação/edição manual de campos dinâmicos (ex: \{\{nome\}\}).}
-\rfitem{rf:mapeamento-campos}[M]{Salvar configurações de mapeamento de campos.}
-\rfitem{rf:duplicar-templates}[C]{Permitir duplicar templates existentes.}
+\rfitem{rf:upload-templates}{M}{Permitir upload de templates (PPTX, PDF).}
+\rfitem{rf:personalizacao-templates}{M}{Permitir personalização de templates.}
+\rfitem{rf:selecionar-template-galeria}{M}{Permitir selecionar template da galeria interna.}
+\rfitem{rf:campos-dinamicos-auto}{C}{Identificar campos dinâmicos automaticamente.}
+\rfitem{rf:edicao-campos-dinamicos}{M}{Permitir criação/edição manual de campos dinâmicos (ex: \{\{nome\}\}).}
+\rfitem{rf:mapeamento-campos}{M}{Salvar configurações de mapeamento de campos.}
+\rfitem{rf:duplicar-templates}{C}{Permitir duplicar templates existentes.}
 \end{itemize}
 
 \subsubsection{Módulo de Entrada de Dados}
 \begin{itemize}
-\rfitem{rf:cadastro-participante}[M]{Permitir cadastro individual de participantes.}
-\rfitem{rf:emissao-manual}[M]{Permitir emissão manual para participante único.}
-\rfitem{rf:importar-csv}[C]{Importar dados via CSV.}
-\rfitem{rf:importar-excel}[C]{Importar dados via Excel (.xlsx).}
-\rfitem{rf:gatilhos-emissao-auto}[C]{Configurar gatilhos de emissão automática.}
-\rfitem{rf:upload-lista-lote}[C]{Permitir upload de lista em lote.}
-\rfitem{rf:processar-fila}[C]{Processar múltiplos certificados em fila.}
-\rfitem{rf:notificar-processamento}[C]{Notificar ao término do processamento.}
+\rfitem{rf:cadastro-participante}{M}{Permitir cadastro individual de participantes.}
+\rfitem{rf:emissao-manual}{M}{Permitir emissão manual para participante único.}
+\rfitem{rf:importar-csv}{C}{Importar dados via CSV.}
+\rfitem{rf:importar-excel}{C}{Importar dados via Excel (.xlsx).}
+\rfitem{rf:gatilhos-emissao-auto}{C}{Configurar gatilhos de emissão automática.}
+\rfitem{rf:upload-lista-lote}{C}{Permitir upload de lista em lote.}
+\rfitem{rf:processar-fila}{C}{Processar múltiplos certificados em fila.}
+\rfitem{rf:notificar-processamento}{C}{Notificar ao término do processamento.}
 \end{itemize}
 
 \subsubsection{Módulo de Geração de Certificados}
 \begin{itemize}
-\rfitem{rf:gerar-pdf}[M]{Gerar certificados em PDF.}
-\rfitem{rf:preencher-campos-dinamicos}[M]{Preencher automaticamente campos dinâmicos.}
-\rfitem{rf:codigo-unico}[M]{Gerar código único por certificado.}
-\rfitem{rf:registro-emissao}[M]{Registrar data, hora e localidade da emissão.}
-\rfitem{rf:reemissao-historico}[M]{Permitir reemissão mantendo histórico.}
-\rfitem{rf:download-individual}[M]{Permitir download individual.}
-\rfitem{rf:download-lote}[S]{Permitir download em lote.}
+\rfitem{rf:gerar-pdf}{M}{Gerar certificados em PDF.}
+\rfitem{rf:preencher-campos-dinamicos}{M}{Preencher automaticamente campos dinâmicos.}
+\rfitem{rf:codigo-unico}{M}{Gerar código único por certificado.}
+\rfitem{rf:registro-emissao}{M}{Registrar data, hora e localidade da emissão.}
+\rfitem{rf:reemissao-historico}{M}{Permitir reemissão mantendo histórico.}
+\rfitem{rf:download-individual}{M}{Permitir download individual.}
+\rfitem{rf:download-lote}{S}{Permitir download em lote.}
 \end{itemize}
 
 \subsubsection{Módulo de Envio e Comunicação}
 \begin{itemize}
-\rfitem{rf:personalizacao-email}[C]{Permitir personalização do corpo do e-mail com variáveis.}
-\rfitem{rf:status-envio}[S]{Registrar status de envio (pendente, enviado, falha).}
-\rfitem{rf:reenviar-falha}[C]{Reenviar automaticamente certificados com falha de envio.}
+\rfitem{rf:personalizacao-email}{C}{Permitir personalização do corpo do e-mail com variáveis.}
+\rfitem{rf:status-envio}{S}{Registrar status de envio (pendente, enviado, falha).}
+\rfitem{rf:reenviar-falha}{C}{Reenviar automaticamente certificados com falha de envio.}
 \end{itemize}
 
 \subsubsection{Módulo de Validação Pública e Antifraude}
 \begin{itemize}
-\rfitem{rf:portal-validacao}[M]{Disponibilizar portal público de validação.}
-\rfitem{rf:validar-certificado}[M]{Validar certificado via código único.}
-\rfitem{rf:qrcode}[M]{Gerar QR Code no certificado com opções de personalização.}
-\rfitem{rf:exibir-validacao}[M]{Exibir informações básicas ao validar (nome, curso, data, validade, autenticidade).}
+\rfitem{rf:portal-validacao}{M}{Disponibilizar portal público de validação.}
+\rfitem{rf:validar-certificado}{M}{Validar certificado via código único.}
+\rfitem{rf:qrcode}{M}{Gerar QR Code no certificado com opções de personalização.}
+\rfitem{rf:exibir-validacao}{M}{Exibir informações básicas ao validar (nome, curso, data, validade, autenticidade).}
 \end{itemize}
 
 \subsubsection{Módulo de Assinaturas Digitais}
 \begin{itemize}
-\rfitem{rf:assinatura-digitalizada}[C]{Permitir adicionar assinatura digitalizada ao template.}
-\rfitem{rf:hash-assinatura}[C]{Registrar hash de verificação da assinatura.}
+\rfitem{rf:assinatura-digitalizada}{C}{Permitir adicionar assinatura digitalizada ao template.}
+\rfitem{rf:hash-assinatura}{C}{Registrar hash de verificação da assinatura.}
 \end{itemize}
 
 \subsubsection{Módulo de Dashboard e Gestão}
 \begin{itemize}
-\rfitem{rf:lista-certificados}[M]{Exibir lista completa de certificados emitidos.}
-\rfitem{rf:filtros-certificados}[M]{Permitir filtros por curso, período, status e instrutor.}
-\rfitem{rf:estatisticas-emissao}[M]{Exibir estatísticas mensais de emissão.}
-\rfitem{rf:logs-acoes}[C]{Exibir logs de ações realizadas.}
+\rfitem{rf:lista-certificados}{M}{Exibir lista completa de certificados emitidos.}
+\rfitem{rf:filtros-certificados}{M}{Permitir filtros por curso, período, status e instrutor.}
+\rfitem{rf:estatisticas-emissao}{M}{Exibir estatísticas mensais de emissão.}
+\rfitem{rf:logs-acoes}{C}{Exibir logs de ações realizadas.}
 \end{itemize}
 
 \subsubsection{Módulo de Auditoria e Segurança Operacional}
 \begin{itemize}
-\rfitem{rf:responsavel-certificado}[S]{Registrar responsável por cada certificado gerado.}
-\rfitem{rf:registro-auditoria}[S]{Registrar data, hora e local de ações relevantes.}
-\rfitem{rf:arquivamento-certificados}[S]{Permitir arquivamento de certificados como alternativa à exclusão definitiva.}
+\rfitem{rf:responsavel-certificado}{S}{Registrar responsável por cada certificado gerado.}
+\rfitem{rf:registro-auditoria}{S}{Registrar data, hora e local de ações relevantes.}
+\rfitem{rf:arquivamento-certificados}{S}{Permitir arquivamento de certificados como alternativa à exclusão definitiva.}
 \end{itemize}
 
 \subsubsection{Módulo de Gestão de Cursos/Eventos}
 \begin{itemize}
-\rfitem{rf:cadastro-curso}[M]{Permitir cadastro de cursos/eventos.}
-\rfitem{rf:associar-participante-curso}[M]{Associar participantes ao curso.}
-\rfitem{rf:carga-horaria}[M]{Definir carga horária.}
-\rfitem{rf:instrutor-responsavel}[S]{Registrar instrutor responsável.}
-\rfitem{rf:datas-curso}[M]{Configurar datas de início e término.}
-\rfitem{rf:certificados-vinculados-curso}[M]{Listar certificados vinculados ao curso.}
-\rfitem{rf:validar-vinculo-participante}[M]{Validar vínculo do participante ao curso antes de permitir a emissão.}
-\rfitem{rf:local-curso}[S]{Registrar local do curso.}
+\rfitem{rf:cadastro-curso}{M}{Permitir cadastro de cursos/eventos.}
+\rfitem{rf:associar-participante-curso}{M}{Associar participantes ao curso.}
+\rfitem{rf:carga-horaria}{M}{Definir carga horária.}
+\rfitem{rf:instrutor-responsavel}{S}{Registrar instrutor responsável.}
+\rfitem{rf:datas-curso}{M}{Configurar datas de início e término.}
+\rfitem{rf:certificados-vinculados-curso}{M}{Listar certificados vinculados ao curso.}
+\rfitem{rf:validar-vinculo-participante}{M}{Validar vínculo do participante ao curso antes de permitir a emissão.}
+\rfitem{rf:local-curso}{S}{Registrar local do curso.}
 \end{itemize}
 
 \subsubsection{Módulo de Participantes}
 \begin{itemize}
-\rfitem{rf:cadastro-completo-participante}[M]{Cadastro completo de participantes (nome, e-mail, CPF opcional).}
-\rfitem{rf:edicao-participante}[M]{Permitir edição de dados.}
-\rfitem{rf:importar-sem-duplicidade}[S]{Importar participantes sem duplicidade.}
-\rfitem{rf:historico-participante}[S]{Exibir histórico de certificados por participante.}
-\rfitem{rf:busca-participante}[M]{Permitir busca por nome, e-mail e CPF.}
+\rfitem{rf:cadastro-completo-participante}{M}{Cadastro completo de participantes (nome, e-mail, CPF opcional).}
+\rfitem{rf:edicao-participante}{M}{Permitir edição de dados.}
+\rfitem{rf:importar-sem-duplicidade}{S}{Importar participantes sem duplicidade.}
+\rfitem{rf:historico-participante}{S}{Exibir histórico de certificados por participante.}
+\rfitem{rf:busca-participante}{M}{Permitir busca por nome, e-mail e CPF.}
 \end{itemize}
 
 \subsubsection{Módulo Multiempresa / Multi-tenant}
 \begin{itemize}
-\rfitem{rf:cadastro-organizacao}[C]{Permitir cadastro de organizações com dados institucionais (CNPJ, razão social, endereço e contato).}
-\rfitem{rf:associar-usuario-organizacao}[C]{Associar usuários cadastrados à sua respectiva organização.}
-\rfitem{rf:organizacao-templates}[C]{Permitir que cada organização gerencie seus próprios templates.}
-\rfitem{rf:organizacao-usuarios}[C]{Permitir que cada organização gerencie seus próprios usuários e perfis de acesso.}
+\rfitem{rf:cadastro-organizacao}{C}{Permitir cadastro de organizações com dados institucionais (CNPJ, razão social, endereço e contato).}
+\rfitem{rf:associar-usuario-organizacao}{C}{Associar usuários cadastrados à sua respectiva organização.}
+\rfitem{rf:organizacao-templates}{C}{Permitir que cada organização gerencie seus próprios templates.}
+\rfitem{rf:organizacao-usuarios}{C}{Permitir que cada organização gerencie seus próprios usuários e perfis de acesso.}
 \end{itemize}
 
 \subsubsection{Módulo de Configurações do Sistema}
 \begin{itemize}
-\rfitem{rf:personalizar-mensagens}[C]{Personalizar mensagens padrão.}
-\rfitem{rf:envio-automatico}[C]{Ativar/desativar envio automático.}
-\rfitem{rf:regras-reemissao}[C]{Configurar regras de reemissão.}
+\rfitem{rf:personalizar-mensagens}{C}{Personalizar mensagens padrão.}
+\rfitem{rf:envio-automatico}{C}{Ativar/desativar envio automático.}
+\rfitem{rf:regras-reemissao}{C}{Configurar regras de reemissão.}
 \end{itemize}
 
 \subsubsection{Módulo de Armazenamento e Arquivos}
 \begin{itemize}
-\rfitem{rf:armazenar-templates}[M]{Armazenar templates no sistema.}
+\rfitem{rf:armazenar-templates}{M}{Armazenar templates no sistema.}
 \end{itemize}
 
 \subsubsection{Módulo de Notificações e Alertas}
 \begin{itemize}
-\rfitem{rf:notificar-falhas}[S]{Notificar falhas de emissão.}
-\rfitem{rf:notificar-sucesso-planilhas}[C]{Notificar sucesso no processamento de planilhas.}
-\rfitem{rf:alertar-template-invalido}[C]{Alertar quando template estiver incompleto ou inválido.}
+\rfitem{rf:notificar-falhas}{S}{Notificar falhas de emissão.}
+\rfitem{rf:notificar-sucesso-planilhas}{C}{Notificar sucesso no processamento de planilhas.}
+\rfitem{rf:alertar-template-invalido}{C}{Alertar quando template estiver incompleto ou inválido.}
 \end{itemize}
 
 \subsubsection{Módulo de Monitoramento e Logs}
 \begin{itemize}
-\rfitem{rf:logs-autenticacao}[S]{Registrar logs de autenticação e tentativas de acesso.}
-\rfitem{rf:eventos-criticos}[C]{Registrar eventos críticos (falha geração PDF etc.).}
-\rfitem{rf:exportacao-logs}[C]{Permitir exportação de logs.}
+\rfitem{rf:logs-autenticacao}{S}{Registrar logs de autenticação e tentativas de acesso.}
+\rfitem{rf:eventos-criticos}{C}{Registrar eventos críticos (falha geração PDF etc.).}
+\rfitem{rf:exportacao-logs}{C}{Permitir exportação de logs.}
 \end{itemize}
 
 \subsubsection{Módulo de Suporte, Operação e Manutenção}
 \begin{itemize}
-\rfitem{rf:chamados-suporte}[C]{Permitir abertura de chamados de suporte.}
-\rfitem{rf:status-sistema}[C]{Exibir status do sistema (online/manutenção).}
-\rfitem{rf:termos-uso}[C]{Permitir atualização de termos de uso e políticas.}
+\rfitem{rf:chamados-suporte}{C}{Permitir abertura de chamados de suporte.}
+\rfitem{rf:status-sistema}{C}{Exibir status do sistema (online/manutenção).}
+\rfitem{rf:termos-uso}{C}{Permitir atualização de termos de uso e políticas.}
 \end{itemize}
