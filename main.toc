@@ -1,103 +1,103 @@
 \babel@toc {brazil}{}\relax 
-\contentsline {section}{\numberline {1.0}Introdução}{7}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Objetivos}{8}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Geral}{8}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.2}Específicos}{8}{subsubsection.1.1.2}%
-\contentsline {section}{\numberline {2.0}Tecnologias Envolvidas}{9}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Frontend}{9}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}React 19}{9}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}TypeScript}{10}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Tailwind CSS}{10}{subsubsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.4}shadcn/ui}{11}{subsubsection.2.1.4}%
-\contentsline {subsubsection}{\numberline {2.1.5}TanStack Router}{11}{subsubsection.2.1.5}%
-\contentsline {subsubsection}{\numberline {2.1.6}React Hook Form}{12}{subsubsection.2.1.6}%
-\contentsline {subsubsection}{\numberline {2.1.7}Sonner}{12}{subsubsection.2.1.7}%
-\contentsline {subsubsection}{\numberline {2.1.8}Recharts}{13}{subsubsection.2.1.8}%
-\contentsline {subsubsection}{\numberline {2.1.9}date-fns}{13}{subsubsection.2.1.9}%
-\contentsline {subsubsection}{\numberline {2.1.10}Vite}{14}{subsubsection.2.1.10}%
-\contentsline {subsubsection}{\numberline {2.1.11}Arquitetura e Padrões}{14}{subsubsection.2.1.11}%
-\contentsline {subsection}{\numberline {2.2}Integração com a API REST}{15}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Zod}{15}{subsubsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.3}Backend}{15}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Next.js 16}{16}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Zod}{17}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Arquitetura e Padrões}{17}{subsubsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.4}Banco de Dados}{17}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Supabase e PostgreSQL}{17}{subsubsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.5}Geração de Documentos}{18}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}PDFKit}{18}{subsubsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.6}Infraestrutura e Ferramentas}{19}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Render}{19}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Jest}{19}{subsubsection.2.6.2}%
-\contentsline {subsubsection}{\numberline {2.6.3}ESLint e Prettier}{20}{subsubsection.2.6.3}%
-\contentsline {subsubsection}{\numberline {2.6.4}Git e GitHub}{20}{subsubsection.2.6.4}%
-\contentsline {subsubsection}{\numberline {2.6.5}Visual Studio Code}{21}{subsubsection.2.6.5}%
-\contentsline {subsection}{\numberline {2.7}Síntese das Tecnologias}{21}{subsection.2.7}%
-\contentsline {section}{\numberline {3.0}Modelagem do Projeto}{23}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Levantamento de Requisitos}{23}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Módulo de Autenticação e Controle de Acesso}{23}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Módulo de Templates de Certificados}{24}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Módulo de Entrada de Dados}{24}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Módulo de Geração de Certificados}{24}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Módulo de Envio e Comunicação}{25}{subsubsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {3.1.6}Módulo de Validação Pública e Antifraude}{25}{subsubsection.3.1.6}%
-\contentsline {subsubsection}{\numberline {3.1.7}Módulo de Assinaturas Digitais}{25}{subsubsection.3.1.7}%
-\contentsline {subsubsection}{\numberline {3.1.8}Módulo de Dashboard e Gestão}{25}{subsubsection.3.1.8}%
-\contentsline {subsubsection}{\numberline {3.1.9}Módulo de Auditoria e Segurança Operacional}{26}{subsubsection.3.1.9}%
-\contentsline {subsubsection}{\numberline {3.1.10}Módulo de Gestão de Cursos/Eventos}{26}{subsubsection.3.1.10}%
-\contentsline {subsubsection}{\numberline {3.1.11}Módulo de Participantes}{26}{subsubsection.3.1.11}%
-\contentsline {subsubsection}{\numberline {3.1.12}Módulo Multiempresa / Multi-tenant}{27}{subsubsection.3.1.12}%
-\contentsline {subsubsection}{\numberline {3.1.13}Módulo de Configurações do Sistema}{27}{subsubsection.3.1.13}%
-\contentsline {subsubsection}{\numberline {3.1.14}Módulo de Armazenamento e Arquivos}{27}{subsubsection.3.1.14}%
-\contentsline {subsubsection}{\numberline {3.1.15}Módulo de Notificações e Alertas}{27}{subsubsection.3.1.15}%
-\contentsline {subsubsection}{\numberline {3.1.16}Módulo de Monitoramento e Logs}{27}{subsubsection.3.1.16}%
-\contentsline {subsubsection}{\numberline {3.1.17}Módulo de Suporte, Operação e Manutenção}{28}{subsubsection.3.1.17}%
-\contentsline {subsubsection}{\numberline {3.1.18}Segurança}{28}{subsubsection.3.1.18}%
-\contentsline {subsubsection}{\numberline {3.1.19}Desempenho e Escalabilidade}{29}{subsubsection.3.1.19}%
-\contentsline {subsubsection}{\numberline {3.1.20}Disponibilidade e Confiabilidade}{29}{subsubsection.3.1.20}%
-\contentsline {subsubsection}{\numberline {3.1.21}Usabilidade e Acessibilidade}{30}{subsubsection.3.1.21}%
-\contentsline {subsubsection}{\numberline {3.1.22}Compatibilidade e Integração}{30}{subsubsection.3.1.22}%
-\contentsline {subsubsection}{\numberline {3.1.23}Armazenamento e Retenção}{30}{subsubsection.3.1.23}%
-\contentsline {subsubsection}{\numberline {3.1.24}Conformidade Legal e LGPD}{30}{subsubsection.3.1.24}%
-\contentsline {subsubsection}{\numberline {3.1.25}Arquitetura e Tecnologia}{31}{subsubsection.3.1.25}%
-\contentsline {subsubsection}{\numberline {3.1.26}Manutenção e Monitoramento}{32}{subsubsection.3.1.26}%
-\contentsline {subsubsection}{\numberline {3.1.27}Internacionalização}{32}{subsubsection.3.1.27}%
-\contentsline {subsection}{\numberline {3.2}Regras de Negócio}{32}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Critérios de Aceitação}{33}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Diagramas de casos de uso}{37}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Diagramas de classe}{53}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Arquitetura do Sistema}{55}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Diagrama Entidade-Relacionamento}{59}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Interfaces}{60}{subsection.3.8}%
-\contentsline {subsubsection}{\numberline {3.8.1}Tela Inicial}{61}{subsubsection.3.8.1}%
-\contentsline {subsubsection}{\numberline {3.8.2}Dashboard}{61}{subsubsection.3.8.2}%
-\contentsline {subsubsection}{\numberline {3.8.3}Templates}{62}{subsubsection.3.8.3}%
-\contentsline {subsubsection}{\numberline {3.8.4}Emissão de Certificados}{63}{subsubsection.3.8.4}%
-\contentsline {subsubsection}{\numberline {3.8.5}Lista de Certificados}{64}{subsubsection.3.8.5}%
-\contentsline {subsubsection}{\numberline {3.8.6}Envios}{65}{subsubsection.3.8.6}%
-\contentsline {subsubsection}{\numberline {3.8.7}Verificação Pública}{66}{subsubsection.3.8.7}%
-\contentsline {subsection}{\numberline {3.9}Matriz de Rastreabilidade}{67}{subsection.3.9}%
-\contentsline {section}{\numberline {4.0}Software}{67}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Implantação}{67}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Arquitetura e Execução}{69}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}CI/CD e Pipeline de Implantação}{69}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Configuração de Ambiente}{70}{subsubsection.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.4}Banco de Dados}{71}{subsubsection.4.1.4}%
-\contentsline {subsubsection}{\numberline {4.1.5}Monitoramento e Observabilidade}{71}{subsubsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.2}Testes}{71}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Plano de Testes}{72}{subsubsection.4.2.1}%
-\contentsline {paragraph}{Estratégia de Testes}{72}{section*.36}%
-\contentsline {paragraph}{Casos de Teste}{72}{section*.37}%
-\contentsline {subsubsection}{\numberline {4.2.2}Frontend (Certificate Hub)}{77}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Backend (Certificate Server)}{78}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Testes End-to-End}{79}{subsubsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.5}Limitações}{80}{subsubsection.4.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.6}Resumo Geral}{80}{subsubsection.4.2.6}%
-\contentsline {section}{\numberline {5.0}Considerações Finais}{80}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{82}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Limitações}{82}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Trabalhos Futuros}{83}{subsection.5.3}%
-\contentsline {section}{Referências}{86}{section*.42}%
-\contentsline {section}{\numberline {6.0}Anexos}{87}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{87}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{87}{subsection.6.2}%
+\contentsline {section}{\numberline {1.0}INTRODUÇÃO}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Objetivos}{2}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Geral}{2}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Específicos}{2}{subsubsection.1.1.2}%
+\contentsline {section}{\numberline {2.0}TECNOLOGIAS ENVOLVIDAS}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Frontend}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}React 19}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}TypeScript}{4}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Tailwind CSS}{5}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}shadcn/ui}{5}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}TanStack Router}{6}{subsubsection.2.1.5}%
+\contentsline {subsubsection}{\numberline {2.1.6}React Hook Form}{6}{subsubsection.2.1.6}%
+\contentsline {subsubsection}{\numberline {2.1.7}Sonner}{7}{subsubsection.2.1.7}%
+\contentsline {subsubsection}{\numberline {2.1.8}Recharts}{7}{subsubsection.2.1.8}%
+\contentsline {subsubsection}{\numberline {2.1.9}date-fns}{8}{subsubsection.2.1.9}%
+\contentsline {subsubsection}{\numberline {2.1.10}Vite}{8}{subsubsection.2.1.10}%
+\contentsline {subsubsection}{\numberline {2.1.11}Arquitetura e Padrões}{9}{subsubsection.2.1.11}%
+\contentsline {subsection}{\numberline {2.2}Integração com a API REST}{9}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Zod}{10}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Backend}{10}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Next.js 16}{10}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Zod}{11}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Arquitetura e Padrões}{12}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Banco de Dados}{12}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Supabase e PostgreSQL}{12}{subsubsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.5}Geração de Documentos}{13}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}PDFKit}{13}{subsubsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.6}Infraestrutura e Ferramentas}{14}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Render}{14}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Jest}{15}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}ESLint e Prettier}{15}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.4}Git e GitHub}{16}{subsubsection.2.6.4}%
+\contentsline {subsubsection}{\numberline {2.6.5}Visual Studio Code}{16}{subsubsection.2.6.5}%
+\contentsline {subsection}{\numberline {2.7}Síntese das Tecnologias}{16}{subsection.2.7}%
+\contentsline {section}{\numberline {3.0}MODELAGEM DO PROJETO}{18}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Levantamento de Requisitos}{18}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Módulo de Autenticação e Controle de Acesso}{18}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Módulo de Templates de Certificados}{19}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Módulo de Entrada de Dados}{19}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Módulo de Geração de Certificados}{19}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Módulo de Envio e Comunicação}{20}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Módulo de Validação Pública e Antifraude}{20}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.7}Módulo de Assinaturas Digitais}{20}{subsubsection.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.1.8}Módulo de Dashboard e Gestão}{20}{subsubsection.3.1.8}%
+\contentsline {subsubsection}{\numberline {3.1.9}Módulo de Auditoria e Segurança Operacional}{21}{subsubsection.3.1.9}%
+\contentsline {subsubsection}{\numberline {3.1.10}Módulo de Gestão de Cursos/Eventos}{21}{subsubsection.3.1.10}%
+\contentsline {subsubsection}{\numberline {3.1.11}Módulo de Participantes}{21}{subsubsection.3.1.11}%
+\contentsline {subsubsection}{\numberline {3.1.12}Módulo Multiempresa / Multi-tenant}{22}{subsubsection.3.1.12}%
+\contentsline {subsubsection}{\numberline {3.1.13}Módulo de Configurações do Sistema}{22}{subsubsection.3.1.13}%
+\contentsline {subsubsection}{\numberline {3.1.14}Módulo de Armazenamento e Arquivos}{22}{subsubsection.3.1.14}%
+\contentsline {subsubsection}{\numberline {3.1.15}Módulo de Notificações e Alertas}{22}{subsubsection.3.1.15}%
+\contentsline {subsubsection}{\numberline {3.1.16}Módulo de Monitoramento e Logs}{22}{subsubsection.3.1.16}%
+\contentsline {subsubsection}{\numberline {3.1.17}Módulo de Suporte, Operação e Manutenção}{23}{subsubsection.3.1.17}%
+\contentsline {subsubsection}{\numberline {3.1.18}Segurança}{23}{subsubsection.3.1.18}%
+\contentsline {subsubsection}{\numberline {3.1.19}Desempenho e Escalabilidade}{24}{subsubsection.3.1.19}%
+\contentsline {subsubsection}{\numberline {3.1.20}Disponibilidade e Confiabilidade}{25}{subsubsection.3.1.20}%
+\contentsline {subsubsection}{\numberline {3.1.21}Usabilidade e Acessibilidade}{25}{subsubsection.3.1.21}%
+\contentsline {subsubsection}{\numberline {3.1.22}Compatibilidade e Integração}{25}{subsubsection.3.1.22}%
+\contentsline {subsubsection}{\numberline {3.1.23}Armazenamento e Retenção}{26}{subsubsection.3.1.23}%
+\contentsline {subsubsection}{\numberline {3.1.24}Conformidade Legal e LGPD}{26}{subsubsection.3.1.24}%
+\contentsline {subsubsection}{\numberline {3.1.25}Arquitetura e Tecnologia}{26}{subsubsection.3.1.25}%
+\contentsline {subsubsection}{\numberline {3.1.26}Manutenção e Monitoramento}{27}{subsubsection.3.1.26}%
+\contentsline {subsubsection}{\numberline {3.1.27}Internacionalização}{28}{subsubsection.3.1.27}%
+\contentsline {subsection}{\numberline {3.2}Regras de Negócio}{28}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Critérios de Aceitação}{28}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Diagramas de casos de uso}{33}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Diagramas de classe}{49}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Arquitetura do Sistema}{51}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Diagrama Entidade-Relacionamento}{55}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Interfaces}{56}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Tela Inicial}{57}{subsubsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}Dashboard}{57}{subsubsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.3}Templates}{58}{subsubsection.3.8.3}%
+\contentsline {subsubsection}{\numberline {3.8.4}Emissão de Certificados}{59}{subsubsection.3.8.4}%
+\contentsline {subsubsection}{\numberline {3.8.5}Lista de Certificados}{60}{subsubsection.3.8.5}%
+\contentsline {subsubsection}{\numberline {3.8.6}Envios}{61}{subsubsection.3.8.6}%
+\contentsline {subsubsection}{\numberline {3.8.7}Verificação Pública}{62}{subsubsection.3.8.7}%
+\contentsline {subsection}{\numberline {3.9}Matriz de Rastreabilidade}{63}{subsection.3.9}%
+\contentsline {section}{\numberline {4.0}SOFTWARE}{65}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Implantação}{65}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Arquitetura e Execução}{65}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}CI/CD e Pipeline de Implantação}{65}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Configuração de Ambiente}{67}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Banco de Dados}{67}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Monitoramento e Observabilidade}{67}{subsubsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.2}Testes}{68}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Plano de Testes}{68}{subsubsection.4.2.1}%
+\contentsline {paragraph}{Estratégia de Testes}{68}{section*.18}%
+\contentsline {paragraph}{Casos de Teste}{69}{section*.19}%
+\contentsline {subsubsection}{\numberline {4.2.2}Frontend (Certificate Hub)}{74}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Backend (Certificate Server)}{75}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Testes End-to-End}{76}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Limitações}{77}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Resumo Geral}{78}{subsubsection.4.2.6}%
+\contentsline {section}{\numberline {5.0}CONSIDERAÇÕES FINAIS}{78}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{79}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Limitações}{80}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Trabalhos Futuros}{81}{subsection.5.3}%
+\contentsline {section}{Referências}{84}{section*.24}%
+\contentsline {section}{\numberline {6.0}ANEXOS}{85}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{85}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{85}{subsection.6.2}%
