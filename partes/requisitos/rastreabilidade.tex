@@ -1,6 +1,6 @@
 \subsection{Matriz de Rastreabilidade}
 
-A Tabela~\ref{tab:rastreabilidade} apresenta a matriz de rastreabilidade que relaciona os requisitos funcionais aos casos de uso, às principais classes do diagrama de classes e às entidades do banco de dados, garantindo a rastreabilidade entre os artefatos do projeto. A tabela foi disposta em orientação paisagem para preservar a legibilidade de seu conteúdo, uma vez que possui quatro colunas com textos extensos.
+A Tabela~\ref{tab:rastreabilidade} apresenta a matriz de rastreabilidade que relaciona os requisitos funcionais implementados no MVP aos casos de uso, às principais classes do diagrama de classes e às tabelas do banco de dados, garantindo a rastreabilidade entre os artefatos do projeto. A tabela foi disposta em orientação paisagem para preservar a legibilidade de seu conteúdo, uma vez que possui quatro colunas com textos extensos.
 
 \begin{sidewaystable}[htbp]
 \centering
@@ -11,41 +11,19 @@ A Tabela~\ref{tab:rastreabilidade} apresenta a matriz de rastreabilidade que rel
 \hline
 \textbf{Módulo / RFs} & \textbf{Casos de Uso} & \textbf{Classes} & \textbf{Tabelas} \\
 \hline
-Autenticação e Controle de Acesso (\ref{rf:login-email}–\ref{rf:bloqueio-sessoes}) & Gerenciar Usuários, Definir Permissões & Usuario, UsuarioOrganizacao, Sessao & USUARIO, USUARIO\_ORGANIZACAO, SESSAO \\
+Templates de Certificados (\ref{rf:upload-templates}–\ref{rf:mapeamento-campos}) & Criar Template, Editar Template, Salvar Template & Template, TemplateLayout & TEMPLATES \\
 \hline
-Templates de Certificados (\ref{rf:upload-templates}–\ref{rf:duplicar-templates}) & Criar Template, Editar Template, Configurar Campos, Salvar, Prévia & Template, CampoDinamico, TemplateVersao & TEMPLATE, CAMPO\_DINAMICO, TEMPLATE\_VERSAO \\
+Geração de Certificados (\ref{rf:gerar-pdf}–\ref{rf:download-individual}) & Emitir Certificado, Gerar PDF, Obter Certificado & Certificate, VerificationCode, EmitCertificateUseCase, GeneratePDFUseCase, GetCertificateUseCase, ICertificateRepository, ITemplateRepository, IPDFService, SupabaseCertificateRepository, SupabaseTemplateRepository, PDFKitService & CERTIFICADOS \\
 \hline
-Entrada de Dados (\ref{rf:cadastro-participante}–\ref{rf:notificar-processamento}) & Cadastrar Part., Importar Part., Emitir Individual, Emitir em Lote & Participante, Importacao & PESSOA, PARTICIPANTE, IMPORTACAO \\
+Validação Pública (\ref{rf:portal-validacao}–\ref{rf:exibir-validacao}) & Verificar Certificado & VerifyCertificateUseCase, VerifyResult, Certificate (Frontend) & CERTIFICADOS \\
 \hline
-Geração de Certificados (\ref{rf:gerar-pdf}–\ref{rf:download-lote}) & Emitir Individual, Emitir em Lote, Fila, Notificar & Certificado, ValorCampo, FilaProcessamento & CERTIFICADO, VALOR\_CAMPO, FILA\_PROCESSAMENTO \\
+Envio por E-mail (\ref{rf:personalizacao-email}–\ref{rf:reenviar-falha}) & --- & EnvioEmail (Frontend) & --- \\
 \hline
-Envio e Comunicação (\ref{rf:personalizacao-email}–\ref{rf:reenviar-falha}) & Notificar & EnvioEmail & ENVIO\_EMAIL \\
+Dashboard e Gestão (\ref{rf:lista-certificados}–\ref{rf:estatisticas-emissao}) & Listar Certificados & Certificate (Frontend), Template (Frontend) & CERTIFICADOS, TEMPLATES \\
 \hline
-Validação Pública e Antifraude (\ref{rf:portal-validacao}–\ref{rf:exibir-validacao}) & Validar Cert., Exibir Dados, Escanear QR Code & Certificado & CERTIFICADO \\
-\hline
-Assinaturas Digitais (\ref{rf:assinatura-digitalizada}–\ref{rf:hash-assinatura}) & Emitir Individual & AssinaturaDigital & ASSINATURA\_DIGITAL \\
-\hline
-Dashboard e Gestão (\ref{rf:lista-certificados}–\ref{rf:logs-acoes}) & Visualizar Dashboard & --- & views / consultas SQL \\
-\hline
-Auditoria e Segurança (\ref{rf:responsavel-certificado}–\ref{rf:arquivamento-certificados}) & Emitir Individual & LogSistema, LogAuditoria & LOGSISTEMA, LOG\_AUDITORIA \\
-\hline
-Gestão de Cursos/Eventos (\ref{rf:cadastro-curso}–\ref{rf:local-curso}) & Gerenciar Cursos & Curso, Matricula & CURSO, MATRICULA \\
-\hline
-Participantes (\ref{rf:cadastro-completo-participante}–\ref{rf:busca-participante}) & Cadastrar Part., Importar Part., Buscar Part., Visualizar Histórico & Participante & PESSOA, PARTICIPANTE \\
-\hline
-Multiempresa (\ref{rf:cadastro-organizacao}–\ref{rf:organizacao-usuarios}) & Gerenciar Organizações & Organizacao, UsuarioOrganizacao & ORGANIZACAO, USUARIO\_ORGANIZACAO \\
-\hline
-Configurações do Sistema (\ref{rf:personalizar-mensagens}–\ref{rf:regras-reemissao}) & Configurar Sistema & ConfiguracaoSistema & CONFIGURACAO\_SISTEMA \\
-\hline
-Armazenamento e Arquivos (\ref{rf:armazenar-templates}) & Criar Template, Editar Template & Template, TemplateVersao & TEMPLATE, TEMPLATE\_VERSAO \\
-\hline
-Notificações e Alertas (\ref{rf:notificar-falhas}–\ref{rf:alertar-template-invalido}) & Notificar & EnvioEmail & ENVIO\_EMAIL \\
-\hline
-Monitoramento e Logs (\ref{rf:logs-autenticacao}–\ref{rf:exportacao-logs}) & Consultar Logs & LogSistema, LogAuditoria & LOGSISTEMA, LOG\_AUDITORIA \\
-\hline
-Suporte e Operação (\ref{rf:chamados-suporte}–\ref{rf:termos-uso}) & Abrir Chamado & ChamadoSuporte & CHAMADO\_SUPORTE \\
+Armazenamento de Templates (\ref{rf:armazenar-templates}) & Criar Template, Editar Template & Template, SupabaseTemplateRepository & TEMPLATES \\
 \hline
 \end{tabularx}
-\caption{Matriz de rastreabilidade entre requisitos funcionais, casos de uso, classes e tabelas do banco de dados}
+\caption{Matriz de rastreabilidade entre requisitos funcionais, casos de uso, classes e tabelas do MVP}
 \label{tab:rastreabilidade}
 \end{sidewaystable}
