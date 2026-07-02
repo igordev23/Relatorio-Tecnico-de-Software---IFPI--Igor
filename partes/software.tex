@@ -65,7 +65,7 @@ Os testes foram classificados como unitários, uma vez que cada módulo (fronten
 
 \input{partes/plano_testes}
 
-A Tabela~\ref{tab:plano-testes} relaciona 60 casos de teste planejados, incluindo cenários funcionais, não-funcionais, \textit{end-to-end} e de resiliência. Cada caso pode ser validado por um ou mais testes automatizados, totalizando 276 testes unitários implementados com o framework Jest. As subseções seguintes detalham os resultados da execução em cada módulo.
+A Tabela~\ref{tab:plano-testes} relaciona 60 casos de teste planejados, incluindo cenários funcionais, não-funcionais, \textit{end-to-end} e de resiliência. Cada caso pode ser validado por um ou mais testes automatizados, totalizando 276 testes unitários implementados com o framework Jest e 1 teste \textit{end-to-end} implementado com Playwright. As subseções seguintes detalham os resultados da execução em cada módulo.
 
 \subsubsection{Frontend (Certificate Hub)}
 
@@ -129,8 +129,9 @@ A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os 
 \midrule
 Frontend (Certificate Hub) & 11 & 108 & 98,11\% & 18,92\,s \\
 Backend (Certificate Server) & 19 & 168 & 97,39\% & 6,36\,s \\
+E2E (Playwright) & 1 & 1 & -- & 10,13\,s \\
 \midrule
-\textbf{Total} & \textbf{30} & \textbf{276} & \textbf{--} & \textbf{35,41\,s} \\
+\textbf{Total} & \textbf{31} & \textbf{277} & \textbf{--} & \textbf{35,41\,s} \\
 \bottomrule
 \end{tabular}
 \end{table}
