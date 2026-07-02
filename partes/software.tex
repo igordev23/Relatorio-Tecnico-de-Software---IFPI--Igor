@@ -19,16 +19,18 @@ O fluxo de implantação baseia-se em um pipeline de CI/CD (Integração e Entre
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{imagens/CIbackend.png}
 \caption{Pipeline de CI do backend no GitHub Actions}
 \label{fig:ci-backend}
+\includegraphics[width=\textwidth]{imagens/CIbackend.png}
+\caption*{Fonte: Elaborado pelo autor}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{imagens/CIfrontend.png}
 \caption{Pipeline de CI do frontend no GitHub Actions}
 \label{fig:ci-frontend}
+\includegraphics[width=\textwidth]{imagens/CIfrontend.png}
+\caption*{Fonte: Elaborado pelo autor}
 \end{figure}
 
 \subsubsection{Configuração de Ambiente}
@@ -75,9 +77,10 @@ A métrica de cobertura, gerada automaticamente pelo Jest por meio da ferramenta
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{imagens/coverage-frontend.png}
 \caption{Relatório de cobertura dos testes — frontend}
 \label{fig:coverage-frontend}
+\includegraphics[width=\textwidth]{imagens/coverage-frontend.png}
+\caption*{Fonte: Elaborado pelo autor}
 \end{figure}
 
 Conforme ilustrado, o frontend atingiu 98,11\% de cobertura de comandos (\textit{Statements}), 91,04\% de ramos (\textit{Branches}), 96,96\% de funções (\textit{Functions}) e 99,57\% de linhas (\textit{Lines}). O diretório \texttt{models} obteve cobertura total (100\%), enquanto \texttt{services} alcançou 97,22\% e \texttt{view-models} 98,23\% em comandos. A cobertura de ramos em \texttt{services} (88,88\%) reflete a presença de tratamentos condicionais de erro que não foram todos exercitados nos testes.
@@ -90,9 +93,10 @@ A Figura~\ref{fig:coverage-backend} apresenta o relatório de cobertura gerado p
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{imagens/coverage-backend.png}
 \caption{Relatório de cobertura dos testes — backend}
 \label{fig:coverage-backend}
+\includegraphics[width=\textwidth]{imagens/coverage-backend.png}
+\caption*{Fonte: Elaborado pelo autor}
 \end{figure}
 
 O backend atingiu 97,39\% de cobertura de comandos, 93,04\% de ramos, 96,87\% de funções e 97,39\% de linhas. As camadas de \textit{application/dtos}, \textit{application/use-cases}, \textit{domain/entities} e \textit{infrastructure/repositories} apresentaram cobertura integral (100\%), evidenciando que as regras de negócio e a lógica de persistência foram amplamente exercitadas pelos testes. A camada \textit{infrastructure/services} registrou 99,09\% em comandos e 45,45\% em ramos, diferença atribuída às condicionais de configuração do PDFKit que não foram totalmente cobertas. As interfaces \textit{domain/repositories} e \textit{domain/services} aparecem com 0\% por se tratarem de contratos abstratos (interfaces) sem implementação concreta a ser testada diretamente.
@@ -106,9 +110,10 @@ O teste demonstra que o sistema suporta o fluxo crítico de ponta a ponta sem in
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{imagens/e2e-report.png}
 \caption{Relatório do teste end-to-end gerado pelo Playwright}
 \label{fig:e2e-report}
+\includegraphics[width=\textwidth]{imagens/e2e-report.png}
+\caption*{Fonte: Elaborado pelo autor}
 \end{figure}
 
 \subsubsection{Limitações}
