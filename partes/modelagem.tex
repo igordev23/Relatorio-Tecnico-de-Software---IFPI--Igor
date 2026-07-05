@@ -76,13 +76,25 @@ A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, ac
 \caption*{\small Fonte: O autor}
 \end{figure}
 
-\subsubsection{Templates}
+\subsubsection{Customização de Templates}
 
-A Figura~\ref{fig:templates} apresenta a página de gerenciamento de templates. Nela, o usuário pode criar novos modelos de certificado, visualizar a lista de templates existentes e personalizar a aparência de cada um (cores, fontes, bordas) através de um editor visual inline com pré-visualização em tempo real. Esta tela atende aos requisitos \textbf{\ref{rf:upload-templates}} (upload de templates), \textbf{\ref{rf:personalizacao-templates}} (personalização), \textbf{\ref{rf:selecionar-template-galeria}} (selecionar template da galeria), \textbf{\ref{rf:edicao-campos-dinamicos}} (criação de campos dinâmicos) e \textbf{\ref{rf:mapeamento-campos}} (salvar configurações de mapeamento).
+A Figura~\ref{fig:customizar-template} exibe o editor visual de templates do sistema. Nele, o usuário pode personalizar a aparência do certificado ajustando cores (fundo, primária, borda), fontes (tamanho do título e do corpo) e a visibilidade de elementos como borda e logotipo, com pré-visualização em tempo real das alterações. O editor é acessado ao clicar em "Editar" em um template na lista de templates. Esta tela atende aos requisitos \textbf{\ref{rf:personalizacao-templates}} (personalização), \textbf{\ref{rf:edicao-campos-dinamicos}} (criação de campos dinâmicos) e \textbf{\ref{rf:mapeamento-campos}} (salvar configurações de mapeamento).
 
 \begin{figure}[H]
 \centering
-\caption{Gerenciamento de templates}
+\caption{Editor visual de template com pré-visualização em tempo real}
+\label{fig:customizar-template}
+\includegraphics[width=\textwidth]{imagens/customizartemplate.png}
+\caption*{\small Fonte: O autor}
+\end{figure}
+
+\subsubsection{Lista de Templates}
+
+A Figura~\ref{fig:templates} apresenta a página de listagem de templates, onde o usuário pode visualizar os modelos cadastrados, criar novos templates e acessar o editor de personalização. Esta tela atende aos requisitos \textbf{\ref{rf:upload-templates}} (upload de templates) e \textbf{\ref{rf:selecionar-template-galeria}} (selecionar template da galeria).
+
+\begin{figure}[H]
+\centering
+\caption{Lista de templates cadastrados}
 \label{fig:templates}
 \includegraphics[width=\textwidth]{imagens/templates.png}
 \caption*{\small Fonte: O autor}
