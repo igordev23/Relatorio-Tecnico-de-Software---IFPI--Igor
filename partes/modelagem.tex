@@ -66,7 +66,7 @@ A Figura~\ref{fig:home} apresenta a \textit{landing page} do sistema, que exibe 
 
 \subsubsection{Dashboard}
 
-A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, acessível a partir do menu lateral. O dashboard apresenta quatro cartões de estatísticas (certificados emitidos, certificados ativos, templates e envios) e dois atalhos de navegação para as páginas de gerenciamento de templates e certificados. Esta tela atende aos requisitos \textbf{\ref{rf:lista-certificados}} (exibir lista de certificados), \textbf{\ref{rf:filtros-certificados}} (filtros) e \textbf{\ref{rf:estatisticas-emissao}} (estatísticas de emissão).
+A Figura~\ref{fig:dashboard} exibe o painel de controle principal do sistema, acessível a partir do menu lateral. O dashboard apresenta quatro cartões de estatísticas (certificados emitidos, certificados ativos, templates e envios) e dois atalhos de navegação para as páginas de gerenciamento de templates e certificados. O cartão "Envios" exibe valor zero porque o módulo de envio automático de e-mails não foi implementado no escopo do MVP --- o registro de envios no \textit{frontend} (\code{envios.ts}) é apenas uma estrutura simulada em armazenamento local, sem integração com provedores SMTP. Esta tela atende aos requisitos \textbf{\ref{rf:lista-certificados}} (exibir lista de certificados), \textbf{\ref{rf:filtros-certificados}} (filtros) e \textbf{\ref{rf:estatisticas-emissao}} (estatísticas de emissão).
 
 \begin{figure}[H]
 \centering
