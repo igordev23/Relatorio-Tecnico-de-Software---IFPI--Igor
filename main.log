@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  5 JUL 2026 20:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  5 JUL 2026 20:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2148,7 +2148,7 @@ s\T1/phv/m/n/12 , \T1/phv/m/sl/12 in-fras-truc-ture/repositories\T1/phv/m/n/12
  []
 
 [85 <./imagens/coverage-backend.png (PNG copy)>]
-<imagens/e2e-report.png, id=1708, 1284.8pt x 722.7pt>
+<imagens/e2e-report.png, id=1709, 1284.8pt x 722.7pt>
 File: imagens/e2e-report.png Graphic file (type png)
 <use imagens/e2e-report.png>
 Package pdftex.def Info: imagens/e2e-report.png  used on input line 268.
@@ -2321,9 +2321,9 @@ KTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/franc/AppData/Local/Programs
 /MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/franc/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/franc/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (105 pages, 1922554 bytes).
+Output written on main.pdf (105 pages, 1922901 bytes).
 PDF statistics:
- 2088 PDF objects out of 2487 (max. 8388607)
+ 2089 PDF objects out of 2487 (max. 8388607)
  588 named destinations out of 1000 (max. 500000)
  977 words of extra memory for PDF output out of 10000 (max. 10000000)
 
