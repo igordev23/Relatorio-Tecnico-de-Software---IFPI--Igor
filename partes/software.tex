@@ -134,9 +134,9 @@ export async function POST(request: Request) {
 O Código~\ref{cod:pdf} apresenta o serviço \code{PDFKitService} que gera o PDF do certificado com QR Code de verificação (\ref{rf:qrcode}). A URL de verificação é montada a partir da variável de ambiente \code{NEXT\_PUBLIC\_VERIFY\_URL} (linha~\ref{line:verifyurl}) e codificada em um QR Code utilizando a biblioteca \code{qrcode} (linha~\ref{line:qrcode}). A imagem gerada é inserida no PDF na posição inferior esquerda (linha~\ref{line:qrimage}), acompanhada das instruções de verificação e do código único.
 
 \begin{lstlisting}[language=TypeScript, caption={Geração de PDF com QR Code no servidor}, label={cod:pdf}, escapechar=§]
-const verifyUrl = `$\${process.env.NEXT_PUBLIC_VERIFY_URL ||
-  "https://example.com/verify"}?cpf=$\${certificate.recipientCPF}
-  &codigo=$\${certificate.verificationCode}`;§\label{line:verifyurl}§
+const verifyUrl = `${process.env.NEXT_PUBLIC_VERIFY_URL ||
+  "https://example.com/verify"}?cpf=${certificate.recipientCPF}
+  &codigo=${certificate.verificationCode}`;§\label{line:verifyurl}§
 
 const qrBuffer = await toBuffer(verifyUrl, {           §\label{line:qrcode}§
   width: 160, margin: 1,
@@ -156,6 +156,60 @@ doc.font("Helvetica").fontSize(8).text(
   \`Este certificado foi emitido pelo CertificateHub.
   Verifique a sua autenticidade acessando o QR Code...\`, instrX, instrY + 14
 );
+\end{lstlisting}
+
+\subsubsection{Validação por Código Único}
+\label{sec:codigo-validacao}
+
+O Código~\ref{cod:verify-handler} apresenta o \textit{Route Handler} público \code{POST /api/verify} que implementa a validação de autenticidade de certificados (\ref{rf:portal-validacao}--\ref{rf:exibir-validacao}). A requisição recebe o CPF e o código de verificação presentes no certificado, valida a entrada com Zod (\code{verifyCertificateSchema}) e delega a lógica ao \code{VerifyCertificateUseCase}.
+
+\begin{lstlisting}[language=TypeScript, caption={Route Handler público de verificação de autenticidade}, label={cod:verify-handler}, escapechar=§]
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    const validated = verifyCertificateSchema.parse(body);
+
+    const repo = new SupabaseCertificateRepository();
+    const useCase = new VerifyCertificateUseCase(repo);
+    const result = await useCase.execute(validated);
+
+    return NextResponse.json({ data: result });
+  } catch (error) {
+    return handleApiError(error);
+  }
+}
+\end{lstlisting}
+
+O Código~\ref{cod:verify-usecase} detalha o caso de uso \code{VerifyCertificateUseCase}, que centraliza a lógica de verificação. O método \code{execute} busca o certificado no banco por CPF e código (\ref{rf:validar-certificado}); se encontrado, retorna os dados do certificado e o status de validade calculado pelo método \code{isValid()} da entidade de domínio. Se não encontrado, indica que o certificado não é autêntico.
+
+\begin{lstlisting}[language=TypeScript, caption={Caso de uso de verificação de autenticidade}, label={cod:verify-usecase}, escapechar=§]
+export class VerifyCertificateUseCase {
+  constructor(private readonly certificateRepo: ICertificateRepository) {}
+
+  async execute(dto: VerifyCertificateDTO): Promise<VerifyCertificateResult> {
+    const certificate = await this.certificateRepo.findByCPFAndCode(
+      dto.cpf,
+      dto.verificationCode.toUpperCase()
+    );
+
+    if (!certificate) {
+      return { isAuthentic: false, isValid: false, certificate: null };
+    }
+
+    return {
+      isAuthentic: true,
+      isValid: certificate.isValid(),
+      certificate: {
+        recipientName: certificate.recipientName,
+        courseName: certificate.courseName,
+        courseHours: certificate.courseHours,
+        issuedAt: certificate.issuedAt,
+        validityDate: certificate.validityDate,
+        verificationCode: certificate.verificationCode,
+      },
+    };
+  }
+}
 \end{lstlisting}
 
 \subsection{Testes}

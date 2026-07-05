@@ -91,20 +91,21 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Entidade de Domínio: Certificate}{72}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Route Handler de Emissão}{74}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Geração de PDF com QR Code}{75}{subsubsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.3}Testes}{76}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Plano de Testes}{76}{subsubsection.4.3.1}%
-\contentsline {paragraph}{Estratégia de Testes}{76}{section*.20}%
-\contentsline {paragraph}{Casos de Teste}{77}{section*.21}%
-\contentsline {subsubsection}{\numberline {4.3.2}Frontend (Certificate Hub)}{81}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Backend (Certificate Server)}{82}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Testes End-to-End}{83}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Limitações}{84}{subsubsection.4.3.5}%
-\contentsline {subsubsection}{\numberline {4.3.6}Resumo Geral}{85}{subsubsection.4.3.6}%
-\contentsline {section}{\numberline {5.0}CONSIDERAÇÕES FINAIS}{85}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{87}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Limitações}{87}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Trabalhos Futuros}{88}{subsection.5.3}%
-\contentsline {section}{Referências}{92}{section*.26}%
-\contentsline {section}{\numberline {6.0}ANEXOS}{93}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{93}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{93}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {4.2.4}Validação por Código Único}{76}{subsubsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.3}Testes}{77}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Plano de Testes}{78}{subsubsection.4.3.1}%
+\contentsline {paragraph}{Estratégia de Testes}{78}{section*.20}%
+\contentsline {paragraph}{Casos de Teste}{79}{section*.21}%
+\contentsline {subsubsection}{\numberline {4.3.2}Frontend (Certificate Hub)}{83}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Backend (Certificate Server)}{84}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Testes End-to-End}{85}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Limitações}{86}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}Resumo Geral}{87}{subsubsection.4.3.6}%
+\contentsline {section}{\numberline {5.0}CONSIDERAÇÕES FINAIS}{87}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{89}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Limitações}{89}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Trabalhos Futuros}{90}{subsection.5.3}%
+\contentsline {section}{Referências}{94}{section*.26}%
+\contentsline {section}{\numberline {6.0}ANEXOS}{95}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{95}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{95}{subsection.6.2}%
