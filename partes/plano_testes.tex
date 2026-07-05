@@ -133,7 +133,7 @@ CT055 & Acessibilidade — Navegação por teclado & Todos os campos do formulá
 \multicolumn{3}{l}{\textbf{Testes End-to-End (E2E)}} \\
 \midrule
 
-CT056 & Fluxo completo de emissão e validação & Usuário cria template, emite certificado e valida o código no portal público; todas as etapas são concluídas com sucesso. (Automatizado com Playwright.) & Executado \\
+CT056 & Fluxo completo de emissão, validação e exclusão & Usuário cria template, emite certificado, valida o código no portal público e exclui o certificado com confirmação; todas as etapas são concluídas com sucesso. (Automatizado com Playwright.) & Executado \\
 CT057 & Validação via \textit{QR Code} & \textit{QR Code} gerado no PDF, quando escaneado, redireciona para a URL de validação com o código correto como parâmetro. & Planejado \\
 
 \midrule
@@ -158,3 +158,7 @@ CT060 & \textit{Timeout} na geração de PDF & Geração de PDF excede o tempo l
     \item \textbf{CT055} (acessibilidade) possui teste automatizado de navegação Tab no frontend (\texttt{ValidityForm.test.tsx}), mas sem auditoria com ferramentas como \texttt{axe-core} -- categorizado como \textbf{Parcial};
     \item Nenhum dos casos CT052--CT055 ficou apenas como \textbf{Planejado} -- todos foram ao menos parcialmente verificados.
 \end{itemize}
+
+\vspace{0.3em}
+\noindent\textbf{Esclarecimento sobre o CT057 (validação via QR Code):}
+O CT057 está marcado como \textbf{Planejado} porque, embora a geração do \textit{QR Code} no PDF já esteja implementada no \textit{backend} (pacote \texttt{qrcode} integrado ao \texttt{PDFKitService.ts}), não há um teste automatizado que valide que o código escaneado redireciona para a URL de verificação correta. A automação dessa verificação exigiria leitura óptica do \textit{QR Code} ou validação visual, o que está fora do escopo atual da suíte de testes E2E. A funcionalidade foi validada manualmente durante o desenvolvimento e permanece como melhoria para versões futuras.
