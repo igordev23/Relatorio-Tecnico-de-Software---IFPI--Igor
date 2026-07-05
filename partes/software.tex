@@ -257,7 +257,7 @@ O backend atingiu 96,53\% de cobertura de comandos, 92,24\% de ramos, 95,87\% de
 \subsubsection{Testes End-to-End}
 \label{subsubsec:e2e}
 
-Para validar a integração entre frontend e backend em cenário realista, foi implementado um teste \textit{end-to-end} com Playwright que percorre o fluxo completo: criar um template, emitir um certificado, verificar a autenticidade pela página pública e, ao final, excluir o certificado — contemplando também o fluxo de remoção com confirmação via \texttt{confirm()}. O teste é executado contra o servidor de desenvolvimento local (Vite na porta 5173) e depende do backend rodando simultaneamente (Next.js na porta 3000). Todo o processo é orquestrado automaticamente pelo Playwright, que inicia o frontend via \texttt{npm run dev} antes da execução. A suíte inclui também um \textit{script} auxiliar de população de dados (\texttt{popular.spec.ts}), utilizado apenas para preparar o ambiente de demonstração, totalizando 2 arquivos de especificação na Figura~\ref{fig:e2e-report}. O tempo total exibido no relatório (9,30\,s) refere-se à execução completa de ambos os \textit{scripts} — o \texttt{fluxo-completo.spec.ts} isoladamente é concluído em aproximadamente 8,3\,s.
+Para validar a integração entre frontend e backend em cenário realista, foi implementado um teste \textit{end-to-end} com Playwright que percorre o fluxo completo: criar um template, emitir um certificado, verificar a autenticidade pela página pública e, ao final, excluir o certificado — contemplando também o fluxo de remoção com confirmação via \texttt{confirm()}. O teste é executado contra o servidor de desenvolvimento local (Vite na porta 5173) e depende do backend rodando simultaneamente (Next.js na porta 3000). Todo o processo é orquestrado automaticamente pelo Playwright, que inicia o frontend via \texttt{npm run dev} antes da execução. A suíte inclui também um \textit{script} auxiliar de população de dados (\texttt{popular.spec.ts}), utilizado apenas para preparar o ambiente de demonstração, totalizando 2 arquivos de especificação na Figura~\ref{fig:e2e-report}. O tempo total de execução, conforme o relatório gerado pelo Playwright, foi de 8,43\,s — incluindo ambos os \textit{scripts} executados em paralelo com 2 \textit{workers}.
 
 O teste demonstra que o sistema suporta o fluxo crítico de ponta a ponta sem intervenção manual. Durante o desenvolvimento, foi identificado e corrigido um erro de configuração de CORS no backend (\texttt{next.config.ts}), que impedia a comunicação entre os serviços em \texttt{localhost}. A Figura~\ref{fig:e2e-report} apresenta o relatório gerado pelo Playwright, que exibe o passo a passo da execução, incluindo as capturas de tela de cada etapa e o resultado final (aprovado). O \textbf{CT057} (validação via \textit{QR Code}) permanece como \textbf{Planejado} -- embora a geração do \textit{QR Code} no PDF já esteja implementada no backend (\texttt{PDFKitService.ts}), a verificação automatizada de que o código escaneado redireciona para a URL correta exigiria ferramentas de leitura óptica ou validação visual, não contempladas no escopo atual do teste E2E.
 
@@ -287,9 +287,9 @@ A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os 
 \midrule
 Frontend (Certificate Hub) & 11 & 108 & 95,58\% & 38,57\,s \\
 Backend (Certificate Server) & 19 & 168 & 96,53\% & 14,86\,s \\
-E2E (Playwright) & 1 & 1 & -- & 9,30\,s \\
+E2E (Playwright) & 1 & 1 & -- & 8,43\,s \\
 \midrule
-\textbf{Total} & \textbf{31} & \textbf{277} & \textbf{--} & \textbf{62,73\,s} \\
+\textbf{Total} & \textbf{31} & \textbf{277} & \textbf{--} & \textbf{61,86\,s} \\
 \bottomrule
 \end{tabular}
 \vspace{0.3em}
