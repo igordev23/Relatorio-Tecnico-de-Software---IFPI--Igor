@@ -67,7 +67,7 @@ Esta seção apresenta trechos reais do código-fonte do sistema que ilustram as
 
 O Código~\ref{cod:certificate} apresenta a entidade \code{Certificate}, que encapsula as regras de negócio relacionadas à emissão e validação de certificados. A classe utiliza um construtor privado e métodos estáticos de fábrica (\code{create} e \code{fromPersistence}) para garantir que apenas instâncias válidas sejam criadas. O método \code{isValid()} (linha~\ref{line:isvalid}) implementa a regra de negócio que determina se um certificado está dentro do prazo de validade, comparando a data de validade com a data atual.
 
-\begin{lstlisting}[language=TypeScript, caption={Entidade Certificate com validações de domínio}, label={cod:certificate}, escapechar={}]
+\begin{lstlisting}[language=TypeScript, caption={Entidade Certificate com validações de domínio}, label={cod:certificate}, escapechar=§]
 export class Certificate {
   private constructor(private props: CertificateProps) {}
 
@@ -80,7 +80,7 @@ export class Certificate {
     return new Certificate({ ...props, validityDate: new Date(props.validityDate) });
   }
 
-  isValid(): boolean {       \label{line:isvalid}
+  isValid(): boolean {       §\label{line:isvalid}§
     return this.props.validityDate > new Date();
   }
 
@@ -106,7 +106,7 @@ export class Certificate {
 
 O Código~\ref{cod:emit} mostra o \textit{Route Handler} responsável pela emissão de certificados (\ref{rf:gerar-pdf}). A requisição \code{POST /api/certificates/emit} recebe os dados do certificado, valida-os com Zod (\code{emitCertificateSchema.parse}), instancia os repositórios concretos e delega a execução ao caso de uso \code{EmitCertificateUseCase}. O uso de injeção de dependência nos repositórios (linhas~\ref{line:repos}) permite substituir as implementações sem alterar a lógica de negócio.
 
-\begin{lstlisting}[language=TypeScript, caption={Route Handler de emissão de certificado}, label={cod:emit}, escapechar={}]
+\begin{lstlisting}[language=TypeScript, caption={Route Handler de emissão de certificado}, label={cod:emit}, escapechar=§]
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -114,7 +114,7 @@ export async function POST(request: Request) {
 
     const certificateRepo = new SupabaseCertificateRepository();
     const templateRepo = new SupabaseTemplateRepository();
-    const useCase = new EmitCertificateUseCase(certificateRepo, templateRepo);\label{line:repos}
+    const useCase = new EmitCertificateUseCase(certificateRepo, templateRepo);§\label{line:repos}§
 
     const { certificate } = await useCase.execute(validated);
 
@@ -133,12 +133,12 @@ export async function POST(request: Request) {
 
 O Código~\ref{cod:pdf} apresenta o serviço \code{PDFKitService} que gera o PDF do certificado com QR Code de verificação (\ref{rf:qrcode}). A URL de verificação é montada a partir da variável de ambiente \code{NEXT\_PUBLIC\_VERIFY\_URL} (linha~\ref{line:verifyurl}) e codificada em um QR Code utilizando a biblioteca \code{qrcode} (linha~\ref{line:qrcode}). A imagem gerada é inserida no PDF na posição inferior esquerda (linha~\ref{line:qrimage}), acompanhada das instruções de verificação e do código único.
 
-\begin{lstlisting}[language=TypeScript, caption={Geração de PDF com QR Code no servidor}, label={cod:pdf}, escapechar={}]
+\begin{lstlisting}[language=TypeScript, caption={Geração de PDF com QR Code no servidor}, label={cod:pdf}, escapechar=§]
 const verifyUrl = `$\${process.env.NEXT_PUBLIC_VERIFY_URL ||
   "https://example.com/verify"}?cpf=$\${certificate.recipientCPF}
-  &codigo=$\${certificate.verificationCode}`;\label{line:verifyurl}
+  &codigo=$\${certificate.verificationCode}`;§\label{line:verifyurl}§
 
-const qrBuffer = await toBuffer(verifyUrl, {           \label{line:qrcode}
+const qrBuffer = await toBuffer(verifyUrl, {           §\label{line:qrcode}§
   width: 160, margin: 1,
   color: { dark: template.layoutConfig.primaryColor, light: "#ffffff" },
 });
@@ -146,7 +146,7 @@ const qrBuffer = await toBuffer(verifyUrl, {           \label{line:qrcode}
 const doc = new PDFDocument({ layout: "landscape", size: "A4" });
 
 // Posicionar QR Code no canto inferior esquerdo
-doc.image(qrBuffer, 80, instrY, { width: 60 });        \label{line:qrimage}
+doc.image(qrBuffer, 80, instrY, { width: 60 });        §\label{line:qrimage}§
 
 // Instruções de verificação ao lado do QR Code
 doc.font("Helvetica-Bold").fontSize(9).text(
