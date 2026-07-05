@@ -91,10 +91,7 @@
 
 % Configuração dos códigos
 \lstset{
-    language=Python,
     basicstyle=\ttfamily\small,
-    emph={@app},
-    emphstyle=\color{teal}\bfseries,
     keywordstyle=\color{blue}\bfseries,
     backgroundcolor=\color{black!5},
     stringstyle=\color{red},
@@ -104,7 +101,16 @@
     frame=single,
     numbers=left,
     numberstyle=\tiny\color{gray},
-    tabsize=4
+    tabsize=2
+}
+
+\lstdefinelanguage{TypeScript}{
+    keywords={import, export, from, async, await, const, let, if, else, return, new, throw, try, catch, class, extends, implements, interface, type, enum, get, set, static, private, public, protected, readonly, typeof, keyof, Partial, Omit, Pick, Promise, Buffer},
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    morestring=[b]',
+    morestring=[b]`
 }
 
 \geometry{a4paper, left=3cm, right=2cm, top=3cm, bottom=2cm}
