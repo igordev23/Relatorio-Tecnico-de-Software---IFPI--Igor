@@ -149,3 +149,12 @@ CT060 & \textit{Timeout} na geração de PDF & Geração de PDF excede o tempo l
 \endgroup
 \normalsize
 \renewcommand{\arraystretch}{1.0}
+
+\vspace{0.5em}
+\noindent\textbf{Esclarecimento sobre os casos não-funcionais (CT052 a CT055):}
+\begin{itemize}
+    \item \textbf{CT052} (carga) possui teste automatizado no backend (10 chamadas concorrentes em \textless 5\,s), porém sem variação de carga ou teste de estresse -- por isso categorizado como \textbf{Parcial};
+    \item \textbf{CT053} (autenticação) e \textbf{CT054} (\textit{rate limiting}) foram \textbf{integralmente executados} com testes automatizados no \textit{middleware};
+    \item \textbf{CT055} (acessibilidade) possui teste automatizado de navegação Tab no frontend (\texttt{ValidityForm.test.tsx}), mas sem auditoria com ferramentas como \texttt{axe-core} -- categorizado como \textbf{Parcial};
+    \item Nenhum dos casos CT052--CT055 ficou apenas como \textbf{Planejado} -- todos foram ao menos parcialmente verificados.
+\end{itemize}
