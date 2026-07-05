@@ -6,6 +6,8 @@ A entidade \code{TEMPLATES} gerencia os modelos de certificado disponíveis para
 
 O relacionamento entre as entidades é de 1:N (um template pode ser usado por vários certificados), materializado pela chave estrangeira \code{templateId} na entidade \code{CERTIFICADOS} que referencia \code{TEMPLATES(id)}. Essa modelagem reflete o escopo reduzido do MVP, que contempla exclusivamente as funcionalidades de emissão de certificados com suporte a templates personalizáveis, sem as entidades de usuários, organizações, participantes, cursos e auditoria que serão incorporadas em versões futuras do sistema.
 
+O Diagrama de Classes (Figura~\ref{fig:diagrama-classes}) apresenta a hierarquia \code{PESSOA} $\rightarrow$ \code{USUARIO} / \code{PARTICIPANTE} como uma generalização conceitual oriunda do modelo de domínio. No banco de dados físico do MVP, essas entidades não foram materializadas --- apenas \code{CERTIFICADOS} e \code{TEMPLATES} existem como tabelas. A implementação futura dessa herança seguirá a estratégia \textit{joined-table} (ou \textit{table-per-type}), na qual \code{PESSOA} seria uma tabela concreta com os atributos comuns (\code{id}, \code{nome}, \code{email}) e cada subtipo (\code{USUARIO}, \code{PARTICIPANTE}) teria sua própria tabela com chave primária que é também chave estrangeira referenciando \code{PESSOA(id)} --- garantindo integridade referencial sem armazenamento redundante.
+
 \begin{figure}[H]
     \centering
     \caption{Diagrama Entidade-Relacionamento (DER) --- MVP do Banco de Dados}
