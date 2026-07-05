@@ -15,7 +15,7 @@ Sistema web SaaS com arquitetura multi-tenant para emissão, gestão, envio e va
 | React 19 | Next.js | PostgreSQL (Supabase) | Docker |
 | TypeScript | Node.js | — | Render |
 | Tailwind CSS | API REST | — | Git/GitHub |
-| qrcode.react 4 | qrcode 1.5 | — | — |
+| — | qrcode 1.5 | — | — |
 
 ## Funcionalidades Principais
 

@@ -117,14 +117,14 @@ A escolha do PDFKit em detrimento de alternativas como Puppeteer baseou-se em ef
 
 No sistema, o PDFKitService implementa a interface \code{IPDFService} definida no domínio, seguindo o princípio de inversão de dependência. O certificado é gerado em formato paisagem A4, com fundo colorido, bordas decorativas, título ``CERTIFICADO'', nome do destinatário, curso, carga horária, datas de emissão e validade, CPF formatado e código de verificação gerado com UUID v4 \cite{uuid2025}. Todas as cores, tamanhos e visibilidade dos elementos são controlados pelo \code{layoutConfig} do template, armazenado como JSONB no banco de dados. O PDF é retornado como \code{Buffer} e streamado diretamente na resposta HTTP.
 
-\subsubsection{qrcode e qrcode.react}
+\subsubsection{qrcode}
 \label{sec:qrcode}
 
-qrcode é uma biblioteca Node.js que gera imagens de QR Code nos formatos PNG, SVG e UTF-8, sem dependência de navegador \cite{qrcode2025}. qrcode.react é um componente React que renderiza QR Codes no navegador utilizando elementos \code{canvas} do HTML, exportando os componentes \code{QRCodeCanvas} e \code{QRCodeSVG} \cite{qrcodereact2025}.
+qrcode é uma biblioteca Node.js que gera imagens de QR Code nos formatos PNG, SVG e UTF-8, sem dependência de navegador \cite{qrcode2025}. A função \code{toBuffer()} é utilizada no serviço \code{PDFKitService} para converter a URL pública de verificação --- construída no formato \code{/verificar?cpf=...\&codigo=...} --- em um buffer de imagem PNG, que é inserido no certificado via \code{PDFKit.image()}. A URL segue o padrão da URL base de validação configurada via variável de ambiente \code{NEXT\_PUBLIC\_VERIFY\_URL}.
 
-A escolha combinada dessas duas bibliotecas atende a dois cenários distintos de uso no sistema. O primeiro, no servidor, ocorre durante a geração do PDF: a função \code{QRCode.toDataURL()} é chamada no serviço \code{PDFKitService} para converter a URL pública de verificação --- construída no formato \code{/verificar?cpf=...\&codigo=...} --- em uma imagem PNG codificada em base64, que é inserida no certificado via \code{PDFKit.image()}. O segundo cenário ocorre no navegador: o componente \code{CertificateQRCode} utiliza \code{QRCodeCanvas} para exibir o QR Code de forma interativa nas telas de listagem e detalhes do certificado e na página pública de validação, permitindo ao usuário realizar o download da imagem.
+No sistema, o QR Code é gerado exclusivamente no servidor durante a produção do PDF, utilizando a cor primária do template (\code{template.layoutConfig.primaryColor}) para manter a identidade visual do documento. A legenda "Verifique o certificado" é posicionada abaixo do código para orientar o usuário.
 
-Alternativas como o \code{node-qrcode} (wrapper C++) foram descartadas por sua API menos expressiva e ecossistema restrito a Node.js, sem contraparte para React. O uso de uma API nativa de desenho de QR Code diretamente com PDFKit também foi preterido, pois adicionaria complexidade desnecessária ao código de geração do PDF.
+Alternativas como o \code{node-qrcode} (wrapper C++) foram descartadas por sua API menos expressiva e ecossistema restrito. O uso de uma API nativa de desenho de QR Code diretamente com PDFKit também foi preterido, pois adicionaria complexidade desnecessária ao código de geração do PDF.
 
 \subsection{Infraestrutura e Ferramentas}
 \label{sec:infra}
@@ -196,7 +196,6 @@ PostgreSQL & 16 & Banco relacional com integridade referencial \\
 \multicolumn{3}{l}{\textbf{Geração de Documentos}} \\
 PDFKit & \textasciitilde 0.18 & Geração server-side de certificados em PDF \\
 qrcode & \textasciitilde 1.5 & Geração de QR Codes no servidor para PDF \\
-qrcode.react & \textasciitilde 4.2 & Renderização de QR Codes no navegador \\
 UUID & \textasciitilde 14.x & Geração de identificadores únicos para verificação \\
 \midrule
 \multicolumn{3}{l}{\textbf{Infraestrutura e DevOps}} \\
