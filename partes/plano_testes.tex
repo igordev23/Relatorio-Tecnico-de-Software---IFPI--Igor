@@ -150,15 +150,6 @@ CT060 & \textit{Timeout} na geração de PDF & Geração de PDF excede o tempo l
 \normalsize
 \renewcommand{\arraystretch}{1.0}
 
-\vspace{0.5em}
-\noindent\textbf{Esclarecimento sobre os casos não-funcionais (CT052 a CT055):}
-\begin{itemize}
-    \item \textbf{CT052} (carga) possui teste automatizado no backend (10 chamadas concorrentes em \textless 5\,s), porém sem variação de carga ou teste de estresse -- por isso categorizado como \textbf{Parcial};
-    \item \textbf{CT053} (autenticação) e \textbf{CT054} (\textit{rate limiting}) foram \textbf{integralmente executados} com testes automatizados no \textit{middleware};
-    \item \textbf{CT055} (acessibilidade) possui teste automatizado de navegação Tab no frontend (\texttt{ValidityForm.test.tsx}), mas sem auditoria com ferramentas como \texttt{axe-core} -- categorizado como \textbf{Parcial};
-    \item Nenhum dos casos CT052--CT055 ficou apenas como \textbf{Planejado} -- todos foram ao menos parcialmente verificados.
-\end{itemize}
+Ressalta-se que os casos não-funcionais CT052 a CT055 foram todos ao menos parcialmente verificados. O CT052 (carga) possui teste automatizado no backend com 10 chamadas concorrentes em menos de 5 segundos, porém sem variação de carga ou teste de estresse --- daí sua classificação como \textbf{Parcial}. O CT053 (autenticação) e o CT054 (\textit{rate limiting}) foram integralmente executados com testes automatizados no \textit{middleware}. O CT055 (acessibilidade) conta com teste automatizado de navegação Tab no frontend (\texttt{ValidityForm.test.tsx}), mas sem auditoria com ferramentas como \texttt{axe-core}, sendo classificado como \textbf{Parcial}.
 
-\vspace{0.3em}
-\noindent\textbf{Esclarecimento sobre o CT057 (validação via QR Code):}
-O CT057 está marcado como \textbf{Planejado} porque, embora a geração do \textit{QR Code} no PDF já esteja implementada no \textit{backend} (pacote \texttt{qrcode} integrado ao \texttt{PDFKitService.ts}), não há um teste automatizado que valide que o código escaneado redireciona para a URL de verificação correta. A automação dessa verificação exigiria leitura óptica do \textit{QR Code} ou validação visual, o que está fora do escopo atual da suíte de testes E2E. A funcionalidade foi validada manualmente durante o desenvolvimento e permanece como melhoria para versões futuras.
+Quanto ao CT057 (validação via QR Code), sua marcação como \textbf{Planejado} deve-se ao fato de que, embora a geração do \textit{QR Code} no PDF já esteja implementada no \textit{backend} (pacote \texttt{qrcode} integrado ao \texttt{PDFKitService.ts}), não há um teste automatizado que valide que o código escaneado redireciona para a URL de verificação correta. A automação dessa verificação exigiria leitura óptica do \textit{QR Code} ou validação visual, o que está fora do escopo atual da suíte de testes E2E. A funcionalidade foi validada manualmente durante o desenvolvimento e permanece como melhoria para versões futuras.
