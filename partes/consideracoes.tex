@@ -2,7 +2,7 @@
 
 Este capítulo apresenta as conclusões consolidadas ao longo do desenvolvimento do sistema, retomando os objetivos propostos na Seção~1.2 e avaliando em que medida foram alcançados. Além disso, destacam-se as principais contribuições técnicas do trabalho, as restrições identificadas no escopo atual e as perspectivas para evolução contínua da arquitetura.
 
-O objetivo geral deste trabalho consistiu em projetar e implementar um sistema web automatizado para emissão, gestão e validação pública de certificados. O produto de software foi desenvolvido com êxito e encontra-se operando em ambiente de produção. Através do acesso via navegador, a plataforma fornece funcionalidades robustas de emissão, gerenciamento de \textit{templates} visuais, \textit{dashboard} gerencial e um portal público de validação. A ausência temporária do disparo automático de e-mails não bloqueia a operação, uma vez que a geração massiva e a autenticação descentralizada reduzem substancialmente a carga manual, permitindo que a distribuição final dos PDFs ocorra via canais institucionais convencionais. Sob a ótica da engenharia de software, conclui-se que o objetivo central foi plenamente atingido, entregando um Produto Mínimo Viável (MVP) funcional e perfeitamente alinhado aos requisitos de negócio.
+O objetivo geral deste trabalho consistiu em projetar e implementar um sistema web automatizado para emissão, gestão e validação pública de certificados. O produto de software foi desenvolvido com êxito e encontra-se operando em ambiente de produção. Através do acesso via navegador, a plataforma fornece funcionalidades robustas de emissão, gerenciamento de \textit{templates} visuais, \textit{dashboard} gerencial e um portal público de validação. O disparo automático de e-mails não foi implementado no escopo do MVP; a distribuição dos PDFs ocorre via canais institucionais convencionais (como e-mail manual ou compartilhamento de link), enquanto a geração dos certificados e o portal de validação já atendem ao fluxo principal do sistema. Sob a ótica da engenharia de software, conclui-se que o objetivo central foi plenamente atingido, entregando um Produto Mínimo Viável (MVP) funcional e alinhado aos requisitos de negócio.
 
 Em relação aos objetivos específicos propostos:
 
@@ -18,14 +18,14 @@ Devido à adoção da abordagem iterativa e às restrições inerentes ao escopo
 
 \subsection{Principais Contribuições}
 
-O sistema desenvolvido entrega valor significativo ao propor uma solução tecnológica moderna e eficiente para o problema identificado:
+O sistema desenvolvido oferece uma solução tecnológica moderna e eficiente para o problema identificado, cujas principais contribuições são:
 
 \begin{itemize}
     \item \textbf{Digitalização do fluxo de emissão:} a transição de ferramentas de escritório genéricas para um fluxo automatizado e dedicado reduz a fricção operacional, mitigando falhas humanas e retrabalho;
     \item \textbf{Verificabilidade e Transparência:} a introdução de um portal público, acessível via \textit{QR Code}, descentraliza o processo de auditoria de certificados, provendo verificação em tempo real sem ônus operacional para a instituição emissora;
     \item \textbf{Governança de Dados:} a persistência de registros de emissão em banco de dados relacional com carimbo de tempo e autoria garante rastreabilidade total do ciclo de vida dos certificados;
     \item \textbf{Arquitetura Desacoplada e Escalável:} a segregação entre \textit{frontend} (Vite/React) e \textit{backend} (Next.js), orientada a princípios de arquitetura limpa, promove alta coesão, testabilidade e facilita a evolução independente dos microsserviços;
-    \item \textbf{Esteira de CI/CD Automatizada:} a implementação de fluxos de CI/CD robustos eleva o nível de maturidade do desenvolvimento, garantindo que incrementos de código sejam exaustivamente testados antes de atingirem o ambiente de produção.
+    \item \textbf{Esteira de CI/CD Automatizada:} a implementação de fluxos de CI/CD garante que todo incremento de código seja automaticamente testado (lint, tipo, unitário, integração e E2E) antes de atingir o ambiente de produção.
 \end{itemize}
 
 \subsection{Limitações}
