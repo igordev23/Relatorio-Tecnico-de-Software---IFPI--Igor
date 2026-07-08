@@ -128,7 +128,7 @@ No sistema, o PDFKitService implementa a interface \code{IPDFService} definida n
 
 A opção de desenhar o QR Code manualmente com retângulos do PDFKit foi avaliada e preterida por três motivos: (1) \textbf{simplicidade} --- \code{toBuffer(url)} gera o PNG em uma linha, enquanto desenhar manualmente exigiria implementar a codificação Reed-Solomon e a matriz de módulos do QR; (2) \textbf{manutenção} --- a lógica de QR fica isolada na biblioteca; qualquer atualização de padrão ou segurança vem do pacote, sem necessidade de alterar o \code{PDFKitService}; e (3) \textbf{cor personalizada} --- o \code{qrcode} já suporta \code{color.dark} e \code{color.light} de fábrica, tornando trivial usar a cor primária do template (\code{template.layoutConfig.primaryColor}) sem manipulação adicional de pixels.
 
-No sistema, o QR Code é gerado exclusivamente no servidor durante a produção do PDF, utilizando a cor primária do template para manter a identidade visual do documento. A legenda "Verifique o certificado" é posicionada abaixo do código para orientar o usuário. Alternativas como o \code{node-qrcode} (wrapper C++) foram descartadas por sua API menos expressiva e ecossistema restrito.
+No sistema, o QR Code é gerado exclusivamente no servidor durante a produção do PDF, utilizando a cor primária do template para manter a identidade visual do documento. A legenda "Verifique o certificado" é posicionada abaixo do código para orientar o usuário. Alternativas como a implementação manual puramente em JavaScript foram descartadas por exigirem a reimplementação da codificação Reed-Solomon e da matriz de módulos, acrescentando complexidade sem ganho real em relação ao binding nativo do libqrencode.
 
 \subsection{Infraestrutura e Ferramentas}
 \label{sec:infra}
