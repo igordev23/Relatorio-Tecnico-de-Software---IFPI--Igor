@@ -2,7 +2,7 @@
 
 \subsection{Implantação}
 
-O sistema é composto por duas aplicações independentes implantadas na plataforma Render, a partir de um repositório central no GitHub (\url{https://github.com/igordev23/Relatorio-Tecnico-de-Software---IFPI--Igor}). O sistema é publicado sob subdomínios automáticos fornecidos pela plataforma, garantindo tráfego criptografado via SSL/HTTPS de forma nativa. O frontend pode ser acessado, por exemplo, em \url{https://certificate-hub.onrender.com}, enquanto a API do backend responde em \url{https://certificate-server-zd0m.onrender.com}.
+O sistema é composto por duas aplicações independentes implantadas na plataforma Render, a partir de dois repositórios no GitHub: frontend (\url{https://github.com/igordev23/certificate-hub}) e backend (\url{https://github.com/igordev23/Certificate-server}). O sistema é publicado sob subdomínios automáticos fornecidos pela plataforma, garantindo tráfego criptografado via SSL/HTTPS de forma nativa. O frontend pode ser acessado, por exemplo, em \url{https://certificate-hub.onrender.com}, enquanto a API do backend responde em \url{https://certificate-server-zd0m.onrender.com}.
 
 \subsubsection{Arquitetura e Execução}
 
@@ -220,11 +220,11 @@ Os testes foram classificados como unitários, uma vez que cada módulo (fronten
 
 \input{partes/plano_testes}
 
-O Quadro~\ref{qua:plano-testes} relaciona 60 casos de teste mapeados, incluindo cenários funcionais, não-funcionais, \textit{end-to-end} e de resiliência. Cada caso pode ser validado por um ou mais testes automatizados, totalizando 276 testes unitários implementados com o framework Jest e 1 teste \textit{end-to-end} implementado com Playwright. A coluna \textbf{Status} indica se o caso foi executado por teste automatizado (\textit{Executado}), executado de forma limitada (\textit{Parcial}) ou apenas planejado sem automação (\textit{Planejado}). As subseções seguintes detalham os resultados da execução em cada módulo.
+O Quadro~\ref{qua:plano-testes} relaciona 60 casos de teste mapeados, incluindo cenários funcionais, não-funcionais, \textit{end-to-end} e de resiliência. Cada caso pode ser validado por um ou mais testes automatizados, totalizando 289 testes unitários implementados com o framework Jest e 1 teste \textit{end-to-end} implementado com Playwright. A coluna \textbf{Status} indica se o caso foi executado por teste automatizado (\textit{Executado}), executado de forma limitada (\textit{Parcial}) ou apenas planejado sem automação (\textit{Planejado}). As subseções seguintes detalham os resultados da execução em cada módulo.
 
 \subsubsection{Frontend (Certificate Hub)}
 
-O frontend contém 11 suítes de testes com 108 testes unitários, abrangendo as \textit{ViewModels} dos módulos de templates (\ref{rf:upload-templates}--\ref{rf:duplicar-templates}), certificados (\ref{rf:gerar-pdf}--\ref{rf:download-lote}), \textit{dashboard} (\ref{rf:lista-certificados}--\ref{rf:estatisticas-emissao}) e validação pública (\ref{rf:portal-validacao}--\ref{rf:exibir-validacao}), além dos serviços de API, componentes de formulário e dos modelos de domínio.
+O frontend contém 13 suítes de testes com 121 testes unitários, abrangendo as \textit{ViewModels} dos módulos de templates (\ref{rf:upload-templates}--\ref{rf:duplicar-templates}), certificados (\ref{rf:gerar-pdf}--\ref{rf:download-lote}), \textit{dashboard} (\ref{rf:lista-certificados}--\ref{rf:estatisticas-emissao}) e validação pública (\ref{rf:portal-validacao}--\ref{rf:exibir-validacao}), além dos serviços de API, componentes de formulário e dos modelos de domínio.
 
 A métrica de cobertura, gerada automaticamente pelo Jest por meio da ferramenta Istanbul, indica a proporção do código-fonte que é exercitada durante a execução dos testes. O relatório é organizado em quatro categorias: \textit{Statements} (comandos executados), \textit{Branches} (ramos de decisão, como \texttt{if/else}), \textit{Functions} (funções chamadas) e \textit{Lines} (linhas de código percorridas). A Figura~\ref{fig:coverage-frontend} apresenta o relatório de cobertura gerado para o frontend.
 
@@ -236,7 +236,7 @@ A métrica de cobertura, gerada automaticamente pelo Jest por meio da ferramenta
 \caption*{\small Fonte: Elaborado pelo autor}
 \end{figure}
 
-Conforme ilustrado, o frontend atingiu 95,58\% de cobertura de comandos (\textit{Statements}), 88,40\% de ramos (\textit{Branches}), 94,11\% de funções (\textit{Functions}) e 97,09\% de linhas (\textit{Lines}). O diretório \texttt{models} obteve cobertura total (100\%), enquanto \texttt{services} alcançou 94,59\% e \texttt{view-models} 95,70\% em comandos. A cobertura de ramos em \texttt{services} (88,88\%) reflete a presença de tratamentos condicionais de erro que não foram todos exercitados nos testes.
+Conforme ilustrado, o frontend atingiu 82,6\% de cobertura de comandos (\textit{Statements}), 65,38\% de ramos (\textit{Branches}), 83,33\% de funções (\textit{Functions}) e 83,66\% de linhas (\textit{Lines}). O \texttt{useEditCertificateViewModel.ts} passou de 0\% para 95,55\% em comandos e 100\% em funções após a inclusão de testes. O \texttt{schemas.test.ts} recebeu 9 novos testes para o \texttt{updateCertificateSchema}, abrangendo validação de CPF e campos obrigatórios. Os únicos ramos não cobertos (65,38\%) são os guards \texttt{if (!active)} no \texttt{useEffect} --- um aborto que só ocorre se o componente desmontar antes do \textit{fetch}, caso raro e aceitável.
 
 \subsubsection{Backend (Certificate Server)}
 
@@ -285,13 +285,13 @@ A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os 
 \toprule
 \textbf{Módulo} & \textbf{Suítes} & \textbf{Testes} & \textbf{Cobertura} & \textbf{Tempo} \\
 \midrule
-Frontend (Certificate Hub) & 11 & 108 & 95,58\% & 38,57\,s \\
+Frontend (Certificate Hub) & 13 & 121 & 82,6\% & 38,57\,s \\
 Backend (Certificate Server) & 19 & 168 & 96,53\% & 14,86\,s \\
 E2E (Playwright) & 1 & 1 & -- & 8,43\,s \\
 \midrule
-\textbf{Total} & \textbf{31} & \textbf{277} & \textbf{--} & \textbf{61,86\,s} \\
+\textbf{Total} & \textbf{33} & \textbf{290} & \textbf{--} & \textbf{61,86\,s} \\
 \bottomrule
 \end{tabular}
 \vspace{0.3em}
-\footnotesize\textbf{Nota:} Os 277 testes automatizados (108 + 168 + 1 E2E) referem-se exclusivamente aos testes unitários, de integração e \textit{end-to-end}. Desses, 4 são casos de teste não-funcionais (CT052 a CT055): CT052 (carga) possui teste automatizado no backend com 10 chamadas concorrentes em \textless 5s; CT053 (autenticação) e CT054 (\textit{rate limiting}) foram integralmente automatizados no \textit{middleware}; CT055 (acessibilidade) possui teste automatizado de navegação Tab no frontend, porém sem auditoria com ferramentas como \texttt{axe-core}.
+\footnotesize\textbf{Nota:} Os 290 testes automatizados (121 + 168 + 1 E2E) referem-se exclusivamente aos testes unitários, de integração e \textit{end-to-end}. Desses, 4 são casos de teste não-funcionais (CT052 a CT055): CT052 (carga) possui teste automatizado no backend com 10 chamadas concorrentes em \textless 5s; CT053 (autenticação) e CT054 (\textit{rate limiting}) foram integralmente automatizados no \textit{middleware}; CT055 (acessibilidade) possui teste automatizado de navegação Tab no frontend, porém sem auditoria com ferramentas como \texttt{axe-core}.
 \end{table}
