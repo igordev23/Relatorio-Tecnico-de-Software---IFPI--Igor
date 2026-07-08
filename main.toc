@@ -27,12 +27,12 @@
 \contentsline {subsection}{\numberline {2.5}Geração de Documentos}{14}{subsection.2.5}%
 \contentsline {subsubsection}{\numberline {2.5.1}PDFKit}{14}{subsubsection.2.5.1}%
 \contentsline {subsubsection}{\numberline {2.5.2}qrcode}{15}{subsubsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.6}Infraestrutura e Ferramentas}{15}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Render}{15}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Jest}{16}{subsubsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6}Infraestrutura e Ferramentas}{16}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Render}{16}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Jest}{17}{subsubsection.2.6.2}%
 \contentsline {subsubsection}{\numberline {2.6.3}ESLint e Prettier}{17}{subsubsection.2.6.3}%
-\contentsline {subsubsection}{\numberline {2.6.4}Git e GitHub}{17}{subsubsection.2.6.4}%
-\contentsline {subsubsection}{\numberline {2.6.5}Visual Studio Code}{17}{subsubsection.2.6.5}%
+\contentsline {subsubsection}{\numberline {2.6.4}Git e GitHub}{18}{subsubsection.2.6.4}%
+\contentsline {subsubsection}{\numberline {2.6.5}Visual Studio Code}{18}{subsubsection.2.6.5}%
 \contentsline {subsection}{\numberline {2.7}Síntese das Tecnologias}{18}{subsection.2.7}%
 \contentsline {section}{\numberline {3.0}MODELAGEM DO PROJETO}{20}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Levantamento de Requisitos}{20}{subsection.3.1}%
@@ -97,15 +97,15 @@
 \contentsline {paragraph}{Estratégia de Testes}{78}{section*.20}%
 \contentsline {paragraph}{Casos de Teste}{79}{section*.21}%
 \contentsline {subsubsection}{\numberline {4.3.2}Frontend (Certificate Hub)}{84}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Backend (Certificate Server)}{85}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Testes End-to-End}{86}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.3}Backend (Certificate Server)}{86}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Testes End-to-End}{87}{subsubsection.4.3.4}%
 \contentsline {subsubsection}{\numberline {4.3.5}Limitações}{88}{subsubsection.4.3.5}%
-\contentsline {subsubsection}{\numberline {4.3.6}Resumo Geral}{88}{subsubsection.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.6}Resumo Geral}{89}{subsubsection.4.3.6}%
 \contentsline {section}{\numberline {5.0}CONSIDERAÇÕES FINAIS}{89}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{90}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Limitações}{91}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{91}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Limitações}{92}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Trabalhos Futuros}{92}{subsection.5.3}%
-\contentsline {section}{REFERÊNCIAS}{95}{section*.26}%
-\contentsline {section}{\numberline {6.0}ANEXOS}{96}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{96}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{96}{subsection.6.2}%
+\contentsline {section}{REFERÊNCIAS}{96}{section*.26}%
+\contentsline {section}{\numberline {6.0}ANEXOS}{97}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{97}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{97}{subsection.6.2}%
