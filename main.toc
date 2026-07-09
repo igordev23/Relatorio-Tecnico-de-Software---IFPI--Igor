@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {1.1}Objetivos}{2}{subsection.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.1}Geral}{2}{subsubsection.1.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.2}Específicos}{3}{subsubsection.1.1.2}%
-\contentsline {section}{\numberline {2.0}TECNOLOGIAS ENVOLVIDAS}{3}{section.2}%
+\contentsline {section}{\numberline {2.0}TECNOLOGIAS ENVOLVIDAS}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Frontend}{4}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}React 19}{5}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}TypeScript}{5}{subsubsection.2.1.2}%
