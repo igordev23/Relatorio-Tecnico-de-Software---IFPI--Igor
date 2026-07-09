@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  8 JUL 2026 21:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  8 JUL 2026 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,22 +1117,12 @@ een already used, duplicate ignored
                    \relax 
 l.161 \newpage
                [4] (partes/introducao.tex
-! You can't use `macro parameter character #' in horizontal mode.
-l.11 ...das como Certifier \cite{certifier2025} (#
-                                                  1 no G2, utilizada por Ama...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13 O
-       presente trabalho consiste no desenvolvimento de um Sistema Web â€” p...
-[1] [2]
+l.14 
+      [1] [2]
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
 9.
 
@@ -1822,7 +1812,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 860--866
  []
 
 ) [50] (partes/diagramas/Diagrama_de_Classes.tex [51] [52]
-<imagens/Diagrama-de-classes.png, id=1294, 2901.84125pt x 2502.34875pt>
+<imagens/Diagrama-de-classes.png, id=1290, 2901.84125pt x 2502.34875pt>
 File: imagens/Diagrama-de-classes.png Graphic file (type png)
 <use imagens/Diagrama-de-classes.png>
 Package pdftex.def Info: imagens/Diagrama-de-classes.png  used on input line 19
@@ -1830,21 +1820,21 @@ Package pdftex.def Info: imagens/Diagrama-de-classes.png  used on input line 19
 (pdftex.def)             Requested size: 455.24411pt x 392.55653pt.
 ) [53 <./imagens/Diagrama-de-classes.png>] [54] [55] (partes/diagramas/arquitet
 ura-backend.tex
-<imagens/backend.png, id=1315, 1808.7575pt x 1728.4575pt>
+<imagens/backend.png, id=1311, 1808.7575pt x 1728.4575pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 5.
 (pdftex.def)             Requested size: 409.71692pt x 391.52357pt.
 )
 (partes/diagramas/arquitetura-frontend.tex
-<imagens/frontend.png, id=1316, 1808.7575pt x 1367.1075pt>
+<imagens/frontend.png, id=1312, 1808.7575pt x 1367.1075pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 6.
 (pdftex.def)             Requested size: 409.71692pt x 309.67195pt.
 ) [56 <./imagens/backend.png>]
 (partes/diagramas/der.tex [57 <./imagens/frontend.png>]
-<imagens/DER.png, id=1332, 1025.8325pt x 495.8525pt>
+<imagens/DER.png, id=1328, 1025.8325pt x 495.8525pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 15.
@@ -1852,57 +1842,57 @@ Package pdftex.def Info: imagens/DER.png  used on input line 15.
 ) [58]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 61.
-<imagens/home.png, id=1339, 1445.4pt x 903.375pt>
+<imagens/home.png, id=1335, 1445.4pt x 903.375pt>
 File: imagens/home.png Graphic file (type png)
 <use imagens/home.png>
 Package pdftex.def Info: imagens/home.png  used on input line 63.
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
  [59 <./imagens/DER.png>]
-<imagens/dashboard.png, id=1350, 1146.08176pt x 549.252pt>
+<imagens/dashboard.png, id=1346, 1146.08176pt x 549.252pt>
 File: imagens/dashboard.png Graphic file (type png)
 <use imagens/dashboard.png>
 Package pdftex.def Info: imagens/dashboard.png  used on input line 75.
 (pdftex.def)             Requested size: 455.24411pt x 218.17159pt.
  [60 <./imagens/home.png (PNG copy)>]
-<imagens/customizartemplate.png, id=1360, 1150.89975pt x 546.24075pt>
+<imagens/customizartemplate.png, id=1356, 1150.89975pt x 546.24075pt>
 File: imagens/customizartemplate.png Graphic file (type png)
 <use imagens/customizartemplate.png>
 Package pdftex.def Info: imagens/customizartemplate.png  used on input line 87.
 
 (pdftex.def)             Requested size: 455.24411pt x 216.06696pt.
  [61 <./imagens/dashboard.png>]
-<imagens/templates.png, id=1370, 1147.28625pt x 545.6385pt>
+<imagens/templates.png, id=1366, 1147.28625pt x 545.6385pt>
 File: imagens/templates.png Graphic file (type png)
 <use imagens/templates.png>
 Package pdftex.def Info: imagens/templates.png  used on input line 99.
 (pdftex.def)             Requested size: 455.24411pt x 216.50311pt.
 
 [62 <./imagens/customizartemplate.png> <./imagens/templates.png>]
-<imagens/certificados-novo.png, id=1386, 1445.4pt x 903.375pt>
+<imagens/certificados-novo.png, id=1382, 1445.4pt x 903.375pt>
 File: imagens/certificados-novo.png Graphic file (type png)
 <use imagens/certificados-novo.png>
 Package pdftex.def Info: imagens/certificados-novo.png  used on input line 111.
 
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
  [63 <./imagens/certificados-novo.png (PNG copy)>]
-<imagens/certificados.png, id=1398, 1139.457pt x 548.64975pt>
+<imagens/certificados.png, id=1394, 1139.457pt x 548.64975pt>
 File: imagens/certificados.png Graphic file (type png)
 <use imagens/certificados.png>
 Package pdftex.def Info: imagens/certificados.png  used on input line 123.
 (pdftex.def)             Requested size: 455.24411pt x 219.19649pt.
-<imagens/envios.png, id=1401, 1445.4pt x 903.375pt>
+<imagens/envios.png, id=1397, 1445.4pt x 903.375pt>
 File: imagens/envios.png Graphic file (type png)
 <use imagens/envios.png>
 Package pdftex.def Info: imagens/envios.png  used on input line 135.
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
  [64 <./imagens/certificados.png>]
-<imagens/certificado.png, id=1415, 630.55576pt x 443.85825pt>
+<imagens/certificado.png, id=1411, 630.55576pt x 443.85825pt>
 File: imagens/certificado.png Graphic file (type png)
 <use imagens/certificado.png>
 Package pdftex.def Info: imagens/certificado.png  used on input line 147.
 (pdftex.def)             Requested size: 409.71692pt x 288.41638pt.
  [65 <./imagens/envios.png (PNG copy)>]
-<imagens/verificar.png, id=1425, 1445.4pt x 903.375pt>
+<imagens/verificar.png, id=1421, 1445.4pt x 903.375pt>
 File: imagens/verificar.png Graphic file (type png)
 <use imagens/verificar.png>
 Package pdftex.def Info: imagens/verificar.png  used on input line 159.
@@ -1920,19 +1910,19 @@ ver$[]\T1/phv/m/n/12 ).
 
 
 ]
-<imagens/CIbackend.png, id=1485, 859.41075pt x 353.52075pt>
+<imagens/CIbackend.png, id=1481, 859.41075pt x 353.52075pt>
 File: imagens/CIbackend.png Graphic file (type png)
 <use imagens/CIbackend.png>
 Package pdftex.def Info: imagens/CIbackend.png  used on input line 24.
 (pdftex.def)             Requested size: 455.24411pt x 187.2626pt.
-<imagens/CIfrontend.png, id=1486, 831.105pt x 345.08925pt>
+<imagens/CIfrontend.png, id=1482, 831.105pt x 345.08925pt>
 File: imagens/CIfrontend.png Graphic file (type png)
 <use imagens/CIfrontend.png>
 Package pdftex.def Info: imagens/CIfrontend.png  used on input line 32.
 (pdftex.def)             Requested size: 455.24411pt x 189.02562pt.
  [70 <./imagens/CIbackend.png> <./imagens/CIfrontend.png>]
 (partes/diagramas/deploy.tex
-<imagens/deploy.png, id=1497, 2007.5pt x 762.85pt>
+<imagens/deploy.png, id=1493, 2007.5pt x 762.85pt>
 File: imagens/deploy.png Graphic file (type png)
 <use imagens/deploy.png>
 Package pdftex.def Info: imagens/deploy.png  used on input line 5.
@@ -2139,14 +2129,14 @@ ignored error: Infinite glue shrinkage found in box being split [80]
 ignored error: Infinite glue shrinkage found in box being split [81]
 ignored error: Infinite glue shrinkage found in box being split [82] [83])
 [84]
-<imagens/coverage-frontend.png, id=1715, 1284.8pt x 903.375pt>
+<imagens/coverage-frontend.png, id=1711, 1284.8pt x 903.375pt>
 File: imagens/coverage-frontend.png Graphic file (type png)
 <use imagens/coverage-frontend.png>
 Package pdftex.def Info: imagens/coverage-frontend.png  used on input line 236.
 
 (pdftex.def)             Requested size: 455.24411pt x 320.08696pt.
  [85 <./imagens/coverage-frontend.png (PNG copy)>]
-<imagens/coverage-backend.png, id=1728, 1284.8pt x 722.7pt>
+<imagens/coverage-backend.png, id=1724, 1284.8pt x 722.7pt>
 File: imagens/coverage-backend.png Graphic file (type png)
 <use imagens/coverage-backend.png>
 Package pdftex.def Info: imagens/coverage-backend.png  used on input line 252.
@@ -2165,7 +2155,7 @@ s\T1/phv/m/n/12 , \T1/phv/m/sl/12 in-fras-truc-ture/repositories\T1/phv/m/n/12
  []
 
 [86 <./imagens/coverage-backend.png (PNG copy)>]
-<imagens/e2e-report.png, id=1736, 1284.8pt x 722.7pt>
+<imagens/e2e-report.png, id=1732, 1284.8pt x 722.7pt>
 File: imagens/e2e-report.png Graphic file (type png)
 <use imagens/e2e-report.png>
 Package pdftex.def Info: imagens/e2e-report.png  used on input line 269.
@@ -2209,116 +2199,110 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--28
 m:
  []
 
-
-Underfull \hbox (badness 2050) in paragraph at lines 38--40
-[]\T1/phv/m/n/12 Certifier. \T1/phv/m/sl/12 Cer-ti-fier --- #1 Cer-ti-fi-cate M
-a-ker Soft-ware\T1/phv/m/n/12 . 2025. Dis-po-ní-vel em:
- []
-
 [94]
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
 []\T1/phv/m/n/12 Labs, T. \T1/phv/m/sl/12 Tailwind CSS Do-cu-men-ta-tion\T1/phv
 /m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--110
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
 []\T1/phv/m/n/12 shadcn. \T1/phv/m/sl/12 shadcn/ui Do-cu-men-ta-tion\T1/phv/m/n
 /12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--131
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
 []\T1/phv/m/n/12 Group, R. \T1/phv/m/sl/12 Re-charts Do-cu-men-ta-tion\T1/phv/m
 /n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
 []\T1/phv/m/n/12 Contributors date-fns. \T1/phv/m/sl/12 date-fns Do-cu-men-ta-t
 ion\T1/phv/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-[95]
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
 []\T1/phv/m/n/12 Foundation, O. \T1/phv/m/sl/12 Node.js Do-cu-men-ta-tion\T1/ph
 v/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 []\T1/phv/m/n/12 Supabase. \T1/phv/m/sl/12 Su-pa-base Do-cu-men-ta-tion\T1/phv/
 m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--161
+[95]
+Underfull \hbox (badness 10000) in paragraph at lines 149--151
 []\T1/phv/m/n/12 Group, P. G. D. \T1/phv/m/sl/12 Post-greSQL Do-cu-men-ta-tion\
 T1/phv/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--172
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
 []\T1/phv/m/n/12 Foundation, O. \T1/phv/m/sl/12 uuid ^^V npm pac-kage\T1/phv/m/
 n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--183
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
 []\T1/phv/m/n/12 Render. \T1/phv/m/sl/12 Ren-der Do-cu-men-ta-tion\T1/phv/m/n/1
 2 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
 []\T1/phv/m/n/12 Foundation, O. \T1/phv/m/sl/12 Jest Do-cu-men-ta-tion\T1/phv/m
 /n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--193
+Underfull \hbox (badness 10000) in paragraph at lines 181--183
 []\T1/phv/m/n/12 Foundation, O. \T1/phv/m/sl/12 ES-Lint Do-cu-men-ta-tion\T1/ph
 v/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
 []\T1/phv/m/n/12 Contributors, P. \T1/phv/m/sl/12 Pret-tier Do-cu-men-ta-tion\T
 1/phv/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 201--203
+Underfull \hbox (badness 1248) in paragraph at lines 191--193
 []\T1/phv/m/n/12 Conservancy, S. F. \T1/phv/m/sl/12 Git Do-cu-men-ta-tion\T1/ph
 v/m/n/12 . 2025. Dis-po-ní-vel em: $\OML/cmm/m/it/12 <$\T1/phv/m/n/12 https://g
 it-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
 []\T1/phv/m/n/12 Github, I. \T1/phv/m/sl/12 GitHub Do-cu-men-ta-tion\T1/phv/m/n
 /12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--213
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
 []\T1/phv/m/n/12 Microsoft. \T1/phv/m/sl/12 Vi-sual Stu-dio Code Do-cu-men-ta-t
 ion\T1/phv/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 7558) in paragraph at lines 216--219
+Underfull \hbox (badness 7558) in paragraph at lines 206--209
 []\T1/phv/m/n/12 Krämer, F. \T1/phv/m/sl/12 Sim-ple but use-ful: Use Case Ta-bl
 es\T1/phv/m/n/12 . 2024. Dis-po-ní-vel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--219
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
 \T1/phv/m/n/12 em: $\OML/cmm/m/it/12 <$\T1/phv/m/n/12 https://florian-kraemer.n
 et/software-architecture/2024/02/28/Use-Case-
  []
 
-[96]) [97] (partes/anexos.tex) [98] (main.aux)
+) [96] (partes/anexos.tex) [97] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -2327,10 +2311,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7E749F7C82956CE82E021A17AF78A566;18541.
  ) 
 Here is how much of TeX's memory you used:
- 30757 strings out of 467871
- 588196 string characters out of 5418376
- 1291946 words of memory out of 5000000
- 58455 multiletter control sequences out of 15000+600000
+ 30752 strings out of 467871
+ 588121 string characters out of 5418376
+ 1291873 words of memory out of 5000000
+ 58453 multiletter control sequences out of 15000+600000
  681072 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,18n,94p,1924b,2132s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2344,9 +2328,9 @@ KTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/franc/AppData/Local/Programs
 /MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/franc/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/franc/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (107 pages, 1946744 bytes).
+Output written on main.pdf (106 pages, 1944897 bytes).
 PDF statistics:
- 2123 PDF objects out of 2487 (max. 8388607)
- 598 named destinations out of 1000 (max. 500000)
+ 2115 PDF objects out of 2487 (max. 8388607)
+ 595 named destinations out of 1000 (max. 500000)
  977 words of extra memory for PDF output out of 10000 (max. 10000000)
 
