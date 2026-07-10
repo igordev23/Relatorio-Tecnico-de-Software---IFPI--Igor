@@ -10,7 +10,7 @@ Em relação aos objetivos específicos propostos:
     \item O módulo de \textbf{\textit{templates} configuráveis} foi concebido com um editor visual \textit{inline} e renderização em tempo real, permitindo personalização dinâmica de atributos visuais (\ref{rf:upload-templates}, \ref{rf:personalizacao-templates});
     \item O \textbf{mecanismo de autenticação pública}, ancorado em códigos únicos e \textit{QR Codes}, foi integrado ao portal de validação, mitigando riscos de fraudes e falsificações (\ref{rf:portal-validacao}, \ref{rf:validar-certificado});
     \item O \textbf{\textit{dashboard} com indicadores gerenciais} foi implantado, fornecendo telemetria sobre estatísticas de emissão, certificados ativos e uso de \textit{templates} (\ref{rf:estatisticas-emissao});
-    \item A \textbf{qualidade do software} foi assegurada através de uma suíte abrangente de \textbf{testes automatizados}, englobando testes unitários (atingindo cobertura superior a 95\% nos módulos \textit{frontend} e \textit{backend}) e \textit{end-to-end}, devidamente integrados ao \textit{pipeline} de integração contínua (Seção~4.2);
+    \item A \textbf{qualidade do software} foi assegurada através de uma suíte abrangente de \textbf{testes automatizados}, englobando testes unitários (atingindo cobertura de 82,6\% no \textit{frontend} e 96,53\% no \textit{backend}) e \textit{end-to-end}, devidamente integrados ao \textit{pipeline} de integração contínua (Seção~4.2);
     \item O \textbf{ambiente de implantação} foi orquestrado em infraestrutura \textit{cloud} (Render), adotando \textit{pipelines} de Integração e Entrega Contínuas (CI/CD) nativos a partir do GitHub, garantindo \textit{deploys} contínuos e resilientes (Seção~4.1).
 \end{itemize}
 
@@ -37,7 +37,8 @@ Do ponto de vista arquitetural e funcional, o produto atual apresenta as seguint
     \item A \textbf{notificação ativa (E-mail)} não foi implementada no lado do servidor (sem integração com provedores SMTP). O artefato atual no \textit{frontend} (\code{envios.ts}) apenas estrutura o agendamento em armazenamento local (\code{localStorage}) de forma simulada;
     \item A \textbf{arquitetura \textit{multi-tenant}} não foi finalizada — o banco de dados opera sob o paradigma de \textit{tenant} único, sem o particionamento lógico de dados essencial para um modelo SaaS em larga escala;
     \item A \textbf{adequação à LGPD} carece de refinamento — mecanismos como ofuscação/anonimização de dados pessoais e gestão granular de consentimento ainda não estão materializados no código;
-    \item A \textbf{reemissão com manutenção de histórico} (\ref{rf:reemissao-historico}) não foi implementada — a edição de certificados sobrescreve os dados in-place, sem gerar novo código de verificação ou preservar a versão anterior, embora o requisito seja classificado como obrigatório;
+    \item A \textbf{reemissão com manutenção de histórico} (\ref{rf:reemissao-historico}) não foi implementada — a edição de certificados sobrescreve os dados in-place, sem gerar novo código de verificação ou preservar a versão anterior;
+    \item A \textbf{autenticação via JWT com Supabase Auth} não foi integralmente implementada — o middleware de autenticação existe no backend e foi validado em testes unitários, mas o fluxo completo de login, gerenciamento de sessão e renovação de tokens está previsto para versões futuras;
     \item A suíte de testes carece de \textbf{testes de carga e estresse}, os quais são fundamentais para atestar o comportamento e as garantias do serviço de geração de PDFs sob alta concorrência.
 \end{itemize}
 

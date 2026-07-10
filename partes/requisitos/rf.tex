@@ -5,18 +5,18 @@ Os requisitos foram priorizados segundo o método MoSCoW, alinhado à abordagem 
 
 \subsubsection{Módulo de Autenticação e Controle de Acesso}
 \begin{itemize}
-\rfitem{rf:login-email}{M}{Permitir login por e-mail e senha.}
+\rfitem{rf:login-email}{S}{Permitir login por e-mail e senha.}
 \rfitem{rf:reset-password}{S}{Permitir redefinição de senha via e-mail.}
-\rfitem{rf:validar-credenciais}{M}{Validar credenciais antes de conceder acesso.}
+\rfitem{rf:validar-credenciais}{S}{Validar credenciais antes de conceder acesso.}
 \rfitem{rf:cadastro-usuario}{S}{Permitir cadastro de novos usuários (apenas administrador).}
-\rfitem{rf:gerenciamento-perfis}{M}{Permitir gerenciamento de perfis e permissões.}
-\rfitem{rf:controle-acesso-restrito}{M}{Controlar acesso a áreas restritas com base no status de autenticação do usuário.}
+\rfitem{rf:gerenciamento-perfis}{S}{Permitir gerenciamento de perfis e permissões.}
+\rfitem{rf:controle-acesso-restrito}{S}{Controlar acesso a áreas restritas com base no status de autenticação do usuário.}
 \rfitem{rf:bloqueio-sessoes}{S}{Implementar bloqueio de múltiplas sessões simultâneas por conta.}
 \end{itemize}
 
 \subsubsection{Módulo de Templates de Certificados}
 \begin{itemize}
-\rfitem{rf:upload-templates}{M}{Permitir upload de templates (PPTX, PDF).}
+\rfitem{rf:upload-templates}{M}{Permitir criação e configuração de templates por editor visual.}
 \rfitem{rf:personalizacao-templates}{M}{Permitir personalização de templates.}
 \rfitem{rf:selecionar-template-galeria}{M}{Permitir selecionar template da galeria interna.}
 \rfitem{rf:campos-dinamicos-auto}{C}{Identificar campos dinâmicos automaticamente.}
@@ -43,7 +43,7 @@ Os requisitos foram priorizados segundo o método MoSCoW, alinhado à abordagem 
 \rfitem{rf:preencher-campos-dinamicos}{M}{Preencher automaticamente campos dinâmicos.}
 \rfitem{rf:codigo-unico}{M}{Gerar código único por certificado.}
 \rfitem{rf:registro-emissao}{M}{Registrar data, hora e localidade da emissão.}
-\rfitem{rf:reemissao-historico}{M}{Permitir reemissão mantendo histórico.}
+\rfitem{rf:reemissao-historico}{S}{Permitir reemissão mantendo histórico.}
 \rfitem{rf:download-individual}{M}{Permitir download individual.}
 \rfitem{rf:download-lote}{S}{Permitir download em lote.}
 \end{itemize}
@@ -86,23 +86,23 @@ Os requisitos foram priorizados segundo o método MoSCoW, alinhado à abordagem 
 
 \subsubsection{Módulo de Gestão de Cursos/Eventos}
 \begin{itemize}
-\rfitem{rf:cadastro-curso}{M}{Permitir cadastro de cursos/eventos.}
-\rfitem{rf:associar-participante-curso}{M}{Associar participantes ao curso.}
-\rfitem{rf:carga-horaria}{M}{Definir carga horária.}
+\rfitem{rf:cadastro-curso}{S}{Permitir cadastro de cursos/eventos.}
+\rfitem{rf:associar-participante-curso}{S}{Associar participantes ao curso.}
+\rfitem{rf:carga-horaria}{S}{Definir carga horária.}
 \rfitem{rf:instrutor-responsavel}{S}{Registrar instrutor responsável.}
-\rfitem{rf:datas-curso}{M}{Configurar datas de início e término.}
-\rfitem{rf:certificados-vinculados-curso}{M}{Listar certificados vinculados ao curso.}
-\rfitem{rf:validar-vinculo-participante}{M}{Validar vínculo do participante ao curso antes de permitir a emissão.}
+\rfitem{rf:datas-curso}{S}{Configurar datas de início e término.}
+\rfitem{rf:certificados-vinculados-curso}{S}{Listar certificados vinculados ao curso.}
+\rfitem{rf:validar-vinculo-participante}{S}{Validar vínculo do participante ao curso antes de permitir a emissão.}
 \rfitem{rf:local-curso}{S}{Registrar local do curso.}
 \end{itemize}
 
 \subsubsection{Módulo de Participantes}
 \begin{itemize}
-\rfitem{rf:cadastro-completo-participante}{M}{Cadastro completo de participantes (nome, e-mail, CPF opcional).}
-\rfitem{rf:edicao-participante}{M}{Permitir edição de dados.}
+\rfitem{rf:cadastro-completo-participante}{S}{Cadastro completo de participantes (nome, e-mail, CPF opcional).}
+\rfitem{rf:edicao-participante}{S}{Permitir edição de dados.}
 \rfitem{rf:importar-sem-duplicidade}{S}{Importar participantes sem duplicidade.}
 \rfitem{rf:historico-participante}{S}{Exibir histórico de certificados por participante.}
-\rfitem{rf:busca-participante}{M}{Permitir busca por nome, e-mail e CPF.}
+\rfitem{rf:busca-participante}{S}{Permitir busca por nome, e-mail e CPF.}
 \end{itemize}
 
 \subsubsection{Módulo Multiempresa / Multi-tenant}
