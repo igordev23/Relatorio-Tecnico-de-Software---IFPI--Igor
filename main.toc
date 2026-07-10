@@ -109,4 +109,4 @@
 \contentsline {section}{REFERÊNCIAS}{97}{section*.26}%
 \contentsline {section}{\numberline {6.0}ANEXOS}{98}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{98}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{98}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{99}{subsection.6.2}%
