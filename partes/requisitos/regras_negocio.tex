@@ -8,3 +8,15 @@ Além dos requisitos funcionais, foram identificadas regras de negócio que imp�
 \rnitem{rn:vinculo-participante}{Certificados só podem ser emitidos para participantes previamente vinculados ao curso ou evento.}
 \rnitem{rn:reenvio-limite}{O reenvio automático de certificados com falha deve respeitar o limite máximo de 3 tentativas com intervalo mínimo de 10 minutos entre cada uma.}
 \end{itemize}
+
+\subsubsection{Status de Implementação das Regras de Negócio}
+
+As regras de negócio acima representam o modelo completo desejado para o sistema. No entanto, considerando o escopo do MVP (v1.0), algumas regras ainda não foram implementadas:
+
+\begin{itemize}
+\item \textbf{rn:certificado-arquivado} --- No MVP atual, a exclusão de templates e certificados é realizada por exclusão definitiva (\textit{hard delete}), conforme testado nos casos CT005 e CT056 do plano de testes. A regra de arquivamento (\textit{soft delete}) está prevista para a versão 2.0, conforme o requisito \ref{rf:arquivamento-certificados} [S].
+\item \textbf{rn:vinculo-participante} --- A validação de vínculo entre participante e curso não é verificada no MVP, pois as entidades Participantes e Cursos ainda não foram materializadas no banco de dados.
+\item \textbf{rn:reenvio-limite} --- O reenvio automático com limite de tentativas não foi implementado no MVP; o envio de e-mails é simulado sem controle de retentativas.
+\end{itemize}
+
+A implementação completa dessas regras está vinculada aos requisitos classificados como [S] ou [C], que serão tratados em versões futuras do sistema.

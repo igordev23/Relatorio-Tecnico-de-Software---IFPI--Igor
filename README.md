@@ -66,4 +66,4 @@ pdflatex main.tex
 
 **Francisco Igor Silva Santos**  
 Orientador: Prof. Mayllon Veras da Silva  
-IFPI — Campus Piripiri, 2025
+IFPI — Campus Piripiri, 2026

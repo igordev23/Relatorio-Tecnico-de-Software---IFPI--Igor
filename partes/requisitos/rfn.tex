@@ -2,7 +2,7 @@
 
 \subsubsection{Segurança}
 \begin{itemize}
-\rnfitem{rnf:supabase-auth}{O sistema deve utilizar o Supabase Auth para gerenciamento seguro de autenticação e armazenamento de senhas com hash criptográfico seguro (bcrypt).}
+\rnfitem{rnf:supabase-auth}{O sistema deve utilizar o Supabase Auth para gerenciamento seguro de autenticação e armazenamento de senhas com hash criptográfico seguro (bcrypt). No MVP, o middleware de autenticação foi estruturado e validado em testes unitários, porém o fluxo completo de login, gerenciamento de sessão e renovação de tokens JWT está previsto para implementação em versões futuras.}
 \rnfitem{rnf:https}{O sistema deve utilizar conexão segura HTTPS (TLS 1.2 ou superior).}
 \rnfitem{rnf:encryption-at-rest}{O sistema deve proteger dados sensíveis em repouso utilizando criptografia fornecida pela infraestrutura cloud.}
 \rnfitem{rnf:login-attempt-limit}{O sistema deve bloquear autenticação após 5 tentativas consecutivas inválidas (conforme política do provedor de autenticação).}
