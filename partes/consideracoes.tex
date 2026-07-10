@@ -37,6 +37,7 @@ Do ponto de vista arquitetural e funcional, o produto atual apresenta as seguint
     \item A \textbf{notificação ativa (E-mail)} não foi implementada no lado do servidor (sem integração com provedores SMTP). O artefato atual no \textit{frontend} (\code{envios.ts}) apenas estrutura o agendamento em armazenamento local (\code{localStorage}) de forma simulada;
     \item A \textbf{arquitetura \textit{multi-tenant}} não foi finalizada — o banco de dados opera sob o paradigma de \textit{tenant} único, sem o particionamento lógico de dados essencial para um modelo SaaS em larga escala;
     \item A \textbf{adequação à LGPD} carece de refinamento — mecanismos como ofuscação/anonimização de dados pessoais e gestão granular de consentimento ainda não estão materializados no código;
+    \item A \textbf{reemissão com manutenção de histórico} (\ref{rf:reemissao-historico}) não foi implementada — a edição de certificados sobrescreve os dados in-place, sem gerar novo código de verificação ou preservar a versão anterior, embora o requisito seja classificado como obrigatório;
     \item A suíte de testes carece de \textbf{testes de carga e estresse}, os quais são fundamentais para atestar o comportamento e as garantias do serviço de geração de PDFs sob alta concorrência.
 \end{itemize}
 
