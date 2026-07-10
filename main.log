@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  10 JUL 2026 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  10 JUL 2026 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2304,7 +2304,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--209
 et/software-architecture/2024/02/28/Use-Case-
  []
 
-) [97] (partes/anexos.tex) [98] (main.aux)
+) [97] (partes/anexos.tex [98]) [99] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -2313,8 +2313,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B05CB3CA4D0EBAB96BF784593698C427;18862.
  ) 
 Here is how much of TeX's memory you used:
- 30781 strings out of 467871
- 588808 string characters out of 5418376
+ 30782 strings out of 467871
+ 588815 string characters out of 5418376
  1294611 words of memory out of 5000000
  58476 multiletter control sequences out of 15000+600000
  681072 words of font info for 107 fonts, out of 8000000 for 9000
@@ -2330,9 +2330,9 @@ KTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/franc/AppData/Local/Programs
 /MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/franc/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/franc/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (107 pages, 1949355 bytes).
+Output written on main.pdf (108 pages, 1950956 bytes).
 PDF statistics:
- 2126 PDF objects out of 2487 (max. 8388607)
- 597 named destinations out of 1000 (max. 500000)
+ 2130 PDF objects out of 2487 (max. 8388607)
+ 598 named destinations out of 1000 (max. 500000)
  985 words of extra memory for PDF output out of 10000 (max. 10000000)
 
