@@ -17,22 +17,20 @@ O desenvolvimento seguiu a abordagem de Produto Mínimo Viável (MVP), priorizan
 Este relatório técnico está organizado da seguinte forma: a Seção 2 apresenta as tecnologias utilizadas no desenvolvimento; a Seção 3 descreve a modelagem do sistema, incluindo levantamento de requisitos, diagramas de casos de uso, classes, arquitetura e entidade-relacionamento; a Seção 4 detalha a implementação do software; e a Seção 5 traz as considerações finais.
 
 
-\subsection{Objetivos}
+\subsection{Objetivos}\label{sec:objetivos}
 
-\subsubsection{Geral}
+\subsubsection{Geral}\label{sec:objetivo-geral}
 
-Projetar e implementar um sistema web automatizado para emissão, gestão, envio e validação de certificados, destinado a empresas de treinamento corporativo, instituições educacionais e demais organizações que necessitem certificar participantes em cursos, capacitações e eventos, a fim de eliminar a dependência de processos manuais e soluções improvisadas, garantindo padronização dos documentos, rastreabilidade do histórico de emissões, autenticação confiável via código único e \textit{QR Code}, centralização dos dados em uma única plataforma e estabelecendo as bases para emissão em lote eficiente em versões futuras.
+Projetar e implementar um sistema web automatizado para emissão, gestão e validação de certificados, com base projetada para suporte a envio automático por e-mail em versões futuras, destinado a empresas de treinamento corporativo, instituições educacionais e demais organizações que necessitem certificar participantes em cursos, capacitações e eventos, a fim de eliminar a dependência de processos manuais e soluções improvisadas, garantindo padronização dos documentos, rastreabilidade do histórico de emissões, autenticação confiável via código único e \textit{QR Code}, centralização dos dados em uma única plataforma e estabelecendo as bases para emissão em lote eficiente em versões futuras.
 
-\subsubsection{Específicos}
+\subsubsection{Específicos}\label{sec:objetivos-especificos}
 
 \begin{itemize}
     \item implementar um módulo de templates configuráveis para a criação de certificados;
-    \item projetar e estruturar o fluxo de importação de dados a partir de arquivos CSV e Excel (.xlsx) para emissão em lote, com interface funcional e preparação da infraestrutura backend para processamento em fila;
-    \item projetar e estruturar um módulo de notificação por e-mail com suporte a variáveis dinâmicas, incluindo a camada de frontend para agendamento e acompanhamento de envios;
     \item desenvolver um mecanismo de autenticação pública via código único e \textit{QR Code} para garantir a integridade dos certificados e prevenir fraudes;
     \item desenvolver um módulo de dashboard com indicadores gerenciais para apoiar o controle operacional e a tomada de decisão das organizações sobre suas emissões, dispondo de filtros por período, curso e status;
     \item planejar e executar testes unitários e de integração para validação dos módulos implementados;
-    \item configurar o ambiente de implantação do sistema em infraestrutura cloud com deploys automáticos a partir do repositório Git;
+    \item configurar o ambiente de implantação do sistema em infraestrutura em nuvem com deploys automáticos a partir do repositório Git;
     \item projetar as bases conceituais e estruturais para conformidade com a LGPD, incluindo a modelagem do registro de consentimento, diretrizes para anonimização de dados pessoais, controle de acesso a logs sensíveis e trilha de auditoria para operações críticas, a serem refinadas em versões futuras;
     \item projetar a arquitetura multi-tenant do sistema, estabelecendo as bases conceituais para isolamento de dados entre organizações, segurança por tenant e escalabilidade horizontal em versões futuras.
 \end{itemize}

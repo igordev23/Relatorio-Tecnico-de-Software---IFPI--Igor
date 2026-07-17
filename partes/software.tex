@@ -1,4 +1,4 @@
-\section{SOFTWARE}
+﻿\section{SOFTWARE}
 
 \subsection{Implantação}
 
@@ -106,7 +106,7 @@ export class Certificate {
 \subsubsection{Route Handler de Emissão}
 \label{sec:codigo-emissao}
 
-O Código~\ref{cod:emit} mostra o \textit{Route Handler} responsável pela emissão de certificados (\ref{rf:gerar-pdf}). A requisição \code{POST /api/certificates/emit} recebe os dados do certificado, valida-os com Zod (\code{emitCertificateSchema.parse}), instancia os repositórios concretos e delega a execução ao caso de uso \code{EmitCertificateUseCase}. O uso de injeção de dependência nos repositórios (linhas~\ref{line:repos}) permite substituir as implementações sem alterar a lógica de negócio.
+O Código~\ref{cod:emit} mostra o \textit{Route Handler} responsável pela emissão de certificados (\ref{rf:gerar-pdf}). A requisição \code{POST /api/certificates/emit} recebe os dados do certificado, valida-os com Zod (\code{emitCertificateSchema.parse}), instancia os repositórios concretos e delega a execução ao caso de uso \code{EmitCertificateUseCase}. O uso de injeção de dependência nos repositórios (linhas~\ref{line:repos} e~\ref{line:repos2}) permite substituir as implementações sem alterar a lógica de negócio.
 
 \begin{lstlisting}[language=TypeScript, caption={Route Handler de emissão de certificado}, label={cod:emit}, escapechar=§]
 export async function POST(request: Request) {
@@ -114,9 +114,9 @@ export async function POST(request: Request) {
     const body = await request.json();
     const validated = emitCertificateSchema.parse(body);
 
-    const certificateRepo = new SupabaseCertificateRepository();
-    const templateRepo = new SupabaseTemplateRepository();
-    const useCase = new EmitCertificateUseCase(certificateRepo, templateRepo);§\label{line:repos}§
+    const certificateRepo = new SupabaseCertificateRepository();§\label{line:repos}§
+    const templateRepo = new SupabaseTemplateRepository();§\label{line:repos2}§
+    const useCase = new EmitCertificateUseCase(certificateRepo, templateRepo);
 
     const { certificate } = await useCase.execute(validated);
 
@@ -137,9 +137,9 @@ export async function POST(request: Request) {
 O Código~\ref{cod:pdf} apresenta o serviço \code{PDFKitService} que gera o PDF do certificado com \textit{QR Code} de verificação (\ref{rf:qrcode}). A URL de verificação é montada a partir da variável de ambiente \code{NEXT\_PUBLIC\_VERIFY\_URL} (linha~\ref{line:verifyurl}) e codificada em um \textit{QR Code} utilizando a biblioteca \code{qrcode} (linha~\ref{line:qrcode}). A imagem gerada é inserida no PDF na posição inferior esquerda (linha~\ref{line:qrimage}), acompanhada das instruções de verificação e do código único.
 
 \begin{lstlisting}[language=TypeScript, caption={Geração de PDF com QR Code no servidor}, label={cod:pdf}, escapechar=§]
-const verifyUrl = `${process.env.NEXT_PUBLIC_VERIFY_URL ||
+const verifyUrl = `${process.env.NEXT_PUBLIC_VERIFY_URL ||§\label{line:verifyurl}§
   "https://example.com/verify"}?cpf=${certificate.recipientCPF}
-  &codigo=${certificate.verificationCode}`;§\label{line:verifyurl}§
+  &codigo=${certificate.verificationCode}`;
 
 const qrBuffer = await toBuffer(verifyUrl, {           §\label{line:qrcode}§
   width: 160, margin: 1,
@@ -220,7 +220,7 @@ export class VerifyCertificateUseCase {
 
 \subsection{Testes}
 
-Conforme definido no objetivo específico da Seção~1.1, foram planejados e executados testes unitários para validação dos módulos implementados no escopo do MVP. Os casos de teste foram elaborados com base nos critérios de aceitação apresentados no Quadro~\ref{qua:criterios} e abrangem os requisitos funcionais classificados como prioritários — \textit{Must have} [M] e \textit{Should have} [S] — essenciais para a primeira versão do sistema.
+Conforme definido nos objetivos específicos da Seção~\ref{sec:objetivos-especificos}, foram planejados e executados testes unitários para validação dos módulos implementados no escopo do MVP. Os casos de teste foram elaborados com base nos critérios de aceitação apresentados no Quadro~\ref{qua:criterios} e abrangem os requisitos funcionais classificados como prioritários — \textit{Must have} [M] e \textit{Should have} [S] — essenciais para a primeira versão do sistema.
 
 Os testes foram classificados como unitários, uma vez que cada módulo (frontend e backend) foi testado de forma isolada, com dependências externas (banco de dados, APIs de terceiros, bibliotecas de geração de PDF) substituídas por \textit{mocks}. Testes não-funcionais de carga, segurança (\textit{rate limiting} e autenticação) e acessibilidade foram implementados com escopo reduzido, conforme detalhado nas subseções seguintes. Testes de integração não foram incluídos no escopo do MVP, podendo ser abordados em versões futuras do sistema. Testes \textit{end-to-end} (E2E) foram implementados com Playwright para validar o fluxo completo do sistema, conforme descrito na Seção~\ref{subsubsec:e2e}. Todos os testes foram executados em ambiente local, com Node.js 22, e integraram o pipeline de CI/CD do Render, que executa a suíte completa a cada \textit{push} na branch \texttt{main}.
 
@@ -232,7 +232,7 @@ O Quadro~\ref{qua:plano-testes} relaciona 60 casos de teste mapeados, incluindo 
 
 O frontend contém 13 suítes de testes com 121 testes unitários, abrangendo as \textit{ViewModels} dos módulos de templates (\ref{rf:upload-templates}--\ref{rf:duplicar-templates}), certificados (\ref{rf:gerar-pdf}--\ref{rf:download-lote}), \textit{dashboard} (\ref{rf:lista-certificados}--\ref{rf:estatisticas-emissao}) e validação pública (\ref{rf:portal-validacao}--\ref{rf:exibir-validacao}), além dos serviços de API, componentes de formulário e dos modelos de domínio.
 
-A métrica de cobertura, gerada automaticamente pelo Jest por meio da ferramenta Istanbul, indica a proporção do código-fonte que é exercitada durante a execução dos testes. O relatório é organizado em quatro categorias: \textit{Statements} (comandos executados), \textit{Branches} (ramos de decisão, como \texttt{if/else}), \textit{Functions} (funções chamadas) e \textit{Lines} (linhas de código percorridas). A Figura~\ref{fig:coverage-frontend} apresenta o relatório de cobertura gerado para o frontend.
+A métrica de cobertura, gerada automaticamente pelo Jest por meio da ferramenta Istanbul~\cite{istanbul2025}, indica a proporção do código-fonte que é exercitada durante a execução dos testes. O relatório é organizado em quatro categorias: \textit{Statements} (comandos executados), \textit{Branches} (ramos de decisão, como \texttt{if/else}), \textit{Functions} (funções chamadas) e \textit{Lines} (linhas de código percorridas). A Figura~\ref{fig:coverage-frontend} apresenta o relatório de cobertura gerado para o frontend.
 
 \begin{figure}[H]
 \centering
