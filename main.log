@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUL 2026 23:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUL 2026 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2243,7 +2243,7 @@ Overfull \hbox (4.63141pt too wide) in paragraph at lines 27--28
  []
 
 [94] [95]
-Overfull \hbox (3.03024pt too wide) in paragraph at lines 53--54
+Overfull \hbox (3.03024pt too wide) in paragraph at lines 54--55
 []\T1/phv/m/n/12 Implementação na-tiva de um mó-dulo de \T1/phv/b/n/12 au-di-to
 -ria e con-for-mi-dade com a LGPD\T1/phv/m/n/12 ,
  []
@@ -2410,10 +2410,6 @@ ub: Sis-tema para Emis-
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: CA395B288E3A3EBB3865A02605DE2A60;18829.
  ) 
@@ -2435,7 +2431,7 @@ KTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/franc/AppData/Local/Programs
 /MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/franc/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/franc/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (113 pages, 1940273 bytes).
+Output written on main.pdf (113 pages, 1940683 bytes).
 PDF statistics:
  2168 PDF objects out of 2487 (max. 8388607)
  604 named destinations out of 1000 (max. 500000)

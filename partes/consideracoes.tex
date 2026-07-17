@@ -47,6 +47,7 @@ Do ponto de vista arquitetural e funcional, o produto atual apresenta as seguint
 Vislumbrando a evolução contínua da plataforma, recomenda-se a exploração dos seguintes aprimoramentos técnicos e funcionais:
 
 \begin{itemize}
+    \item Materialização das entidades \textbf{PARTICIPANTES} e \textbf{CURSOS} no banco de dados, substituindo a abordagem denormalizada atual (campos \code{recipientName}, \code{recipientCPF}, \code{courseName} e \code{courseHours} diretamente na tabela \code{CERTIFICADOS}) por um modelo relacional normalizado com chaves estrangeiras (\code{participantId} e \code{courseId}), habilitando histórico de certificados por participante, listagem por curso e relatórios gerenciais por unidade de treinamento;
     \item Adoção de um \textbf{serviço de mensageria / fila} (como Redis/BullMQ ou RabbitMQ) para orquestrar o processamento assíncrono de emissões em lote e processamento de arquivos CSV/Excel;
     \item Integração com provedores de nuvem para \textbf{envio transacional de e-mails}, implementando retentativas exponenciais (\textit{exponential backoff}) e \textit{templates} ricos;
     \item Refatoração do modelo de dados para suportar plenamente o \textbf{isolamento \textit{multi-tenant}}, com políticas de segurança de linha (\textit{Row Level Security} - RLS) via Supabase;
