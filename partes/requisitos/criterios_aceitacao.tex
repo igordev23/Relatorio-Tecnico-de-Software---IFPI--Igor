@@ -38,7 +38,7 @@ Cada requisito funcional possui critérios de aceitação que definem as condiç
 \ref{rf:mapeamento-campos} & Salvar configurações & Mapeamento de campos persiste após recarregar a página. \\
 \ref{rf:duplicar-templates} & Duplicar templates & Duplicata cria cópia idêntica com nome "(cópia)"; original não é alterado. \\
 \midrule
-\ref{rf:cadastro-participante} & Cadastro individual & Formulário válido salva participante; e-mail duplicado exibe alerta; participante aparece na lista. \\
+\ref{rf:cadastro-participante} & Cadastro individual & Formulário válido salva participante; e-mail ou CPF duplicado exibe alerta; participante aparece na lista. \\
 \ref{rf:emissao-manual} & Emissão manual & Selecionar template, preencher dados e confirmar gera certificado listado no dashboard. \\
 \ref{rf:importar-csv} & Importar CSV & Arquivo CSV com cabeçalho correto importa participantes; linhas com erro são ignoradas e reportadas. \\
 \ref{rf:importar-excel} & Importar Excel & Arquivo .xlsx com abas é processado; primeira aba é usada como padrão. \\
@@ -85,7 +85,7 @@ Cada requisito funcional possui critérios de aceitação que definem as condiç
 \ref{rf:validar-vinculo-participante} & Validar vínculo & Emissão é bloqueada se participante não pertence ao curso selecionado; mensagem exibe motivo. \\
 \ref{rf:local-curso} & Registrar local & Local do curso é salvo e exibido no certificado. \\
 \midrule
-\ref{rf:cadastro-completo-participante} & Cadastro completo & Nome e e-mail são obrigatórios; CPF é opcional; e-mail inválido é rejeitado. \\
+\ref{rf:cadastro-completo-participante} & Cadastro completo & Nome, e-mail e CPF são obrigatórios; e-mail inválido é rejeitado. \\
 \ref{rf:edicao-participante} & Edição & Dados editados são salvos e refletidos na tela de emissão. \\
 \ref{rf:importar-sem-duplicidade} & Importar sem duplicidade & Mesmo CPF/e-mail não cria registro duplicado; dados existentes são atualizados. \\
 \ref{rf:historico-participante} & Histórico & Página do participante exibe todos os certificados emitidos para ele. \\

@@ -6,7 +6,7 @@ Relatório técnico de software desenvolvido como Trabalho de Conclusão de Curs
 
 ## Resumo
 
-Sistema web SaaS com arquitetura multi-tenant para emissão, gestão, envio e validação de certificados digitais. O sistema substitui processos manuais por uma plataforma centralizada com suporte a templates configuráveis, importação em lote, autenticação via QR Code e dashboard gerencial.
+Sistema web SaaS com arquitetura multi-tenant para emissão, gestão e validação de certificados digitais. O sistema substitui processos manuais por uma plataforma centralizada com suporte a templates configuráveis, autenticação via QR Code e dashboard gerencial. Funcionalidades como importação em lote e envio automático por e-mail foram planejadas para versões futuras.
 
 ## Tecnologias
 
@@ -21,8 +21,7 @@ Sistema web SaaS com arquitetura multi-tenant para emissão, gestão, envio e va
 
 - Autenticação e controle de acesso por perfis (RBAC)
 - Templates configuráveis com campos dinâmicos
-- Emissão individual e em lote (CSV/Excel)
-- Envio automático de e-mails
+- Emissão individual de certificados
 - Validação pública via código único e QR Code
 - Dashboard com indicadores e logs de auditoria
 

@@ -2,6 +2,7 @@
 
 Além dos requisitos funcionais, foram identificadas regras de negócio que impõem restrições ou condições sobre as funcionalidades do sistema:
 
+\vspace{0.5em}
 \begin{itemize}
 \rnitem{rn:acesso-restrito}{Não deve ser permitido acesso a áreas restritas sem autenticação prévia.}
 \rnitem{rn:certificado-arquivado}{Certificados não podem ser excluídos definitivamente, devendo ser arquivados.}
@@ -13,10 +14,11 @@ Além dos requisitos funcionais, foram identificadas regras de negócio que imp�
 
 As regras de negócio acima representam o modelo completo desejado para o sistema. No entanto, considerando o escopo do MVP (v1.0), algumas regras ainda não foram implementadas:
 
+\vspace{0.5em}
 \begin{itemize}
-\item \textbf{rn:certificado-arquivado} --- No MVP atual, a exclusão de templates e certificados é realizada por exclusão definitiva (\textit{hard delete}), conforme testado nos casos CT005 e CT056 do plano de testes. A regra de arquivamento (\textit{soft delete}) está prevista para a versão 2.0, conforme o requisito \ref{rf:arquivamento-certificados} [S].
-\item \textbf{rn:vinculo-participante} --- A validação de vínculo entre participante e curso não é verificada no MVP, pois as entidades Participantes e Cursos ainda não foram materializadas no banco de dados.
-\item \textbf{rn:reenvio-limite} --- O reenvio automático com limite de tentativas não foi implementado no MVP; o envio de e-mails é simulado sem controle de retentativas.
+\item \textbf{\ref{rn:certificado-arquivado} ---} No MVP atual, a exclusão de templates e certificados é realizada por exclusão definitiva (\textit{hard delete}), conforme testado nos casos CT005 e CT056 do plano de testes. A regra de arquivamento (\textit{soft delete}) está prevista para a versão 2.0, conforme o requisito \ref{rf:arquivamento-certificados} [S].
+\item \textbf{\ref{rn:vinculo-participante} ---} A validação de vínculo entre participante e curso não é verificada no MVP, pois as entidades Participantes e Cursos ainda não foram materializadas no banco de dados.
+\item \textbf{\ref{rn:reenvio-limite} ---} O reenvio automático com limite de tentativas não foi implementado no MVP; o envio de e-mails é simulado sem controle de retentativas.
 \end{itemize}
 
 A implementação completa dessas regras está vinculada aos requisitos classificados como [S] ou [C], que serão tratados em versões futuras do sistema.

@@ -9,15 +9,21 @@
 \textbf{UC001} & \textbf{Gerenciar Usuários} \\
 \hline
 \textbf{Dependências} & \ref{rf:login-email}, \ref{rf:validar-credenciais}, \ref{rf:cadastro-usuario}, \ref{rf:gerenciamento-perfis}, \ref{rf:controle-acesso-restrito} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
+\hline
 \textbf{Descrição} & O sistema deve permitir que o administrador gerencie os usuários da plataforma, incluindo criação, edição e desativação de contas, bem como a definição de perfis de acesso. \\
+\hline
 \textbf{Ator(es)} & Administrador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Administrador autenticado no sistema.
-    \item Administrador possui permissão de gerenciamento de usuários.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador autenticado no sistema. \\
+\hline
+2 & Administrador possui permissão de gerenciamento de usuários. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -42,10 +48,13 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Usuário criado, editado ou desativado com sucesso.
-    \item Alterações refletidas na lista de usuários.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Usuário criado, editado ou desativado com sucesso. \\
+\hline
+2 & Alterações refletidas na lista de usuários. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -56,6 +65,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:login-email}, \ref{rf:validar-credenciais}, \ref{rf:cadastro-usuario}, \ref{rf:gerenciamento-perfis}, \ref{rf:controle-acesso-restrito} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -71,14 +81,19 @@
 \textbf{UC002} & \textbf{Gerenciar Templates} \\
 \hline
 \textbf{Dependências} & \ref{rf:upload-templates}, \ref{rf:personalizacao-templates}, \ref{rf:selecionar-template-galeria}, \ref{rf:edicao-campos-dinamicos}, \ref{rf:mapeamento-campos} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
+\hline
 \textbf{Descrição} & O sistema deve permitir que o administrador gerencie templates de certificados, incluindo upload, personalização visual e configuração de campos dinâmicos. \\
+\hline
 \textbf{Ator(es)} & Administrador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Administrador autenticado no sistema.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador autenticado no sistema. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -101,10 +116,13 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Template salvo no sistema.
-    \item Template disponível para uso na emissão de certificados.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Template salvo no sistema. \\
+\hline
+2 & Template disponível para uso na emissão de certificados. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -115,6 +133,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:upload-templates}, \ref{rf:personalizacao-templates}, \ref{rf:selecionar-template-galeria}, \ref{rf:edicao-campos-dinamicos}, \ref{rf:mapeamento-campos} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -130,14 +149,19 @@
 \textbf{UC003} & \textbf{Gerenciar Cursos} \\
 \hline
 \textbf{Dependências} & \ref{rf:cadastro-curso}, \ref{rf:associar-participante-curso}, \ref{rf:carga-horaria}, \ref{rf:instrutor-responsavel}, \ref{rf:datas-curso}, \ref{rf:local-curso} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
+\hline
 \textbf{Descrição} & O sistema deve permitir que o administrador cadastre e gerencie cursos, incluindo nome, carga horária, datas, local e instrutor. \\
+\hline
 \textbf{Ator(es)} & Administrador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Administrador autenticado no sistema.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador autenticado no sistema. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -158,10 +182,13 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Curso cadastrado no sistema.
-    \item Curso disponível para vinculação com certificados.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Curso cadastrado no sistema. \\
+\hline
+2 & Curso disponível para vinculação com certificados. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -172,6 +199,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:cadastro-curso}, \ref{rf:associar-participante-curso}, \ref{rf:carga-horaria}, \ref{rf:instrutor-responsavel}, \ref{rf:datas-curso}, \ref{rf:local-curso} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -187,16 +215,23 @@
 \textbf{UC004} & \textbf{Emitir Certificado Individual} \\
 \hline
 \textbf{Dependências} & \ref{rf:cadastro-participante}, \ref{rf:emissao-manual}, \ref{rf:gerar-pdf}, \ref{rf:preencher-campos-dinamicos}, \ref{rf:codigo-unico}, \ref{rf:registro-emissao}, \ref{rf:download-individual}, \ref{rf:validar-vinculo-participante}, \ref{rf:status-envio}, \ref{rf:reenviar-falha} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
-\textbf{Descrição} & O sistema deve permitir que o colaborador emita um certificado individual, selecionando template, curso e participante, e gerando PDF com código único e \textit{QR Code}. \\
-\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Descrição} & O sistema deve permitir que o administrador ou colaborador emita um certificado individual, selecionando template, curso e participante, e gerando PDF com código único e \textit{QR Code}. \\
+\hline
+\textbf{Ator(es)} & Administrador, Colaborador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Colaborador autenticado no sistema.
-    \item Template de certificado cadastrado.
-    \item Curso cadastrado.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Participante já cadastrado no sistema. \\
+\hline
+2 & Template disponível para uso. \\
+\hline
+3 & Usuário autenticado com perfil de colaborador ou administrador. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -225,11 +260,15 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Certificado gerado em PDF.
-    \item Código único registrado no banco de dados.
-    \item Certificado disponível para validação pública.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Certificado gerado em PDF. \\
+\hline
+2 & Código único registrado no banco de dados. \\
+\hline
+3 & Certificado disponível para validação pública. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -242,6 +281,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:cadastro-participante}, \ref{rf:emissao-manual}, \ref{rf:gerar-pdf}, \ref{rf:preencher-campos-dinamicos}, \ref{rf:codigo-unico}, \ref{rf:registro-emissao}, \ref{rf:download-individual}, \ref{rf:validar-vinculo-participante}, \ref{rf:status-envio}, \ref{rf:reenviar-falha} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -257,16 +297,23 @@
 \textbf{UC005} & \textbf{Emitir Certificados em Lote} \\
 \hline
 \textbf{Dependências} & \ref{rf:importar-csv}, \ref{rf:upload-lista-lote}, \ref{rf:processar-fila}, \ref{rf:notificar-processamento} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
-\textbf{Descrição} & O sistema deve permitir que o colaborador emita certificados em lote a partir de uma lista de participantes, processando de forma assíncrona por fila. \\
-\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Descrição} & O sistema deve permitir que o administrador ou colaborador emita certificados em lote a partir de uma lista de participantes, processando de forma assíncrona por fila. \\
+\hline
+\textbf{Ator(es)} & Administrador, Colaborador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Colaborador autenticado no sistema.
-    \item Template de certificado cadastrado.
-    \item Arquivo com lista de participantes disponível.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador ou colaborador autenticado no sistema. \\
+\hline
+2 & Template de certificado cadastrado. \\
+\hline
+3 & Arquivo com lista de participantes disponível. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -289,10 +336,13 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Certificados do lote gerados e registrados.
-    \item Colaborador notificado sobre o resultado.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Certificados do lote gerados e registrados. \\
+\hline
+2 & Colaborador notificado sobre o resultado. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -305,6 +355,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:importar-csv}, \ref{rf:upload-lista-lote}, \ref{rf:processar-fila}, \ref{rf:notificar-processamento} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -320,14 +371,19 @@
 \textbf{UC006} & \textbf{Cadastrar Participante} \\
 \hline
 \textbf{Dependências} & \ref{rf:cadastro-participante}, \ref{rf:cadastro-completo-participante}, \ref{rf:edicao-participante}, \ref{rf:busca-participante} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
-\textbf{Descrição} & O sistema deve permitir que o colaborador cadastre participantes individualmente, informando nome, e-mail e CPF opcional. \\
-\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Descrição} & O sistema deve permitir que o administrador ou colaborador cadastre participantes individualmente, informando nome, e-mail e CPF opcional. \\
+\hline
+\textbf{Ator(es)} & Administrador, Colaborador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Colaborador autenticado no sistema.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador ou colaborador autenticado no sistema. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -348,10 +404,13 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Participante cadastrado no sistema.
-    \item Participante disponível para emissão de certificados.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Participante cadastrado no sistema. \\
+\hline
+2 & Participante disponível para emissão de certificados. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -364,6 +423,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:cadastro-participante}, \ref{rf:cadastro-completo-participante}, \ref{rf:edicao-participante}, \ref{rf:busca-participante} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -379,15 +439,21 @@
 \textbf{UC007} & \textbf{Importar Participantes} \\
 \hline
 \textbf{Dependências} & \ref{rf:importar-csv}, \ref{rf:importar-excel}, \ref{rf:importar-sem-duplicidade} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
-\textbf{Descrição} & O sistema deve permitir que o colaborador importe participantes em lote a partir de arquivos CSV ou Excel. \\
-\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Descrição} & O sistema deve permitir que o administrador ou colaborador importe participantes em lote a partir de arquivos CSV ou Excel. \\
+\hline
+\textbf{Ator(es)} & Administrador, Colaborador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Colaborador autenticado no sistema.
-    \item Arquivo CSV ou Excel disponível.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador ou colaborador autenticado no sistema. \\
+\hline
+2 & Arquivo CSV ou Excel disponível. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -408,10 +474,13 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Participantes válidos importados e disponíveis para emissão.
-    \item Relatório de erros gerado para registros rejeitados.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Participantes válidos importados e disponíveis para emissão. \\
+\hline
+2 & Relatório de erros gerado para registros rejeitados. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -424,6 +493,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:importar-csv}, \ref{rf:importar-excel}, \ref{rf:importar-sem-duplicidade} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -439,14 +509,19 @@
 \textbf{UC008} & \textbf{Validar Certificado} \\
 \hline
 \textbf{Dependências} & \ref{rf:portal-validacao}, \ref{rf:validar-certificado}, \ref{rf:qrcode}, \ref{rf:exibir-validacao} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
+\hline
 \textbf{Descrição} & O sistema deve disponibilizar um portal público onde qualquer visitante possa validar um certificado informando o código único ou escaneando o \textit{QR Code}. \\
+\hline
 \textbf{Ator(es)} & Visitante \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Nenhuma (portal público, sem autenticação).
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Nenhuma (portal público, sem autenticação). \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -465,9 +540,11 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Informações do certificado exibidas ao visitante.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Informações do certificado exibidas ao visitante. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -480,6 +557,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:portal-validacao}, \ref{rf:validar-certificado}, \ref{rf:qrcode}, \ref{rf:exibir-validacao} \\
+\hline
 \textbf{Comentários} & A validação via \textit{QR Code} elimina a necessidade de digitação manual do código. \\
 \hline
 \end{tabular}
@@ -495,14 +573,19 @@
 \textbf{UC009} & \textbf{Buscar Participantes} \\
 \hline
 \textbf{Dependências} & \ref{rf:busca-participante} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
-\textbf{Descrição} & O sistema deve permitir que o colaborador busque participantes por nome, e-mail ou CPF, exibindo os resultados de forma rápida e paginada. \\
-\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Descrição} & O sistema deve permitir que o administrador ou colaborador busque participantes por nome, e-mail ou CPF, exibindo os resultados de forma rápida e paginada. \\
+\hline
+\textbf{Ator(es)} & Administrador, Colaborador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Colaborador autenticado no sistema.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador ou colaborador autenticado no sistema. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -521,9 +604,11 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Lista de participantes filtrada exibida ao colaborador.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Lista de participantes filtrada exibida ao colaborador. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -536,6 +621,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:busca-participante} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -551,15 +637,21 @@
 \textbf{UC010} & \textbf{Visualizar Histórico de Certificados} \\
 \hline
 \textbf{Dependências} & \ref{rf:historico-participante}, \ref{rf:busca-participante} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
+\hline
 \textbf{Descrição} & O sistema deve exibir o histórico completo de certificados emitidos para um participante específico, incluindo data de emissão, template utilizado e status de validade. \\
-\textbf{Ator(es)} & Colaborador \\
+\hline
+\textbf{Ator(es)} & Administrador, Colaborador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Colaborador autenticado no sistema.
-    \item Participante localizado via busca.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador ou colaborador autenticado no sistema. \\
+\hline
+2 & Participante localizado via busca. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -578,9 +670,11 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Histórico de certificados exibido ao colaborador.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Histórico de certificados exibido ao colaborador. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -591,6 +685,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:historico-participante}, \ref{rf:busca-participante} \\
+\hline
 \textbf{Comentários} & Estende o caso de uso Buscar Participantes. \\
 \hline
 \end{tabular}
@@ -606,14 +701,19 @@
 \textbf{UC011} & \textbf{Gerenciar Organizações} \\
 \hline
 \textbf{Dependências} & \ref{rf:cadastro-organizacao}, \ref{rf:associar-usuario-organizacao}, \ref{rf:organizacao-templates}, \ref{rf:organizacao-usuarios} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
+\hline
 \textbf{Descrição} & O sistema deve permitir que o administrador cadastre e gerencie organizações (multi-tenant), incluindo CNPJ, razão social, endereço e contato, bem como a associação de usuários e templates a cada organização. \\
+\hline
 \textbf{Ator(es)} & Administrador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Administrador autenticado no sistema.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador autenticado no sistema. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -636,10 +736,13 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Organização cadastrada, editada ou desativada com sucesso.
-    \item Organização disponível para associação de usuários e templates.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Organização cadastrada, editada ou desativada com sucesso. \\
+\hline
+2 & Organização disponível para associação de usuários e templates. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -652,6 +755,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:cadastro-organizacao}, \ref{rf:associar-usuario-organizacao}, \ref{rf:organizacao-templates}, \ref{rf:organizacao-usuarios} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -667,14 +771,19 @@
 \textbf{UC012} & \textbf{Configurar Sistema} \\
 \hline
 \textbf{Dependências} & \ref{rf:personalizar-mensagens}, \ref{rf:envio-automatico}, \ref{rf:regras-reemissao} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
+\hline
 \textbf{Descrição} & O sistema deve permitir que o administrador configure parâmetros gerais do sistema, incluindo personalização de mensagens padrão, ativação de envio automático e regras de reemissão de certificados. \\
+\hline
 \textbf{Ator(es)} & Administrador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Administrador autenticado no sistema.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador autenticado no sistema. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -697,10 +806,13 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Configurações do sistema atualizadas.
-    \item Novas regras e mensagens aplicadas às próximas operações.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Configurações do sistema atualizadas. \\
+\hline
+2 & Novas regras e mensagens aplicadas às próximas operações. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -710,6 +822,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:personalizar-mensagens}, \ref{rf:envio-automatico}, \ref{rf:regras-reemissao} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -725,14 +838,19 @@
 \textbf{UC013} & \textbf{Abrir Chamado de Suporte} \\
 \hline
 \textbf{Dependências} & \ref{rf:chamados-suporte} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
-\textbf{Descrição} & O sistema deve permitir que o administrador abra chamados de suporte técnico, informando descrição do problema, prioridade e dados de contato. \\
-\textbf{Ator(es)} & Administrador \\
+\hline
+\textbf{Descrição} & O sistema deve permitir que o administrador ou colaborador abra chamados de suporte técnico, informando descrição do problema, prioridade e dados de contato. \\
+\hline
+\textbf{Ator(es)} & Administrador, Colaborador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Administrador autenticado no sistema.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador ou colaborador autenticado no sistema. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -753,10 +871,13 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Chamado registrado no sistema.
-    \item Chamado disponível para acompanhamento pela equipe de suporte.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Chamado registrado no sistema. \\
+\hline
+2 & Chamado disponível para acompanhamento pela equipe de suporte. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -767,6 +888,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:chamados-suporte} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -782,14 +904,19 @@
 \textbf{UC014} & \textbf{Visualizar Dashboard} \\
 \hline
 \textbf{Dependências} & \ref{rf:lista-certificados}, \ref{rf:filtros-certificados}, \ref{rf:estatisticas-emissao} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
+\hline
 \textbf{Descrição} & O sistema deve exibir um dashboard com a lista de certificados emitidos, filtros por curso, período, status e instrutor e estatísticas mensais de emissão. \\
+\hline
 \textbf{Ator(es)} & Administrador, Colaborador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Usuário autenticado no sistema.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Usuário autenticado no sistema. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -808,9 +935,11 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Dashboard exibido com dados atualizados.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Dashboard exibido com dados atualizados. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -821,6 +950,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:lista-certificados}, \ref{rf:filtros-certificados}, \ref{rf:estatisticas-emissao} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}
@@ -836,14 +966,19 @@
 \textbf{UC015} & \textbf{Consultar Logs} \\
 \hline
 \textbf{Dependências} & \ref{rf:logs-autenticacao}, \ref{rf:eventos-criticos}, \ref{rf:exportacao-logs} \\
+\hline
 \textbf{Autor} & Francisco Igor Silva Santos \\
+\hline
 \textbf{Descrição} & O sistema deve permitir que o administrador consulte logs de autenticação e eventos críticos do sistema, com opção de exportação dos registros. \\
+\hline
 \textbf{Ator(es)} & Administrador \\
 \hline
 \textbf{Pré-condições} &
-\begin{enumerate}
-    \item Administrador autenticado no sistema.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Administrador autenticado no sistema. \\
+\end{tabular} \\
 \hline
 \textbf{Sequência Ordinária} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -864,9 +999,11 @@
 \end{tabular} \\
 \hline
 \textbf{Pós-condições} &
-\begin{enumerate}
-    \item Logs consultados e/ou exportados com sucesso.
-\end{enumerate} \\
+\hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
+\textbf{Item} & \textbf{Condição} \\
+\hline
+1 & Logs consultados e/ou exportados com sucesso. \\
+\end{tabular} \\
 \hline
 \textbf{Exceções} &
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
@@ -877,6 +1014,7 @@
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:logs-autenticacao}, \ref{rf:eventos-criticos}, \ref{rf:exportacao-logs} \\
+\hline
 \textbf{Comentários} & Nenhum. \\
 \hline
 \end{tabular}

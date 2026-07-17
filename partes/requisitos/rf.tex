@@ -42,6 +42,8 @@ Os requisitos foram priorizados segundo o método MoSCoW, alinhado à abordagem 
 \rfitem{rf:gerar-pdf}{M}{Gerar certificados em PDF.}
 \rfitem{rf:preencher-campos-dinamicos}{M}{Preencher automaticamente campos dinâmicos.}
 \rfitem{rf:codigo-unico}{M}{Gerar código único por certificado.}
+\rfitem{rf:qrcode}{M}{Gerar \textit{QR Code} no certificado com opções de personalização.}
+\rfitem{rf:hash-integridade}{M}{Gerar hash de integridade para cada certificado.}
 \rfitem{rf:registro-emissao}{M}{Registrar data, hora e localidade da emissão.}
 \rfitem{rf:reemissao-historico}{S}{Permitir reemissão mantendo histórico.}
 \rfitem{rf:download-individual}{M}{Permitir download individual.}
@@ -50,6 +52,7 @@ Os requisitos foram priorizados segundo o método MoSCoW, alinhado à abordagem 
 
 \subsubsection{Módulo de Envio e Comunicação}
 \begin{itemize}
+\rfitem{rf:enviar-email}{S}{Enviar certificado por e-mail ao participante.}
 \rfitem{rf:personalizacao-email}{C}{Permitir personalização do corpo do e-mail com variáveis.}
 \rfitem{rf:status-envio}{S}{Registrar status de envio (pendente, enviado, falha).}
 \rfitem{rf:reenviar-falha}{C}{Reenviar automaticamente certificados com falha de envio.}
@@ -59,7 +62,6 @@ Os requisitos foram priorizados segundo o método MoSCoW, alinhado à abordagem 
 \begin{itemize}
 \rfitem{rf:portal-validacao}{M}{Disponibilizar portal público de validação.}
 \rfitem{rf:validar-certificado}{M}{Validar certificado via código único.}
-\rfitem{rf:qrcode}{M}{Gerar \textit{QR Code} no certificado com opções de personalização.}
 \rfitem{rf:exibir-validacao}{M}{Exibir informações básicas ao validar (nome, curso, data, validade, autenticidade).}
 \end{itemize}
 
@@ -98,7 +100,7 @@ Os requisitos foram priorizados segundo o método MoSCoW, alinhado à abordagem 
 
 \subsubsection{Módulo de Participantes}
 \begin{itemize}
-\rfitem{rf:cadastro-completo-participante}{S}{Cadastro completo de participantes (nome, e-mail, CPF opcional).}
+\rfitem{rf:cadastro-completo-participante}{S}{Cadastro completo de participantes (nome, e-mail e CPF).}
 \rfitem{rf:edicao-participante}{S}{Permitir edição de dados.}
 \rfitem{rf:importar-sem-duplicidade}{S}{Importar participantes sem duplicidade.}
 \rfitem{rf:historico-participante}{S}{Exibir histórico de certificados por participante.}
@@ -127,6 +129,7 @@ Os requisitos foram priorizados segundo o método MoSCoW, alinhado à abordagem 
 
 \subsubsection{Módulo de Notificações e Alertas}
 \begin{itemize}
+\rfitem{rf:notificar-sucesso-emissao}{S}{Notificar sucesso na emissão de certificado.}
 \rfitem{rf:notificar-falhas}{S}{Notificar falhas de emissão.}
 \rfitem{rf:notificar-sucesso-planilhas}{C}{Notificar sucesso no processamento de planilhas.}
 \rfitem{rf:alertar-template-invalido}{C}{Alertar quando template estiver incompleto ou inválido.}

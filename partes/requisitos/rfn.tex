@@ -1,104 +1,107 @@
+\vspace{1em}
 \textbf{Requisitos Não Funcionais}:
+
+Os requisitos não funcionais foram priorizados segundo o método MoSCoW, alinhado à abordagem MVP (Produto Mínimo Viável) adotada no projeto: \textbf{[M]} \textit{Must have} — requisitos essenciais implementados no MVP; \textbf{[S]} \textit{Should have} — importantes, mas não críticos para a primeira versão; \textbf{[C]} \textit{Could have} — desejáveis para versões futuras; \textbf{[W]} \textit{Won't have} — fora do escopo do MVP.
 
 \subsubsection{Segurança}
 \begin{itemize}
-\rnfitem{rnf:supabase-auth}{O sistema deve utilizar o Supabase Auth para gerenciamento seguro de autenticação e armazenamento de senhas com hash criptográfico seguro (bcrypt). No MVP, o middleware de autenticação foi estruturado e validado em testes unitários, porém o fluxo completo de login, gerenciamento de sessão e renovação de tokens JWT está previsto para implementação em versões futuras.}
-\rnfitem{rnf:https}{O sistema deve utilizar conexão segura HTTPS (TLS 1.2 ou superior).}
-\rnfitem{rnf:encryption-at-rest}{O sistema deve proteger dados sensíveis em repouso utilizando criptografia fornecida pela infraestrutura cloud.}
-\rnfitem{rnf:login-attempt-limit}{O sistema deve bloquear autenticação após 5 tentativas consecutivas inválidas (conforme política do provedor de autenticação).}
-\rnfitem{rnf:session-timeout}{Sessões inativas devem expirar automaticamente após tempo configurável (ex.: 30 minutos).}
-\rnfitem{rnf:rbac}{O sistema deve implementar controle de acesso baseado em papéis (RBAC).}
-\rnfitem{rnf:owasp}{O sistema deve seguir boas práticas de segurança conforme OWASP Top 10.}
-\rnfitem{rnf:auth-logs}{O sistema deve registrar logs de autenticação e eventos de segurança.}
-\rnfitem{rnf:tenant-isolation}{O sistema deve garantir isolamento de dados entre empresas (multi-tenant).}
-\rnfitem{rnf:mfa}{O sistema deve permitir futura implementação de autenticação multifator (MFA).}
-\rnfitem{rnf:emission-schedules}{O sistema deve permitir configurar horários de emissão por perfil de colaborador como política de segurança.}
+\rnfitem{rnf:supabase-auth}{[S] O sistema deve utilizar o Supabase Auth para gerenciamento seguro de autenticação e armazenamento de senhas com hash criptográfico seguro (bcrypt).}
+\rnfitem{rnf:https}{[M] O sistema deve utilizar conexão segura HTTPS (TLS 1.2 ou superior) em todas as comunicações entre o cliente e o servidor, garantindo confidencialidade e integridade dos dados em trânsito.}
+\rnfitem{rnf:encryption-at-rest}{[S] O sistema deve proteger dados sensíveis em repouso utilizando criptografia fornecida pela infraestrutura em nuvem.}
+\rnfitem{rnf:login-attempt-limit}{[S] O sistema deve bloquear autenticação após 5 tentativas consecutivas inválidas (conforme política do provedor de autenticação).}
+\rnfitem{rnf:session-timeout}{[C] Sessões inativas devem expirar automaticamente após tempo configurável (ex.: 30 minutos).}
+\rnfitem{rnf:rbac}{[M] O sistema deve implementar controle de acesso baseado em papéis (RBAC).}
+\rnfitem{rnf:owasp}{[S] O sistema deve seguir boas práticas de segurança conforme OWASP Top 10.}
+\rnfitem{rnf:auth-logs}{[S] O sistema deve registrar logs de autenticação e eventos de segurança, incluindo tentativas de login, falhas, acessos negados e alterações de configuração, com data, hora e identificação do usuário.}
+\rnfitem{rnf:tenant-isolation}{[C] O sistema deve garantir isolamento de dados entre empresas (multi-tenant).}
+\rnfitem{rnf:mfa}{[W] O sistema deve permitir futura implementação de autenticação multifator (MFA).}
+\rnfitem{rnf:emission-schedules}{[C] O sistema deve permitir configurar horários de emissão por perfil de colaborador como política de segurança.}
 \end{itemize}
 
 \subsubsection{Desempenho e Escalabilidade}
 
-Os valores numéricos apresentados a seguir são estimativas definidas pelo desenvolvedor com base no porte esperado da operação, considerando turmas típicas de 20 a 50 participantes e emissões recorrentes ao longo do ano. Os limites estabelecidos consideram uma margem de segurança para absorver picos sazonais sem degradação da experiência do usuário.
+Os valores numéricos apresentados a seguir são estimativas definidas pelo desenvolvedor com base no porte esperado da operação, considerando turmas típicas de 20 a 50 participantes, palestras com até 200 participantes e emissões recorrentes ao longo do ano. Os limites estabelecidos consideram uma margem de segurança para absorver picos sazonais sem degradação da experiência do usuário.
 
+\vspace{0.5em}
 \begin{itemize}
-\rnfitem{rnf:batch-capacity}{O sistema deve suportar geração simultânea de, estimados, 500 certificados por lote, volume equivalente a dez turmas médias processadas em única operação.}
-\rnfitem{rnf:generation-time}{O tempo médio de geração individual não deve exceder 5 segundos por certificado, garantindo que um lote de 500 certificados seja concluído em aproximadamente 40 minutos.}
-\rnfitem{rnf:validation-response-time}{O portal público de validação deve responder em até 2 segundos.}
-\rnfitem{rnf:horizontal-scaling}{O sistema deve permitir escalabilidade horizontal do serviço de geração.}
-\rnfitem{rnf:monthly-volume}{O sistema deve suportar volume estimado de 10.000 certificados/mês, compatível com a projeção de emissões recorrentes acrescida de margem de segurança.}
-\rnfitem{rnf:async-batch-processing}{A geração em lote deve ser processada de forma assíncrona por meio de fila de processamento, sem bloquear a aplicação principal.}
-\rnfitem{rnf:queue-ordering}{A fila de certificados deve garantir processamento ordenado e controle de concorrência.}
+\rnfitem{rnf:batch-capacity}{[M] O sistema deve suportar geração simultânea de, estimados, 500 certificados por lote, volume equivalente a duas turmas grandes ou dez turmas médias processadas em única operação.}
+\rnfitem{rnf:generation-time}{[M] O tempo médio de geração individual não deve exceder 5 segundos por certificado, garantindo que um lote de 500 certificados seja concluído em aproximadamente 42 minutos.}
+\rnfitem{rnf:validation-response-time}{[M] O portal público de validação deve responder em até 2 segundos.}
+\rnfitem{rnf:horizontal-scaling}{[S] O sistema deve permitir escalabilidade horizontal do serviço de geração.}
+\rnfitem{rnf:monthly-volume}{[S] O sistema deve suportar volume estimado de 10.000 certificados/mês, compatível com a projeção de emissões recorrentes acrescida de margem de segurança.}
+\rnfitem{rnf:async-batch-processing}{[M] A geração em lote deve ser processada de forma assíncrona por meio de fila de processamento, sem bloquear a aplicação principal.}
+\rnfitem{rnf:queue-ordering}{[S] A fila de certificados deve garantir processamento ordenado e controle de concorrência.}
 \end{itemize}
 
 \subsubsection{Disponibilidade e Confiabilidade}
 \begin{itemize}
-\rnfitem{rnf:uptime}{O sistema deve garantir disponibilidade mínima de 99,5\% mensal.}
-\rnfitem{rnf:daily-backup}{O sistema deve realizar backup automático diário do banco de dados.}
-\rnfitem{rnf:restore-time}{O sistema deve permitir restauração de dados em até 24 horas.}
-\rnfitem{rnf:retry-mechanism}{O sistema deve implementar mecanismo de retentativa automática para tarefas falhas na fila de certificados.}
-\rnfitem{rnf:failure-logging}{O sistema deve registrar falhas de processamento para auditoria posterior.}
+\rnfitem{rnf:uptime}{[S] O sistema deve garantir disponibilidade mínima de 99,5\% mensal.}
+\rnfitem{rnf:daily-backup}{[S] O sistema deve realizar backup automático diário do banco de dados, com retenção mínima de 30 dias, garantindo recuperação de dados em caso de falha ou corrupção.}
+\rnfitem{rnf:restore-time}{[C] O sistema deve permitir restauração de dados em até 24 horas.}
+\rnfitem{rnf:retry-mechanism}{[S] O sistema deve implementar mecanismo de retentativa automática para tarefas falhas na fila de certificados.}
+\rnfitem{rnf:failure-logging}{[M] O sistema deve registrar falhas de processamento para auditoria posterior.}
 \end{itemize}
 
 \subsubsection{Usabilidade e Acessibilidade}
 \begin{itemize}
-\rnfitem{rnf:responsive}{O sistema deve ser responsivo (desktop, tablet e mobile).}
-\rnfitem{rnf:visual-consistency}{O sistema deve manter padrão visual consistente.}
-\rnfitem{rnf:error-messages}{O sistema deve fornecer mensagens de erro claras.}
-\rnfitem{rnf:keyboard-nav}{O sistema deve permitir navegação por teclado.}
-\rnfitem{rnf:wcag}{O sistema deve seguir recomendações WCAG 2.1 nível AA (quando aplicável).}
+\rnfitem{rnf:responsive}{[M] O sistema deve ser responsivo (desktop, tablet e mobile).}
+\rnfitem{rnf:visual-consistency}{[M] O sistema deve manter padrão visual consistente.}
+\rnfitem{rnf:error-messages}{[M] O sistema deve fornecer mensagens de erro claras.}
+\rnfitem{rnf:keyboard-nav}{[S] O sistema deve permitir navegação por teclado.}
+\rnfitem{rnf:wcag}{[C] O sistema deve seguir recomendações WCAG 2.1 nível AA (quando aplicável).}
 \end{itemize}
 
 \subsubsection{Compatibilidade e Integração}
 \begin{itemize}
-\rnfitem{rnf:browser-compat}{O sistema deve ser compatível com navegadores modernos (Chrome, Firefox, Edge, Safari).}
-\rnfitem{rnf:pdf-fidelity}{A geração de PDF deve preservar fidelidade visual do template original.}
-\rnfitem{rnf:rest-api}{O sistema deve disponibilizar API REST autenticada via token JWT do Supabase.}
-\rnfitem{rnf:csv-utf8}{O sistema deve aceitar arquivos CSV codificados em UTF-8.}
-\rnfitem{rnf:webhooks}{O sistema deve permitir integração via Webhooks em formato JSON.}
+\rnfitem{rnf:browser-compat}{[M] O sistema deve ser compatível com navegadores modernos (Chrome, Firefox, Edge, Safari).}
+\rnfitem{rnf:pdf-fidelity}{[M] A geração de PDF deve preservar fidelidade visual do template original.}
+\rnfitem{rnf:rest-api}{[M] O sistema deve disponibilizar API REST autenticada via token JWT do Supabase.}
+\rnfitem{rnf:csv-utf8}{[S] O sistema deve aceitar arquivos CSV codificados em UTF-8.}
+\rnfitem{rnf:webhooks}{[C] O sistema deve permitir integração via Webhooks em formato JSON.}
 \end{itemize}
 
 \subsubsection{Armazenamento e Retenção}
 \begin{itemize}
-\rnfitem{rnf:storage-retention}{O sistema deve armazenar certificados por no mínimo 5 anos.}
-\rnfitem{rnf:certificate-integrity}{O sistema deve garantir integridade dos certificados por meio de hash único.}
-\rnfitem{rnf:soft-delete}{O sistema deve aplicar exclusão lógica (soft delete) quando aplicável.}
+\rnfitem{rnf:storage-retention}{[S] O sistema deve armazenar certificados de forma permanente, garantindo validação indefinida pelo portal público.}
+\rnfitem{rnf:soft-delete}{[S] O sistema deve aplicar exclusão lógica (soft delete) quando aplicável.}
 \end{itemize}
 
 \subsubsection{Conformidade Legal e LGPD}
 \begin{itemize}
-\rnfitem{rnf:lgpd}{O sistema deve estar em conformidade com a LGPD (Lei nº 13.709/2018).}
-\rnfitem{rnf:data-deletion}{O sistema deve permitir exclusão ou anonimização de dados pessoais mediante solicitação.}
-\rnfitem{rnf:consent-logging}{O sistema deve registrar consentimento para tratamento de dados.}
-\rnfitem{rnf:sensitive-logs}{Logs sensíveis devem ser acessíveis apenas por administradores autorizados.}
-\rnfitem{rnf:audit-trail}{O sistema deve manter trilha de auditoria inviolável para operações críticas.}
+\rnfitem{rnf:lgpd}{[C] O sistema deve estar em conformidade com a LGPD (Lei nº 13.709/2018), garantindo tratamento adequado dos dados pessoais coletados, incluindo consentimento, finalidade específica, minimização de dados e direitos do titular.}
+\rnfitem{rnf:data-deletion}{[C] O sistema deve permitir exclusão ou anonimização de dados pessoais mediante solicitação.}
+\rnfitem{rnf:consent-logging}{[C] O sistema deve registrar consentimento do usuário para o tratamento de dados pessoais, incluindo finalidade, base legal e data da coleta.}
+\rnfitem{rnf:sensitive-logs}{[S] Logs sensíveis devem ser acessíveis apenas por administradores autorizados.}
+\rnfitem{rnf:audit-trail}{[S] O sistema deve manter trilha de auditoria inviolável para operações críticas.}
 \end{itemize}
 
 \subsubsection{Arquitetura e Tecnologia}
 \begin{itemize}
-\rnfitem{rnf:independent-apps}{O sistema deve ser composto por duas aplicações independentes: uma \textit{Single Page Application} (SPA) para o frontend e uma API REST para o backend, cada uma com seu próprio ciclo de vida de desenvolvimento e deploy.}
-\rnfitem{rnf:frontend-layers}{O frontend deve adotar arquitetura em camadas com React, com quatro camadas: (i) \textit{View} --- componentes de interface; (ii) \textit{ViewModel} --- custom hooks que encapsulam estado e ações; (iii) \textit{Service} --- cliente de comunicação com a API; (iv) \textit{Model} --- interfaces TypeScript que definem as entidades de domínio.}
-\rnfitem{rnf:backend-layers}{O backend deve adotar arquitetura em camadas (domínio, aplicação e infraestrutura), com as dependências apontando para a camada de domínio (princípio de inversão de dependências).}
-\rnfitem{rnf:api-communication}{A comunicação entre frontend e backend deve ocorrer exclusivamente via API REST sobre HTTPS, com autenticação baseada em token JWT.}
-\rnfitem{rnf:async-cert-generation}{A geração de certificados em lote deve ser processada de forma assíncrona por meio de fila de processamento, sem bloquear a aplicação principal.}
-\rnfitem{rnf:postgresql}{O sistema deve utilizar banco de dados relacional com integridade referencial (PostgreSQL), gerenciado pelo Supabase.}
-\rnfitem{rnf:multi-tenant-strategy}{O sistema deve implementar estratégia de isolamento multi-tenant (por schema ou coluna organizacional).}
-\rnfitem{rnf:monitoring}{O sistema deve implementar monitoramento e observabilidade centralizada (logs, métricas e rastreamento).}
-\rnfitem{rnf:static-deploy}{O frontend deve ser compilado como site estático e implantado em plataforma de hospedagem com deploy contínuo a partir do repositório Git.}
-\rnfitem{rnf:backend-deploy}{O backend deve ser implantado como serviço web independente em plataforma cloud compatível com Node.js.}
-\rnfitem{rnf:extensibility}{O sistema deve permitir extensibilidade, garantindo que novos módulos possam ser adicionados seguindo os mesmos padrões arquiteturais já estabelecidos.}
+\rnfitem{rnf:independent-apps}{[M] O sistema deve ser composto por duas aplicações independentes: uma \textit{Single Page Application} (SPA) para o frontend e uma API REST para o backend, cada uma com seu próprio ciclo de vida de desenvolvimento e deploy.}
+\rnfitem{rnf:frontend-layers}{[M] O frontend deve adotar arquitetura em camadas com React, com quatro camadas: (i) \textit{View} --- componentes de interface; (ii) \textit{ViewModel} --- custom hooks que encapsulam estado e ações; (iii) \textit{Service} --- cliente de comunicação com a API; (iv) \textit{Model} --- interfaces TypeScript que definem as entidades de domínio.}
+\rnfitem{rnf:backend-layers}{[M] O backend deve adotar arquitetura em camadas (domínio, aplicação e infraestrutura), com as dependências apontando para a camada de domínio (princípio de inversão de dependências).}
+\rnfitem{rnf:api-communication}{[M] A comunicação entre frontend e backend deve ocorrer exclusivamente via API REST sobre HTTPS, com autenticação baseada em token JWT.}
+\rnfitem{rnf:async-cert-generation}{[S] A geração de certificados em lote deve ser processada de forma assíncrona por meio de fila de processamento, sem bloquear a aplicação principal.}
+\rnfitem{rnf:postgresql}{[M] O sistema deve utilizar banco de dados relacional com integridade referencial (PostgreSQL), gerenciado pelo Supabase.}
+\rnfitem{rnf:multi-tenant-strategy}{[C] O sistema deve implementar estratégia de isolamento multi-tenant (por schema ou coluna organizacional).}
+\rnfitem{rnf:monitoring}{[S] O sistema deve implementar monitoramento e observabilidade centralizada (logs, métricas e rastreamento).}
+\rnfitem{rnf:static-deploy}{[M] O frontend deve ser compilado como site estático e implantado em plataforma de hospedagem com deploy contínuo a partir do repositório Git.}
+\rnfitem{rnf:backend-deploy}{[M] O backend deve ser implantado como serviço web independente em plataforma em nuvem compatível com Node.js.}
+\rnfitem{rnf:extensibility}{[S] O sistema deve permitir extensibilidade, garantindo que novos módulos possam ser adicionados seguindo os mesmos padrões arquiteturais já estabelecidos.}
 \end{itemize}
 
 \subsubsection{Manutenção e Monitoramento}
 \begin{itemize}
-\rnfitem{rnf:zero-downtime-deploy}{O sistema deve permitir atualização com mínima indisponibilidade (deploy contínuo).}
-\rnfitem{rnf:documentation}{O sistema deve possuir documentação técnica e manual do usuário.}
-\rnfitem{rnf:error-monitoring}{O sistema deve registrar erros em sistema centralizado de monitoramento.}
-\rnfitem{rnf:backward-compatibility}{O sistema deve permitir extensibilidade sem impacto nas funcionalidades existentes.}
-\rnfitem{rnf:template-history}{O sistema deve manter histórico de versões de templates e configurações para fins de auditoria e rastreabilidade.}
+\rnfitem{rnf:zero-downtime-deploy}{[S] O sistema deve permitir atualização com mínima indisponibilidade (deploy contínuo).}
+\rnfitem{rnf:documentation}{[M] O sistema deve possuir documentação técnica e manual do usuário.}
+\rnfitem{rnf:error-monitoring}{[S] O sistema deve registrar erros em sistema centralizado de monitoramento.}
+\rnfitem{rnf:backward-compatibility}{[S] O sistema deve permitir extensibilidade sem impacto nas funcionalidades existentes.}
+\rnfitem{rnf:template-history}{[C] O sistema deve manter histórico de versões de templates, configurações e endpoints da API para fins de auditoria, rastreabilidade e versionamento.}
 \end{itemize}
 
 \subsubsection{Internacionalização}
 \begin{itemize}
-\rnfitem{rnf:timezone}{O sistema deve permitir configuração de timezone por organização.}
-\rnfitem{rnf:i18n}{O sistema deve permitir tradução futura da interface.}
-\rnfitem{rnf:date-format}{O sistema deve suportar diferentes formatos de data e hora.}
+\rnfitem{rnf:timezone}{[S] O sistema deve permitir configuração de timezone por organização.}
+\rnfitem{rnf:i18n}{[W] O sistema deve permitir tradução futura da interface.}
+\rnfitem{rnf:date-format}{[C] O sistema deve suportar diferentes formatos de data e hora.}
 \end{itemize}
