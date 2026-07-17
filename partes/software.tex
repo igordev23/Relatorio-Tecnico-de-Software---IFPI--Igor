@@ -61,7 +61,7 @@ Por fim, a observabilidade do sistema e o monitoramento (\textit{health checks})
 \subsection{Exemplos de Código}
 \label{sec:exemplos-codigo}
 
-Esta seção apresenta trechos reais do código-fonte do sistema que ilustram as principais funcionalidades implementadas. Os exemplos foram extraídos do backend (Certificate Server), construído com Next.js e TypeScript seguindo os princípios de arquitetura limpa.
+Esta seção apresenta trechos reais do código-fonte do sistema que ilustram as principais funcionalidades implementadas. Os exemplos foram extraídos do backend (CertifyHub Server), construído com Next.js e TypeScript seguindo os princípios de arquitetura limpa.
 
 \subsubsection{Entidade de Domínio: Certificate}
 \label{sec:codigo-certificate}
@@ -156,7 +156,7 @@ doc.font("Helvetica-Bold").fontSize(9).text(
   "INSTRUÇÕES PARA VERIFICAÇÃO DE AUTENTICIDADE:", instrX, instrY
 );
 doc.font("Helvetica").fontSize(8).text(
-  \`Este certificado foi emitido pelo CertificateHub.
+  \`Este certificado foi emitido pelo CertifyHub.
   Verifique a sua autenticidade acessando o QR Code...\`, instrX, instrY + 14
 );
 \end{lstlisting}
@@ -228,7 +228,7 @@ Os testes foram classificados como unitários, uma vez que cada módulo (fronten
 
 O Quadro~\ref{qua:plano-testes} relaciona 60 casos de teste mapeados, incluindo cenários funcionais, não-funcionais, \textit{end-to-end} e de resiliência. Cada caso pode ser validado por um ou mais testes automatizados, totalizando 289 testes unitários implementados com o framework Jest e 1 teste \textit{end-to-end} implementado com Playwright. A coluna \textbf{Status} indica se o caso foi executado por teste automatizado (\textit{Executado}), executado de forma limitada (\textit{Parcial}) ou apenas planejado sem automação (\textit{Planejado}). As subseções seguintes detalham os resultados da execução em cada módulo.
 
-\subsubsection{Frontend (Certificate Hub)}
+\subsubsection{Frontend (CertifyHub)}
 
 O frontend contém 13 suítes de testes com 121 testes unitários, abrangendo as \textit{ViewModels} dos módulos de templates (\ref{rf:upload-templates}--\ref{rf:duplicar-templates}), certificados (\ref{rf:gerar-pdf}--\ref{rf:download-lote}), \textit{dashboard} (\ref{rf:lista-certificados}--\ref{rf:estatisticas-emissao}) e validação pública (\ref{rf:portal-validacao}--\ref{rf:exibir-validacao}), além dos serviços de API, componentes de formulário e dos modelos de domínio.
 
@@ -244,7 +244,7 @@ A métrica de cobertura, gerada automaticamente pelo Jest por meio da ferramenta
 
 Conforme ilustrado, o frontend atingiu 82,6\% de cobertura de comandos (\textit{Statements}), 65,38\% de ramos (\textit{Branches}), 83,33\% de funções (\textit{Functions}) e 83,66\% de linhas (\textit{Lines}). O \texttt{useEditCertificateViewModel.ts} passou de 0\% para 95,55\% em comandos e 100\% em funções após a inclusão de testes. O \texttt{schemas.test.ts} recebeu 9 novos testes para o \texttt{updateCertificateSchema}, abrangendo validação de CPF e campos obrigatórios. Os únicos ramos não cobertos (65,38\%) são os guards \texttt{if (!active)} no \texttt{useEffect} --- um aborto que só ocorre se o componente desmontar antes do \textit{fetch}, caso raro e aceitável.
 
-\subsubsection{Backend (Certificate Server)}
+\subsubsection{Backend (CertifyHub Server)}
 
 O backend contém 19 suítes de testes com 168 testes unitários, cobrindo casos de uso (emissão e reemissão \ref{rf:gerar-pdf}--\ref{rf:download-individual}, validação \ref{rf:portal-validacao}--\ref{rf:exibir-validacao}, templates \ref{rf:upload-templates}--\ref{rf:duplicar-templates}), entidades de domínio (\texttt{Certificate}, \texttt{Template}, \texttt{VerificationCode}), repositórios (Supabase), serviços (PDFKit) e \textit{middleware} de autenticação e \textit{rate limiting} — principais camadas da arquitetura limpa adotada no MVP.
 
@@ -291,8 +291,8 @@ A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os 
 \toprule
 \textbf{Módulo} & \textbf{Suítes} & \textbf{Testes} & \textbf{Cobertura} & \textbf{Tempo} \\
 \midrule
-Frontend (Certificate Hub) & 13 & 121 & 82,6\% & 38,57\,s \\
-Backend (Certificate Server) & 19 & 168 & 96,53\% & 14,86\,s \\
+Frontend (CertifyHub) & 13 & 121 & 82,6\% & 38,57\,s \\
+Backend (CertifyHub Server) & 19 & 168 & 96,53\% & 14,86\,s \\
 E2E (Playwright) & 1 & 1 & -- & 8,43\,s \\
 \midrule
 \textbf{Total} & \textbf{33} & \textbf{290} & \textbf{--} & \textbf{61,86\,s} \\

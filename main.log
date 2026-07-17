@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUL 2026 23:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUL 2026 23:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1144,16 +1144,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 ...ra e Tecnologia}{28}{subsubsection.3.1.25}
+l.63 ...ra e Tecnologia}{29}{subsubsection.3.1.25}
                                                   % [2]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 ...r Código Único}{78}{subsubsection.4.2.4}
+l.95 ...r Código Único}{79}{subsubsection.4.2.4}
                                                   % [3]
-Overfull \hbox (1.41573pt too wide) detected at line 112
+Overfull \hbox (1.41573pt too wide) detected at line 111
  []\T1/phv/m/n/12 100
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 112
+ []\T1/phv/m/n/12 101
  []
 
 )
@@ -2394,22 +2399,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--212
 et/software-architecture/2024/02/28/Use-Case-
  []
 
-) [99] (partes/anexos.tex [100]) [101] (main.aux)
+) [99] (partes/anexos.tex
+Overfull \hbox (0.72482pt too wide) in paragraph at lines 5--6
+[]\T1/phv/m/n/12 Declaro que o c�digo-fonte re-fe-rente ao pro-jeto ``Cer-tifyH
+ub: Sis-tema para Emis-
+ []
+
+[100]) [101] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 19FB2D9F6F12F251F67CC388338EEDB6;18862.
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 8AF3984889A7073962B4F2A6550986F0;18834
+(rerunfilecheck)             After:  CA395B288E3A3EBB3865A02605DE2A60;18829.
  ) 
 Here is how much of TeX's memory you used:
  30878 strings out of 467871
  591402 string characters out of 5418376
- 1299844 words of memory out of 5000000
+ 1299856 words of memory out of 5000000
  58547 multiletter control sequences out of 15000+600000
  681072 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2424,7 +2438,7 @@ KTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/franc/AppData/Local/Programs
 /MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/franc/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/franc/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (113 pages, 1939556 bytes).
+Output written on main.pdf (113 pages, 1939552 bytes).
 PDF statistics:
  2168 PDF objects out of 2487 (max. 8388607)
  604 named destinations out of 1000 (max. 500000)
