@@ -35,8 +35,8 @@
 \usepackage{tabularx}
 \usetikzlibrary{arrows.meta,positioning,shapes}
 
-% Numeração: 1.0, 1.1, 1.1.1...
-\renewcommand{\thesection}{\arabic{section}.0}
+% Numeração: 1, 1.1, 1.1.1...
+\renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
 
@@ -46,10 +46,6 @@
 \floatname{quadro}{Quadro}
 \captionsetup[quadro]{labelsep=endash, font={sf,small}}
 \captionsetup[table]{position=above}
-% Mesmo contador para quadros e tabelas (numeração única sequencial)
-\makeatletter
-\let\c@quadro\c@table
-\makeatother
 
 % Sumário
 \renewcommand{\contentsname}{SUMÁRIO}
@@ -126,6 +122,8 @@
 \captionsetup{labelfont=bf, labelsep=endash, font={sf,small}}
 \renewcommand{\arraystretch}{0.9}
 
+% Para longtable quadros: usar \LTcaptype{quadro} antes do \caption
+
 % Dados do trabalho
 \newcommand{\Instituicao}{INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO PIAUÍ}
 \newcommand{\Campus}{Campus Piripiri}
@@ -150,6 +148,15 @@
 \newpage
 \thispagestyle{pretextual}
 \input{partes/siglas}
+\newpage
+\thispagestyle{pretextual}
+\listoffigures
+\newpage
+\thispagestyle{pretextual}
+\listoftables
+\newpage
+\thispagestyle{pretextual}
+\listof{quadro}{LISTA DE QUADROS}
 \newpage
 \thispagestyle{pretextual}
 \bgroup
