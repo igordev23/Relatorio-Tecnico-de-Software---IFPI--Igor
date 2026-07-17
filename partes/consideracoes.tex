@@ -51,6 +51,6 @@ Vislumbrando a evolução contínua da plataforma, recomenda-se a exploração d
     \item Integração com provedores de nuvem para \textbf{envio transacional de e-mails}, implementando retentativas exponenciais (\textit{exponential backoff}) e \textit{templates} ricos;
     \item Refatoração do modelo de dados para suportar plenamente o \textbf{isolamento \textit{multi-tenant}}, com políticas de segurança de linha (\textit{Row Level Security} - RLS) via Supabase;
     \item Implementação nativa de um módulo de \textbf{auditoria e conformidade com a LGPD}, incorporando \textit{logs} imutáveis e fluxos automatizados para a exclusão de dados pessoais;
-    \item Execução de campanhas de \textbf{testes não-funcionais} (carga/desempenho) e \textbf{análise automatizada de vulnerabilidades} na esteira de CI/CD;
+    \item Execução de campanhas de \textbf{testes não-funcionais} (carga/desempenho) e \textbf{análise automatizada de vulnerabilidades} na esteira de CI/CD, com ênfase em patamares de concorrência superiores (50, 100 e 500 requisições simultâneas) para o serviço de geração de PDF, validando o comportamento do sistema sob carga real de produção;
     \item Investigação sobre a viabilidade de ancoragem criptográfica dos certificados através de \textbf{Assinatura Digital (ICP-Brasil)} ou redes \textbf{Blockchain}, visando segurança e imutabilidade incontestáveis.
 \end{itemize}
