@@ -1,9 +1,9 @@
 \babel@toc {brazil}{}\relax 
-\contentsline {section}{\numberline {1.0}INTRODUÇÃO}{1}{section.1}%
+\contentsline {section}{\numberline {1}INTRODUÇÃO}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Objetivos}{2}{subsection.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.1}Geral}{2}{subsubsection.1.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.2}Específicos}{3}{subsubsection.1.1.2}%
-\contentsline {section}{\numberline {2.0}TECNOLOGIAS ENVOLVIDAS}{4}{section.2}%
+\contentsline {section}{\numberline {2}TECNOLOGIAS ENVOLVIDAS}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Frontend}{4}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}React 19}{5}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}TypeScript}{5}{subsubsection.2.1.2}%
@@ -34,7 +34,7 @@
 \contentsline {subsubsection}{\numberline {2.6.4}Git e GitHub}{18}{subsubsection.2.6.4}%
 \contentsline {subsubsection}{\numberline {2.6.5}Visual Studio Code}{18}{subsubsection.2.6.5}%
 \contentsline {subsection}{\numberline {2.7}Síntese das Tecnologias}{18}{subsection.2.7}%
-\contentsline {section}{\numberline {3.0}MODELAGEM DO PROJETO}{20}{section.3}%
+\contentsline {section}{\numberline {3}MODELAGEM DO PROJETO}{20}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Levantamento de Requisitos}{20}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Módulo de Autenticação e Controle de Acesso}{20}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Módulo de Templates de Certificados}{21}{subsubsection.3.1.2}%
@@ -76,37 +76,37 @@
 \contentsline {subsubsection}{\numberline {3.8.3}Customização de Templates}{62}{subsubsection.3.8.3}%
 \contentsline {subsubsection}{\numberline {3.8.4}Lista de Templates}{63}{subsubsection.3.8.4}%
 \contentsline {subsubsection}{\numberline {3.8.5}Emissão de Certificados}{64}{subsubsection.3.8.5}%
-\contentsline {subsubsection}{\numberline {3.8.6}Lista de Certificados}{64}{subsubsection.3.8.6}%
-\contentsline {subsubsection}{\numberline {3.8.7}Envios}{65}{subsubsection.3.8.7}%
-\contentsline {subsubsection}{\numberline {3.8.8}Certificado Gerado}{66}{subsubsection.3.8.8}%
-\contentsline {subsubsection}{\numberline {3.8.9}Verificação Pública}{67}{subsubsection.3.8.9}%
-\contentsline {subsection}{\numberline {3.9}Matriz de Rastreabilidade}{68}{subsection.3.9}%
-\contentsline {section}{\numberline {4.0}SOFTWARE}{70}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Implantação}{70}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Arquitetura e Execução}{70}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}CI/CD e Pipeline de Implantação}{70}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Configuração de Ambiente}{72}{subsubsection.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.4}Banco de Dados}{72}{subsubsection.4.1.4}%
-\contentsline {subsubsection}{\numberline {4.1.5}Monitoramento e Observabilidade}{72}{subsubsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.2}Exemplos de Código}{73}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Entidade de Domínio: Certificate}{73}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Route Handler de Emissão}{75}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Geração de PDF com QR Code}{76}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Validação por Código Único}{77}{subsubsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.3}Testes}{78}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Plano de Testes}{79}{subsubsection.4.3.1}%
-\contentsline {paragraph}{Estratégia de Testes}{79}{section*.20}%
-\contentsline {paragraph}{Casos de Teste}{80}{section*.21}%
-\contentsline {subsubsection}{\numberline {4.3.2}Frontend (Certificate Hub)}{85}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Backend (Certificate Server)}{87}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Testes End-to-End}{88}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Limitações}{89}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {3.8.6}Lista de Certificados}{65}{subsubsection.3.8.6}%
+\contentsline {subsubsection}{\numberline {3.8.7}Envios}{66}{subsubsection.3.8.7}%
+\contentsline {subsubsection}{\numberline {3.8.8}Certificado Gerado}{67}{subsubsection.3.8.8}%
+\contentsline {subsubsection}{\numberline {3.8.9}Verificação Pública}{68}{subsubsection.3.8.9}%
+\contentsline {subsection}{\numberline {3.9}Matriz de Rastreabilidade}{69}{subsection.3.9}%
+\contentsline {section}{\numberline {4}SOFTWARE}{71}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Implantação}{71}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Arquitetura e Execução}{71}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}CI/CD e Pipeline de Implantação}{71}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Configuração de Ambiente}{73}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Banco de Dados}{73}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Monitoramento e Observabilidade}{73}{subsubsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.2}Exemplos de Código}{74}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Entidade de Domínio: Certificate}{74}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Route Handler de Emissão}{76}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Geração de PDF com QR Code}{77}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Validação por Código Único}{78}{subsubsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.3}Testes}{80}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Plano de Testes}{80}{subsubsection.4.3.1}%
+\contentsline {paragraph}{Estratégia de Testes}{80}{section*.24}%
+\contentsline {paragraph}{Casos de Teste}{81}{section*.25}%
+\contentsline {subsubsection}{\numberline {4.3.2}Frontend (Certificate Hub)}{87}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Backend (Certificate Server)}{88}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Testes End-to-End}{89}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Limitações}{90}{subsubsection.4.3.5}%
 \contentsline {subsubsection}{\numberline {4.3.6}Resumo Geral}{90}{subsubsection.4.3.6}%
-\contentsline {section}{\numberline {5.0}CONSIDERAÇÕES FINAIS}{90}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{92}{subsection.5.1}%
+\contentsline {section}{\numberline {5}CONSIDERAÇÕES FINAIS}{91}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{93}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Limitações}{93}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Trabalhos Futuros}{94}{subsection.5.3}%
-\contentsline {section}{REFERÊNCIAS}{97}{section*.26}%
-\contentsline {section}{\numberline {6.0}ANEXOS}{98}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{98}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{99}{subsection.6.2}%
+\contentsline {section}{REFERÊNCIAS}{98}{section*.30}%
+\contentsline {section}{\numberline {6}ANEXOS}{99}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{99}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{100}{subsection.6.2}%

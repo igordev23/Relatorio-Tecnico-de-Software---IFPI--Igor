@@ -1,0 +1,53 @@
+\subsection{Requisitos do MVP}
+
+O Quadro~\ref{qua:mvp} resume os requisitos funcionais classificados como \textit{Must have} [M], ou seja, as funcionalidades essenciais implementadas no escopo do Produto Mínimo Viável. Esses requisitos foram selecionados com base na priorização MoSCoW e representam o conjunto mínimo de funcionalidades necessário para que o sistema atenda ao seu propósito principal: emissão, gestão e autenticação de certificados.
+
+\small
+\begingroup
+\renewcommand{\tablename}{Quadro}
+\begin{longtable}{p{1.2cm} p{3.5cm} p{10.5cm}}
+\caption{Requisitos funcionais do MVP -- Prioridade [M]}
+\label{qua:mvp}\\
+\toprule
+\textbf{RF} & \textbf{Módulo} & \textbf{Descrição} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{RF} & \textbf{Módulo} & \textbf{Descrição} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+\ref{rf:upload-templates} & Templates & Permitir criação e configuração de templates por editor visual. \\
+\ref{rf:personalizacao-templates} & Templates & Permitir personalização de templates (cores, fontes, bordas). \\
+\ref{rf:selecionar-template-galeria} & Templates & Permitir selecionar template da galeria interna. \\
+\ref{rf:edicao-campos-dinamicos} & Templates & Permitir criação/edição manual de campos dinâmicos (ex: \{\{nome\}\}). \\
+\ref{rf:mapeamento-campos} & Templates & Salvar configurações de mapeamento de campos. \\
+\midrule
+\ref{rf:cadastro-participante} & Entrada de Dados & Permitir cadastro individual de participantes. \\
+\ref{rf:emissao-manual} & Entrada de Dados & Permitir emissão manual para participante único. \\
+\midrule
+\ref{rf:gerar-pdf} & Geração & Gerar certificados em PDF. \\
+\ref{rf:preencher-campos-dinamicos} & Geração & Preencher automaticamente campos dinâmicos. \\
+\ref{rf:codigo-unico} & Geração & Gerar código único por certificado. \\
+\ref{rf:registro-emissao} & Geração & Registrar data, hora e localidade da emissão. \\
+\ref{rf:download-individual} & Geração & Permitir download individual do PDF. \\
+\midrule
+\ref{rf:portal-validacao} & Validação Pública & Disponibilizar portal público de validação. \\
+\ref{rf:validar-certificado} & Validação Pública & Validar certificado via código único. \\
+\ref{rf:qrcode} & Validação Pública & Gerar QR Code no certificado com opções de personalização. \\
+\ref{rf:exibir-validacao} & Validação Pública & Exibir informações básicas ao validar (nome, curso, data, validade, autenticidade). \\
+\midrule
+\ref{rf:lista-certificados} & Dashboard & Exibir lista completa de certificados emitidos. \\
+\ref{rf:filtros-certificados} & Dashboard & Permitir filtros por curso, período, status e instrutor. \\
+\ref{rf:estatisticas-emissao} & Dashboard & Exibir estatísticas mensais de emissão. \\
+\midrule
+\ref{rf:armazenar-templates} & Armazenamento & Armazenar templates no sistema. \\
+\bottomrule
+\small\textit{Fonte: Elaborado pelo Autor (2026).}
+\end{longtable}
+\endgroup
+\normalsize
+\renewcommand{\arraystretch}{1.0}
