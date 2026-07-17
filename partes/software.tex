@@ -287,7 +287,7 @@ A Tabela~\ref{tab:testes-resumo} consolida os resultados dos testes em ambos os 
 \centering
 \caption{Resumo geral dos testes}
 \label{tab:testes-resumo}
-\begin{tabular}{lcccc}
+\begin{tabularx}{\textwidth}{Xcccc}
 \toprule
 \textbf{Módulo} & \textbf{Suítes} & \textbf{Testes} & \textbf{Cobertura} & \textbf{Tempo} \\
 \midrule
@@ -297,11 +297,10 @@ E2E (Playwright) & 1 & 1 & -- & 8,43\,s \\
 \midrule
 \textbf{Total} & \textbf{33} & \textbf{290} & \textbf{--} & \textbf{61,86\,s} \\
 \bottomrule
-\end{tabular}
-\vspace{0.3em}
-\footnotesize\noindent\textbf{Nota:} Os 290 testes automatizados (121 + 168 + 1 E2E) referem-se exclusivamente aos testes unitários, de integração e \textit{end-to-end}.\\
-Desses, 4 são casos de teste não-funcionais (CT052 a CT055): CT052 (carga) possui teste automatizado no backend com 10 chamadas concorrentes em \textless 5s;\\
-CT053 (autenticação) e CT054 (\textit{rate limiting}) foram integralmente automatizados no \textit{middleware};\\
-CT055 (acessibilidade) possui teste automatizado de navegação Tab no frontend, porém sem auditoria com ferramentas como \texttt{axe-core}.
+\end{tabularx}
+\par\vspace{6pt}
+\mbox{}\vspace{6pt}\par
+\footnotesize\noindent\textbf{Nota:} Os 290 testes automatizados (121 + 168 + 1 E2E) referem-se exclusivamente aos testes unitários, de integração e \textit{end-to-end}. Desses, 4 são casos de teste não-funcionais (CT052 a CT055): CT052 (carga) possui teste automatizado no backend com 10 chamadas concorrentes em \textless 5s; CT053 (autenticação) e CT054 (\textit{rate limiting}) foram integralmente automatizados no \textit{middleware}; CT055 (acessibilidade) possui teste automatizado de navegação Tab no frontend, porém sem auditoria com ferramentas como \texttt{axe-core}.
+\par\vspace{4pt}
 \begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
 \end{table}
