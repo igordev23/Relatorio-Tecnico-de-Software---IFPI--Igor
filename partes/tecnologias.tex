@@ -8,7 +8,7 @@ Este capítulo apresenta as tecnologias empregadas no desenvolvimento do sistema
 
 A camada de apresentação adota a arquitetura de \textit{Single Page Application} (SPA), conforme estabelecido no requisito não funcional \ref{rnf:independent-apps}. Nesse modelo, o navegador carrega um único documento HTML e as atualizações de conteúdo ocorrem dinamicamente via JavaScript, sem recarregamento completo da página \cite{romanov2025, karka2025}. A comunicação com o backend é realizada exclusivamente via API REST, o que desacopla as duas aplicações e permite que cada uma evolua com seu próprio ciclo de vida.
 
-A escolha pela arquitetura SPA foi motivada pela natureza do sistema: trata-se de um painel administrativo (\textit{dashboard}) com operações CRUD, formulários de emissão, gráficos gerenciais e filtros em tempo real --- cenários nos quais a SPA oferece vantagens significativas em interatividade e fluidez de navegação \cite{amin2022}. Estudos comparativos demonstram que, embora a SPA apresente tempo de carregamento inicial superior ao de abordagens com renderização no servidor (SSR), ela oferece interatividade mais rápida após o carregamento e melhor experiência do usuário em interfaces dinâmicas \cite{clapton2025}. Para o contexto deste sistema, as limitações de SEO não são impeditivas: o portal público de validação é acessado via QR Code impresso no certificado --- não por busca orgânica --- e o público interno da plataforma (administradores) se beneficia da navegação sem recarregamento entre as telas de gestão.
+A escolha pela arquitetura SPA foi motivada pela natureza do sistema: trata-se de um painel administrativo (\textit{dashboard}) com operações CRUD, formulários de emissão, gráficos gerenciais e filtros em tempo real --- cenários nos quais a SPA oferece vantagens significativas em interatividade e fluidez de navegação \cite{amin2022}. Estudos comparativos demonstram que, embora a SPA apresente tempo de carregamento inicial superior ao de abordagens com renderização no servidor (SSR), ela oferece interatividade mais rápida após o carregamento e melhor experiência do usuário em interfaces dinâmicas \cite{clapton2025}. Para o contexto deste sistema, as limitações de SEO não são impeditivas: o portal público de validação é acessado via \textit{QR Code} impresso no certificado --- não por busca orgânica --- e o público interno da plataforma (administradores) se beneficia da navegação sem recarregamento entre as telas de gestão.
 
 Outro fator determinante foi a sobrecarga que o SSR imporia ao backend. Como todo o processamento pesado --- geração de PDF, validação de dados, comunicação com o banco --- já está concentrado no servidor de API, adicionar renderização de páginas a esse mesmo processo tornaria a aplicação mais lenta e complexa. Com a separação SPA + API, o frontend é compilado como um conjunto de arquivos estáticos (HTML, CSS, JS) e implantado como \textit{Static Site}, sem necessidade de um runtime Node.js ativo ou de consumo adicional de recursos do servidor \cite{vite2025}. O backend permanece enxuto, dedicado exclusivamente às suas responsabilidades de API e processamento.
 
@@ -54,7 +54,7 @@ No sistema, o Sonner é utilizado para exibir feedback ao usuário após operaç
 \subsubsection{Recharts}
 Recharts é uma biblioteca de gráficos para React construída sobre os componentes SVG do D3, seguindo uma abordagem declarativa e composível \cite{recharts2025}. Cada tipo de gráfico é um componente React independente (\code{BarChart}, \code{PieChart}, \code{LineChart}), facilitando a personalização sem conhecimento aprofundado de SVG.
 
-A escolha do Recharts em vez do react-chartjs-2 (wrapper para Chart.js) deu-se pela integração mais natural com o ecossistema React: enquanto o Chart.js manipula o canvas diretamente e exige imperativamente chamar \code{update()} para refletir alterações nos dados, o Recharts utiliza SVG declarativo e reage automaticamente a mudanças de props — o que simplifica a manutenção de gráficos dinâmicos que se atualizam conforme o usuário filtra os dados no dashboard. O D3 puro foi descartado por sua API de baixo nível, que demandaria mais código boilerplate para alcançar o mesmo resultado.
+A escolha do Recharts em vez do react-chartjs-2 (wrapper para Chart.js) deu-se pela integração mais natural com o ecossistema React: enquanto o Chart.js manipula o canvas diretamente e exige imperativamente chamar \code{update()} para refletir alterações nos dados, o Recharts utiliza SVG declarativo e reage automaticamente a mudanças de props — o que simplifica a manutenção de gráficos dinâmicos que se atualizam conforme o usuário filtra os dados no dashboard. O D3 puro foi descartado por sua API de baixo nível, que demandaria mais código \textit{boilerplate} para alcançar o mesmo resultado.
 
 No sistema, o Recharts é utilizado no dashboard para exibir métricas como total de certificados emitidos por mês (gráfico de barras) e distribuição por tipo de template (gráfico de pizza). Os componentes \code{ResponsiveContainer}, \code{Tooltip} e \code{Legend} garantem que os gráficos se adaptem ao tamanho da tela e exibam informações contextuais ao passar o mouse.
 
@@ -124,11 +124,11 @@ No sistema, o PDFKitService implementa a interface \code{IPDFService} definida n
 \subsubsection{qrcode}
 \label{sec:qrcode}
 
-\code{qrcode} é uma biblioteca Node.js que gera imagens de QR Code nos formatos PNG, SVG e UTF-8, sem dependência de navegador \cite{qrcode2025}. A função \code{toBuffer()} é utilizada no serviço \code{PDFKitService} para converter a URL pública de verificação --- construída no formato \code{/verificar?cpf=...\&codigo=...} --- em um buffer de imagem PNG, que é inserido no certificado via \code{PDFKit.image()}. Essa abordagem é necessária porque o PDFKit é um motor de renderização de PDF --- ele desenha textos, formas e imagens, mas não possui capacidade nativa de codificar QR Codes. A geração do QR Code, portanto, é delegada a uma biblioteca especializada externa.
+\code{qrcode} é uma biblioteca Node.js que gera imagens de \textit{QR Code} nos formatos PNG, SVG e UTF-8, sem dependência de navegador \cite{qrcode2025}. A função \code{toBuffer()} é utilizada no serviço \code{PDFKitService} para converter a URL pública de verificação --- construída no formato \code{/verificar?cpf=...\&codigo=...} --- em um buffer de imagem PNG, que é inserido no certificado via \code{PDFKit.image()}. Essa abordagem é necessária porque o PDFKit é um motor de renderização de PDF --- ele desenha textos, formas e imagens, mas não possui capacidade nativa de codificar \textit{QR Codes}. A geração do \textit{QR Code}, portanto, é delegada a uma biblioteca especializada externa.
 
-A opção de desenhar o QR Code manualmente com retângulos do PDFKit foi avaliada e preterida por três motivos: (1) \textbf{simplicidade} --- \code{toBuffer(url)} gera o PNG em uma linha, enquanto desenhar manualmente exigiria implementar a codificação Reed-Solomon e a matriz de módulos do QR; (2) \textbf{manutenção} --- a lógica de QR fica isolada na biblioteca; qualquer atualização de padrão ou segurança vem do pacote, sem necessidade de alterar o \code{PDFKitService}; e (3) \textbf{cor personalizada} --- o \code{qrcode} já suporta \code{color.dark} e \code{color.light} de fábrica, tornando trivial usar a cor primária do template (\code{template.layoutConfig.primaryColor}) sem manipulação adicional de pixels.
+A opção de desenhar o \textit{QR Code} manualmente com retângulos do PDFKit foi avaliada e preterida por três motivos: (1) \textbf{simplicidade} --- \code{toBuffer(url)} gera o PNG em uma linha, enquanto desenhar manualmente exigiria implementar a codificação Reed-Solomon e a matriz de módulos do QR; (2) \textbf{manutenção} --- a lógica de QR fica isolada na biblioteca; qualquer atualização de padrão ou segurança vem do pacote, sem necessidade de alterar o \code{PDFKitService}; e (3) \textbf{cor personalizada} --- o \code{qrcode} já suporta \code{color.dark} e \code{color.light} de fábrica, tornando trivial usar a cor primária do template (\code{template.layoutConfig.primaryColor}) sem manipulação adicional de pixels.
 
-No sistema, o QR Code é gerado exclusivamente no servidor durante a produção do PDF, utilizando a cor primária do template para manter a identidade visual do documento. A legenda "Verifique o certificado" é posicionada abaixo do código para orientar o usuário. Alternativas como a implementação manual puramente em JavaScript foram descartadas por exigirem a reimplementação da codificação Reed-Solomon e da matriz de módulos, acrescentando complexidade sem ganho real em relação ao binding nativo do libqrencode.
+No sistema, o \textit{QR Code} é gerado exclusivamente no servidor durante a produção do PDF, utilizando a cor primária do template para manter a identidade visual do documento. A legenda "Verifique o certificado" é posicionada abaixo do código para orientar o usuário. Alternativas como a implementação manual puramente em JavaScript foram descartadas por exigirem a reimplementação da codificação Reed-Solomon e da matriz de módulos, acrescentando complexidade sem ganho real em relação ao binding nativo do libqrencode.
 
 \subsection{Infraestrutura e Ferramentas}
 \label{sec:infra}
@@ -179,18 +179,18 @@ O Quadro~\ref{qua:tecnologias} apresenta um resumo das tecnologias discutidas ne
 \multicolumn{3}{l}{\textbf{Frontend}} \\
 React & 19 & Construção da interface com componentes reutilizáveis \\
 TypeScript & 5.x & Tipagem estática e segurança em tempo de compilação \\
-Tailwind CSS & 4.x & Estilização utilitária com configuração CSS-first \\
+Tailwind CSS & 4.x & Estilização utilitária com configuração \textit{CSS-first} \\
 shadcn/ui & \textasciitilde 2.x & Componentes reutilizáveis baseados em Radix UI \\
 TanStack Router & \textasciitilde 1.x & Roteamento declarativo com proteção de rotas \\
 React Hook Form & \textasciitilde 7.x & Gerenciamento performático de formulários \\
-Sonner & \textasciitilde 2.x & Notificações toast acessíveis \\
-Recharts & \textasciitilde 2.x & Gráficos declarativos para dashboard \\
+Sonner & \textasciitilde 2.x & Notificações \textit{toast} acessíveis \\
+Recharts & \textasciitilde 2.x & Gráficos declarativos para \textit{dashboard} \\
 date-fns & \textasciitilde 4.x & Utilitários de manipulação de datas \\
 Vite & \textasciitilde 7.x & Servidor de desenvolvimento e empacotamento \\
-Zod & \textasciitilde 3.x / 4.x & Validação de esquemas no frontend e backend \\
+Zod & \textasciitilde 3.x / 4.x & Validação de esquemas no \textit{frontend} e \textit{backend} \\
 \midrule
 \multicolumn{3}{l}{\textbf{Backend}} \\
-Next.js & 16 & Framework para API REST com Route Handlers \\
+Next.js & 16 & Framework para API REST com \textit{Route Handlers} \\
 Node.js & 22 LTS & Ambiente de execução do servidor \\
 \midrule
 \multicolumn{3}{l}{\textbf{Banco de Dados}} \\
@@ -198,8 +198,8 @@ Supabase & \textasciitilde 2.x & Plataforma de banco PostgreSQL gerenciado \\
 PostgreSQL & 16 & Banco relacional com integridade referencial \\
 \midrule
 \multicolumn{3}{l}{\textbf{Geração de Documentos}} \\
-PDFKit & \textasciitilde 0.18 & Geração server-side de certificados em PDF \\
-qrcode & \textasciitilde 1.5 & Geração de QR Codes no servidor para PDF \\
+PDFKit & \textasciitilde 0.18 & Geração \textit{server-side} de certificados em PDF \\
+qrcode & \textasciitilde 1.5 & Geração de \textit{QR Codes} no servidor para PDF \\
 UUID & \textasciitilde 14.x & Geração de identificadores únicos para verificação \\
 \midrule
 \multicolumn{3}{l}{\textbf{Infraestrutura e DevOps}} \\
@@ -209,7 +209,7 @@ GitHub & SaaS & Repositório remoto e CI/CD via Actions \\
 \midrule
 \multicolumn{3}{l}{\textbf{Ferramentas de Desenvolvimento}} \\
 Jest & \textasciitilde 30.x & Testes unitários com cobertura mínima de 75\% \\
-ESLint & \textasciitilde 9.x & Análise estática e linting de código \\
+ESLint & \textasciitilde 9.x & Análise estática e \textit{linting} de código \\
 Prettier & \textasciitilde 3.x & Formatador opinativo de código \\
 Visual Studio Code & \textasciitilde 1.x & Ambiente de desenvolvimento \\
 \bottomrule

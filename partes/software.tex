@@ -131,10 +131,10 @@ export async function POST(request: Request) {
 \end{lstlisting}
 \begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
 
-\subsubsection{Geração de PDF com QR Code}
+\subsubsection{Geração de PDF com \textit{QR Code}}
 \label{sec:codigo-pdf}
 
-O Código~\ref{cod:pdf} apresenta o serviço \code{PDFKitService} que gera o PDF do certificado com QR Code de verificação (\ref{rf:qrcode}). A URL de verificação é montada a partir da variável de ambiente \code{NEXT\_PUBLIC\_VERIFY\_URL} (linha~\ref{line:verifyurl}) e codificada em um QR Code utilizando a biblioteca \code{qrcode} (linha~\ref{line:qrcode}). A imagem gerada é inserida no PDF na posição inferior esquerda (linha~\ref{line:qrimage}), acompanhada das instruções de verificação e do código único.
+O Código~\ref{cod:pdf} apresenta o serviço \code{PDFKitService} que gera o PDF do certificado com \textit{QR Code} de verificação (\ref{rf:qrcode}). A URL de verificação é montada a partir da variável de ambiente \code{NEXT\_PUBLIC\_VERIFY\_URL} (linha~\ref{line:verifyurl}) e codificada em um \textit{QR Code} utilizando a biblioteca \code{qrcode} (linha~\ref{line:qrcode}). A imagem gerada é inserida no PDF na posição inferior esquerda (linha~\ref{line:qrimage}), acompanhada das instruções de verificação e do código único.
 
 \begin{lstlisting}[language=TypeScript, caption={Geração de PDF com QR Code no servidor}, label={cod:pdf}, escapechar=§]
 const verifyUrl = `${process.env.NEXT_PUBLIC_VERIFY_URL ||
@@ -269,7 +269,7 @@ O teste demonstra que o sistema suporta o fluxo crítico de ponta a ponta sem in
 
 \begin{figure}[H]
 \centering
-\caption{Relatório do teste end-to-end gerado pelo Playwright}
+\caption{Relatório do teste \textit{end-to-end} gerado pelo Playwright}
 \label{fig:e2e-report}
 \includegraphics[width=\textwidth]{imagens/e2e-report.png}
 \end{figure}
