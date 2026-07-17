@@ -1,37 +1,40 @@
 \subsection{Matriz de Rastreabilidade}
 
-O Quadro~\ref{qua:rastreabilidade} apresenta a matriz de rastreabilidade que relaciona os requisitos funcionais implementados no MVP aos casos de uso, às principais classes do diagrama de classes e às tabelas do banco de dados, garantindo a rastreabilidade entre os artefatos do projeto. A tabela foi disposta em orientação vertical (rotacionada 90\textdegree) para preservar a legibilidade de seu conteúdo, uma vez que possui quatro colunas com textos extensos.
+O Quadro~\ref{qua:rastreabilidade} apresenta a matriz de rastreabilidade que relaciona os requisitos funcionais implementados no MVP aos casos de uso, às principais classes do diagrama de classes e às tabelas do banco de dados, garantindo a rastreabilidade entre os artefatos do projeto. A página foi disposta em orientação paisagem (rotacionada 90\textdegree) para preservar a legibilidade de seu conteúdo, uma vez que possui quatro colunas com textos extensos.
 
 \clearpage
+\thispagestyle{landscape}
+\begin{landscape}
 \begingroup
 \renewcommand{\tablename}{Quadro}
-\begin{sidewaystable}[p!]
+\begin{table}[H]
 \centering
 \footnotesize
 \captionsetup{type=quadro}
 \caption{Matriz de rastreabilidade entre requisitos funcionais, casos de uso, classes e tabelas implementados no MVP}
 \label{qua:rastreabilidade}
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{0.9}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.85}
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Módulo / RFs} & \textbf{Casos de Uso} & \textbf{Classes} & \textbf{Tabelas} \\
 \hline
-Templates de Certificados (\ref{rf:upload-templates}–\ref{rf:mapeamento-campos}) & Gerenciar Templates (UC002), Criar Template, Editar Template, Salvar Template & Template, TemplateLayout & TEMPLATES \\
+Templates de Certificados (RF008–RF014) & Gerenciar Templates (UC002), Criar Template, Editar Template, Salvar Template & Template, TemplateLayout & TEMPLATES \\
 \hline
-Entrada de Dados e Emissão (\ref{rf:cadastro-participante}, \ref{rf:emissao-manual}) & Emitir Certificado Individual (UC004) & Certificate, EmitCertificateUseCase, ICertificateRepository & CERTIFICADOS \\
+Entrada de Dados (RF015–RF022) & Emitir Certificado Individual (UC004) & Certificate, EmitCertificateUseCase, ICertificateRepository & CERTIFICADOS \\
 \hline
-Geração de Certificados (\ref{rf:gerar-pdf}–\ref{rf:download-individual}) & Emitir Certificado (UC004), Gerar PDF, Obter Certificado & Certificate, VerificationCode, EmitCertificateUseCase, GeneratePDFUseCase, GetCertificateUseCase, ICertificateRepository, ITemplateRepository, IPDFService, SupabaseCertificateRepository, SupabaseTemplateRepository, PDFKitService & CERTIFICADOS \\
+Geração de Certificados (RF023–RF029) & Emitir Certificado (UC004), Gerar PDF, Obter Certificado & Certificate, VerificationCode, EmitCertificateUseCase, GeneratePDFUseCase, GetCertificateUseCase, ICertificateRepository, ITemplateRepository, IPDFService, SupabaseCertificateRepository, SupabaseTemplateRepository, PDFKitService & CERTIFICADOS \\
 \hline
-Validação Pública (\ref{rf:portal-validacao}–\ref{rf:exibir-validacao}) & Validar Certificado (UC008) & VerifyCertificateUseCase, VerifyResult, Certificate (Frontend) & CERTIFICADOS \\
+Validação Pública (RF033–RF036) & Validar Certificado (UC008) & VerifyCertificateUseCase, VerifyResult, Certificate (Frontend) & CERTIFICADOS \\
 \hline
-Dashboard e Gestão (\ref{rf:lista-certificados}–\ref{rf:estatisticas-emissao}) & Visualizar Dashboard (UC014) & Certificate (Frontend), Template (Frontend) & CERTIFICADOS, TEMPLATES \\
+Dashboard e Gestão (RF039–RF042) & Visualizar Dashboard (UC014) & Certificate (Frontend), Template (Frontend) & CERTIFICADOS, TEMPLATES \\
 \hline
-Armazenamento de Templates (\ref{rf:armazenar-templates}) & Gerenciar Templates (UC002) & Template, SupabaseTemplateRepository & TEMPLATES \\
+Armazenamento de Templates (RF066) & Gerenciar Templates (UC002) & Template, SupabaseTemplateRepository & TEMPLATES \\
 \hline
 \end{tabularx}
-\end{sidewaystable}
+\end{table}
 \par\vspace{4pt}
 \begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
 \endgroup
+\end{landscape}
 \clearpage
