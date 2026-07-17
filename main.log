@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  10 JUL 2026 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.11)  16 JUL 2026 22:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -263,6 +263,31 @@ Package: xurl 2022/01/09 v 0.10 modify URL breaks
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ))
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
+Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
+
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count308
+\rotFPtop=\skip55
+\rotFPbot=\skip56
+\rot@float@box=\box62
+\rot@mess@toks=\toks25
+)
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nom
+etadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
@@ -309,11 +334,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count308
+\c@section@level=\count309
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count309
+\etb@tempcnta=\count310
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
 ty
@@ -321,8 +346,8 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen186
-\Hy@linkcounter=\count310
-\Hy@pagecounter=\count311
+\Hy@linkcounter=\count311
+\Hy@pagecounter=\count312
  (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -330,7 +355,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count312
+\Hy@SavedSpaceFactor=\count313
  (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -343,7 +368,7 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count313
+\c@Hy@tempcnt=\count314
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen187
 
@@ -355,7 +380,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count314
+\Fld@menulength=\count315
 \Field@Width=\dimen188
 \Fld@charsize=\dimen189
 Package hyperref Info: Hyper figures OFF on input line 6078.
@@ -365,16 +390,16 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count315
-\c@Item=\count316
-\c@Hfootnote=\count317
+\Hy@abspage=\count316
+\c@Item=\count317
+\c@Hfootnote=\count318
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count318
-\c@bookmark@seq@number=\count319
+\Fld@listcount=\count319
+\c@bookmark@seq@number=\count320
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -387,39 +412,39 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip55
+\Hy@SectionHShift=\skip57
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip56
-\f@nch@offset@elh=\skip57
-\f@nch@offset@erh=\skip58
-\f@nch@offset@olh=\skip59
-\f@nch@offset@orh=\skip60
-\f@nch@offset@elf=\skip61
-\f@nch@offset@erf=\skip62
-\f@nch@offset@olf=\skip63
-\f@nch@offset@orf=\skip64
-\f@nch@height=\skip65
-\f@nch@footalignment=\skip66
-\f@nch@widthL=\skip67
-\f@nch@widthC=\skip68
-\f@nch@widthR=\skip69
-\@temptokenb=\toks25
+\f@nch@headwidth=\skip58
+\f@nch@offset@elh=\skip59
+\f@nch@offset@erh=\skip60
+\f@nch@offset@olh=\skip61
+\f@nch@offset@orh=\skip62
+\f@nch@offset@elf=\skip63
+\f@nch@offset@erf=\skip64
+\f@nch@offset@olf=\skip65
+\f@nch@offset@orf=\skip66
+\f@nch@height=\skip67
+\f@nch@footalignment=\skip68
+\f@nch@widthL=\skip69
+\f@nch@widthC=\skip70
+\f@nch@widthR=\skip71
+\@temptokenb=\toks26
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip70
+\labelindent=\skip72
 \enit@outerparindent=\dimen190
-\enit@toks=\toks26
-\enit@inbox=\box62
-\enit@count@id=\count320
-\enitdp@description=\count321
+\enit@toks=\toks27
+\enit@inbox=\box63
+\enit@count@id=\count321
+\enitdp@description=\count322
 )
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip71
+\@mathmargin=\skip73
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -427,7 +452,7 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks27
+\@emptytoks=\toks28
 \ex@=\dimen191
 ))
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
@@ -437,19 +462,19 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count322
+\inf@bad=\count323
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count323
-\leftroot@=\count324
+\uproot@=\count324
+\leftroot@=\count325
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count325
-\DOTSCASE@=\count326
+\classnum@=\count326
+\DOTSCASE@=\count327
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box63
-\strutbox@=\box64
+\Mathstrutbox@=\box64
+\strutbox@=\box65
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
@@ -457,31 +482,31 @@ LaTeX Info: Redefining \Bigg on input line 724.
 \big@size=\dimen193
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count327
+\macc@depth=\count328
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count328
+\c@MaxMatrixCols=\count329
 \dotsspace@=\muskip18
-\c@parentequation=\count329
-\dspbrk@lvl=\count330
-\tag@help=\toks28
-\row@=\count331
-\column@=\count332
-\maxfields@=\count333
-\andhelp@=\toks29
+\c@parentequation=\count330
+\dspbrk@lvl=\count331
+\tag@help=\toks29
+\row@=\count332
+\column@=\count333
+\maxfields@=\count334
+\andhelp@=\toks30
 \eqnshift@=\dimen194
 \alignsep@=\dimen195
 \tagshift@=\dimen196
 \tagwidth@=\dimen197
 \totwidth@=\dimen198
 \lineht@=\dimen199
-\@envbody=\toks30
-\multlinegap=\skip72
-\multlinetaggap=\skip73
-\mathdisplay@stack=\toks31
+\@envbody=\toks31
+\multlinegap=\skip74
+\multlinetaggap=\skip75
+\mathdisplay@stack=\toks32
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
@@ -498,19 +523,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.st
 y
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
-Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
-
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-\c@r@tfl@t=\count334
-\rotFPtop=\skip74
-\rotFPbot=\skip75
-\rot@float@box=\box65
-\rot@mess@toks=\toks32
-)
-(C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+) (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
 eys2e.sty
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
@@ -938,7 +951,7 @@ File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \c@rnf=\count363
 \c@rn=\count364
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 14
-0.
+5.
 
 (C:\Users\franc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
@@ -953,24 +966,24 @@ Package babel Info: 'brazil' activates 'portuges' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1042,7 +1055,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 140.
+Package hyperref Info: Link coloring OFF on input line 145.
 
 (main.out) (main.out)
 \@outlinefile=\write4
@@ -1073,7 +1086,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.150 \newpage
+l.155 \newpage
                [2] (partes/siglas.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
 
@@ -1089,7 +1102,37 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.153 \newpage
+l.158 \newpage
+               [1] (main.lof)
+\tf@lof=\write5
+\openout5 = `main.lof'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.161 \newpage
+               [1] (main.lot)
+\tf@lot=\write6
+\openout6 = `main.lot'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.164 \newpage
+               [1] (main.loq)
+\tf@loq=\write7
+\openout7 = `main.loq'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.167 \newpage
                [1] (main.toc
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
@@ -1107,17 +1150,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 ...r CÃ³digo Ãšnico}{77}{subsubsection.4.2.4}
-                                                  % [3])
-\tf@toc=\write5
-\openout5 = `main.toc'.
+l.95 ...r CÃ³digo Ãšnico}{78}{subsubsection.4.2.4}
+                                                  % [3]
+Overfull \hbox (1.41573pt too wide) detected at line 112
+ []\T1/phv/m/n/12 100
+ []
+
+)
+\tf@toc=\write8
+\openout8 = `main.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.162 \newpage
+l.176 \newpage
                [4] (partes/introducao.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -1138,6 +1186,8 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 [14] [15] [16] [17]
 Package hyperref Info: bookmark level for unknown quadro defaults to 0 on input
  line 173.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 217.
 ) (partes/modelagem.tex [18] [19] (partes/requisitos/rf.tex
 [20]
 Overfull \hbox (0.29332pt too wide) in paragraph at lines 23--24
@@ -1153,503 +1203,503 @@ Overfull \hbox (17.68053pt too wide) in paragraph at lines 68--69
 
 [28] [29]) (partes/requisitos/regras_negocio.tex [30])
 (partes/requisitos/criterios_aceitacao.tex
-Overfull \hbox (7.5472pt too wide) in alignment at lines 9--15
+Overfull \hbox (7.5472pt too wide) in alignment at lines 10--16
  [] [] [] 
  []
 
 
-Overfull \hbox (7.5472pt too wide) in alignment at lines 15--19
+Overfull \hbox (7.5472pt too wide) in alignment at lines 16--20
  [] [] [] 
  []
 
 
-Overfull \hbox (7.5472pt too wide) in alignment at lines 19--21
+Overfull \hbox (7.5472pt too wide) in alignment at lines 20--22
  [] [] [] 
  []
 
 
-Overfull \hbox (7.5472pt too wide) in alignment at lines 21--23
+Overfull \hbox (7.5472pt too wide) in alignment at lines 22--24
  [] [] [] 
- []
-
-
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 24--24
-[]|[]\T1/phv/m/n/10.95 RF001[]| 
  []
 
 
 Overfull \hbox (4.4079pt too wide) in paragraph at lines 25--25
-[]|[]\T1/phv/m/n/10.95 RF002[]| 
+[]|[]\T1/phv/m/n/10.95 RF001[]| 
  []
 
 
 Overfull \hbox (4.4079pt too wide) in paragraph at lines 26--26
-[]|[]\T1/phv/m/n/10.95 RF003[]| 
+[]|[]\T1/phv/m/n/10.95 RF002[]| 
  []
 
 
 Overfull \hbox (4.4079pt too wide) in paragraph at lines 27--27
-[]|[]\T1/phv/m/n/10.95 RF004[]| 
+[]|[]\T1/phv/m/n/10.95 RF003[]| 
  []
 
 
 Overfull \hbox (4.4079pt too wide) in paragraph at lines 28--28
-[]|[]\T1/phv/m/n/10.95 RF005[]| 
+[]|[]\T1/phv/m/n/10.95 RF004[]| 
  []
 
 
 Overfull \hbox (4.4079pt too wide) in paragraph at lines 29--29
-[]|[]\T1/phv/m/n/10.95 RF006[]| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-[]|\T1/phv/m/n/10.95 Controle de
+[]|[]\T1/phv/m/n/10.95 RF005[]| 
  []
 
 
 Overfull \hbox (4.4079pt too wide) in paragraph at lines 30--30
+[]|[]\T1/phv/m/n/10.95 RF006[]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/phv/m/n/10.95 Controle de
+ []
+
+
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 31--31
 []|[]\T1/phv/m/n/10.95 RF007[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 32--32
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 33--33
 []|[]\T1/phv/m/n/10.95 RF008[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 33--33
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 34--34
 []|[]\T1/phv/m/n/10.95 RF009[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 34--34
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 35--35
 []|[]\T1/phv/m/n/10.95 RF010[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
 []|\T1/phv/m/n/10.95 Selecionar tem-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 35--35
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 36--36
 []|[]\T1/phv/m/n/10.95 RF011[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 36--36
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 37--37
 []|[]\T1/phv/m/n/10.95 RF012[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--36
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 []|\T1/phv/m/n/10.95 Criar/editar cam-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 37--37
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 38--38
 []|[]\T1/phv/m/n/10.95 RF013[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--37
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
 []|\T1/phv/m/n/10.95 Salvar con-fi-gu-ra-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 38--38
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 39--39
 []|[]\T1/phv/m/n/10.95 RF014[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 40--40
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 41--41
 []|[]\T1/phv/m/n/10.95 RF015[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
 []|\T1/phv/m/n/10.95 Cadastro in-di-vi-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 41--41
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 42--42
 []|[]\T1/phv/m/n/10.95 RF016[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 42--42
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 43--43
 []|[]\T1/phv/m/n/10.95 RF017[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 43--43
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 44--44
 []|[]\T1/phv/m/n/10.95 RF018[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 44--44
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 45--45
 []|[]\T1/phv/m/n/10.95 RF019[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 45--45
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 46--46
 []|[]\T1/phv/m/n/10.95 RF020[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 46--46
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 47--47
 []|[]\T1/phv/m/n/10.95 RF021[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 47--47
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 48--48
 []|[]\T1/phv/m/n/10.95 RF022[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 49--49
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 50--50
 []|[]\T1/phv/m/n/10.95 RF023[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 50--50
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 51--51
 []|[]\T1/phv/m/n/10.95 RF024[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--50
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
 []|\T1/phv/m/n/10.95 Preencher cam-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 51--51
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 52--52
 []|[]\T1/phv/m/n/10.95 RF025[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 52--52
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 53--53
 []|[]\T1/phv/m/n/10.95 RF026[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 53--53
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 54--54
 []|[]\T1/phv/m/n/10.95 RF027[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 54--54
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 55--55
 []|[]\T1/phv/m/n/10.95 RF028[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []|\T1/phv/m/n/10.95 Download in-di-vi-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 55--55
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 56--56
 []|[]\T1/phv/m/n/10.95 RF029[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 57--57
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 58--58
 []|[]\T1/phv/m/n/10.95 RF030[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
 []|\T1/phv/m/n/10.95 Personalizar e-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 58--58
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 59--59
 []|[]\T1/phv/m/n/10.95 RF031[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 59--59
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 60--60
 []|[]\T1/phv/m/n/10.95 RF032[]| 
  []
 
 
-Underfull \hbox (badness 8189) in paragraph at lines 59--59
+Underfull \hbox (badness 8189) in paragraph at lines 60--60
 []|\T1/phv/m/n/10.95 Reenvio au-to-má-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 61--61
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 62--62
 []|[]\T1/phv/m/n/10.95 RF033[]| 
  []
 
 
-Underfull \hbox (badness 3884) in paragraph at lines 61--61
+Underfull \hbox (badness 3884) in paragraph at lines 62--62
 []|\T1/phv/m/n/10.95 Portal de va-li-da-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 62--62
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 63--63
 []|[]\T1/phv/m/n/10.95 RF034[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 63--63
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 64--64
 []|[]\T1/phv/m/n/10.95 RF035[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 64--64
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 65--65
 []|[]\T1/phv/m/n/10.95 RF036[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 66--66
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 67--67
 []|[]\T1/phv/m/n/10.95 RF037[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 67--67
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 68--68
 []|[]\T1/phv/m/n/10.95 RF038[]| 
  []
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 67--67
+Underfull \hbox (badness 3536) in paragraph at lines 68--68
 []|\T1/phv/m/n/10.95 Hash da as-si-na-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 69--69
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 70--70
 []|[]\T1/phv/m/n/10.95 RF039[]| 
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 69--69
+Underfull \hbox (badness 1005) in paragraph at lines 70--70
 []|\T1/phv/m/n/10.95 Lista de cer-ti-fi-ca-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 70--70
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 71--71
 []|[]\T1/phv/m/n/10.95 RF040[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 71--71
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 72--72
 []|[]\T1/phv/m/n/10.95 RF041[]| 
  []
 
 
-Underfull \hbox (badness 5878) in paragraph at lines 71--71
+Underfull \hbox (badness 5878) in paragraph at lines 72--72
 []|\T1/phv/m/n/10.95 Estatísticas men-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 72--72
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 73--73
 []|[]\T1/phv/m/n/10.95 RF042[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 74--74
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 75--75
 []|[]\T1/phv/m/n/10.95 RF043[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 75--75
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 76--76
 []|[]\T1/phv/m/n/10.95 RF044[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 76--76
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 77--77
 []|[]\T1/phv/m/n/10.95 RF045[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 78--78
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 79--79
 []|[]\T1/phv/m/n/10.95 RF046[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 79--79
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 80--80
 []|[]\T1/phv/m/n/10.95 RF047[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []|\T1/phv/m/n/10.95 Associar par-ti-ci-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 80--80
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 81--81
 []|[]\T1/phv/m/n/10.95 RF048[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 81--81
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 82--82
 []|[]\T1/phv/m/n/10.95 RF049[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 82--82
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 83--83
 []|[]\T1/phv/m/n/10.95 RF050[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 83--83
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 84--84
 []|[]\T1/phv/m/n/10.95 RF051[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 84--84
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 85--85
 []|[]\T1/phv/m/n/10.95 RF052[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 85--85
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 86--86
 []|[]\T1/phv/m/n/10.95 RF053[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 87--87
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 88--88
 []|[]\T1/phv/m/n/10.95 RF054[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
 []|\T1/phv/m/n/10.95 Cadastro com-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 88--88
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 89--89
 []|[]\T1/phv/m/n/10.95 RF055[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 89--89
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 90--90
 []|[]\T1/phv/m/n/10.95 RF056[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 90--90
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 91--91
 []|[]\T1/phv/m/n/10.95 RF057[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 91--91
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 92--92
 []|[]\T1/phv/m/n/10.95 RF058[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 93--93
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 94--94
 []|[]\T1/phv/m/n/10.95 RF059[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
 []|\T1/phv/m/n/10.95 Cadastro or-ga-ni-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 94--94
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 95--95
 []|[]\T1/phv/m/n/10.95 RF060[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 95--95
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 96--96
 []|[]\T1/phv/m/n/10.95 RF061[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 96--96
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 97--97
 []|[]\T1/phv/m/n/10.95 RF062[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 98--98
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 99--99
 []|[]\T1/phv/m/n/10.95 RF063[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
 []|\T1/phv/m/n/10.95 Mensagens pa-
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 99--99
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 100--100
 []|[]\T1/phv/m/n/10.95 RF064[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 100--100
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 101--101
 []|[]\T1/phv/m/n/10.95 RF065[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 102--102
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 103--103
 []|[]\T1/phv/m/n/10.95 RF066[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 []|\T1/phv/m/n/10.95 Armazenar tem-
  []
 
 
-Underfull \hbox (badness 1383) in paragraph at lines 102--103
+Underfull \hbox (badness 1383) in paragraph at lines 103--104
 []|\T1/phv/m/n/10.95 Template en-vi-ado fica ime-di-a-ta-mente dis-po-ní-vel pa
 ra uso;
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 104--104
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 105--105
 []|[]\T1/phv/m/n/10.95 RF067[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 105--105
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 106--106
 []|[]\T1/phv/m/n/10.95 RF068[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 106--106
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 107--107
 []|[]\T1/phv/m/n/10.95 RF069[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
 []|\T1/phv/m/n/10.95 Alertar tem-plate
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 108--108
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 109--109
 []|[]\T1/phv/m/n/10.95 RF070[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 109--109
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 110--110
 []|[]\T1/phv/m/n/10.95 RF071[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 110--110
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 111--111
 []|[]\T1/phv/m/n/10.95 RF072[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 112--112
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 113--113
 []|[]\T1/phv/m/n/10.95 RF073[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 113--113
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 114--114
 []|[]\T1/phv/m/n/10.95 RF074[]| 
  []
 
 
-Overfull \hbox (4.4079pt too wide) in paragraph at lines 114--114
+Overfull \hbox (4.4079pt too wide) in paragraph at lines 115--115
 []|[]\T1/phv/m/n/10.95 RF075[]| 
  []
 
 
-Overfull \hbox (7.5472pt too wide) in alignment at lines 23--116
+Overfull \hbox (7.5472pt too wide) in alignment at lines 24--117
  [] [] [] 
  []
 
@@ -1658,7 +1708,7 @@ ignored error: Infinite glue shrinkage found in box being split [32]
 ignored error: Infinite glue shrinkage found in box being split [33]
 ignored error: Infinite glue shrinkage found in box being split [34]
 ignored error: Infinite glue shrinkage found in box being split [35])
-(partes/diagramas/casos_de_uso.tex) [36]
+(partes/diagramas/casos_de_uso.tex [36])
 (partes/diagramas/casos_de_uso_descricao.tex
 Overfull \hbox (6.0pt too wide) in paragraph at lines 23--43
 []|| []| 
@@ -1670,151 +1720,151 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 51--57
  []
 
 [37]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 83--101
+Overfull \hbox (6.0pt too wide) in paragraph at lines 84--102
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 109--115
+Overfull \hbox (6.0pt too wide) in paragraph at lines 110--116
 []|| []| 
  []
 
 [38]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 141--157
+Overfull \hbox (6.0pt too wide) in paragraph at lines 143--159
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 165--171
+Overfull \hbox (6.0pt too wide) in paragraph at lines 167--173
 []|| []| 
  []
 
 [39]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 199--223
+Overfull \hbox (6.0pt too wide) in paragraph at lines 202--226
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 232--240
+Overfull \hbox (6.0pt too wide) in paragraph at lines 235--243
 []|| []| 
  []
 
 [40]
-Overfull \vbox (16.32674pt too high) has occurred while \output is active []
+Overfull \vbox (47.68532pt too high) has occurred while \output is active []
 
 
 [41]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 268--286
+Overfull \hbox (6.0pt too wide) in paragraph at lines 272--290
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 294--302
+Overfull \hbox (6.0pt too wide) in paragraph at lines 298--306
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 328--344
+Overfull \hbox (6.0pt too wide) in paragraph at lines 333--349
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 352--360
+Overfull \hbox (6.0pt too wide) in paragraph at lines 357--365
 []|| []| 
  []
 
 [42]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 387--403
+Overfull \hbox (6.0pt too wide) in paragraph at lines 393--409
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 411--419
+Overfull \hbox (6.0pt too wide) in paragraph at lines 417--425
 []|| []| 
  []
 
 [43]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 445--459
+Overfull \hbox (6.0pt too wide) in paragraph at lines 452--466
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 466--474
+Overfull \hbox (6.0pt too wide) in paragraph at lines 473--481
 []|| []| 
  []
 
 [44]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 500--514
+Overfull \hbox (6.0pt too wide) in paragraph at lines 508--522
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 521--529
+Overfull \hbox (6.0pt too wide) in paragraph at lines 529--537
 []|| []| 
  []
 
 [45]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 556--570
+Overfull \hbox (6.0pt too wide) in paragraph at lines 565--579
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 577--583
+Overfull \hbox (6.0pt too wide) in paragraph at lines 586--592
 []|| []| 
  []
 
 [46]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 609--627
+Overfull \hbox (6.0pt too wide) in paragraph at lines 619--637
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 635--643
+Overfull \hbox (6.0pt too wide) in paragraph at lines 645--653
 []|| []| 
  []
 
 [47]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 669--687
+Overfull \hbox (6.0pt too wide) in paragraph at lines 680--698
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 695--700
+Overfull \hbox (6.0pt too wide) in paragraph at lines 706--711
 []|| []| 
  []
 
 [48]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 726--742
+Overfull \hbox (6.0pt too wide) in paragraph at lines 738--754
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 750--756
+Overfull \hbox (6.0pt too wide) in paragraph at lines 762--768
 []|| []| 
  []
 
 [49]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 782--796
+Overfull \hbox (6.0pt too wide) in paragraph at lines 795--809
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 803--809
+Overfull \hbox (6.0pt too wide) in paragraph at lines 816--822
 []|| []| 
  []
 
 [50]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 835--851
+Overfull \hbox (6.0pt too wide) in paragraph at lines 849--865
 []|| []| 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 858--864
+Overfull \hbox (6.0pt too wide) in paragraph at lines 872--878
 []|| []| 
  []
 
 ) [51] (partes/diagramas/Diagrama_de_Classes.tex [52] [53]
-<imagens/Diagrama-de-classes.png, id=1298, 2901.84125pt x 2502.34875pt>
+<imagens/Diagrama-de-classes.png, id=1376, 2901.84125pt x 2502.34875pt>
 File: imagens/Diagrama-de-classes.png Graphic file (type png)
 <use imagens/Diagrama-de-classes.png>
 Package pdftex.def Info: imagens/Diagrama-de-classes.png  used on input line 19
@@ -1822,272 +1872,282 @@ Package pdftex.def Info: imagens/Diagrama-de-classes.png  used on input line 19
 (pdftex.def)             Requested size: 455.24411pt x 392.55653pt.
 ) [54 <./imagens/Diagrama-de-classes.png>] [55] [56] (partes/diagramas/arquitet
 ura-backend.tex
-<imagens/backend.png, id=1319, 1808.7575pt x 1728.4575pt>
+<imagens/backend.png, id=1398, 1808.7575pt x 1728.4575pt>
 File: imagens/backend.png Graphic file (type png)
 <use imagens/backend.png>
 Package pdftex.def Info: imagens/backend.png  used on input line 5.
 (pdftex.def)             Requested size: 409.71692pt x 391.52357pt.
 )
 (partes/diagramas/arquitetura-frontend.tex
-<imagens/frontend.png, id=1320, 1808.7575pt x 1367.1075pt>
+<imagens/frontend.png, id=1399, 1808.7575pt x 1367.1075pt>
 File: imagens/frontend.png Graphic file (type png)
 <use imagens/frontend.png>
 Package pdftex.def Info: imagens/frontend.png  used on input line 6.
 (pdftex.def)             Requested size: 409.71692pt x 309.67195pt.
-) [57 <./imagens/backend.png>]
+ [57 <./imagens/backend.png>])
 (partes/diagramas/der.tex [58 <./imagens/frontend.png>]
-<imagens/DER.png, id=1337, 1025.8325pt x 495.8525pt>
+<imagens/DER.png, id=1412, 1025.8325pt x 495.8525pt>
 File: imagens/DER.png Graphic file (type png)
 <use imagens/DER.png>
 Package pdftex.def Info: imagens/DER.png  used on input line 15.
 (pdftex.def)             Requested size: 409.71692pt x 198.0424pt.
-) [59]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 61.
-<imagens/home.png, id=1343, 1445.4pt x 903.375pt>
+ [59 <./imagens/DER.png>])
+<imagens/home.png, id=1419, 1445.4pt x 903.375pt>
 File: imagens/home.png Graphic file (type png)
 <use imagens/home.png>
 Package pdftex.def Info: imagens/home.png  used on input line 63.
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
- [60 <./imagens/DER.png>]
-<imagens/dashboard.png, id=1354, 1146.08176pt x 549.252pt>
+ [60]
+<imagens/dashboard.png, id=1428, 1146.08176pt x 549.252pt>
 File: imagens/dashboard.png Graphic file (type png)
 <use imagens/dashboard.png>
 Package pdftex.def Info: imagens/dashboard.png  used on input line 75.
 (pdftex.def)             Requested size: 455.24411pt x 218.17159pt.
  [61 <./imagens/home.png (PNG copy)>]
-<imagens/customizartemplate.png, id=1364, 1150.89975pt x 546.24075pt>
+<imagens/customizartemplate.png, id=1438, 1150.89975pt x 546.24075pt>
 File: imagens/customizartemplate.png Graphic file (type png)
 <use imagens/customizartemplate.png>
 Package pdftex.def Info: imagens/customizartemplate.png  used on input line 87.
 
 (pdftex.def)             Requested size: 455.24411pt x 216.06696pt.
  [62 <./imagens/dashboard.png>]
-<imagens/templates.png, id=1374, 1147.28625pt x 545.6385pt>
+<imagens/templates.png, id=1447, 1147.28625pt x 545.6385pt>
 File: imagens/templates.png Graphic file (type png)
 <use imagens/templates.png>
 Package pdftex.def Info: imagens/templates.png  used on input line 99.
 (pdftex.def)             Requested size: 455.24411pt x 216.50311pt.
 
-[63 <./imagens/customizartemplate.png> <./imagens/templates.png>]
-<imagens/certificados-novo.png, id=1390, 1445.4pt x 903.375pt>
+[63 <./imagens/customizartemplate.png>]
+<imagens/certificados-novo.png, id=1461, 1445.4pt x 903.375pt>
 File: imagens/certificados-novo.png Graphic file (type png)
 <use imagens/certificados-novo.png>
 Package pdftex.def Info: imagens/certificados-novo.png  used on input line 111.
 
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
- [64 <./imagens/certificados-novo.png (PNG copy)>]
-<imagens/certificados.png, id=1403, 1139.457pt x 548.64975pt>
+ [64 <./imagens/templates.png>]
+<imagens/certificados.png, id=1472, 1139.457pt x 548.64975pt>
 File: imagens/certificados.png Graphic file (type png)
 <use imagens/certificados.png>
 Package pdftex.def Info: imagens/certificados.png  used on input line 123.
 (pdftex.def)             Requested size: 455.24411pt x 219.19649pt.
-<imagens/envios.png, id=1406, 1445.4pt x 903.375pt>
+ [65 <./imagens/certificados-novo.png (PNG copy)>]
+<imagens/envios.png, id=1479, 1445.4pt x 903.375pt>
 File: imagens/envios.png Graphic file (type png)
 <use imagens/envios.png>
 Package pdftex.def Info: imagens/envios.png  used on input line 135.
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
- [65 <./imagens/certificados.png>]
-<imagens/certificado.png, id=1419, 630.55576pt x 443.85825pt>
+ [66 <./imagens/certificados.png>]
+<imagens/certificado.png, id=1491, 630.55576pt x 443.85825pt>
 File: imagens/certificado.png Graphic file (type png)
 <use imagens/certificado.png>
 Package pdftex.def Info: imagens/certificado.png  used on input line 147.
 (pdftex.def)             Requested size: 409.71692pt x 288.41638pt.
- [66 <./imagens/envios.png (PNG copy)>]
-<imagens/verificar.png, id=1429, 1445.4pt x 903.375pt>
+
+[67 <./imagens/envios.png (PNG copy)>]
+<imagens/verificar.png, id=1501, 1445.4pt x 903.375pt>
 File: imagens/verificar.png Graphic file (type png)
 <use imagens/verificar.png>
 Package pdftex.def Info: imagens/verificar.png  used on input line 159.
 (pdftex.def)             Requested size: 455.24411pt x 284.52328pt.
- [67 <./imagens/certificado.png>]
+ [68 <./imagens/certificado.png>]
 (partes/diagramas/interfaces.tex) (partes/requisitos/rastreabilidade.tex
-[68 <./imagens/verificar.png (PNG copy)>] [69])) (partes/software.tex [70
+[69 <./imagens/verificar.png (PNG copy)>]
+
+Package caption Warning: The type was already set to `table'
+(caption)                 on input line 13.
+See the caption package documentation for explanation.
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 17.69388pt, for example:
+(fancyhdr)                \setlength{\headheight}{17.69388pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.19388pt}.
+
+[70
+
+
+])) (partes/software.tex [71
 
 
 ]
-<imagens/CIbackend.png, id=1492, 859.41075pt x 353.52075pt>
+<imagens/CIbackend.png, id=1529, 859.41075pt x 353.52075pt>
 File: imagens/CIbackend.png Graphic file (type png)
 <use imagens/CIbackend.png>
 Package pdftex.def Info: imagens/CIbackend.png  used on input line 24.
 (pdftex.def)             Requested size: 455.24411pt x 187.2626pt.
-<imagens/CIfrontend.png, id=1493, 831.105pt x 345.08925pt>
+<imagens/CIfrontend.png, id=1530, 831.105pt x 345.08925pt>
 File: imagens/CIfrontend.png Graphic file (type png)
 <use imagens/CIfrontend.png>
 Package pdftex.def Info: imagens/CIfrontend.png  used on input line 32.
 (pdftex.def)             Requested size: 455.24411pt x 189.02562pt.
-
-[71 <./imagens/CIbackend.png> <./imagens/CIfrontend.png>]
-(partes/diagramas/deploy.tex
-<imagens/deploy.png, id=1503, 2007.5pt x 762.85pt>
+ [72 <./imagens/CIbackend.png> <./imagens/CIfrontend.png>] (partes/diagramas/de
+ploy.tex
+<imagens/deploy.png, id=1537, 2007.5pt x 762.85pt>
 File: imagens/deploy.png Graphic file (type png)
 <use imagens/deploy.png>
 Package pdftex.def Info: imagens/deploy.png  used on input line 5.
 (pdftex.def)             Requested size: 386.96027pt x 147.03822pt.
-) [72]
+ [73])
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 71.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 72.
- [73 <./imagens/deploy.png>] [74] [75]
-[76] [77] [78] (partes/plano_testes.tex [79]
-Overfull \hbox (33.77357pt too wide) in alignment at lines 22--28
+ [74 <./imagens/deploy.png>]
+[75] [76] [77] [78] [79] (partes/plano_testes.tex [80]
+Overfull \hbox (33.77357pt too wide) in alignment at lines 23--29
  [] [] [] [] 
  []
 
 
-Overfull \hbox (33.77357pt too wide) in alignment at lines 28--32
+Overfull \hbox (33.77357pt too wide) in alignment at lines 29--33
  [] [] [] [] 
  []
 
 
-Overfull \hbox (33.77357pt too wide) in alignment at lines 32--34
+Overfull \hbox (33.77357pt too wide) in alignment at lines 33--35
  [] [] [] [] 
  []
 
 
-Overfull \hbox (33.77357pt too wide) in alignment at lines 34--36
+Overfull \hbox (33.77357pt too wide) in alignment at lines 35--37
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 43--43
+Underfull \hbox (badness 3386) in paragraph at lines 44--44
 []|\T1/phv/m/n/10.95 Obtenção de tem-plate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
 []|\T1/phv/m/n/10.95 Personalização de
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 52--52
+Underfull \hbox (badness 1584) in paragraph at lines 53--53
 []|\T1/phv/m/n/10.95 Selecionar tem-plate, pre-en-cher da-dos e
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 54--54
+Underfull \hbox (badness 1590) in paragraph at lines 55--55
 []|\T1/phv/m/n/10.95 Geração de PDF com
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 54--54
+Underfull \hbox (badness 7486) in paragraph at lines 55--55
 []|\T1/phv/m/n/10.95 PDF é ge-rado com \T1/cmtt/m/n/10.95 backgroundColor\T1/ph
 v/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 55--55
+Underfull \hbox (badness 1590) in paragraph at lines 56--56
 []|\T1/phv/m/n/10.95 Geração de PDF sem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []|\T1/phv/m/n/10.95 PDF é ge-rado cor-re-ta-mente com
  []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 57--57
+Underfull \hbox (badness 6944) in paragraph at lines 58--58
 []|\T1/phv/m/sl/10.95 Endpoint \T1/phv/m/n/10.95 re-torna cer-ti-fi-cado es-pe-
 cí-fico;
  []
 
 
-Underfull \hbox (badness 6204) in paragraph at lines 59--59
+Underfull \hbox (badness 6204) in paragraph at lines 60--60
 []|\T1/phv/m/n/10.95 Atualização de cer-ti-fi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
 []|\T1/phv/m/n/10.95 Nome, CPF, carga ho-rá-ria, curso e
  []
 
 
-Underfull \hbox (badness 3701) in paragraph at lines 59--59
+Underfull \hbox (badness 3701) in paragraph at lines 60--60
 \T1/cmtt/m/n/10.95 templateId \T1/phv/m/n/10.95 são al-te-ra-dos in-di-vi-dual 
 ou
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
 []|\T1/phv/m/n/10.95 CPF é au-to-ma-ti-ca-mente for-ma-tado
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 64--64
+Underfull \hbox (badness 1394) in paragraph at lines 65--65
 []|\T1/phv/m/n/10.95 Emissão com tem-plate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--70
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 []|\T1/phv/m/n/10.95 Validação via có-digo
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 74--74
+Underfull \hbox (badness 4072) in paragraph at lines 75--75
 []|\T1/phv/m/n/10.95 Remoção de más-cara
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 75--75
+Underfull \hbox (badness 1057) in paragraph at lines 76--76
 []|\T1/phv/m/n/10.95 Tratamento de erro na
  []
 
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 78.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 79.
 
-Underfull \hbox (badness 1472) in paragraph at lines 86--86
+Underfull \hbox (badness 1472) in paragraph at lines 87--87
 []|\T1/phv/m/n/10.95 Cálculo de cer-ti-fi-ca-dos
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 86--86
+Underfull \hbox (badness 2142) in paragraph at lines 87--87
 []|\T1/phv/m/n/10.95 Certificados ex-pi-ra-dos são ex-clu-í-dos da
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 92--92
+Underfull \hbox (badness 4582) in paragraph at lines 93--93
 []|\T1/phv/m/n/10.95 Criação de cer-ti-fi-cado
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 93--93
+Underfull \hbox (badness 1565) in paragraph at lines 94--94
 []|\T1/phv/m/n/10.95 Nome va-zio, CPF in-vá-lido, curso va-zio,
  []
 
 
-Underfull \hbox (badness 3780) in paragraph at lines 94--94
+Underfull \hbox (badness 3780) in paragraph at lines 95--95
 []|\T1/phv/m/n/10.95 Certificado com va-li-dade fu-tura re-torna
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 95--95
+Underfull \hbox (badness 1436) in paragraph at lines 96--96
 []|\T1/phv/m/n/10.95 Data de va-li-dade pas-
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 98--98
+Underfull \hbox (badness 1028) in paragraph at lines 99--99
 []|\T1/phv/m/n/10.95 Geração de có-digo de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 []|\T1/phv/m/n/10.95 Classes de erro
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 \T1/phv/m/n/10.95 (\T1/cmtt/m/n/10.95 CertificateNotFoundError\T1/phv/m/n/10.95
  ,
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 100--100
+Underfull \hbox (badness 1783) in paragraph at lines 101--101
 \T1/cmtt/m/n/10.95 InvalidCPFError\T1/phv/m/n/10.95 , etc.) pos-suem men-
- []
-
-
-Underfull \hbox (badness 1616) in paragraph at lines 109--109
-[]|\T1/phv/m/n/10.95 Repositório de tem-pla-
  []
 
 
@@ -2096,88 +2156,94 @@ Underfull \hbox (badness 1616) in paragraph at lines 110--110
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 111--111
+Underfull \hbox (badness 1616) in paragraph at lines 111--111
+[]|\T1/phv/m/n/10.95 Repositório de tem-pla-
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 112--112
 []|\T1/phv/m/n/10.95 Geração de PDF com
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 119--119
+Underfull \hbox (badness 1735) in paragraph at lines 120--120
 []|\T1/phv/m/n/10.95 Serviço de en-vios (\T1/phv/m/sl/10.95 lo-
  []
 
 
-Underfull \hbox (badness 5359) in paragraph at lines 128--128
+Underfull \hbox (badness 5359) in paragraph at lines 129--129
 []|\T1/phv/m/n/10.95 Segurança ^^V Acesso
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []|\T1/phv/m/n/10.95 Segurança ^^V Força
  []
 
 
-Overfull \hbox (33.77357pt too wide) in alignment at lines 36--148
+Overfull \hbox (33.77357pt too wide) in alignment at lines 37--149
  [] [] [] [] 
  []
 
-ignored error: Infinite glue shrinkage found in box being split [80]
 ignored error: Infinite glue shrinkage found in box being split [81]
 ignored error: Infinite glue shrinkage found in box being split [82]
-ignored error: Infinite glue shrinkage found in box being split [83] [84])
-[85]
-<imagens/coverage-frontend.png, id=1721, 1284.8pt x 903.375pt>
+ignored error: Infinite glue shrinkage found in box being split [83]
+ignored error: Infinite glue shrinkage found in box being split [84]
+ignored error: Infinite glue shrinkage found in box being split [85]) [86]
+<imagens/coverage-frontend.png, id=1755, 963.6pt x 278.54062pt>
 File: imagens/coverage-frontend.png Graphic file (type png)
 <use imagens/coverage-frontend.png>
-Package pdftex.def Info: imagens/coverage-frontend.png  used on input line 236.
+Package pdftex.def Info: imagens/coverage-frontend.png  used on input line 241.
 
-(pdftex.def)             Requested size: 455.24411pt x 320.08696pt.
- [86 <./imagens/coverage-frontend.png (PNG copy)>]
-<imagens/coverage-backend.png, id=1734, 1284.8pt x 722.7pt>
+(pdftex.def)             Requested size: 455.24411pt x 131.59413pt.
+
+[87 <./imagens/coverage-frontend.png>]
+<imagens/coverage-backend.png, id=1768, 1284.8pt x 722.7pt>
 File: imagens/coverage-backend.png Graphic file (type png)
 <use imagens/coverage-backend.png>
-Package pdftex.def Info: imagens/coverage-backend.png  used on input line 252.
+Package pdftex.def Info: imagens/coverage-backend.png  used on input line 257.
 (pdftex.def)             Requested size: 455.24411pt x 256.06956pt.
 
-Overfull \hbox (6.22522pt too wide) in paragraph at lines 256--257
+Overfull \hbox (6.22522pt too wide) in paragraph at lines 261--262
 []\T1/phv/m/n/12 O bac-kend atin-giu 96,53% de co-ber-tura de co-man-dos, 92,24
 % de ra-mos, 95,87%
  []
 
 
-Overfull \hbox (6.52336pt too wide) in paragraph at lines 256--257
+Overfull \hbox (6.52336pt too wide) in paragraph at lines 261--262
 \T1/phv/m/sl/12 main/errors\T1/phv/m/n/12 , \T1/phv/m/sl/12 domain/value-object
 s\T1/phv/m/n/12 , \T1/phv/m/sl/12 in-fras-truc-ture/repositories\T1/phv/m/n/12 
 , \T1/phv/m/sl/12 mid-dleware \T1/phv/m/n/12 e \T1/phv/m/sl/12 sha-red/utils
  []
 
-[87 <./imagens/coverage-backend.png (PNG copy)>]
-<imagens/e2e-report.png, id=1742, 1284.8pt x 722.7pt>
+[88 <./imagens/coverage-backend.png (PNG copy)>]
+<imagens/e2e-report.png, id=1775, 752.0597pt x 265.74281pt>
 File: imagens/e2e-report.png Graphic file (type png)
 <use imagens/e2e-report.png>
-Package pdftex.def Info: imagens/e2e-report.png  used on input line 269.
-(pdftex.def)             Requested size: 455.24411pt x 256.06956pt.
- [88] [89 <./imagens/e2e-report.png (PNG copy)>]
+Package pdftex.def Info: imagens/e2e-report.png  used on input line 274.
+(pdftex.def)             Requested size: 455.24411pt x 160.86612pt.
+ [89 <./imagens/e2e-report.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 297.
-) (partes/consideracoes.tex [90]
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 303.
+) (partes/consideracoes.tex [90] [91]
 Overfull \hbox (8.02371pt too wide) in paragraph at lines 13--14
 \T1/phv/b/n/12 tes-tes au-to-ma-ti-za-dos\T1/phv/m/n/12 , en-glo-bando tes-tes 
 uni-tá-rios (atin-gindo co-ber-tura de 82,6%
  []
 
-[91]
+[92]
 Overfull \hbox (4.63141pt too wide) in paragraph at lines 27--28
 []\T1/phv/b/n/12 Arquitetura De-sa-co-plada e Es-ca-lá-vel: \T1/phv/m/n/12 a se
 -gre-ga-ção en-tre \T1/phv/m/sl/12 fron-tend \T1/phv/m/n/12 (Vite/React)
  []
 
-[92] [93]
+[93] [94]
 Overfull \hbox (3.03024pt too wide) in paragraph at lines 53--54
 []\T1/phv/m/n/12 Implementação na-tiva de um mó-dulo de \T1/phv/b/n/12 au-di-to
 -ria e con-for-mi-dade com a LGPD\T1/phv/m/n/12 ,
  []
 
-) [94] (main.bbl
+) [95] (main.bbl
 Underfull \hbox (badness 2181) in paragraph at lines 16--21
 []\T1/phv/m/n/12 Kulkarni, R. et al. A se-cure cer-ti-fi-cate authen-ti-ca-tion
  sys-tem using cryp-
@@ -2190,133 +2256,157 @@ Underfull \hbox (badness 1077) in paragraph at lines 16--21
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
 []\T1/phv/m/n/12 Google Works-pace. \T1/phv/m/sl/12 Au-to-Crat ^^V Do-cu-ment m
-erge
+erge tool for Go-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
-\T1/phv/m/sl/12 tool for Go-o-gle She-ets\T1/phv/m/n/12 . 2025. Dis-po-ní-vel e
-m:
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+\T1/phv/m/sl/12 o-gle She-ets\T1/phv/m/n/12 . 2025. Acesso em: 08 jul. 2026. Di
+s-po-ní-vel em:
  []
 
-[95]
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
+
+Underfull \hbox (badness 2261) in paragraph at lines 39--43
+[]\T1/phv/m/n/12 Gaurav, K. \T1/phv/m/sl/12 Tru-e-Cert --- A production-ready S
+aaS plat-form for se-cure di-
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 39--43
+\T1/phv/m/sl/12 gi-tal cer-ti-fi-cate is-su-ance\T1/phv/m/n/12 . 2025. Acesso e
+m: 08 jul. 2026. Dis-po-ní-vel em:
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 46--50
+[]\T1/phv/m/n/12 Autocert. \T1/phv/m/sl/12 Au-to-Cert --- Ge-ra-dor de Cer-ti-f
+i-ca-dos Au-to-má-tico com QR Code
+ []
+
+
+Underfull \hbox (badness 6510) in paragraph at lines 46--50
+\T1/phv/m/sl/12 e Va-li-da-ção On-line\T1/phv/m/n/12 . 2025. Acesso em: 08 jul.
+ 2026. Dis-po-ní-vel em:
+ []
+
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
 []\T1/phv/m/n/12 Labs, T. \T1/phv/m/sl/12 Tailwind CSS Do-cu-men-ta-tion\T1/phv
 /m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 []\T1/phv/m/n/12 shadcn. \T1/phv/m/sl/12 shadcn/ui Do-cu-men-ta-tion\T1/phv/m/n
 /12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
 []\T1/phv/m/n/12 Group, R. \T1/phv/m/sl/12 Re-charts Do-cu-men-ta-tion\T1/phv/m
 /n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
 []\T1/phv/m/n/12 Contributors date-fns. \T1/phv/m/sl/12 date-fns Do-cu-men-ta-t
 ion\T1/phv/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--141
+Underfull \hbox (badness 10000) in paragraph at lines 142--144
 []\T1/phv/m/n/12 Foundation, O. \T1/phv/m/sl/12 Node.js Do-cu-men-ta-tion\T1/ph
 v/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
+Underfull \hbox (badness 10000) in paragraph at lines 147--149
 []\T1/phv/m/n/12 Supabase. \T1/phv/m/sl/12 Su-pa-base Do-cu-men-ta-tion\T1/phv/
 m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
-[96]
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
+[97]
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
 []\T1/phv/m/n/12 Group, P. G. D. \T1/phv/m/sl/12 Post-greSQL Do-cu-men-ta-tion\
 T1/phv/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--162
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
 []\T1/phv/m/n/12 Foundation, O. \T1/phv/m/sl/12 uuid ^^V npm pac-kage\T1/phv/m/
 n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
 []\T1/phv/m/n/12 Render. \T1/phv/m/sl/12 Ren-der Do-cu-men-ta-tion\T1/phv/m/n/1
 2 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
 []\T1/phv/m/n/12 Foundation, O. \T1/phv/m/sl/12 Jest Do-cu-men-ta-tion\T1/phv/m
 /n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--183
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 []\T1/phv/m/n/12 Foundation, O. \T1/phv/m/sl/12 ES-Lint Do-cu-men-ta-tion\T1/ph
 v/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
 []\T1/phv/m/n/12 Contributors, P. \T1/phv/m/sl/12 Pret-tier Do-cu-men-ta-tion\T
 1/phv/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 191--193
+Underfull \hbox (badness 1248) in paragraph at lines 194--196
 []\T1/phv/m/n/12 Conservancy, S. F. \T1/phv/m/sl/12 Git Do-cu-men-ta-tion\T1/ph
 v/m/n/12 . 2025. Dis-po-ní-vel em: $\OML/cmm/m/it/12 <$\T1/phv/m/n/12 https://g
 it-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
+Underfull \hbox (badness 10000) in paragraph at lines 199--201
 []\T1/phv/m/n/12 Github, I. \T1/phv/m/sl/12 GitHub Do-cu-men-ta-tion\T1/phv/m/n
 /12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--203
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
 []\T1/phv/m/n/12 Microsoft. \T1/phv/m/sl/12 Vi-sual Stu-dio Code Do-cu-men-ta-t
 ion\T1/phv/m/n/12 . 2025. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 7558) in paragraph at lines 206--209
+Underfull \hbox (badness 7558) in paragraph at lines 209--212
 []\T1/phv/m/n/12 Krämer, F. \T1/phv/m/sl/12 Sim-ple but use-ful: Use Case Ta-bl
 es\T1/phv/m/n/12 . 2024. Dis-po-ní-vel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--209
+Underfull \hbox (badness 10000) in paragraph at lines 209--212
 \T1/phv/m/n/12 em: $\OML/cmm/m/it/12 <$\T1/phv/m/n/12 https://florian-kraemer.n
 et/software-architecture/2024/02/28/Use-Case-
  []
 
-) [97] (partes/anexos.tex [98]) [99] (main.aux)
+) [98] (partes/anexos.tex [99]) [100] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B05CB3CA4D0EBAB96BF784593698C427;18862.
+(rerunfilecheck)             Checksum: 19FB2D9F6F12F251F67CC388338EEDB6;18862.
  ) 
 Here is how much of TeX's memory you used:
- 30782 strings out of 467871
- 588815 string characters out of 5418376
- 1294611 words of memory out of 5000000
- 58476 multiletter control sequences out of 15000+600000
+ 30877 strings out of 467871
+ 591394 string characters out of 5418376
+ 1299844 words of memory out of 5000000
+ 58547 multiletter control sequences out of 15000+600000
  681072 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,18n,94p,1924b,2132s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2330,9 +2420,9 @@ KTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/franc/AppData/Local/Programs
 /MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/franc/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/franc/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (108 pages, 1950956 bytes).
+Output written on main.pdf (112 pages, 1938099 bytes).
 PDF statistics:
- 2130 PDF objects out of 2487 (max. 8388607)
- 598 named destinations out of 1000 (max. 500000)
+ 2164 PDF objects out of 2487 (max. 8388607)
+ 603 named destinations out of 1000 (max. 500000)
  985 words of extra memory for PDF output out of 10000 (max. 10000000)
 
