@@ -138,11 +138,11 @@ A Figura~\ref{fig:envios} apresenta o histórico de envios de e-mail --- funcion
 
 \subsubsection{Certificado Gerado}
 
-A Figura~\ref{fig:certificado} apresenta o certificado gerado pelo sistema no formato PDF, em layout paisagem A4, com bordas decorativas, nome do participante, curso, carga horária, CPF, código de verificação, datas de emissão e validade e o QR Code de verificação no canto superior direito. O QR Code codifica a URL pública de validação (\code{/verificar?cpf=...\&codigo=...}), permitindo que qualquer pessoa autentique o certificado apontando a câmera do celular para o código. Este resultado é produzido pela combinação das bibliotecas PDFKit e qrcode no backend, conforme detalhado na Seção~\ref{sec:qrcode}. Esta tela atende aos requisitos \textbf{\ref{rf:gerar-pdf}} (gerar PDF), \textbf{\ref{rf:codigo-unico}} (código único), \textbf{\ref{rf:qrcode}} (QR Code) e \textbf{\ref{rf:download-individual}} (download individual).
+A Figura~\ref{fig:certificado} apresenta o certificado gerado pelo sistema no formato PDF, em layout paisagem A4, com bordas decorativas, nome do participante, curso, carga horária, CPF, código de verificação, datas de emissão e validade e o \textit{QR Code} de verificação no canto superior direito. O \textit{QR Code} codifica a URL pública de validação (\code{/verificar?cpf=...\&codigo=...}), permitindo que qualquer pessoa autentique o certificado apontando a câmera do celular para o código. Este resultado é produzido pela combinação das bibliotecas PDFKit e qrcode no backend, conforme detalhado na Seção~\ref{sec:qrcode}. Esta tela atende aos requisitos \textbf{\ref{rf:gerar-pdf}} (gerar PDF), \textbf{\ref{rf:codigo-unico}} (código único), \textbf{\ref{rf:qrcode}} (\textit{QR Code}) e \textbf{\ref{rf:download-individual}} (download individual).
 
 \begin{figure}[H]
 \centering
-\caption{Certificado gerado com QR Code de verificação}
+\caption{Certificado gerado com \textit{QR Code} de verificação}
 \label{fig:certificado}
 \includegraphics[width=0.9\textwidth]{imagens/certificado.png}
 \begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}

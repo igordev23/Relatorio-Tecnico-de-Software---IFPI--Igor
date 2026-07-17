@@ -188,7 +188,7 @@
 \hline
 \textbf{Dependências} & \ref{rf:cadastro-participante}, \ref{rf:emissao-manual}, \ref{rf:gerar-pdf}, \ref{rf:preencher-campos-dinamicos}, \ref{rf:codigo-unico}, \ref{rf:registro-emissao}, \ref{rf:download-individual}, \ref{rf:validar-vinculo-participante}, \ref{rf:status-envio}, \ref{rf:reenviar-falha} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
-\textbf{Descrição} & O sistema deve permitir que o colaborador emita um certificado individual, selecionando template, curso e participante, e gerando PDF com código único e QR Code. \\
+\textbf{Descrição} & O sistema deve permitir que o colaborador emita um certificado individual, selecionando template, curso e participante, e gerando PDF com código único e \textit{QR Code}. \\
 \textbf{Ator(es)} & Colaborador \\
 \hline
 \textbf{Pré-condições} &
@@ -214,7 +214,7 @@
 \hline
 6 & O sistema gera o PDF preenchendo os campos dinâmicos. \\
 \hline
-7 & O sistema gera código único e insere QR Code no PDF. \\
+7 & O sistema gera código único e insere \textit{QR Code} no PDF. \\
 \hline
 8 & O sistema registra data, hora e responsável pela emissão. \\
 \hline
@@ -440,7 +440,7 @@
 \hline
 \textbf{Dependências} & \ref{rf:portal-validacao}, \ref{rf:validar-certificado}, \ref{rf:qrcode}, \ref{rf:exibir-validacao} \\
 \textbf{Autor} & Francisco Igor Silva Santos \\
-\textbf{Descrição} & O sistema deve disponibilizar um portal público onde qualquer visitante possa validar um certificado informando o código único ou escaneando o QR Code. \\
+\textbf{Descrição} & O sistema deve disponibilizar um portal público onde qualquer visitante possa validar um certificado informando o código único ou escaneando o \textit{QR Code}. \\
 \textbf{Ator(es)} & Visitante \\
 \hline
 \textbf{Pré-condições} &
@@ -473,14 +473,14 @@
 \hspace*{-\tabcolsep}\begin{tabular}{@{\hspace{\tabcolsep}}p{1.2cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-\tabcolsep-1.2cm-\arrayrulewidth\relax}@{}}
 \textbf{Passo} & \textbf{Condição} \\
 \hline
-3 & Se o visitante escanear o QR Code, o sistema redireciona com o código preenchido automaticamente. \\
+3 & Se o visitante escanear o \textit{QR Code}, o sistema redireciona com o código preenchido automaticamente. \\
 \hline
 4 & Se o código não existir, o sistema exibe "Certificado não encontrado". \\
 \hline
 \end{tabular} \\
 \hline
 \textbf{Referências} & \ref{rf:portal-validacao}, \ref{rf:validar-certificado}, \ref{rf:qrcode}, \ref{rf:exibir-validacao} \\
-\textbf{Comentários} & A validação via QR Code elimina a necessidade de digitação manual do código. \\
+\textbf{Comentários} & A validação via \textit{QR Code} elimina a necessidade de digitação manual do código. \\
 \hline
 \end{tabular}
 \begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
