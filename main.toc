@@ -91,7 +91,7 @@
 \contentsline {subsection}{\numberline {4.2}Exemplos de Código}{75}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Entidade de Domínio: Certificate}{75}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Route Handler de Emissão}{77}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Geração de PDF com QR Code}{78}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3}Geração de PDF com \textit {QR Code}}{78}{subsubsection.4.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.4}Validação por Código Único}{79}{subsubsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.3}Testes}{81}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Plano de Testes}{81}{subsubsection.4.3.1}%
