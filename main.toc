@@ -8,7 +8,7 @@
 \contentsline {subsubsection}{\numberline {2.1.1}React 19}{5}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}TypeScript}{5}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}Tailwind CSS}{6}{subsubsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.4}shadcn/ui}{7}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.4}shadcn/ui}{6}{subsubsection.2.1.4}%
 \contentsline {subsubsection}{\numberline {2.1.5}TanStack Router}{7}{subsubsection.2.1.5}%
 \contentsline {subsubsection}{\numberline {2.1.6}React Hook Form}{8}{subsubsection.2.1.6}%
 \contentsline {subsubsection}{\numberline {2.1.7}Sonner}{8}{subsubsection.2.1.7}%
@@ -47,12 +47,12 @@
 \contentsline {subsubsection}{\numberline {3.1.9}Módulo de Auditoria e Segurança Operacional}{24}{subsubsection.3.1.9}%
 \contentsline {subsubsection}{\numberline {3.1.10}Módulo de Gestão de Cursos/Eventos}{24}{subsubsection.3.1.10}%
 \contentsline {subsubsection}{\numberline {3.1.11}Módulo de Participantes}{24}{subsubsection.3.1.11}%
-\contentsline {subsubsection}{\numberline {3.1.12}Módulo Multiempresa / Multi-tenant}{25}{subsubsection.3.1.12}%
+\contentsline {subsubsection}{\numberline {3.1.12}Módulo Multiempresa / Multi-tenant}{24}{subsubsection.3.1.12}%
 \contentsline {subsubsection}{\numberline {3.1.13}Módulo de Configurações do Sistema}{25}{subsubsection.3.1.13}%
 \contentsline {subsubsection}{\numberline {3.1.14}Módulo de Armazenamento e Arquivos}{25}{subsubsection.3.1.14}%
 \contentsline {subsubsection}{\numberline {3.1.15}Módulo de Notificações e Alertas}{25}{subsubsection.3.1.15}%
 \contentsline {subsubsection}{\numberline {3.1.16}Módulo de Monitoramento e Logs}{25}{subsubsection.3.1.16}%
-\contentsline {subsubsection}{\numberline {3.1.17}Módulo de Suporte, Operação e Manutenção}{26}{subsubsection.3.1.17}%
+\contentsline {subsubsection}{\numberline {3.1.17}Módulo de Suporte, Operação e Manutenção}{25}{subsubsection.3.1.17}%
 \contentsline {subsubsection}{\numberline {3.1.18}Segurança}{26}{subsubsection.3.1.18}%
 \contentsline {subsubsection}{\numberline {3.1.19}Desempenho e Escalabilidade}{27}{subsubsection.3.1.19}%
 \contentsline {subsubsection}{\numberline {3.1.20}Disponibilidade e Confiabilidade}{28}{subsubsection.3.1.20}%
@@ -103,10 +103,10 @@
 \contentsline {subsubsection}{\numberline {4.3.5}Limitações}{91}{subsubsection.4.3.5}%
 \contentsline {subsubsection}{\numberline {4.3.6}Resumo Geral}{91}{subsubsection.4.3.6}%
 \contentsline {section}{\numberline {5}CONSIDERAÇÕES FINAIS}{92}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{94}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.1}Principais Contribuições}{93}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Limitações}{94}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Trabalhos Futuros}{95}{subsection.5.3}%
-\contentsline {section}{REFERÊNCIAS}{99}{section*.30}%
-\contentsline {section}{\numberline {6}ANEXOS}{100}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{100}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{101}{subsection.6.2}%
+\contentsline {section}{REFERÊNCIAS}{100}{section*.30}%
+\contentsline {section}{\numberline {6}ANEXOS}{101}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Declaração de Entrega do Código-Fonte}{101}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Declaração de Submissão ao NIT}{102}{subsection.6.2}%
