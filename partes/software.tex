@@ -23,7 +23,7 @@ O fluxo de implantação baseia-se em um pipeline de CI/CD (Integração e Entre
 \label{fig:ci-backend}
 \includegraphics[width=\textwidth]{imagens/CIbackend.png}
 \end{figure}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 \begin{figure}[H]
 \centering
@@ -31,7 +31,7 @@ O fluxo de implantação baseia-se em um pipeline de CI/CD (Integração e Entre
 \label{fig:ci-frontend}
 \includegraphics[width=\textwidth]{imagens/CIfrontend.png}
 \end{figure}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 \subsubsection{Configuração de Ambiente}
 
@@ -101,7 +101,7 @@ export class Certificate {
   }
 }
 \end{lstlisting}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 \subsubsection{Route Handler de Emissão}
 \label{sec:codigo-emissao}
@@ -129,7 +129,7 @@ export async function POST(request: Request) {
   }
 }
 \end{lstlisting}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 \subsubsection{Geração de PDF com \textit{QR Code}}
 \label{sec:codigo-pdf}
@@ -160,7 +160,7 @@ doc.font("Helvetica").fontSize(8).text(
   Verifique a sua autenticidade acessando o QR Code...\`, instrX, instrY + 14
 );
 \end{lstlisting}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 \subsubsection{Validação por Código Único}
 \label{sec:codigo-validacao}
@@ -183,7 +183,7 @@ export async function POST(request: Request) {
   }
 }
 \end{lstlisting}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 O Código~\ref{cod:verify-usecase} detalha o caso de uso \code{VerifyCertificateUseCase}, que centraliza a lógica de verificação. O método \code{execute} busca o certificado no banco por CPF e código (\ref{rf:validar-certificado}); se encontrado, retorna os dados do certificado e o status de validade calculado pelo método \code{isValid()} da entidade de domínio. Se não encontrado, indica que o certificado não é autêntico.
 
@@ -216,7 +216,7 @@ export class VerifyCertificateUseCase {
   }
 }
 \end{lstlisting}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 \subsection{Testes}
 
@@ -240,7 +240,7 @@ A métrica de cobertura, gerada automaticamente pelo Jest por meio da ferramenta
 \label{fig:coverage-frontend}
 \includegraphics[width=\textwidth]{imagens/coverage-frontend.png}
 \end{figure}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 Conforme ilustrado, o frontend atingiu 82,6\% de cobertura de comandos (\textit{Statements}), 65,38\% de ramos (\textit{Branches}), 83,33\% de funções (\textit{Functions}) e 83,66\% de linhas (\textit{Lines}). O \texttt{useEditCertificateViewModel.ts} passou de 0\% para 95,55\% em comandos e 100\% em funções após a inclusão de testes. O \texttt{schemas.test.ts} recebeu 9 novos testes para o \texttt{updateCertificateSchema}, abrangendo validação de CPF e campos obrigatórios. Os únicos ramos não cobertos (65,38\%) são os guards \texttt{if (!active)} no \texttt{useEffect} --- um aborto que só ocorre se o componente desmontar antes do \textit{fetch}, caso raro e aceitável.
 
@@ -256,7 +256,7 @@ A Figura~\ref{fig:coverage-backend} apresenta o relatório de cobertura gerado p
 \label{fig:coverage-backend}
 \includegraphics[width=\textwidth]{imagens/coverage-backend.png}
 \end{figure}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 O backend atingiu 96,53\% de cobertura de comandos, 92,24\% de ramos, 95,87\% de funções e 96,53\% de linhas. As camadas de \textit{application/dtos}, \textit{domain/entities}, \textit{domain/errors}, \textit{domain/value-objects}, \textit{infrastructure/repositories}, \textit{middleware} e \textit{shared/utils} apresentaram cobertura integral (100\%), evidenciando que as regras de negócio e a lógica de persistência foram amplamente exercitadas pelos testes. A camada \textit{infrastructure/services} registrou 99,25\% em comandos e 41,66\% em ramos, diferença atribuída às condicionais de configuração do PDFKit que não foram totalmente cobertas. As interfaces \textit{domain/repositories} e \textit{domain/services} aparecem com 0\% por se tratarem de contratos abstratos (interfaces) sem implementação concreta a ser testada diretamente.
 
@@ -273,7 +273,7 @@ O teste demonstra que o sistema suporta o fluxo crítico de ponta a ponta sem in
 \label{fig:e2e-report}
 \includegraphics[width=\textwidth]{imagens/e2e-report.png}
 \end{figure}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
 \subsubsection{Limitações}
 
@@ -302,5 +302,5 @@ E2E (Playwright) & 1 & 1 & -- & 8,43\,s \\
 \mbox{}\vspace{6pt}\par
 \footnotesize\noindent\textbf{Nota:} Os 290 testes automatizados (121 + 168 + 1 E2E) referem-se exclusivamente aos testes unitários, de integração e \textit{end-to-end}. Desses, 4 são casos de teste não-funcionais (CT052 a CT055): CT052 (carga) possui teste automatizado no backend com 10 chamadas concorrentes em \textless 5s; CT053 (autenticação) e CT054 (\textit{rate limiting}) foram integralmente automatizados no \textit{middleware}; CT055 (acessibilidade) possui teste automatizado de navegação Tab no frontend, porém sem auditoria com ferramentas como \texttt{axe-core}.
 \par\vspace{4pt}
-\begin{center}\small\textit{Fonte: Elaborado pelo Autor (2026).}\end{center}
 \end{table}
+\noindent\small\textit{Fonte: Elaborado pelo Autor (2026).}
