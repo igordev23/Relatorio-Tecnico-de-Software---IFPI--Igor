@@ -52,6 +52,7 @@
 \usepackage{xurl}
 \usepackage{rotating}
 \usepackage{pdflscape}
+\usepackage{pdfpages}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \setlength{\headheight}{14.5pt}
@@ -429,42 +430,11 @@ Vislumbrando a evolução contínua da plataforma, recomenda-se a exploração d
 
 % ================= ANEXOS =================
 \newpage
-\section{ANEXOS}
 
-\begin{center}\large
-\textbf{ANEXO A --- Declaração de Entrega do Código-Fonte}
-\end{center}
+\includepdf[pages=-,width=\textwidth,trim=0 3cm 0 0,clip,pagecommand={\thispagestyle{fancy}\section{ANEXOS}\begin{center}\large\textbf{ANEXO A --- Declaração de Entrega do Código-Fonte}\end{center}\vspace{0.5cm}}]{anexos/Processo-requerimento.pdf}
 
-Declaro que o código-fonte referente ao projeto ``CertifyHub: Sistema para Emissão, Gestão e Autenticação de Certificados'', desenvolvido como requisito parcial para obtenção do grau de Tecnólogo em Análise e Desenvolvimento de Sistemas no Instituto Federal de Educação, Ciência e Tecnologia do Piauí, foi entregue na íntegra, acompanhado de toda a documentação técnica necessária para sua compilação, execução e manutenção.
+\clearpage
 
-\vspace{4cm}
-
-Piripiri, 09 de julho de 2026.
-
-\vspace{2cm}
-\begin{flushright}
-\rule{8cm}{0.4pt}\\
-\textbf{Francisco Igor Silva Santos}\\
-Graduando em Análise e Desenvolvimento de Sistemas
-\end{flushright}
-
-\newpage
-
-\begin{center}\large
-\textbf{ANEXO B --- Declaração de Submissão ao NIT}
-\end{center}
-
-Declaro que o software ``CertifyHub: Sistema para Emissão, Gestão e Autenticação de Certificados'' foi submetido ao Núcleo de Inovação e Tecnologia (NIT) do Instituto Federal de Educação, Ciência e Tecnologia do Piauí, para fins de registro e proteção intelectual, conforme procedimentos internos da instituição.
-
-\vspace{4cm}
-
-Piripiri, 09 de julho de 2026.
-
-\vspace{2cm}
-\begin{flushright}
-\rule{8cm}{0.4pt}\\
-\textbf{Francisco Igor Silva Santos}\\
-Graduando em Análise e Desenvolvimento de Sistemas
-\end{flushright}
+\includepdf[pages=-,width=\textwidth,trim=0 3cm 0 0,clip,pagecommand={\thispagestyle{fancy}\begin{center}\large\textbf{ANEXO B --- Declaração de Submissão ao NIT}\end{center}\vspace{0.5cm}}]{anexos/Processo-requerimento.pdf}
 
 \end{document}
