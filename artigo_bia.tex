@@ -72,6 +72,14 @@
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
 
+% Títulos das subseções: caixa alta e sem negrito
+\makeatletter
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize}}
+\makeatother
+
 % Ambiente para Quadros (dados textuais, ABNT)
 \floatstyle{plaintop}
 \newfloat{quadro}{htbp}{loq}
@@ -176,7 +184,7 @@
 \newcommand{\InstituicaoLower}{Instituto Federal de Educação, Ciência e Tecnologia do Piauí}
 \newcommand{\Campus}{Campus Piripiri}
 \newcommand{\Curso}{Tecnólogo em Análise e Desenvolvimento de Sistemas}
-\newcommand{\Titulo}{CertifyHub: Sistema para Emissão, Gestão e Autenticação de Certificados}
+\newcommand{\Titulo}{CERTIFYHUB: SISTEMA PARA EMISSÃO, GESTÃO E AUTENTICAÇÃO DE CERTIFICADOS}
 \newcommand{\Autor}{Francisco Igor Silva Santos}
 \newcommand{\Matricula}{2024116TADS0030}
 \newcommand{\Orientador}{Prof. Me. Mayllon Veras da Silva}
@@ -194,10 +202,10 @@
 \begin{center}
 \includegraphics[width=10cm]{imagens/Logo-IFPI-Vertical.png} \\[0.3cm]
 \textbf{\Instituicao} \\
-\textbf{\Campus} \\
-\textbf{\Curso} \\[3cm]
+\textbf{CAMPUS PIRIPIRI} \\
+\textbf{TECNÓLOGO EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS} \\[3cm]
 
-\textbf{\Autor} \\[2.5cm]
+\textbf{FRANCISCO IGOR SILVA SANTOS} \\[2.5cm]
 \textbf{\Titulo} \\[6cm]
 
 \Cidade\\
@@ -230,6 +238,11 @@ Orientador: \Orientador.
 \Ano
 \end{center}
 \end{titlepage}
+
+% ================= FICHA CATALOGRÁFICA =================
+\newpage
+\thispagestyle{pretextual}
+\includepdf[pages=-,pagecommand={\thispagestyle{pretextual}}]{anexos/ficha_catalografica.pdf}
 
 % ================= CABEÇALHO PRÉ-RESUMO =================
 \thispagestyle{pretextual}
@@ -335,7 +348,9 @@ O desenvolvimento seguiu a abordagem de Produto Mínimo Viável (MVP), priorizan
 
 Este relatório técnico está organizado da seguinte forma: a Seção 2 apresenta as tecnologias utilizadas no desenvolvimento; a Seção 3 descreve a modelagem do sistema, incluindo levantamento de requisitos, diagramas de casos de uso, classes, arquitetura e entidade-relacionamento; a Seção 4 detalha a implementação do software; e a Seção 5 traz as considerações finais.
 
-\subsection{Objetivos}\label{sec:objetivos}
+\subsection{OBJETIVOS}\label{sec:objetivos}
+
+Os objetivos deste trabalho estão organizados em um objetivo geral e em objetivos específicos. O objetivo geral sintetiza a finalidade central do sistema proposto, enquanto os objetivos específicos detalham, de forma objetiva e mensurável, as metas técnicas e funcionais cuja realização é necessária para a concretização do projeto. Em conjunto, eles orientam a condução das etapas de levantamento de requisitos, modelagem, implementação e validação descritas ao longo deste relatório técnico.
 
 \subsubsection{Geral}\label{sec:objetivo-geral}
 
@@ -381,7 +396,7 @@ Em relação aos objetivos específicos propostos:
 
 Devido à adoção da abordagem iterativa e às restrições inerentes ao escopo de um MVP, alguns objetivos específicos foram estrategicamente postergados para iterações futuras. O suporte a importação de dados em lote via arquivos (CSV e Excel) e o serviço de mensageria para envio automático de e-mails não foram incorporados ao \textit{backend} nesta versão. Adicionalmente, os mecanismos rígidos de conformidade com a LGPD e a implementação integral da arquitetura \textit{multi-tenant} requerem validações jurídicas e de infraestrutura, sendo mapeados como evoluções necessárias para o \textit{roadmap} futuro.
 
-\subsection{Principais Contribuições}
+\subsection{PRINCIPAIS CONTRIBUIÇÕES}
 
 O sistema desenvolvido oferece uma solução tecnológica moderna e eficiente para o problema identificado, cujas principais contribuições são:
 
@@ -393,7 +408,7 @@ O sistema desenvolvido oferece uma solução tecnológica moderna e eficiente pa
     \item \textbf{Esteira de CI/CD Automatizada:} a implementação de fluxos de CI/CD garante que todo incremento de código seja automaticamente testado (lint, tipo, unitário, integração e E2E) antes de atingir o ambiente de produção.
 \end{itemize}
 
-\subsection{Limitações}
+\subsection{LIMITAÇÕES}
 
 Do ponto de vista arquitetural e funcional, o produto atual apresenta as seguintes limitações, oriundas de \textit{trade-offs} assumidos no escopo do MVP:
 
@@ -407,7 +422,7 @@ Do ponto de vista arquitetural e funcional, o produto atual apresenta as seguint
     \item A suíte de testes carece de \textbf{testes de carga e estresse}, os quais são fundamentais para atestar o comportamento e as garantias do serviço de geração de PDFs sob alta concorrência.
 \end{itemize}
 
-\subsection{Trabalhos Futuros}
+\subsection{TRABALHOS FUTUROS}
 
 Vislumbrando a evolução contínua da plataforma, recomenda-se a exploração dos seguintes aprimoramentos técnicos e funcionais:
 
