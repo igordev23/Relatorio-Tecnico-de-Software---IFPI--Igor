@@ -1,10 +1,10 @@
-\section{TECNOLOGIAS ENVOLVIDAS}
+\chaptercap{TECNOLOGIAS ENVOLVIDAS}
+
+Este capítulo apresenta o conjunto de tecnologias empregadas no desenvolvimento do sistema, organizadas por camada de atuação. A discussão que se segue detalha as opções técnicas adotadas, seus motivos e as alternativas consideradas ao longo do processo de decisão.
+
 \label{sec:tecnologias}
 
-Este capítulo apresenta as tecnologias empregadas no desenvolvimento do sistema, organizadas em seis categorias: frontend, integração com a API REST, backend, banco de dados, geração de documentos e infraestrutura e ferramentas, com uma discussão sobre o papel de cada uma, os motivos de sua escolha e as alternativas consideradas durante o processo de decisão. As seções a seguir detalham as tecnologias de cada camada.
-
-\subsection{FRONTEND}
-\label{sec:frontend}
+\subcap{frontend}\label{sec:frontend}
 
 A camada de apresentação adota a arquitetura de \textit{Single Page Application} (SPA), conforme estabelecido no requisito não funcional \ref{rnf:independent-apps}. Nesse modelo, o navegador carrega um único documento HTML e as atualizações de conteúdo ocorrem dinamicamente via JavaScript, sem recarregamento completo da página \cite{romanov2025, karka2025}. A comunicação com o backend é realizada exclusivamente via API REST, o que desacopla as duas aplicações e permite que cada uma evolua com seu próprio ciclo de vida.
 
@@ -73,7 +73,6 @@ No projeto, o Vite foi escolhido como ferramenta de build do frontend por ser a 
 \subsubsection{Arquitetura e Padrões}
 O frontend adota uma arquitetura em camadas com React, organizada em quatro níveis. A camada \textit{View} reúne os componentes React que renderizam a interface e capturam eventos do usuário, divididos entre páginas (\code{views/}) e componentes reutilizáveis (\code{components/}), incluindo os do shadcn/ui. A camada \textit{ViewModel} é composta por custom hooks (\code{useCertificatesViewModel}, \code{useDashboardViewModel}, etc.) que encapsulam o estado local com \code{useState}, efeitos colaterais com \code{useEffect}, dados derivados com \code{useMemo} e expõem ações de forma coesa --- cada hook retorna um objeto com o estado e os manipuladores necessários para sua respectiva tela. A camada \textit{Service} centraliza a comunicação externa: o módulo \code{api.ts} utiliza a \code{fetch} API nativa para consumir a API REST, e o módulo \code{envios.ts} gerencia uma fila local de envios de e-mail no \code{localStorage}, armazenando apenas dados operacionais (nome e e-mail do destinatário, \textit{status} da entrega). Não há armazenamento de tokens de autenticação ou credenciais no \code{localStorage} --- a autenticação será gerenciada pelo Supabase Auth, que utiliza mecanismo de sessão próprio e seguro. A camada \textit{Model} contém as interfaces TypeScript que definem as entidades de domínio (\code{Certificate}, \code{Template}, \code{VerifyResult}, \code{EnvioEmail}) com tipos inferidos. O TanStack Router orquestra a navegação, mapeando URLs a componentes (\code{views/}) de forma declarativa. O Tailwind CSS gerencia a estilização em todas as camadas de apresentação. Essa separação permite testar a lógica de apresentação independentemente da interface, utilizando Jest para validar os \textit{ViewModels} sem depender de um navegador.
 
-\subsection{INTEGRAÇÃO COM A API REST}
 \label{sec:api}
 
 O frontend comunica-se com um backend externo por meio de uma API REST, cuja URL base é configurada via variável de ambiente \code{VITE\_API\_URL}. As requisições são centralizadas em um módulo \code{api.ts} que utiliza a \code{fetch} API nativa do JavaScript, encapsulando o tratamento de erros e a serialização JSON. Os endpoints expostos incluem operações CRUD para templates e certificados, emissão de certificados, geração de PDF e verificação de autenticidade.
@@ -83,7 +82,6 @@ Zod é uma biblioteca de validação de esquemas com suporte primário a TypeScr
 
 No sistema, os esquemas Zod são utilizados em conjunto com o React Hook Form para validar as entradas dos formulários antes do envio à API. Um mesmo esquema pode validar desde o formato de e-mail até a estrutura completa de um cadastro de certificado, com mensagens de erro localizadas exibidas nos componentes \code{FormMessage} do shadcn/ui. Essa abordagem garante consistência entre a validação no frontend e as regras aplicadas pelo backend.
 
-\subsection{BACKEND}
 \label{sec:backend}
 
 O backend do sistema é uma API REST desenvolvida com Next.js e executada no Node.js 22 LTS \cite{nodejs2025}, seguindo uma arquitetura em quatro camadas: apresentação (\textit{Route Handlers}), aplicação (\textit{use cases} e \textit{DTOs}), domínio (\textit{entities} e \textit{value objects} sem dependências externas) e infraestrutura (\textit{repositories}, \textit{services} e acesso a banco de dados). As dependências apontam para dentro: a camada de domínio define interfaces que a infraestrutura implementa, permitindo substituir implementações sem alterar a lógica de negócio.
@@ -103,7 +101,7 @@ Zod é uma biblioteca de validação de esquemas que, na versão 4, oferece infe
 \subsubsection{Arquitetura e Padrões}
 A arquitetura em camadas adotada no backend organiza o código em quatro pacotes: \code{domain}, \code{application}, \code{infrastructure} e \code{app}. O pacote \code{domain} contém as entidades e interfaces de repositório. O pacote \code{application} abriga os \textit{use cases} de emissão, geração e verificação, além dos DTOs. O pacote \code{infrastructure} implementa os repositórios (\code{SupabaseCertificateRepository}, \code{SupabaseTemplateRepository}) e serviços (\code{PDFKitService}). O \code{app} contém os \textit{Route Handlers}. Cada \textit{use case} possui uma única responsabilidade, e as entidades encapsulam regras de negócio --- \code{Certificate} valida a data antes de alterá-la.
 
-\subsection{BANCO DE DADOS}
+\subcap{banco de dados}
 
 \subsubsection{Supabase e PostgreSQL}
 Supabase é uma plataforma \textit{open-source} que oferece PostgreSQL como serviço gerenciado, com APIs REST auto-geradas e autenticação integrada \cite{supabase2025}. Diferentemente do Firebase (Google), que utiliza um banco NoSQL proprietário, o Supabase utiliza PostgreSQL, um banco relacional maduro que permite consultas complexas, integridade referencial e transações ACID.
@@ -112,7 +110,7 @@ A escolha do Supabase em vez de alternativas como Firebase foi motivada pelo mod
 
 No sistema, o Supabase é utilizado exclusivamente como banco de dados relacional. As consultas são construídas através do \textit{Query Builder} nativo (\code{@supabase/supabase-js} e \code{@supabase/ssr}), dispensando o uso de ORMs pesados como Prisma ou TypeORM. O PostgreSQL 16 \cite{postgresql2025} atua como o banco de dados subjacente. A opção por utilizar o SDK oficial em vez de um ORM tradicional baseou-se na redução da sobrecarga de processamento (\textit{overhead}) e na mitigação do excesso de arquivos de configuração, permitindo usufruir da tipagem gerada automaticamente pelo Supabase de forma muito mais leve e com excelente controle granular das consultas. O esquema contém duas tabelas principais: \code{templates} (coluna \code{layout\_config} do tipo JSONB) e \code{certificates} (índices em \code{recipient\_cpf} e \code{verification\_code}). A nomenclatura segue \textit{snake\_case} no banco e \textit{camelCase} no código, com mapeamento manual nos repositórios.
 
-\subsection{GERAÇÃO DE DOCUMENTOS}
+\subcap{geração de documentos}
 
 \subsubsection{PDFKit}
 PDFKit é uma biblioteca Node.js para geração de documentos PDF no lado do servidor, sem dependência de ferramentas externas como wkhtmltopdf \cite{wkhtmltopdf2025} ou LaTeX \cite{pdfkit2025}. Suporta texto com fontes embutidas, imagens, vetores e cores personalizadas.
@@ -130,7 +128,6 @@ A opção de desenhar o \textit{QR Code} manualmente com retângulos do PDFKit f
 
 No sistema, o \textit{QR Code} é gerado exclusivamente no servidor durante a produção do PDF, utilizando a cor primária do template para manter a identidade visual do documento. A legenda ``Verifique o certificado'' é posicionada abaixo do código para orientar o usuário. Alternativas como a implementação manual puramente em JavaScript foram descartadas por exigirem a reimplementação da codificação Reed-Solomon e da matriz de módulos, acrescentando complexidade sem ganho real em relação ao binding nativo do libqrencode.
 
-\subsection{INFRAESTRUTURA E FERRAMENTAS}
 \label{sec:infra}
 
 \subsubsection{Render}
@@ -162,7 +159,6 @@ Visual Studio Code \cite{vscode2025} é um editor de código-fonte desenvolvido 
 
 A produtividade foi ampliada com extensões como ESLint (análise estática), Prettier (formatação automática), Tailwind CSS IntelliSense (autocompletar para classes) e GitHub Copilot (sugestões contextuais).
 
-\subsection{SÍNTESE DAS TECNOLOGIAS}
 \label{sec:sintese}
 
 O Quadro~\ref{qua:tecnologias} apresenta um resumo das tecnologias discutidas neste capítulo, com suas respectivas finalidades no contexto do sistema.
