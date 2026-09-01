@@ -1,6 +1,8 @@
-﻿\section{MODELAGEM DO PROJETO}
-\subsection{LEVANTAMENTO DE REQUISITOS}
-\label{sec:requisitos}
+﻿\chaptercap{MODELAGEM DO PROJETO}
+
+Com base nos requisitos levantados na introdução, este capítulo descreve a modelagem completa do sistema. A discussão que se segue detalha o processo de levantamento de requisitos, os diagramas de casos de uso e classes, a arquitetura adotada, o modelo entidade-relacionamento e as interfaces implementadas.
+
+\subcap{levantamento de requisitos}\label{sec:requisitos}
 
 O levantamento de requisitos foi realizado por meio de um estudo de caso em uma organização do ramo de treinamentos corporativos, utilizando entrevista semiestruturada com o responsável pela emissão de certificados, juntamente com a observação direta do processo manual executado por ele. Durante a entrevista, foram identificadas as principais dificuldades enfrentadas, como o tempo elevado para emissão manual, a dificuldade em gerenciar grandes volumes de certificados e a ausência de um mecanismo de validação pública. A análise do processo permitiu mapear o fluxo completo de emissão, desde o cadastro de participantes até a entrega do certificado, servindo como base para a definição dos requisitos funcionais e não funcionais apresentados a seguir.
 
@@ -11,7 +13,7 @@ O levantamento de requisitos foi realizado por meio de um estudo de caso em uma 
 
 \input{partes/requisitos/criterios_aceitacao.tex}
 
-\subsection{DIAGRAMAS DE CASOS DE USO}
+\subcap{diagramas de casos de uso}
 
 O diagrama de casos de uso da Figura~\ref{fig:casos-uso} apresenta a visão completa do sistema, incluindo todas as funcionalidades planejadas para o produto final. É importante distinguir os \textbf{casos de uso de negócio} (descritos nesta seção) dos \textbf{casos de uso de aplicação} (classes do diagrama de classes). Os casos de uso de negócio --- como UC004 (Emitir Certificado Individual) e UC002 (Gerenciar Templates) --- representam \textit{o que} o sistema faz do ponto de vista do usuário. Já os casos de uso de aplicação --- como \code{EmitCertificateUseCase}, \code{GeneratePDFUseCase}, \code{VerifyCertificateUseCase} e \code{GetCertificateUseCase} --- são classes da camada de aplicação da arquitetura DDD que implementam \textit{como} o fluxo de negócio é orquestrado internamente, com granularidade mais fina. No MVP, um caso de uso de negócio pode ser implementado por um ou mais casos de uso de aplicação: por exemplo, UC004 (Emitir Certificado Individual) é orquestrado por \code{EmitCertificateUseCase} (validação e persistência) e \code{GeneratePDFUseCase} (geração do arquivo PDF).
 
@@ -21,10 +23,10 @@ As funcionalidades implementadas no escopo do MVP compreendem os casos de uso de
 
 \input{partes/diagramas/casos_de_uso_descricao}
 
-\subsection{DIAGRAMAS DE CLASSE}
+\subcap{diagramas de classe}
 \input{partes/diagramas/Diagrama_de_Classes}
 
-\subsection{ARQUITETURA DO SISTEMA}
+\subcap{arquitetura do sistema}
 
 A arquitetura do sistema foi projetada para atender aos requisitos de independência entre camadas, testabilidade e facilidade de manutenção. Optou-se por uma abordagem de duas aplicações independentes --- frontend e backend --- que se comunicam exclusivamente via API REST. Essa separação permite que cada aplicação seja desenvolvida, testada, implantada e escalada de forma independente, sem acoplamento tecnológico entre as camadas de apresentação e lógica de negócio.
 
@@ -46,9 +48,9 @@ O fluxo de comunicação entre as duas aplicações ocorre da seguinte forma: o 
 \input{partes/diagramas/arquitetura-backend}
 \input{partes/diagramas/arquitetura-frontend}
 
-\subsection{DIAGRAMA ENTIDADE-RELACIONAMENTO}
+\subcap{diagrama entidade-relacionamento}
 \input{partes/diagramas/der}
-\subsection{INTERFACES}
+\subcap{interfaces}
 
 No escopo do MVP, foram implementadas sete telas principais que atendem aos requisitos funcionais prioritários (\textit{Must have} e \textit{Should have}). As telas estão organizadas entre páginas públicas (acessíveis sem autenticação) e páginas do painel administrativo (com sidebar de navegação). As figuras a seguir apresentam cada tela com sua respectiva descrição e os requisitos funcionais atendidos.
 

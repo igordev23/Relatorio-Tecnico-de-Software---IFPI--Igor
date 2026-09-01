@@ -5,7 +5,7 @@
 % ---------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[brazil]{babel}
+\usepackage[brazilian]{babel}
 
 % Hifenação correta para palavras inglesas
 \hyphenation{
@@ -63,6 +63,7 @@
 \usepackage{indentfirst}
 \usepackage{lipsum}
 \usepackage{tikz}
+\usepackage[explicit]{titlesec}
 \usepackage{array}
 \usepackage{tabularx}
 \usetikzlibrary{arrows.meta,positioning,shapes}
@@ -71,14 +72,6 @@
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
-
-% Títulos das subseções: caixa alta e sem negrito
-\makeatletter
-\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
-                                     {1.5ex \@plus .2ex}%
-                                     {\normalfont\normalsize}}
-\makeatother
 
 % Ambiente para Quadros (dados textuais, ABNT)
 \floatstyle{plaintop}
@@ -174,9 +167,24 @@
 \setlength{\parindent}{1.25cm}
 
 % Sem espaço entre parágrafos
-\setlength{\parskip}{0pt}
+\setlength{\parskip}{6pt}
 
 \captionsetup{labelfont=bf, labelsep=endash, font=normalsize}
+
+% =================================== PADRONIZAÇÃO DOS TÍTULOS ===================================
+\titleformat{\section}
+  {\normalfont\fontsize{14}{17}\bfseries}{\thesection}{1em}{#1}
+\titleformat{\subsection}
+  {\normalfont\fontsize{11}{13.2}\bfseries}{\thesubsection}{1em}{\MakeLowercase{#1}}
+\titleformat{\subsubsection}
+  {\normalfont\itshape\small}{\thesubsubsection}{1em}{#1}
+\titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+\titlespacing{\subsection}{0pt}{10pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing{\subsubsection}{0pt}{8pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+% Comando auxiliar para capítulos: maiúsculas + numeração
+\newcommand{\chaptercap}[1]{\section{\uppercase{#1}}}
+% Subtítulo: minúsculas + negrito + numeração
+\newcommand{\subcap}[1]{\subsection{\textbf{#1}}}
 \renewcommand{\arraystretch}{0.9}
 
 % Dados do trabalho
@@ -184,7 +192,7 @@
 \newcommand{\InstituicaoLower}{Instituto Federal de Educação, Ciência e Tecnologia do Piauí}
 \newcommand{\Campus}{Campus Piripiri}
 \newcommand{\Curso}{Tecnólogo em Análise e Desenvolvimento de Sistemas}
-\newcommand{\Titulo}{CERTIFYHUB: SISTEMA PARA EMISSÃO, GESTÃO E AUTENTICAÇÃO DE CERTIFICADOS}
+\newcommand{\Titulo}{CertifyHub: \textbf{sistema para emissão, gestão e autenticação de certificados}}
 \newcommand{\Autor}{Francisco Igor Silva Santos}
 \newcommand{\Matricula}{2024116TADS0030}
 \newcommand{\Orientador}{Prof. Me. Mayllon Veras da Silva}
