@@ -1,6 +1,6 @@
 \subsubsection{Plano de Testes}
 
-\paragraph{Estratégia de Testes}
+\textbf{Estratégia de Testes}
 
 O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.1) e nos critérios de aceitação (Quadro~\ref{qua:criterios}), contemplando exclusivamente os módulos implementados no escopo do MVP. A estratégia adotada prioriza testes unitários como primeira camada de defesa, combinada com testes de integração para validação das camadas de infraestrutura e testes \textit{end-to-end} (E2E) para verificação do fluxo completo do sistema.
 
@@ -11,7 +11,7 @@ O plano de testes foi elaborado com base nos requisitos funcionais (Seção~3.1.
     \item \textbf{Massa de dados:} Os testes de repositório utilizam o cliente Supabase \textit{mockado}, dispensando banco de dados real. Para testes das entidades de domínio, os dados são construídos em memória (\textit{in-memory}), garantindo isolamento total entre cenários.
 \end{itemize}
 
-\paragraph{Casos de Teste}
+\textbf{Casos de Teste}
 
 Cada caso de teste é identificado por um código único (CT\textit{nnn}) e descreve o cenário avaliado juntamente com o resultado esperado. O Quadro~\ref{qua:plano-testes} apresenta o plano completo, organizado por módulo e tipo de teste.
 

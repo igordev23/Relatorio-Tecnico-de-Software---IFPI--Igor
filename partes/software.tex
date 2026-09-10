@@ -3,7 +3,7 @@
 O capítulo anterior apresentou a modelagem do sistema, definindo requisitos, diagramas e arquitetura. Este capítulo detalha a implementação prática do software, incluindo o ambiente de implantação, exemplos de código relevantes e a estratégia de testes adotada.
 
 
-\subcap{implantação}
+\subcap{IMPLANTACÃCO}
 
 O sistema é composto por duas aplicações independentes implantadas na plataforma Render, a partir de dois repositórios no GitHub: frontend (\url{https://github.com/igordev23/certificate-hub}) e backend (\url{https://github.com/igordev23/Certificate-server}). O sistema é publicado sob subdomínios automáticos fornecidos pela plataforma, garantindo tráfego criptografado via SSL/HTTPS de forma nativa. O frontend pode ser acessado, por exemplo, em \url{https://certificate-hub.onrender.com}, enquanto a API do backend responde em \url{https://certificate-server-zd0m.onrender.com}.
 
@@ -222,7 +222,7 @@ export class VerifyCertificateUseCase {
 \end{lstlisting}
 \noindent\raggedright\small\textit{Fonte: Elaborado pelo Autor (2026).}
 
-\subcap{testes}
+\subcap{TESTES}
 
 Conforme definido nos objetivos específicos da Seção~\ref{sec:objetivos-especificos}, foram planejados e executados testes unitários para validação dos módulos implementados no escopo do MVP. Os casos de teste foram elaborados com base nos critérios de aceitação apresentados no Quadro~\ref{qua:criterios} e abrangem os requisitos funcionais classificados como prioritários — \textit{Must have} [M] e \textit{Should have} [S] — essenciais para a primeira versão do sistema.
 

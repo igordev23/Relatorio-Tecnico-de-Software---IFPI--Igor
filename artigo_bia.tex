@@ -175,16 +175,16 @@
 \titleformat{\section}
   {\normalfont\fontsize{14}{17}\bfseries}{\thesection}{1em}{#1}
 \titleformat{\subsection}
-  {\normalfont\fontsize{11}{13.2}\bfseries}{\thesubsection}{1em}{\MakeLowercase{#1}}
+  {\normalfont\fontsize{11}{13.2}}{\thesubsection}{1em}{#1}
 \titleformat{\subsubsection}
-  {\normalfont\itshape\small}{\thesubsubsection}{1em}{#1}
+  {\normalfont\fontsize{11}{13.2}\bfseries}{\thesubsubsection}{1em}{\MakeLowercase{#1}}
 \titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
 \titlespacing{\subsection}{0pt}{10pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
 \titlespacing{\subsubsection}{0pt}{8pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
 % Comando auxiliar para capítulos: maiúsculas + numeração
 \newcommand{\chaptercap}[1]{\section{\uppercase{#1}}}
-% Subtítulo: minúsculas + negrito + numeração
-\newcommand{\subcap}[1]{\subsection{\textbf{#1}}}
+\newcommand{\subcap}[1]{\subsection{#1}}
+\setcounter{tocdepth}{3}
 \renewcommand{\arraystretch}{0.9}
 
 % Dados do trabalho
@@ -192,7 +192,7 @@
 \newcommand{\InstituicaoLower}{Instituto Federal de Educação, Ciência e Tecnologia do Piauí}
 \newcommand{\Campus}{Campus Piripiri}
 \newcommand{\Curso}{Tecnólogo em Análise e Desenvolvimento de Sistemas}
-\newcommand{\Titulo}{CertifyHub: \textbf{sistema para emissão, gestão e autenticação de certificados}}
+\newcommand{\Titulo}{CERTIFYHUB: SISTEMA PARA EMISSÃO, GESTÃO E AUTENTICAÇÃO DE CERTIFICADOS}
 \newcommand{\Autor}{Francisco Igor Silva Santos}
 \newcommand{\Matricula}{2024116TADS0030}
 \newcommand{\Orientador}{Prof. Me. Mayllon Veras da Silva}
