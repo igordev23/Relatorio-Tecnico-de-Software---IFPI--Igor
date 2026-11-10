@@ -11,4 +11,5 @@
 *.lof
 *.lot
 *.loq
-
+__pycache__/
+*.py[cod]
