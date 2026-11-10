@@ -126,7 +126,7 @@ Recuo de primeira linha **1,25 cm**; texto justificado; espaçamento antes/depoi
 **Fonte:** IFPI §3.5; NBR10719 §5.2.
 Pré-textuais contadas, não numeradas. Em trabalho digitado só no anverso, contar sequencialmente a partir da folha de rosto. Numeração arábica desde a primeira folha textual, canto superior direito, a 2 cm do topo e a 2 cm da direita. Apêndices e anexos continuam a paginação do texto.
 Se impresso frente e verso, numerar anversos no canto superior direito e versos no canto superior esquerdo.
-**Desvio do PDF atual:** posição medida ≈ 1,64 cm do topo / ~3,3 cm da direita; a regra anterior havia tratado isso como tolerância, mas não corresponde às medidas do Manual. Só manter como exceção se houver confirmação documentada do BIA.
+Após o ajuste, a caixa do número na parte textual mede aproximadamente 2,00 cm do topo e 2,00 cm da direita.
 
 ---
 
@@ -248,9 +248,8 @@ O Manual também apresenta orientações específicas para elementos opcionais e
 ### Pendências observadas no PDF atual
 
 1. **Folha de aprovação:** obrigatória no modelo de monografia/TCC do IFPI (§5; TPL), ausente no PDF. O cap. 9 do relatório técnico não a relaciona. O template exige data de aprovação e dados da banca, mas orienta não colher assinaturas. Resolver com o BIA e obter os dados corretos antes de completar; não inventá-los.
-2. **Posição da paginação:** a posição medida no PDF não atende literalmente à distância de 2 cm do Manual (§3.5). A exceção antes descrita como tolerância não está comprovada por uma regra do IFPI.
-3. **Espaçamento:** 1,5 é a regra geral do cap. 3 e do modelo de monografia; simples é a recomendação específica da NBR 10719 para relatório. A escolha simples está documentada em R15, mas é uma decisão híbrida, não conformidade simultânea às duas recomendações.
-4. **Verso da folha de rosto:** o Manual prevê equipe técnica para relatório e ficha catalográfica para TCC. O PDF usa a ficha e não inclui equipe técnica; essa adaptação deve ser confirmada com o BIA se a equipe for elemento requerido para este relatório.
+2. **Espaçamento:** 1,5 é a regra geral do cap. 3 e do modelo de monografia; simples é a recomendação específica da NBR 10719 para relatório. A escolha simples está documentada em R15, mas é uma decisão híbrida, não conformidade simultânea às duas recomendações.
+3. **Verso da folha de rosto:** o Manual prevê equipe técnica para relatório e ficha catalográfica para TCC. O PDF usa a ficha e não inclui equipe técnica; essa adaptação deve ser confirmada com o BIA se a equipe for elemento requerido para este relatório.
 
 Assim, os testes existentes verificam um subconjunto dos requisitos R01–R36. A aprovação da banca/BIA e os conflitos acima requerem conferência ou decisão humana; os testes não garantem ausência de novas devoluções.
 
