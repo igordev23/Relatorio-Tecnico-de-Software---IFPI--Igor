@@ -14,7 +14,7 @@ Checklist numerado para validação do PDF (`artigo_bia.pdf` / `anexos/2026_tcc_
 
 Este trabalho é um **relatório técnico apresentado como TCC**, com estrutura de relatório (IFPI cap. 9 e NBR 10719) e apresentação adaptada ao modelo de monografia de TCC do IFPI (cap. 5 e template). As regras do cap. 3 aplicáveis a ambos os tipos também valem. Quando as fontes divergem, a regra e a decisão adotada são registradas explicitamente abaixo; uma exigência BIA específica só prevalece quando documentada.
 
-**Ressalva de conformidade:** o cap. 5 do Manual IFPI exige folha de aprovação para monografia/TCC, mas a estrutura do cap. 9 para relatório técnico não a enumera. O PDF atual não contém essa folha. Até haver dispensa expressa do BIA, este checklist trata a folha de aprovação como exigência do modelo de TCC e registra a ausência como pendência; não inventar data ou dados da banca.
+**Ressalva de conformidade:** o cap. 5 do Manual IFPI exige folha de aprovação no modelo de monografia/TCC, mas a estrutura do cap. 9 para relatório técnico não a enumera. O PDF atual não contém uma folha separada; a data de aprovação (15/07/2026) aparece junto ao abstract. Como nenhuma das cinco devoluções do BIA pediu essa folha, registra-se a diferença entre os modelos, mas ela não é tratada como bloqueio conhecido para este relatório técnico. Não inserir uma folha ou dados de banca sem solicitação/orientação do BIA.
 
 ---
 
@@ -28,7 +28,7 @@ Ordem aplicável ao TCC, com elementos opcionais apenas quando usados:
 2. Folha de rosto
 3. Ficha catalográfica (no verso da folha de rosto)
 4. Errata, se houver (inserida após a folha de rosto, quando necessária)
-5. Folha de aprovação (obrigatória no modelo de monografia/TCC; pendente no PDF atual)
+5. Folha de aprovação (obrigatória no modelo de monografia/TCC; não consta separadamente no PDF; ver ressalva de conformidade)
 6. Dedicatória, agradecimentos e epígrafe, se houver
 7. Resumo em português + palavras-chave
 8. Abstract + keywords, conforme o modelo de monografia do IFPI
@@ -245,11 +245,11 @@ O formulário de identificação é opcional quando há dados internacionais de 
 
 O Manual também apresenta orientações específicas para elementos opcionais e modelos bibliográficos por tipo de fonte. Os elementos opcionais não foram transformados em requisitos do PDF; os modelos de referência aplicáveis estão abrangidos em R31. A matriz acima registra onde cada grupo de requisitos foi incorporado, não afirma que todos os itens são verificáveis automaticamente.
 
-### Pendências observadas no PDF atual
+### Diferenças e decisões documentadas
 
-1. **Folha de aprovação:** obrigatória no modelo de monografia/TCC do IFPI (§5; TPL), ausente no PDF. O cap. 9 do relatório técnico não a relaciona. O template exige data de aprovação e dados da banca, mas orienta não colher assinaturas. Resolver com o BIA e obter os dados corretos antes de completar; não inventá-los.
+1. **Folha de aprovação:** o modelo de monografia/TCC do IFPI a prevê, mas o cap. 9 para relatório técnico não a enumera. O PDF não tem folha separada, embora registre a data de aprovação junto ao abstract. Nenhuma das cinco devoluções do BIA a exigiu; por isso, a ausência não é classificada como bloqueio conhecido para esta submissão.
 2. **Espaçamento:** 1,5 é a regra geral do cap. 3 e do modelo de monografia; simples é a recomendação específica da NBR 10719 para relatório. A escolha simples está documentada em R15, mas é uma decisão híbrida, não conformidade simultânea às duas recomendações.
-3. **Verso da folha de rosto:** o Manual prevê equipe técnica para relatório e ficha catalográfica para TCC. O PDF usa a ficha e não inclui equipe técnica; essa adaptação deve ser confirmada com o BIA se a equipe for elemento requerido para este relatório.
+3. **Verso da folha de rosto:** o Manual prevê equipe técnica para relatório e ficha catalográfica para TCC. O PDF usa a ficha e não inclui equipe técnica; nenhuma devolução citou essa diferença.
 
 Assim, os testes existentes verificam um subconjunto dos requisitos R01–R36. A aprovação da banca/BIA e os conflitos acima requerem conferência ou decisão humana; os testes não garantem ausência de novas devoluções.
 
