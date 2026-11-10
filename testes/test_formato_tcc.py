@@ -427,8 +427,8 @@ class TestFormatoTCC(unittest.TestCase):
             nums = [w for w in words if re.fullmatch(r"\d+", w[4]) and w[1] < 70 and w[0] > 450]
             if nums:
                 found = True
-                self.assertLess(nums[0][1], 70)
-                self.assertGreater(nums[0][0], 450)
+                self.assertAlmostEqual(nums[0][1], 2 * CM, delta=1.0)
+                self.assertAlmostEqual(self.doc[i].rect.width - nums[0][2], 2 * CM, delta=1.0)
                 break
         self.assertTrue(found, "Numeração da parte textual não encontrada")
 

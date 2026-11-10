@@ -55,7 +55,9 @@
 \usepackage{pdfpages}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\setlength{\headheight}{14.5pt}
+\setlength{\headheight}{17.7pt}
+\setlength{\headsep}{14.9pt}
+\fancyheadoffset[R]{0.65cm}
 \usepackage{enumitem}
 \setlist[itemize]{itemsep=3pt, topsep=0pt, partopsep=0pt, leftmargin=*}
 \newcommand{\code}[1]{\texttt{\seqsplit{#1}}}
@@ -87,7 +89,7 @@
 % Configuração de página (numeração)
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\thepage}
+\fancyhead[R]{\thepage\hspace*{0.65cm}}
 \renewcommand{\headrulewidth}{0pt}
 \fancypagestyle{pretextual}{
   \fancyhf{}
@@ -365,7 +367,7 @@ Training companies and educational institutions still rely on manual processes a
 \renewcommand{\thepage}{\arabic{page}}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\thepage}
+\fancyhead[R]{\thepage\hspace*{0.65cm}}
 \renewcommand{\headrulewidth}{0pt}
 \thispagestyle{fancy}
 
