@@ -53,7 +53,7 @@
 \usepackage{rotating}
 \usepackage{pdflscape}
 \usepackage{pdfpages}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \setlength{\headheight}{14.5pt}
 \usepackage{enumitem}
@@ -172,19 +172,51 @@
 \captionsetup{labelfont=bf, labelsep=endash, font=normalsize}
 
 % =================================== PADRONIZAÇÃO DOS TÍTULOS ===================================
+% 1. Primária: Caixa alta com negrito (Ex: 1 INTRODUÇÃO)
 \titleformat{\section}
-  {\normalfont\fontsize{14}{17}\bfseries}{\thesection}{1em}{#1}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{\uppercase{#1}}
+
+% 2. Secundária: Caixa alta SEM negrito (Ex: 1.1 OBJETIVOS)
 \titleformat{\subsection}
-  {\normalfont\fontsize{11}{13.2}\bfseries}{\thesubsection}{1em}{\MakeLowercase{#1}}
+  {\normalfont\fontsize{12}{15}}{\thesubsection}{1em}{\uppercase{#1}}
+
+% 3. Terciária: Minúsculas (Sentence case) COM negrito (Ex: 1.1.1 Geral)
 \titleformat{\subsubsection}
-  {\normalfont\itshape\small}{\thesubsubsection}{1em}{#1}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesubsubsection}{1em}{#1}
+
+% 4. Títulos sem indicativo numérico (REFERÊNCIAS, ANEXOS, listas):
+%    caixa alta, negrito, centralizados e mesmo corpo das seções primárias
+\titleformat{name=\section,numberless}
+  {\normalfont\fontsize{12}{15}\bfseries\centering}{}{0pt}{\MakeUppercase{#1}}
+\titlespacing*{name=\section,numberless}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+
 \titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
 \titlespacing{\subsection}{0pt}{10pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
 \titlespacing{\subsubsection}{0pt}{8pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
 % Comando auxiliar para capítulos: maiúsculas + numeração
 \newcommand{\chaptercap}[1]{\section{\uppercase{#1}}}
-% Subtítulo: minúsculas + negrito + numeração
-\newcommand{\subcap}[1]{\subsection{\textbf{#1}}}
+% Subtítulo: maiúsculas sem negrito + numeração
+\newcommand{\subcap}[1]{\subsection{\uppercase{#1}}}
+
+% Formatação no Sumário (ABNT NBR 6027 e BIA/IFPI)
+% Todos os títulos alinhados à esquerda na mesma coluna (modelo IFPI):
+% números no início da margem e títulos a 4.5em.
+% Primária: Negrito | Secundária: sem negrito | Terciária: Negrito
+\makeatletter
+\renewcommand*\l@section[2]{%
+  \ifnum \c@tocdepth >\z@
+    \addpenalty\@secpenalty
+    \addvspace{1.0em \@plus\p@}%
+    \@dottedtocline{1}{0em}{4.5em}{\bfseries #1}{#2}%
+  \fi}
+\renewcommand*\l@subsection{\@dottedtocline{2}{0em}{4.5em}}
+\renewcommand*\l@subsubsection[2]{%
+  \ifnum \c@tocdepth >2\relax
+    \@dottedtocline{3}{0em}{4.5em}{\textbf{#1}}{#2}%
+  \fi}
+\makeatother
+
 \renewcommand{\arraystretch}{0.9}
 
 % Dados do trabalho
@@ -192,11 +224,11 @@
 \newcommand{\InstituicaoLower}{Instituto Federal de Educação, Ciência e Tecnologia do Piauí}
 \newcommand{\Campus}{Campus Piripiri}
 \newcommand{\Curso}{Tecnólogo em Análise e Desenvolvimento de Sistemas}
-\newcommand{\Titulo}{CERTIFYHUB: \textbf{sistema para emissão, gestão e autenticação de certificados}}
+\newcommand{\Titulo}{CERTIFYHUB: sistema para emissão, gestão e autenticação de certificados}
 \newcommand{\Autor}{Francisco Igor Silva Santos}
 \newcommand{\Matricula}{2024116TADS0030}
 \newcommand{\Orientador}{Prof. Me. Mayllon Veras da Silva}
-\newcommand{\Cidade}{Piripiri -- PI}
+\newcommand{\Cidade}{PIRIPIRI -- PI}
 \newcommand{\Ano}{2026}
 
 % ---------------------------------------------------------
@@ -216,8 +248,8 @@
 \textbf{FRANCISCO IGOR SILVA SANTOS} \\[2.5cm]
 \textbf{\Titulo} \\[6cm]
 
-\Cidade\\
-\Ano
+\textbf{\Cidade}\\
+\textbf{\Ano}
 \end{center}
 \end{titlepage}
 
@@ -454,7 +486,7 @@ Vislumbrando a evolução contínua da plataforma, recomenda-se a exploração d
 % ================= ANEXOS =================
 \newpage
 
-\includepdf[pages=-,width=\textwidth,trim=0 3cm 0 0,clip,pagecommand={\thispagestyle{fancy}\section{ANEXOS}\begin{center}\large\textbf{ANEXO A --- Declaração de Entrega do Código-Fonte}\end{center}\vspace{0.5cm}}]{anexos/Processo-requerimento.pdf}
+\includepdf[pages=-,width=\textwidth,trim=0 3cm 0 0,clip,pagecommand={\thispagestyle{fancy}\section*{ANEXOS}\addcontentsline{toc}{section}{ANEXOS}\begin{center}\large\textbf{ANEXO A --- Declaração de Entrega do Código-Fonte}\end{center}\vspace{0.5cm}}]{anexos/Processo-requerimento.pdf}
 
 \clearpage
 

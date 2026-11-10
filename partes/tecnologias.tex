@@ -4,7 +4,7 @@ Este capítulo apresenta o conjunto de tecnologias empregadas no desenvolvimento
 
 \label{sec:tecnologias}
 
-\subcap{frontend}\label{sec:frontend}
+\subcap{FRONTEND}\label{sec:frontend}
 
 A camada de apresentação adota a arquitetura de \textit{Single Page Application} (SPA), conforme estabelecido no requisito não funcional \ref{rnf:independent-apps}. Nesse modelo, o navegador carrega um único documento HTML e as atualizações de conteúdo ocorrem dinamicamente via JavaScript, sem recarregamento completo da página \cite{romanov2025, karka2025}. A comunicação com o backend é realizada exclusivamente via API REST, o que desacopla as duas aplicações e permite que cada uma evolua com seu próprio ciclo de vida.
 
@@ -101,7 +101,9 @@ Zod é uma biblioteca de validação de esquemas que, na versão 4, oferece infe
 \subsubsection{Arquitetura e Padrões}
 A arquitetura em camadas adotada no backend organiza o código em quatro pacotes: \code{domain}, \code{application}, \code{infrastructure} e \code{app}. O pacote \code{domain} contém as entidades e interfaces de repositório. O pacote \code{application} abriga os \textit{use cases} de emissão, geração e verificação, além dos DTOs. O pacote \code{infrastructure} implementa os repositórios (\code{SupabaseCertificateRepository}, \code{SupabaseTemplateRepository}) e serviços (\code{PDFKitService}). O \code{app} contém os \textit{Route Handlers}. Cada \textit{use case} possui uma única responsabilidade, e as entidades encapsulam regras de negócio --- \code{Certificate} valida a data antes de alterá-la.
 
-\subcap{banco de dados}
+\subcap{BANCO DE DADOS}
+
+Esta seção descreve a camada de persistência do sistema. A escolha de um banco relacional gerenciado (PostgreSQL por meio do Supabase) foi orientada pela necessidade de integridade referencial, transações ACID e consultas complexas sobre os dados de certificados e templates, conforme detalhado a seguir.
 
 \subsubsection{Supabase e PostgreSQL}
 Supabase é uma plataforma \textit{open-source} que oferece PostgreSQL como serviço gerenciado, com APIs REST auto-geradas e autenticação integrada \cite{supabase2025}. Diferentemente do Firebase (Google), que utiliza um banco NoSQL proprietário, o Supabase utiliza PostgreSQL, um banco relacional maduro que permite consultas complexas, integridade referencial e transações ACID.
@@ -110,7 +112,9 @@ A escolha do Supabase em vez de alternativas como Firebase foi motivada pelo mod
 
 No sistema, o Supabase é utilizado exclusivamente como banco de dados relacional. As consultas são construídas através do \textit{Query Builder} nativo (\code{@supabase/supabase-js} e \code{@supabase/ssr}), dispensando o uso de ORMs pesados como Prisma ou TypeORM. O PostgreSQL 16 \cite{postgresql2025} atua como o banco de dados subjacente. A opção por utilizar o SDK oficial em vez de um ORM tradicional baseou-se na redução da sobrecarga de processamento (\textit{overhead}) e na mitigação do excesso de arquivos de configuração, permitindo usufruir da tipagem gerada automaticamente pelo Supabase de forma muito mais leve e com excelente controle granular das consultas. O esquema contém duas tabelas principais: \code{templates} (coluna \code{layout\_config} do tipo JSONB) e \code{certificates} (índices em \code{recipient\_cpf} e \code{verification\_code}). A nomenclatura segue \textit{snake\_case} no banco e \textit{camelCase} no código, com mapeamento manual nos repositórios.
 
-\subcap{geração de documentos}
+\subcap{GERAÇÃO DE DOCUMENTOS}
+
+Esta seção descreve as bibliotecas responsáveis pela produção dos certificados em PDF no lado do servidor. A geração programática de documentos foi adotada para garantir consistência visual, segurança e escalabilidade, com destaque para a biblioteca PDFKit e a geração de QR Codes de verificação.
 
 \subsubsection{PDFKit}
 PDFKit é uma biblioteca Node.js para geração de documentos PDF no lado do servidor, sem dependência de ferramentas externas como wkhtmltopdf \cite{wkhtmltopdf2025} ou LaTeX \cite{pdfkit2025}. Suporta texto com fontes embutidas, imagens, vetores e cores personalizadas.
