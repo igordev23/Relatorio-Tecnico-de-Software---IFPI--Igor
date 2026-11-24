@@ -6,6 +6,18 @@ Relatório técnico de software desenvolvido como Trabalho de Conclusão de Curs
 
 ---
 
+## Publicado na BIA
+
+Este TCC foi aprovado pela biblioteca e publicado no **BIA — Repositório Institucional do IFPI**.
+
+- **Trabalho:** CERTIFYHUB: sistema para emissão, gestão e autenticação de certificados
+- **Coleção:** Tecnologia em Análise e Desenvolvimento de Sistemas — Piripiri
+- **Endereço permanente:** https://bia.ifpi.edu.br/handle/123456789/6145
+
+Use este endereço para citar e divulgar o trabalho (por exemplo, no currículo Lattes).
+
+---
+
 ## Tipo de documento
 
 Este trabalho é um **relatório técnico apresentado como TCC**, com estrutura de relatório (IFPI cap. 9 e NBR 10719) e apresentação adaptada ao modelo de monografia de TCC do IFPI (cap. 5 e template). Por ser uma adaptação, **pode diferir um pouco do documento oficial da disciplina** — quando há divergência entre as fontes, a regra e a decisão adotada são registradas explicitamente em `regras-relatorio-monografia.md`.
