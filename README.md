@@ -40,46 +40,24 @@ O título segue o formato aceito pela BIA: palavra principal em caixa alta, subt
 
 ---
 
-## Formato aceito pela BIA (repositório para submissão à BIA)
+## O repositório
 
-Este repositório é o canal de entrega do TCC à BIA (Biblioteca) do IFPI. O modelo final aprovado está na branch `main`, preparado a partir da branch `bia` (a última modificada antes do modelo aprovado).
+Este repositório guarda o modelo final do TCC aprovado pela BIA (Biblioteca do IFPI), preparado a partir da branch `bia` e publicado na branch `main`. O trabalho já foi aprovado e publicado no Repositório Institucional do IFPI (veja a seção "Publicado na BIA" acima).
 
-### Regras aplicadas (checklist R01–R36)
+O que você encontra aqui:
 
-Documentadas em `regras-relatorio-monografia.md`, com base em:
+- **`artigo_bia.tex`** — fonte LaTeX do modelo de TCC, já no formato aceito pela BIA (título `CERTIFYHUB` em maiúsculo, subtítulo minúsculo e negrito, hierarquia de títulos e sumário conforme as devoluções da biblioteca).
+- **`artigo_bia.pdf`** — PDF final do modelo.
+- **`anexos/2026_tcc_fisSantos.pdf`** — PDF de entrega, idêntico ao `artigo_bia.pdf`.
+- **`anexos/Processo-requerimento.pdf`**, **`anexos/ficha_catalografica.pdf`** e **`anexos/requerimento.pdf`** — documentos de apoio do TCC.
+- **`regras-relatorio-monografia.md`** — registro das regras seguidas (Manual IFPI, NBR 10719 e devoluções da BIA), para referência futura.
+- **`REGISTRO_BIA/`** — cópias do template de monografia, da NBR 10719 e de outros documentos usados na formatação.
+- **`testes/test_formato_tcc.py`** — suíte de validação automática que confere se o PDF segue o formato definido (margens, fonte, paginação, hierarquia de títulos, etc.).
+- **`partes/`** — capítulos do relatório em LaTeX (introdução, modelagem, software, considerações, requisitos, diagramas, etc.).
+- **`imagens/`** — figuras usadas no documento.
+- **`registro NIT/`** e **`regrasABNT/`** — documentação de registro de software e manuais ABNT consultados.
 
-- Manual de Trabalhos Acadêmicos do IFPI (cap. 3, 5, 9, 10, 11)
-- ABNT NBR 10719:2015 (`REGISTRO_BIA/nbr-10719-atualizada.pdf`)
-- Template de monografia do IFPI (`REGISTRO_BIA/MONOGRAFIATEMPLATE.pdf`)
-- 5 devoluções do BIA (checklist anti-reincidência D1–D9)
-
-### Principais exigências da BIA (D1–D9)
-
-| ID | Exigência | Onde está |
-|----|-----------|-----------|
-| D1 | Título `CERTIFYHUB` maiúsculo | Capa (`artigo_bia.tex`, linha 229) |
-| D2 | Texto da capa em maiúscula (exceto subtítulo) | Capa (`artigo_bia.tex`) |
-| D3 | Ficha catalográfica presente | `anexos/ficha_catalografica.pdf` |
-| D4 | Texto entre seção e subdivisão (ex.: 1.1 → 1.1.1) | Partes textuais |
-| D5 | Subtítulo minúsculo e negrito | Capa (`artigo_bia.tex`) |
-| D6 | Fonte dos títulos padronizada (12 pt / hierarquia) | `artigo_bia.tex` |
-| D7 | Sumário alinhado à esquerda (coluna única) | `artigo_bia.tex` |
-| D8 | Secundárias: caixa alta, sem negrito | `artigo_bia.tex` |
-| D9 | Terciárias: minúsculas com negrito | `artigo_bia.tex` |
-
-### Arquivos de entrega
-
-- `artigo_bia.tex` — fonte LaTeX do modelo de TCC conforme formato aprovado pela BIA
-- `artigo_bia.pdf` — PDF final do artigo/modelo
-- `anexos/2026_tcc_fisSantos.pdf` — PDF de entrega (idêntico a `artigo_bia.pdf`, regra R27)
-- `anexos/Processo-requerimento.pdf` — processo/requerimento do TCC
-- `anexos/ficha_catalografica.pdf` — ficha catalográfica (obrigatória para TCC)
-- `anexos/requerimento.pdf` — requerimento
-- `regras-relatorio-monografia.md` — checklist de regras (fonte: Manual IFPI, NBR 10719, devoluções BIA)
-- `REGISTRO_BIA/` — registro do artigo, template e documentação da BIA/NIT
-- `testes/test_formato_tcc.py` — suíte de validação de formato (R01–R27)
-
-> **Nota:** arquivos com dados sensíveis (termo de autorização de arquivamento, ficha com dados pessoais e termo `2026_termo_fisSantos.pdf`) foram removidos do histórico do repositório e não constam no `main`.
+> **Nota:** arquivos com dados pessoais (termo de autorização de arquivamento, ficha com dados sensíveis e o termo `2026_termo_fisSantos.pdf`) foram removidos do histórico do repositório e não constam no `main`.
 
 ---
 
