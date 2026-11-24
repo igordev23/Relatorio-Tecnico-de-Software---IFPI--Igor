@@ -10,4 +10,6 @@
 *.blg
 *.lof
 *.lot
-*.pdf
+*.loq
+__pycache__/
+*.py[cod]
