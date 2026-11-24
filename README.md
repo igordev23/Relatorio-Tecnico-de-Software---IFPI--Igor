@@ -162,20 +162,53 @@ Relatorio-Tecnico-de-Software---IFPI--Igor/
 │   ├── capa.tex
 │   ├── consideracoes.tex
 │   ├── diagramas/
+│   │   ├── arquitetura-backend.tex
+│   │   ├── arquitetura-frontend.tex
+│   │   ├── casos_de_uso.tex
+│   │   ├── casos_de_uso_descricao.tex
+│   │   ├── deploy.tex
+│   │   ├── der.tex
+│   │   ├── der BACKUP.tex
+│   │   ├── Diagrama_de_Classes.tex
+│   │   └── interfaces.tex
 │   ├── folha_rosto.tex
 │   ├── introducao.tex
-│   ├── modelo/
+│   ├── modelagem.tex
+│   ├── plano_testes.tex
 │   ├── requisitos/
+│   │   ├── criterios_aceitacao.tex
+│   │   ├── mvp_quadro.tex
+│   │   ├── rastreabilidade.tex
+│   │   ├── regras_negocio.tex
+│   │   ├── rf.tex
+│   │   └── rfn.tex
 │   ├── resumo.tex
 │   ├── siglas.tex
 │   ├── software.tex
 │   └── tecnologias.tex
-├── requisitos/
-│   ├── criterios_aceitacao.tex
-│   ├── mvp_quadro.tex
-│   ├── rastreabilidade.tex
-│   └── regras_negocio.tex
-└── referencias.bib
+├── partes/diagramas/
+├── imagens/
+├── registro NIT/
+│   ├── campo_de_aplicacao.pdf
+│   └── tipos_de_programa.pdf
+├── regrasABNT/
+│   ├── MANUAL-ABNT-GRADUCAO-2026-at.pdf
+│   └── MANUALDETRABALHOSACADMICOS2024-eb6489917ee640b985f6c0a5efc585c9.pdf
+├── REGISTRO_BIA/
+│   ├── artigo_bia.tex
+│   ├── copy_of_Artigo_template.docx
+│   ├── copy_of_Artigo_template.pdf
+│   ├── nbr-10719-atualizada.pdf
+│   ├── page_11.png
+│   ├── page_12.png
+│   └── page_13.png
+├── testes/
+│   └── test_formato_tcc.py
+├── artigo_bia.tex
+├── artigo_bia.pdf
+├── referencias.bib
+├── regras-relatorio-monografia.md
+└── README.md
 ```
 
 ### Branches
@@ -223,17 +256,6 @@ pdflatex artigo_bia.tex
 O PDF gerado será `artigo_bia.pdf` (idêntico a `anexos/2026_tcc_fisSantos.pdf`, regra R27).
 
 > **Nota:** são necessárias 3 passagens do `pdflatex` (uma antes e duas depois do `bibtex`) para que referências, citações e sumário fiquem corretos.
-
----
-
-## Compilação
-
-```bash
-pdflatex artigo_bia.tex
-bibtex artigo_bia
-pdflatex artigo_bia.tex
-pdflatex artigo_bia.tex
-```
 
 ---
 
