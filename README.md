@@ -117,62 +117,38 @@ OK
 Relatorio-Tecnico-de-Software---IFPI--Igor/
 ├── artigo_bia.tex              # Fonte LaTeX do modelo aprovado pela BIA
 ├── artigo_bia.pdf              # PDF final do modelo
+├── referencias.bib             # Referências bibliográficas
+├── regras-relatorio-monografia.md  # Regras seguidas (Manual IFPI, NBR 10719, BIA)
 ├── README.md                   # Este arquivo
-├── regras-relatorio-monografia.md  # Checklist de regras (R01–R36)
-├── testes/
-│   └── test_formato_tcc.py     # Suíte de validação de formato (R01–R27)
+├── .gitignore
+├── abntex2-num-sentcase.bst
 ├── anexos/
 │   ├── 2026_tcc_fisSantos.pdf  # PDF de entrega (idêntico a artigo_bia.pdf)
-│   ├── 2026_termo_fisSantos.pdf
 │   ├── Processo-requerimento.pdf
 │   ├── ficha_catalografica.pdf
 │   └── requerimento.pdf
-├── REGISTRO_BIA/
-│   ├── artigo_bia.tex
-│   ├── copy_of_Artigo_template.docx
-│   ├── copy_of_Artigo_template.pdf
-│   ├── nbr-10719-atualizada.pdf
-│   ├── page_11.png
-│   ├── page_12.png
-│   └── page_13.png
+├── imagens/                    # Figuras usadas no documento
 ├── partes/
 │   ├── anexos.tex
 │   ├── capa.tex
 │   ├── consideracoes.tex
-│   ├── diagramas/
-│   │   ├── arquitetura-backend.tex
-│   │   ├── arquitetura-frontend.tex
-│   │   ├── casos_de_uso.tex
-│   │   ├── casos_de_uso_descricao.tex
-│   │   ├── deploy.tex
-│   │   ├── der.tex
-│   │   ├── der BACKUP.tex
-│   │   ├── Diagrama_de_Classes.tex
-│   │   └── interfaces.tex
 │   ├── folha_rosto.tex
 │   ├── introducao.tex
 │   ├── modelagem.tex
 │   ├── plano_testes.tex
-│   ├── requisitos/
-│   │   ├── criterios_aceitacao.tex
-│   │   ├── mvp_quadro.tex
-│   │   ├── rastreabilidade.tex
-│   │   ├── regras_negocio.tex
-│   │   ├── rf.tex
-│   │   └── rfn.tex
 │   ├── resumo.tex
 │   ├── siglas.tex
 │   ├── software.tex
-│   └── tecnologias.tex
-├── partes/diagramas/
-├── imagens/
-├── registro NIT/
+│   ├── tecnologias.tex
+│   ├── diagramas/              # Diagramas em LaTeX (classes, casos de uso, etc.)
+│   └── requisitos/             # RF, RNF, regras de negócio, rastreabilidade, etc.
+├── registro NIT/               # Documentos de registro de software no NIT/IFPI
 │   ├── campo_de_aplicacao.pdf
 │   └── tipos_de_programa.pdf
-├── regrasABNT/
+├── regrasABNT/                 # Manuais ABNT consultados
 │   ├── MANUAL-ABNT-GRADUCAO-2026-at.pdf
 │   └── MANUALDETRABALHOSACADMICOS2024-eb6489917ee640b985f6c0a5efc585c9.pdf
-├── REGISTRO_BIA/
+├── REGISTRO_BIA/               # Template de monografia, NBR 10719 e páginas da BIA
 │   ├── artigo_bia.tex
 │   ├── copy_of_Artigo_template.docx
 │   ├── copy_of_Artigo_template.pdf
@@ -180,13 +156,8 @@ Relatorio-Tecnico-de-Software---IFPI--Igor/
 │   ├── page_11.png
 │   ├── page_12.png
 │   └── page_13.png
-├── testes/
-│   └── test_formato_tcc.py
-├── artigo_bia.tex
-├── artigo_bia.pdf
-├── referencias.bib
-├── regras-relatorio-monografia.md
-└── README.md
+└── testes/
+    └── test_formato_tcc.py     # Validação automática de formato (R01–R27)
 ```
 
 ### Branches
