@@ -185,6 +185,47 @@ Relatorio-Tecnico-de-Software---IFPI--Igor/
 
 ---
 
+## Quick Start — Compilar localmente
+
+### 1. Baixe o repositório
+
+```bash
+git clone https://github.com/igordev23/Relatorio-Tecnico-de-Software---IFPI--Igor.git
+cd Relatorio-Tecnico-de-Software---IFPI--Igor
+```
+
+### 2. Instale o LaTeX (se ainda não tiver)
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get install texlive-full
+```
+
+**Fedora:**
+```bash
+sudo dnf install texlive-scheme-full
+```
+
+**macOS:** instale o [MacTeX](https://www.tug.org/mactex/)  
+**Windows:** instale o [TeX Live](https://tug.org/texlive/) ou [MiKTeX](https://miktex.org/)
+
+### 3. Compile o documento
+
+Na raiz do repositório, rode:
+
+```bash
+pdflatex artigo_bia.tex
+bibtex artigo_bia
+pdflatex artigo_bia.tex
+pdflatex artigo_bia.tex
+```
+
+O PDF gerado será `artigo_bia.pdf` (idêntico a `anexos/2026_tcc_fisSantos.pdf`, regra R27).
+
+> **Nota:** são necessárias 3 passagens do `pdflatex` (uma antes e duas depois do `bibtex`) para que referências, citações e sumário fiquem corretos.
+
+---
+
 ## Compilação
 
 ```bash
